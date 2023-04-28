@@ -1,9 +1,17 @@
-import {FC} from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import RootLayout from "./pages/RootLayout.tsx";
-import Home from "./pages/Home.tsx";
+import {ThemeProvider} from "@mui/material";
 
-const App: FC = () => {
+// THEMING
+import theme from "./theme.ts";
+
+// LAYOUT
+import RootLayout from "./pages/RootLayout.tsx";
+
+// PAGES
+import Home from "./pages/Home.tsx";
+import About from "./pages/About.tsx";
+
+const App = () => {
 	const router = createBrowserRouter([
 		{
 			path: "/",
@@ -11,6 +19,10 @@ const App: FC = () => {
 			// errorElement: <ErrorPage />,
 			children: [
 				{index: true, element: <Home />},
+				{
+					path: "/about",
+					element: <About />,
+				},
 			],
 		},
 		// {
@@ -19,7 +31,11 @@ const App: FC = () => {
 		// },
 	]);
 
-	return <RouterProvider router={router} />;
+	return (
+		<ThemeProvider theme={theme}>
+			<RouterProvider router={router} />
+		</ThemeProvider>
+	);
 };
 
 export default App;

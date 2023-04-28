@@ -1,12 +1,15 @@
-import {Box, Typography} from "@mui/material";
-import {FC} from "react";
-import Counts from "../sections/LandingPage/Counts.tsx";
+import {Box} from "@mui/material";
 
-const Home: FC = () => {
+// COMPONENTS
+import Counts from "../sections/LandingPage/Counts.tsx";
+import Offers from "../sections/LandingPage/Offers.tsx";
+
+const Home = () => {
 	return (
 		<Box>
-			<Typography variant="h1">Mooch Marod</Typography>
+			{/* <Typography variant="h1">Mooch Marod</Typography> */}
 			<Counts />
+			<Offers />
 		</Box>
 	);
 };
