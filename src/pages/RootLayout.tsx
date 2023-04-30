@@ -1,14 +1,17 @@
-import {FC} from "react";
 import {Outlet} from "react-router-dom";
 import {Box} from "@mui/material";
 
-const RootLayout: FC = () => {
+// SECTIONS
+import Footer from "../sections/Footer";
+
+const RootLayout = () => {
 	return (
 		<>
 			{/* Navigation */}
 			<Box component="main">
 				<Outlet />
 			</Box>
+			<Footer />
 		</>
 	);
 };

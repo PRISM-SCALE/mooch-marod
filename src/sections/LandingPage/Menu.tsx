@@ -103,7 +103,7 @@ const Menu = () => {
 		}
 	});
 
-	// console.log(groupedMenuData);
+	console.log(groupedMenuData);
 
 	const handleChange = (event: React.SyntheticEvent, newValue: number) => {
 		// console.log(event);
@@ -122,7 +122,7 @@ const Menu = () => {
 					</Typography>
 					<Typography
 						variant="h1"
-						sx={{textTransform: "uppercase", fontSize: {xs: 26, md: 32}}}
+						sx={{textTransform: "uppercase", fontSize: {xs: 26, md: 42}}}
 						gutterBottom
 					>
 						Mooch Marod's Paratha, THE BEST IN TOWN
@@ -152,6 +152,7 @@ const Menu = () => {
 										"&.Mui-selected": {
 											color: theme.palette.custom.butter,
 											background: color,
+											dropShadow: "0px 15px 30px rgba(0, 0, 0, 0.15)",
 										},
 									}}
 									{...a11yProps(index)}

@@ -1,9 +1,11 @@
 import {Box} from "@mui/material";
 
-// COMPONENTS
+// SECTIONS
 import Counts from "../sections/LandingPage/Counts.tsx";
 import Offers from "../sections/LandingPage/Offers.tsx";
 import Menu from "../sections/LandingPage/Menu.tsx";
+import ParathaBanner from "../sections/LandingPage/ParathaBanner.tsx";
+import GoogleReviews from "../sections/LandingPage/GoogleReviews.tsx";
 
 const Home = () => {
 	return (
@@ -12,6 +14,8 @@ const Home = () => {
 			<Counts />
 			<Offers />
 			<Menu />
+			<ParathaBanner />
+			<GoogleReviews />
 		</Box>
 	);
 };
