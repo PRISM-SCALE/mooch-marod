@@ -2,7 +2,7 @@ import {useState} from "react";
 import {alpha, styled} from "@mui/material/styles";
 import {Box, Button, Container, Tab, Tabs, Typography, useTheme} from "@mui/material";
 
-//  COMPONENTS
+// COMPONENTS
 import TabPanelWrapper from "../../components/TabPanelWrapper";
 import MenuDetail from "../../components/MenuDetail";
 
