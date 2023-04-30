@@ -45,7 +45,7 @@ const TestimonialCard = ({rating, name, reviewText, image}: Props) => {
 					Google Review
 				</Typography>
 
-				<Rating value={rating} />
+				<Rating value={rating} readOnly />
 			</Box>
 		</Box>
 	);
