@@ -1,10 +1,24 @@
 import {useState} from "react";
 import {alpha, styled} from "@mui/material/styles";
-import {Box, Container, Tab, Tabs, Typography, useTheme} from "@mui/material";
+import {Box, Button, Container, Tab, Tabs, Typography, useTheme} from "@mui/material";
 
 //  COMPONENTS
 import TabPanelWrapper from "../../components/TabPanelWrapper";
 import MenuDetail from "../../components/MenuDetail";
+
+// JSON DATA
+import {menu} from "../../_mock/menu.json";
+
+interface MenuItem {
+	name: string;
+	category: string;
+	description?: string;
+	price: number;
+}
+
+interface GroupedMenuData {
+	[category: string]: MenuItem[];
+}
 
 interface StyledTabsProps {
 	children?: React.ReactNode;
@@ -77,6 +91,20 @@ const Menu = () => {
 	const theme = useTheme();
 	const [value, setValue] = useState(0);
 
+	const menuData: MenuItem[] = menu;
+
+	const groupedMenuData: GroupedMenuData = {};
+
+	menuData.forEach((menuItem) => {
+		if (groupedMenuData[menuItem.category]) {
+			groupedMenuData[menuItem.category].push(menuItem);
+		} else {
+			groupedMenuData[menuItem.category] = [menuItem];
+		}
+	});
+
+	// console.log(groupedMenuData);
+
 	const handleChange = (event: React.SyntheticEvent, newValue: number) => {
 		// console.log(event);
 		setValue(newValue);
@@ -133,7 +161,7 @@ const Menu = () => {
 					</StyledTabs>
 				</Box>
 
-				{/* MENUS */}
+				{/* MENUS LIST */}
 				<Box sx={{mt: "4rem"}}>
 					<TabPanelWrapper value={value} index={0}>
 						<MenuDetail
@@ -142,6 +170,26 @@ const Menu = () => {
 							description="All beef hot dog, pickles, red onion, pepperoncini, and tomato."
 						/>
 					</TabPanelWrapper>
+
+					<Box textAlign={"center"} mt={6}>
+						<Button
+							sx={{
+								borderRadius: 30,
+								background: theme.palette.custom.achar,
+								"&:hover": {
+									background: theme.palette.custom.achar,
+								},
+								color: theme.palette.custom.butter,
+								py: ".8rem",
+								px: "2rem",
+							}}
+						>
+							Show More
+						</Button>
+						<Typography variant="caption" mt={4} display={"block"}>
+							* Offers available for carry-out and delivery orders only.
+						</Typography>
+					</Box>
 				</Box>
 			</Container>
 		</Box>
@@ -151,5 +199,13 @@ const Menu = () => {
 export default Menu;
 
 /*
-generate a menu json data with the following categories parathas, lassi, starters and food kasoot with 5 or more data for each categories
+const items = Array.from(Array(10).keys());
+
+<Grid container spacing={2}>
+  {items.map((item) => (
+    <Grid item xs={12} md={6} key={item}>
+      <Paper>{`Item ${item + 1}`}</Paper>
+    </Grid>
+  ))}
+</Grid> 
 */
