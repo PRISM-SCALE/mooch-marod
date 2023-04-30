@@ -1,8 +1,9 @@
+import {useMemo} from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {ThemeProvider} from "@mui/material";
+import {createTheme, ThemeProvider} from "@mui/material";
 
 // THEMING
-import theme from "./theme.ts";
+import {themeSettings} from "./theme";
 
 // LAYOUT
 import RootLayout from "./pages/RootLayout.tsx";
@@ -12,6 +13,8 @@ import Home from "./pages/Home.tsx";
 import About from "./pages/About.tsx";
 
 const App = () => {
+	const theme = useMemo(() => createTheme(themeSettings), []);
+
 	const router = createBrowserRouter([
 		{
 			path: "/",

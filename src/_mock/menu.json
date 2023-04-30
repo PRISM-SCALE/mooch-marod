@@ -1,0 +1,244 @@
+{
+	"menu": [
+		{
+			"name": "Aloo Paratha",
+			"price": 5.99,
+			"description": "Whole wheat bread stuffed with seasoned mashed potatoes.",
+			"category": "parathas"
+		},
+		{
+			"name": "Paneer Paratha",
+			"price": 7.99,
+			"description": "Whole wheat bread stuffed with seasoned cottage cheese.",
+			"category": "parathas"
+		},
+		{
+			"name": "Gobi Paratha",
+			"price": 6.99,
+			"description": "Whole wheat bread stuffed with seasoned cauliflower.",
+			"category": "parathas"
+		},
+		{
+			"name": "Methi Paratha",
+			"price": 6.99,
+			"description": "Whole wheat bread stuffed with seasoned fenugreek leaves.",
+			"category": "parathas"
+		},
+		{
+			"name": "Pudina Paratha",
+			"price": 6.99,
+			"description": "Whole wheat bread stuffed with seasoned mint leaves.",
+			"category": "parathas"
+		},
+		{
+			"name": "Onion Paratha",
+			"price": 6.99,
+			"description": "Whole wheat bread stuffed with seasoned onions.",
+			"category": "parathas"
+		},
+		{
+			"name": "Palak Paratha",
+			"price": 6.99,
+			"description": "Whole wheat bread stuffed with seasoned spinach.",
+			"category": "parathas"
+		},
+		{
+			"name": "Mooli Paratha",
+			"price": 6.99,
+			"description": "Whole wheat bread stuffed with seasoned radish.",
+			"category": "parathas"
+		},
+		{
+			"name": "Mixed Vegetable Paratha",
+			"price": 7.99,
+			"description": "Whole wheat bread stuffed with seasoned mixed vegetables.",
+			"category": "parathas"
+		},
+		{
+			"name": "Keema Paratha",
+			"price": 8.99,
+			"description": "Whole wheat bread stuffed with seasoned ground beef.",
+			"category": "parathas"
+		},
+		{
+			"name": "Mango Lassi",
+			"description": "A sweet and creamy drink made with fresh mangoes and yogurt.",
+			"price": 4.99,
+			"category": "lassi"
+		},
+		{
+			"name": "Salted Lassi",
+			"description": "A savory drink made with yogurt and salt.",
+			"price": 3.99,
+			"category": "lassi"
+		},
+		{
+			"name": "Sweet Lassi",
+			"description": "A sweet and refreshing drink made with yogurt and sugar.",
+			"price": 3.99,
+			"category": "lassi"
+		},
+		{
+			"name": "Rose Lassi",
+			"description": "A fragrant and refreshing drink made with rose syrup and yogurt.",
+			"price": 4.99,
+			"category": "lassi"
+		},
+		{
+			"name": "Banana Lassi",
+			"description": "A creamy and fruity drink made with bananas and yogurt.",
+			"price": 4.99,
+			"category": "lassi"
+		},
+		{
+			"name": "Pistachio Lassi",
+			"description": "A nutty and creamy drink made with pistachios and yogurt.",
+			"price": 5.99,
+			"category": "lassi"
+		},
+		{
+			"name": "Mint Lassi",
+			"description": "A refreshing and minty drink made with fresh mint leaves and yogurt.",
+			"price": 4.99,
+			"category": "lassi"
+		},
+		{
+			"name": "Strawberry Lassi",
+			"description": "A sweet and fruity drink made with fresh strawberries and yogurt.",
+			"price": 5.99,
+			"category": "lassi"
+		},
+		{
+			"name": "Blueberry Lassi",
+			"description": "A sweet and tangy drink made with fresh blueberries and yogurt.",
+			"price": 5.99,
+			"category": "lassi"
+		},
+		{
+			"name": "Pineapple Lassi",
+			"description": "A tropical and refreshing drink made with fresh pineapple and yogurt.",
+			"price": 5.99,
+			"category": "lassi"
+		},
+		{
+			"name": "Veg Spring Rolls",
+			"price": 4.99,
+			"description": "Crispy fried rolls filled with vegetables",
+			"category": "starters"
+		},
+		{
+			"name": "Chilli Paneer",
+			"price": 5.99,
+			"description": "Cubes of paneer cooked in a spicy sauce with bell peppers and onions",
+			"category": "starters"
+		},
+		{
+			"name": "Chicken Tikka",
+			"price": 6.99,
+			"description": "Tender pieces of chicken marinated in yogurt and spices, grilled to perfection",
+			"category": "starters"
+		},
+		{
+			"name": "Aloo Tikki",
+			"price": 3.99,
+			"description": "Crispy potato patties topped with chutney and spices",
+			"category": "starters"
+		},
+		{
+			"name": "Samosa",
+			"price": 2.99,
+			"description": "Crispy pastry filled with spiced potatoes and peas",
+			"category": "starters"
+		},
+		{
+			"name": "Onion Bhaji",
+			"price": 3.99,
+			"description": "Crispy fritters made with sliced onions and chickpea flour",
+			"category": "starters"
+		},
+		{
+			"name": "Papdi Chaat",
+			"price": 4.99,
+			"description": "Crispy wafers topped with potatoes, chickpeas, yogurt, and chutneys",
+			"category": "starters"
+		},
+		{
+			"name": "Paneer Tikka",
+			"price": 6.99,
+			"description": "Cubes of paneer marinated in yogurt and spices, grilled to perfection",
+			"category": "starters"
+		},
+		{
+			"name": "Chicken 65",
+			"price": 7.99,
+			"description": "Spicy fried chicken served with onions and lemon wedges",
+			"category": "starters"
+		},
+		{
+			"name": "Hara Bhara Kebab",
+			"price": 4.99,
+			"description": "Vegetarian kebabs made with spinach, peas, and potatoes",
+			"category": "starters"
+		},
+		{
+			"name": "Karahi Gosht",
+			"price": 12.99,
+			"category": "food kasoot",
+			"description": "A spicy and flavorful dish made with tender pieces of lamb, cooked in a tomato-based curry with plenty of aromatic spices. Served with naan bread."
+		},
+		{
+			"name": "Chicken Tikka Masala",
+			"price": 10.99,
+			"category": "food kasoot",
+			"description": "Tender pieces of marinated chicken cooked in a creamy tomato-based sauce with plenty of spices, served with basmati rice and naan bread."
+		},
+		{
+			"name": "Daal Makhani",
+			"price": 8.99,
+			"category": "food kasoot",
+			"description": "A popular vegetarian dish made with black lentils, kidney beans, and plenty of spices. Served with basmati rice and naan bread."
+		},
+		{
+			"name": "Palak Paneer",
+			"price": 9.99,
+			"category": "food kasoot",
+			"description": "A vegetarian dish made with spinach and paneer cheese, cooked with a blend of spices. Served with basmati rice and naan bread."
+		},
+		{
+			"name": "Beef Biryani",
+			"price": 13.99,
+			"category": "food kasoot",
+			"description": "A classic dish of spiced rice and tender pieces of beef, served with raita and naan bread."
+		},
+		{
+			"name": "Fish Curry",
+			"price": 11.99,
+			"category": "food kasoot",
+			"description": "A flavorful and aromatic curry made with fish fillets, cooked with a blend of spices and served with basmati rice and naan bread."
+		},
+		{
+			"name": "Aloo Gobi",
+			"price": 7.99,
+			"category": "food kasoot",
+			"description": "A vegetarian dish made with potatoes, cauliflower, and plenty of spices. Served with basmati rice and naan bread."
+		},
+		{
+			"name": "Chana Masala",
+			"price": 8.99,
+			"category": "food kasoot",
+			"description": "A vegetarian dish made with chickpeas, cooked in a tomato-based sauce with plenty of spices. Served with basmati rice and naan bread."
+		},
+		{
+			"name": "Lamb Rogan Josh",
+			"price": 12.99,
+			"category": "food kasoot",
+			"description": "Tender pieces of lamb cooked in a spicy and aromatic tomato-based sauce with plenty of fragrant spices. Served with basmati rice and naan bread."
+		},
+		{
+			"name": "Vegetable Biryani",
+			"price": 9.99,
+			"category": "food kasoot",
+			"description": "A fragrant and flavorful dish of spiced rice and mixed vegetables, served with raita and naan bread."
+		}
+	]
+}

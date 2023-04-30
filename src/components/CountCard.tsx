@@ -14,11 +14,11 @@ const CountCard = ({count, text}: Props) => {
 			}}
 		>
 			{/* Component for counts+ */}
-			<Typography component="span" variant="h2">
+			<Typography component="span" variant="h1" fontWeight={600}>
 				{count}+
 			</Typography>
 			<br />
-			<Typography component="span" sx={{fontSize: "1.4rem"}}>
+			<Typography component="span" sx={{fontSize: "1.2rem"}}>
 				{text}
 			</Typography>
 		</Box>
