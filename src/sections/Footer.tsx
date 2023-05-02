@@ -1,5 +1,18 @@
-import {Box} from "@mui/material";
+import {Box, Container, Typography, alpha} from "@mui/material";
 import logo_white from "/icons/logo_notag_white.svg";
+import {Link} from "react-router-dom";
+import {footerLinks} from "../utils/links";
+import FooterGallery from "../components/FooterGallery";
+
+interface Styles {
+	[key: string]: string | number | object;
+}
+
+const styles: Styles = {
+	mt: 2,
+	color: "#aaa",
+	mx: "auto",
+};
 
 const Footer = () => {
 	return (
@@ -14,9 +27,83 @@ const Footer = () => {
 				background: "#222",
 			}}
 		>
-			<Box textAlign={"center"}>
-				<img src={logo_white} alt="logo" width={120} height={120} />
-			</Box>
+			<Container>
+				<Box textAlign={"center"}>
+					<img src={logo_white} alt="logo" width={120} height={120} />
+				</Box>
+
+				<Box sx={{display: "flex", alignItems: "center", justifyContent: "space-between", p: 6}}>
+					<Box sx={{textAlign: "center"}}>
+						<Typography variant="h3" fontWeight={400} sx={{color: "#fff"}}>
+							Address
+						</Typography>
+						<Typography sx={styles}>
+							570 8th Ave, New York,
+							<br /> NY 10018 United States
+						</Typography>
+					</Box>
+
+					<Box sx={{textAlign: "center"}}>
+						<Typography variant="h3" fontWeight={400} sx={{color: "#fff"}}>
+							Opening hours
+						</Typography>
+						<Typography sx={styles}>
+							Monday - Friday <br /> 10.00 AM - 11.00 PM
+						</Typography>
+					</Box>
+
+					<Box>
+						<FooterGallery />
+					</Box>
+				</Box>
+
+				<Box
+					sx={{
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "space-between",
+						mb: 6,
+						pt: 4,
+						borderTop: `1px solid ${alpha("#aaa", 0.4)}`,
+					}}
+				>
+					<Box
+						sx={{
+							display: "flex",
+							alignItems: "center",
+							justifyContent: "space-between",
+							width: "40%",
+						}}
+					>
+						{footerLinks.map((item, index) => (
+							<Box
+								key={index}
+								component={Link}
+								to={`/${item.toLowerCase()}`}
+								sx={{
+									color: "#aaa",
+									textDecoration: "none",
+									fontSize: ".8rem",
+									transition: ".5s ease-out",
+									"&:hover": {
+										color: "white",
+									},
+								}}
+							>
+								{item}
+							</Box>
+						))}
+					</Box>
+
+					<Box sx={{color: "#aaa", fontSize: ".8rem"}}>SOCIAL ICONS</Box>
+				</Box>
+
+				<Box sx={{textAlign: "center"}}>
+					<Typography sx={{color: "#aaa", fontSize: ".8rem"}}>
+						Copyright © 2023 PRISMSCALE. All Right Reserved
+					</Typography>
+				</Box>
+			</Container>
 		</Box>
 	);
 };

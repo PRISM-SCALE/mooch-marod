@@ -105,7 +105,7 @@ const Menu = () => {
 
 	console.log(groupedMenuData);
 
-	const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+	const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
 		// console.log(event);
 		setValue(newValue);
 	};
