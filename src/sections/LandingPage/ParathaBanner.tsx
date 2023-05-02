@@ -11,6 +11,7 @@ const ParathaBanner = () => {
 				backgroundImage: `url(/images/preview_paratha_banner.jpeg)`,
 				backgroundSize: "cover",
 				backgroundRepeat: "no-repeat",
+				backgroundAttachment: "fixed",
 				display: "flex",
 				alignItems: "flex-end",
 			}}
