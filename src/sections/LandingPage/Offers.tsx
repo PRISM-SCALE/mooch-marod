@@ -12,11 +12,13 @@ const Offers = () => {
 								height: {xs: 340, md: 280},
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
+								p: '2rem'
 							}}
 						>
-							<Typography variant="h3" sx={{color: "white", pt: "1rem", pl: "1rem"}}>
+							<Typography variant="h3" sx={{color: "white"}}>
 								OFFERS
 							</Typography>
+							<Typography variant='body1' fontSize='1rem' color='white'>We offer a wide range of parathas</Typography>
 						</Box>
 					</Grid>
 

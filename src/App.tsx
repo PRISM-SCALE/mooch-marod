@@ -1,6 +1,7 @@
 import {useMemo} from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {createTheme, ThemeProvider} from "@mui/material";
+import {ParallaxProvider} from "react-scroll-parallax";
 
 // THEMING
 import {themeSettings} from "./theme";
@@ -36,7 +37,9 @@ const App = () => {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<RouterProvider router={router} />
+			<ParallaxProvider>
+				<RouterProvider router={router} />
+			</ParallaxProvider>
 		</ThemeProvider>
 	);
 };
