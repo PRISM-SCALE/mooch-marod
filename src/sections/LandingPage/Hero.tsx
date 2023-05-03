@@ -1,4 +1,4 @@
-import {Box, Button, Container, Divider, Typography, useTheme} from "@mui/material";
+import {Box, Button, Container, Typography, useTheme} from "@mui/material";
 
 const Hero = () => {
 	const theme = useTheme();
@@ -16,7 +16,19 @@ const Hero = () => {
 			}}
 		>
 			<Container>
-				<Box sx={{}}>
+				<img
+					src="/images/jabardast_desi.png"
+					alt="jabardast_desi"
+					style={{
+						position: "absolute",
+						top: "50%",
+						left: "50%",
+						transform: "translate(-50%, -50%)",
+						zIndex: 0,
+					}}
+				/>
+				
+				<Box sx={{position: "relative"}}>
 					<Box sx={{display: "flex", alignItems: "center"}}>
 						<Typography color={theme.palette.custom.paratha} fontWeight={600} fontSize={".8rem"}>
 							PARATHA TIME
