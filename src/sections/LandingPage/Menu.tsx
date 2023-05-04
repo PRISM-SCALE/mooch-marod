@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {alpha, styled} from "@mui/material/styles";
-import {Box, Button, Container, Grid, Paper, Tab, Tabs, Typography, useTheme} from "@mui/material";
+import {Box, Button, Container, Grid, Tab, Tabs, Typography, useTheme} from "@mui/material";
 
 // COMPONENTS
 import TabPanelWrapper from "../../components/TabPanelWrapper";
@@ -65,7 +65,6 @@ const StyledTabs = styled((props: StyledTabsProps) => (
 interface StyledTabProps {
 	label: string;
 	sx: object;
-	onClick?: () => void;
 }
 
 const StyledTab = styled((props: StyledTabProps) => <Tab disableRipple {...props} />)(
@@ -167,21 +166,10 @@ const Menu = () => {
 				<Box sx={{mt: "4rem"}}>
 					{Object.entries(groupedMenuData).map(([category, menuList], index) => (
 						<TabPanelWrapper key={category} value={value} index={index}>
-							{/* <Paper elevation={3} sx={{p: 4}}> */}
 							<Grid container columnSpacing={4}>
-								{menuList.map((menuItem) => {
-									return (
-										<Grid item xs={12} md={6} key={menuItem.name}>
-											<MenuDetail
-												foodItem={menuItem.name}
-												price={menuItem.price}
-												description={menuItem.description}
-											/>
-										</Grid>
-									);
-								})}
+								{/* MAPPING THE MENU-LIST */}
+								<MenuDetail menuList={menuList} />
 							</Grid>
-							{/* </Paper> */}
 						</TabPanelWrapper>
 					))}
 

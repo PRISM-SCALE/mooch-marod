@@ -52,6 +52,7 @@ const Footer = () => {
 						</Typography>
 					</Box>
 
+					{/* FOOTER GALLERY */}
 					<Box>
 						<FooterGallery />
 					</Box>
