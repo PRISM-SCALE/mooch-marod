@@ -9,7 +9,7 @@ type Props = {
 const MenuDetail = ({foodItem, price, description}: Props) => {
 	const theme = useTheme();
 	return (
-		<Box sx={{width: {xs: "100%", md: "50%"}}}>
+		<Box sx={{width: {xs: "100%"}}}>
 			<Box sx={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
 				<Typography
 					fontSize={{xs: "1.2rem", sm: "1.2rem"}}
@@ -26,7 +26,7 @@ const MenuDetail = ({foodItem, price, description}: Props) => {
 					${price}
 				</Typography>
 			</Box>
-			<Typography variant="caption" fontSize={"0.8rem"} width={"55%"} display={"block"}>
+			<Typography variant="caption" fontSize={"0.8rem"} width={"65%"} display={"block"} mb={2}>
 				{description}
 			</Typography>
 		</Box>

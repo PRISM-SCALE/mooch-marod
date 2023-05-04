@@ -15,6 +15,7 @@ const Hero = () => {
 				flexDirection: "column",
 			}}
 		>
+			{/* HERO Section Navigation */}
 			<Container>
 				<img
 					src="/images/jabardast_desi.png"
@@ -27,7 +28,7 @@ const Hero = () => {
 						zIndex: 0,
 					}}
 				/>
-				
+
 				<Box sx={{position: "relative"}}>
 					<Box sx={{display: "flex", alignItems: "center"}}>
 						<Typography color={theme.palette.custom.paratha} fontWeight={600} fontSize={".8rem"}>
@@ -63,11 +64,31 @@ const Hero = () => {
 							"&:hover": {
 								backgroundColor: theme.palette.custom.paratha,
 							},
+							mr: 2,
 						}}
 						disableElevation
 						disableRipple
 					>
 						Book a table
+					</Button>
+					<Button
+						sx={{
+							border: `3px solid ${theme.palette.custom.paratha}`,
+							backgroundColor: "transparent",
+							borderRadius: 30,
+							px: 6,
+							py: 2,
+							color: "white",
+							mt: 4,
+							fontSize: "1rem",
+							"&:hover": {
+								backgroundColor: "transparent",
+							},
+						}}
+						disableElevation
+						disableRipple
+					>
+						Bulk order
 					</Button>
 				</Box>
 			</Container>
@@ -76,3 +97,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
+//https://youtube.com/shorts/ITogH7lJTyE?feature=share

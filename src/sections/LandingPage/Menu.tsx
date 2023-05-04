@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {alpha, styled} from "@mui/material/styles";
-import {Box, Button, Container, Tab, Tabs, Typography, useTheme} from "@mui/material";
+import {Box, Button, Container, Grid, Paper, Tab, Tabs, Typography, useTheme} from "@mui/material";
 
 // COMPONENTS
 import TabPanelWrapper from "../../components/TabPanelWrapper";
@@ -12,8 +12,9 @@ import {menu} from "../../_mock/menu.json";
 interface MenuItem {
 	name: string;
 	category: string;
-	description?: string;
+	description: string;
 	price: number;
+	priority: number;
 }
 
 interface GroupedMenuData {
@@ -39,10 +40,10 @@ type TabData = {
 };
 
 const tabData: TabData = {
-	paratha: "parathas",
-	pani: "lassi",
-	achar: "starters",
-	conceot: "food kasoot",
+	parathas: "paratha",
+	lassi: "pani",
+	starters: "achar",
+	"food kasoot": "conceot",
 };
 
 const StyledTabs = styled((props: StyledTabsProps) => (
@@ -64,6 +65,7 @@ const StyledTabs = styled((props: StyledTabsProps) => (
 interface StyledTabProps {
 	label: string;
 	sx: object;
+	onClick?: () => void;
 }
 
 const StyledTab = styled((props: StyledTabProps) => <Tab disableRipple {...props} />)(
@@ -90,6 +92,7 @@ function a11yProps(index: number) {
 const Menu = () => {
 	const theme = useTheme();
 	const [value, setValue] = useState(0);
+	// const [menuItems, setMenuItems] = useState<MenuItem[] | null>();
 
 	const menuData: MenuItem[] = menu;
 
@@ -103,10 +106,7 @@ const Menu = () => {
 		}
 	});
 
-	console.log(groupedMenuData);
-
 	const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
-		// console.log(event);
 		setValue(newValue);
 	};
 	return (
@@ -136,13 +136,14 @@ const Menu = () => {
 				{/* TAB BUTTONS */}
 				<Box sx={{mt: "1rem"}}>
 					<StyledTabs value={value} onChange={handleChange} centered>
-						{Object.entries(tabData).map(([key, value], index) => {
-							// const color = theme.palette.custom[value as keyof CustomPalette];
-							const color = theme.palette.custom[key as keyof CustomPalette];
+						{Object.entries(groupedMenuData).map(([category, menuList], index) => {
+							const data = tabData[category as keyof typeof tabData];
+							const color = theme.palette.custom[data as keyof CustomPalette];
+
 							return (
 								<StyledTab
-									key={key}
-									label={value}
+									key={category}
+									label={category}
 									sx={{
 										borderRadius: 30,
 										border: `3px solid ${alpha(color, 0.7)}`,
@@ -164,13 +165,25 @@ const Menu = () => {
 
 				{/* MENUS LIST */}
 				<Box sx={{mt: "4rem"}}>
-					<TabPanelWrapper value={value} index={0}>
-						<MenuDetail
-							foodItem="Chicago Dog"
-							price={10}
-							description="All beef hot dog, pickles, red onion, pepperoncini, and tomato."
-						/>
-					</TabPanelWrapper>
+					{Object.entries(groupedMenuData).map(([category, menuList], index) => (
+						<TabPanelWrapper key={category} value={value} index={index}>
+							{/* <Paper elevation={3} sx={{p: 4}}> */}
+							<Grid container columnSpacing={4}>
+								{menuList.map((menuItem) => {
+									return (
+										<Grid item xs={12} md={6} key={menuItem.name}>
+											<MenuDetail
+												foodItem={menuItem.name}
+												price={menuItem.price}
+												description={menuItem.description}
+											/>
+										</Grid>
+									);
+								})}
+							</Grid>
+							{/* </Paper> */}
+						</TabPanelWrapper>
+					))}
 
 					<Box textAlign={"center"} mt={6}>
 						<Button
