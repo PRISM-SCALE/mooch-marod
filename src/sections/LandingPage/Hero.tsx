@@ -13,18 +13,20 @@ const Hero = () => {
 				display: "flex",
 				justifyContent: "center",
 				flexDirection: "column",
+				overflow: "hidden",
 			}}
 		>
 			{/* HERO Section Navigation */}
-			<Container>
+
+			<Container sx={{position: "relative"}}>
 				<img
 					src="/images/jabardast_desi.png"
 					alt="jabardast_desi"
 					style={{
 						position: "absolute",
 						top: "50%",
-						left: "50%",
-						transform: "translate(-50%, -50%)",
+						left: "80%",
+						transform: "translate(-50%, -50%) rotate(-15deg)",
 						zIndex: 0,
 					}}
 				/>
@@ -56,11 +58,12 @@ const Hero = () => {
 						sx={{
 							backgroundColor: theme.palette.custom.paratha,
 							borderRadius: 30,
-							px: 6,
-							py: 2,
+							px: 4,
+							py: 1,
 							color: "white",
 							mt: 4,
-							fontSize: "1rem",
+							fontSize: {xs: ".8rem", md: "1rem"},
+							fontWeight: 400,
 							"&:hover": {
 								backgroundColor: theme.palette.custom.paratha,
 							},
@@ -76,11 +79,12 @@ const Hero = () => {
 							border: `3px solid ${theme.palette.custom.paratha}`,
 							backgroundColor: "transparent",
 							borderRadius: 30,
-							px: 6,
-							py: 2,
+							px: 4,
+							py: 1,
 							color: "white",
 							mt: 4,
-							fontSize: "1rem",
+							fontSize: {xs: ".8rem", md: "1rem"},
+							fontWeight: 400,
 							"&:hover": {
 								backgroundColor: "transparent",
 							},

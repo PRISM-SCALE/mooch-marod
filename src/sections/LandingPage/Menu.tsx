@@ -1,5 +1,7 @@
 import {useState} from "react";
 import {alpha, styled} from "@mui/material/styles";
+// import {useInView} from "react-intersection-observer";
+
 import {Box, Button, Container, Grid, Tab, Tabs, Typography, useTheme} from "@mui/material";
 
 // COMPONENTS
@@ -92,6 +94,10 @@ const Menu = () => {
 	const theme = useTheme();
 	const [value, setValue] = useState(0);
 	// const [menuItems, setMenuItems] = useState<MenuItem[] | null>();
+	// const [ref, inView] = useInView({
+	// 	threshold: 0.3,
+	// 	triggerOnce: true,
+	// });
 
 	const menuData: MenuItem[] = menu;
 
@@ -135,7 +141,7 @@ const Menu = () => {
 				{/* TAB BUTTONS */}
 				<Box sx={{mt: "1rem"}}>
 					<StyledTabs value={value} onChange={handleChange} centered>
-						{Object.entries(groupedMenuData).map(([category, menuList], index) => {
+						{Object.keys(groupedMenuData).map((category, index) => {
 							const data = tabData[category as keyof typeof tabData];
 							const color = theme.palette.custom[data as keyof CustomPalette];
 
@@ -162,7 +168,7 @@ const Menu = () => {
 					</StyledTabs>
 				</Box>
 
-				{/* MENUS LIST */}
+				{/* MENU LIST */}
 				<Box sx={{mt: "4rem"}}>
 					{Object.entries(groupedMenuData).map(([category, menuList], index) => (
 						<TabPanelWrapper key={category} value={value} index={index}>

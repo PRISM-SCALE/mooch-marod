@@ -5,7 +5,14 @@ interface Image {
 
 export const footerLinks = ["About", "Menu", "Blog", "Gallery", "Faq", "Contact"];
 
-export const menuLinks = ["Home", "About", "Menu", "Offers", "Outlets", "Contact"];
+export const menuLinks = [
+	{link: "/", path: "Home"},
+	{link: "/about", path: "About"},
+	{link: "/menu", path: "Menu"},
+	{link: "/offers", path: "Offers"},
+	{link: "/outlets", path: "Outlets"},
+	{link: "/contacts", path: "Contacts"},
+];
 
 export const footerImageUrl = [
 	"https://images.unsplash.com/photo-1552611052-33e04de081de",

@@ -12,6 +12,7 @@ import RootLayout from "./pages/RootLayout.tsx";
 // PAGES
 import Home from "./pages/Home.tsx";
 import About from "./pages/About.tsx";
+import NotFound from "./sections/NotFound.tsx";
 
 const App = () => {
 	const theme = useMemo(() => createTheme(themeSettings), []);
@@ -29,6 +30,11 @@ const App = () => {
 				},
 			],
 		},
+		{
+			path: "*",
+			element: <NotFound />,
+		},
+
 		// {
 		// 	path: "/newsletter",
 		// 	action: newsletterAction,
