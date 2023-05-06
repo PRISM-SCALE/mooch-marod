@@ -4,7 +4,7 @@ import type {IconifyIcon} from "@iconify/iconify";
 
 type IconProps = {
 	icon: IconifyIcon | string;
-	size?: string;
+	size?: number;
 	color?: string;
 };
 

@@ -1,8 +1,9 @@
-import {Box, Container, Typography, alpha} from "@mui/material";
+import {Box, Container, Typography, alpha, useTheme} from "@mui/material";
 import logo_white from "/icons/logo_notag_white.svg";
 import {Link} from "react-router-dom";
 import {footerLinks} from "../utils/links";
 import FooterGallery from "../components/FooterGallery";
+import {useResponsive} from "../hooks/useResponsive";
 
 interface Styles {
 	[key: string]: string | number | object;
@@ -15,6 +16,7 @@ const styles: Styles = {
 };
 
 const Footer = () => {
+	const {isMediumScreen, isSmallScreen} = useResponsive();
 	return (
 		<Box
 			component="section"
@@ -32,7 +34,16 @@ const Footer = () => {
 					<img src={logo_white} alt="logo" width={120} height={120} />
 				</Box>
 
-				<Box sx={{display: "flex", alignItems: "center", justifyContent: "space-between", p: 6}}>
+				<Box
+					sx={{
+						display: "flex",
+						flexWrap: isMediumScreen !== isSmallScreen ? "wrap" : "nowrap",
+						alignItems: "center",
+						justifyContent: isMediumScreen !== isSmallScreen ? "center" : "space-between",
+						gap: 6,
+						p: isMediumScreen !== isSmallScreen ? 2 : 6,
+					}}
+				>
 					<Box sx={{textAlign: "center"}}>
 						<Typography variant="h3" fontWeight={400} sx={{color: "#fff"}}>
 							Address

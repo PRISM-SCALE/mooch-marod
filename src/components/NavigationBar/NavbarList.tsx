@@ -17,7 +17,7 @@ const NavbarList = () => {
 				display: "flex",
 				alignItems: "center",
 				"& > *:not(:last-child)": {
-					marginRight: "2rem",
+					marginRight: {xs: 0, md: "2rem"},
 				},
 			}}
 		>

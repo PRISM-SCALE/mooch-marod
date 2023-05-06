@@ -2,7 +2,7 @@ import {useState} from "react";
 import {alpha, styled} from "@mui/material/styles";
 // import {useInView} from "react-intersection-observer";
 
-import {Box, Button, Container, Grid, Tab, Tabs, Typography, useTheme} from "@mui/material";
+import {Box, Button, Container, Grid, Fade, Tab, Tabs, Typography, useTheme} from "@mui/material";
 
 // COMPONENTS
 import TabPanelWrapper from "../../components/TabPanelWrapper";
@@ -154,6 +154,17 @@ const Menu = () => {
 										border: `3px solid ${alpha(color, 0.7)}`,
 										paddingX: "2rem",
 										marginLeft: "1rem",
+										fontWeight: 600,
+
+										transition: theme.transitions.create(["background", "color"], {
+											duration: 400,
+											easing: "ease-out",
+										}),
+
+										"&:hover": {
+											background: color,
+											color: theme.palette.custom.butter,
+										},
 
 										"&.Mui-selected": {
 											color: theme.palette.custom.butter,
@@ -172,10 +183,17 @@ const Menu = () => {
 				<Box sx={{mt: "4rem"}}>
 					{Object.entries(groupedMenuData).map(([category, menuList], index) => (
 						<TabPanelWrapper key={category} value={value} index={index}>
-							<Grid container columnSpacing={4}>
-								{/* MAPPING THE MENU-LIST */}
-								<MenuDetail menuList={menuList} />
-							</Grid>
+							<Fade
+								in={value === index}
+								timeout={{enter: 900, exit: 1000}}
+								mountOnEnter
+								unmountOnExit
+							>
+								<Grid container columnSpacing={4}>
+									{/* MAPPING THE MENU-LIST */}
+									<MenuDetail menuList={menuList} />
+								</Grid>
+							</Fade>
 						</TabPanelWrapper>
 					))}
 

@@ -34,11 +34,6 @@ const App = () => {
 			path: "*",
 			element: <NotFound />,
 		},
-
-		// {
-		// 	path: "/newsletter",
-		// 	action: newsletterAction,
-		// },
 	]);
 
 	return (

@@ -1,6 +1,6 @@
 import * as React from "react";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import {AppBar, Toolbar, CssBaseline, Box, Button, Container} from "@mui/material";
+import {AppBar, Toolbar, CssBaseline, Box, Button, Container, IconButton} from "@mui/material";
 import {useTheme} from "@mui/material/styles";
 
 // HOOKS
@@ -9,6 +9,7 @@ import {useResponsive} from "../../hooks/useResponsive";
 // COMPONENTS
 import SearchBar from "../SearchBar";
 import NavbarList from "./NavbarList";
+import Iconify from "../Iconify";
 
 interface Props {
 	window?: () => Window;
@@ -57,7 +58,14 @@ export default function Navbar(props: Props) {
 					<Container>
 						<Toolbar sx={{width: "100%", ...spaceBetween}} disableGutters>
 							<>
+								{isSmallScreen === !isMediumScreen ? (
+									<IconButton sx={{color: "white"}}>
+										<Iconify icon={"gg:menu-left-alt"} size={24} />
+									</IconButton>
+								) : null}
+
 								{isMediumScreen !== isSmallScreen ? null : <SearchBar />}
+
 								<NavbarList />
 
 								{isMediumScreen !== isSmallScreen ? null : (

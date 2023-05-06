@@ -51,14 +51,15 @@ const Hero = () => {
 						color="white"
 						sx={{textTransform: "uppercase"}}
 					>
-						share your love for <br /> paratha!
+						share your love
+						<br /> for paratha!
 					</Typography>
 
 					<Button
 						sx={{
 							backgroundColor: theme.palette.custom.paratha,
 							borderRadius: 30,
-							px: 4,
+							px: {xs: 2, md: 4},
 							py: 1,
 							color: "white",
 							mt: 4,
@@ -79,11 +80,11 @@ const Hero = () => {
 							border: `3px solid ${theme.palette.custom.paratha}`,
 							backgroundColor: "transparent",
 							borderRadius: 30,
-							px: 4,
+							px: {xs: 2, md: 4},
 							py: 1,
 							color: "white",
 							mt: 4,
-							fontSize: {xs: ".8rem", md: "1rem"},
+							fontSize: {xs: "8.rem", md: "1rem"},
 							fontWeight: 400,
 							"&:hover": {
 								backgroundColor: "transparent",
