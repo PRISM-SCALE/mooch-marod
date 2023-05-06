@@ -56,7 +56,12 @@ export default function Navbar(props: Props) {
 				<AppBar position="fixed" sx={{top: 0}} component="nav">
 					<Container>
 						<Toolbar
-							sx={{width: "100%", flexDirection: {xs: "row-reverse", md: "row"}, ...spaceBetween}}
+							sx={{
+								width: "100%",
+								flexDirection: {xs: "row-reverse", md: "row"},
+								height: "80px",
+								...spaceBetween,
+							}}
 							disableGutters
 						>
 							<>
@@ -96,7 +101,8 @@ export default function Navbar(props: Props) {
 					</Container>
 				</AppBar>
 			</ElevationScroll>
-			<Toolbar />
+
+			<Toolbar sx={{height: "80px"}} />
 		</Box>
 	);
 }

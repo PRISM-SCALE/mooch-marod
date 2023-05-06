@@ -1,9 +1,11 @@
-import Slider, {Settings} from "react-slick";
 import {styled} from "@mui/material/styles";
 import {Box} from "@mui/material";
+import Slider, {Settings} from "react-slick";
 
 // JSON DATA
 import {testimonials} from "../_mock/testimonial.json";
+
+// COMPONENTS
 import TestimonialCard from "./TestimonialCard";
 
 interface SliderSettings extends Settings {
@@ -21,15 +23,16 @@ const Slide = styled(Box)(({theme}) => ({
 
 const ReviewCarousel = () => {
 	const settings: SliderSettings = {
-		dots: true,
-		infinite: false,
+		dots: false,
+		infinite: true,
 		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		initialSlide: 0,
 		draggable: true,
 		lazyLoad: "ondemand",
-		// autoplay: true,
+		arrows: false,
+		autoplay: true,
 
 		// responsive: [
 		// 	{
@@ -60,11 +63,10 @@ const ReviewCarousel = () => {
 	};
 	return (
 		<SlideWrapper {...settings}>
-			{testimonials.map(({id, name, comment, image, location, rating}, index) => (
-				<SlideChildWrapper key={index}>
+			{testimonials.map(({id, name, comment, image, location, rating}) => (
+				<SlideChildWrapper key={id}>
 					<Slide>
 						<TestimonialCard
-							key={id}
 							name={name}
 							image={image}
 							location={location}

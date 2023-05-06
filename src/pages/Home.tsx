@@ -7,7 +7,7 @@ import Offers from "../sections/LandingPage/Offers.tsx";
 import Menu from "../sections/LandingPage/Menu.tsx";
 import ParathaBanner from "../sections/LandingPage/ParathaBanner.tsx";
 import GoogleReviews from "../sections/LandingPage/GoogleReviews.tsx";
-// import Instagram from "../sections/LandingPage/Instagram.tsx";
+import Instagram from "../sections/LandingPage/Instagram.tsx";
 
 const Home = () => {
 	return (
@@ -19,7 +19,7 @@ const Home = () => {
 			<Menu />
 			<ParathaBanner />
 			<GoogleReviews />
-			{/* <Instagram /> */}
+			<Instagram />
 		</Box>
 	);
 };
