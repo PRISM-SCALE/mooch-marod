@@ -1,7 +1,8 @@
 import {Box, Container, Typography, useTheme} from "@mui/material";
 
 // COMPONENTS
-import TestimonialCard from "../../components/TestimonialCard";
+// import TestimonialCard from "../../components/TestimonialCard";
+import ReviewCarousel from "../../components/ReviewCarousel";
 
 const GoogleReviews = () => {
 	const theme = useTheme();
@@ -25,12 +26,13 @@ const GoogleReviews = () => {
 				</Box>
 
 				<Box>
-					<TestimonialCard
+					{/* <TestimonialCard
 						image="/images/dummy_testimonial.jpg"
 						name="Nina Margaret"
 						rating={4}
 						reviewText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ea voluptas eius ab qui tempore molestias consequuntur nam accusantium corporis? Perferendis consequatur aliquam expedita."
-					/>
+					/> */}
+					<ReviewCarousel />
 				</Box>
 			</Container>
 		</Box>

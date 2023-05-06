@@ -5,9 +5,10 @@ const ParathaBanner = () => {
 	const theme = useTheme();
 
 	return (
-		<ParallaxBanner
+		<Box
+			component={ParallaxBanner}
 			layers={[{image: "/images/preview_paratha_banner.jpeg", speed: -20}]}
-			style={{height: 460}}
+			sx={{height: 460}}
 		>
 			<Container sx={{position: "relative"}}>
 				<Box
@@ -39,7 +40,7 @@ const ParathaBanner = () => {
 					</Typography>
 				</Box>
 			</Container>
-		</ParallaxBanner>
+		</Box>
 	);
 };
 

@@ -16,9 +16,10 @@ const NavbarList = () => {
 			sx={{
 				display: "flex",
 				alignItems: "center",
-				"& > *:not(:last-child)": {
-					marginRight: {xs: 0, md: "2rem"},
-				},
+				// "& > *:not(:last-child)": {
+				// 	marginRight: {xs: 0, md: "2rem"},
+				// },
+				columnGap: 4,
 			}}
 		>
 			{firstThree.map(({link, path}, key) => (

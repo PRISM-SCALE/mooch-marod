@@ -19,7 +19,7 @@ const Footer = () => {
 	const {isMediumScreen, isSmallScreen} = useResponsive();
 	return (
 		<Box
-			component="section"
+			component="footer"
 			id="footer_section"
 			sx={{
 				py: {xs: "2rem", md: "4rem"},

@@ -4,9 +4,9 @@ import logo from "/icons/logo_notag_white.svg";
 const ImageWrapper = styled(Box)(({theme}) => ({
 	width: "80px",
 	maxWidth: "80px",
-	overflow: "hidden",
+	// overflow: "hidden",
 	display: "inline-block",
-	// margin: "0 1rem",
+	margin: "0 1rem",
 	[theme.breakpoints.down("sm")]: {
 		width: "70px",
 		maxWidth: "70px",

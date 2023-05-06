@@ -1,0 +1,68 @@
+{
+	"testimonials": [
+		{
+			"id": 1,
+			"name": "Ravi Kumar",
+			"location": "Mumbai, Maharashtra",
+			"comment": "The parathas here are amazing! I love the variety and the flavors are just perfect.",
+			"rating": 5,
+			"image": "https://via.placeholder.com/300"
+		},
+		{
+			"id": 2,
+			"name": "Kiran Patel",
+			"location": "Ahmedabad, Gujarat",
+			"comment": "This restaurant is a must-visit for anyone who loves parathas. The quality and taste are both excellent.",
+			"rating": 4.5,
+			"image": "https://via.placeholder.com/300"
+		},
+		{
+			"id": 3,
+			"name": "Neha Sharma",
+			"location": "New Delhi, Delhi",
+			"comment": "I've been coming to this restaurant for years and it never disappoints. The parathas are always fresh and hot, and the service is excellent. Highly recommend!",
+			"rating": 4,
+			"image": "https://via.placeholder.com/300"
+		},
+		{
+			"id": 4,
+			"name": "Amit Singh",
+			"location": "Jaipur, Rajasthan",
+			"comment": "The parathas here are simply amazing. I love the variety and the service is always friendly and attentive.",
+			"rating": 5,
+			"image": "https://via.placeholder.com/300"
+		},
+		{
+			"id": 5,
+			"name": "Sarika Gupta",
+			"location": "Kolkata, West Bengal",
+			"comment": "I can't get enough of the parathas here! They're always fresh and the flavors are incredible.",
+			"rating": 4.5,
+			"image": "https://via.placeholder.com/300"
+		},
+		{
+			"id": 6,
+			"name": "Prakash Reddy",
+			"location": "Hyderabad, Telangana",
+			"comment": "This restaurant has some of the best parathas I've ever had. The quality and taste are both excellent, and the prices are very reasonable.",
+			"rating": 5,
+			"image": "https://via.placeholder.com/300"
+		},
+		{
+			"id": 7,
+			"name": "Aarti Desai",
+			"location": "Surat, Gujarat",
+			"comment": "I'm a huge fan of parathas and this place does not disappoint. The quality is consistently high and the flavors are amazing.",
+			"rating": 4,
+			"image": "https://via.placeholder.com/300"
+		},
+		{
+			"id": 8,
+			"name": "Vikram Singh",
+			"location": "Lucknow, Uttar Pradesh",
+			"comment": "This is my favorite paratha restaurant in town. The parathas are always fresh and the flavors are incredible. Highly recommend!",
+			"rating": 5,
+			"image": "https://via.placeholder.com/300"
+		}
+	]
+}

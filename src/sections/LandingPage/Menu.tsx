@@ -1,6 +1,5 @@
 import {useState} from "react";
 import {alpha, styled} from "@mui/material/styles";
-// import {useInView} from "react-intersection-observer";
 
 import {Box, Button, Container, Grid, Fade, Tab, Tabs, Typography, useTheme} from "@mui/material";
 
@@ -93,11 +92,6 @@ function a11yProps(index: number) {
 const Menu = () => {
 	const theme = useTheme();
 	const [value, setValue] = useState(0);
-	// const [menuItems, setMenuItems] = useState<MenuItem[] | null>();
-	// const [ref, inView] = useInView({
-	// 	threshold: 0.3,
-	// 	triggerOnce: true,
-	// });
 
 	const menuData: MenuItem[] = menu;
 
@@ -169,7 +163,6 @@ const Menu = () => {
 										"&.Mui-selected": {
 											color: theme.palette.custom.butter,
 											background: color,
-											dropShadow: "0px 15px 30px rgba(0, 0, 0, 0.15)",
 										},
 									}}
 									{...a11yProps(index)}
@@ -185,7 +178,7 @@ const Menu = () => {
 						<TabPanelWrapper key={category} value={value} index={index}>
 							<Fade
 								in={value === index}
-								timeout={{enter: 900, exit: 1000}}
+								timeout={{enter: 900, exit: 1500}}
 								mountOnEnter
 								unmountOnExit
 							>
@@ -208,6 +201,7 @@ const Menu = () => {
 								color: theme.palette.custom.butter,
 								py: ".8rem",
 								px: "2rem",
+								boxShadow: "rgba(0, 0, 0, 0.15) 0px 4px 12px",
 							}}
 						>
 							Show More

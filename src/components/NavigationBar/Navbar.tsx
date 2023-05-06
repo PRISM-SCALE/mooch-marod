@@ -51,16 +51,18 @@ export default function Navbar(props: Props) {
 	};
 
 	return (
-		<React.Fragment>
-			<CssBaseline />
+		<Box component="header">
 			<ElevationScroll {...props}>
-				<AppBar position="fixed" sx={{top: 0}}>
+				<AppBar position="fixed" sx={{top: 0}} component="nav">
 					<Container>
-						<Toolbar sx={{width: "100%", ...spaceBetween}} disableGutters>
+						<Toolbar
+							sx={{width: "100%", flexDirection: {xs: "row-reverse", md: "row"}, ...spaceBetween}}
+							disableGutters
+						>
 							<>
 								{isSmallScreen === !isMediumScreen ? (
 									<IconButton sx={{color: "white"}}>
-										<Iconify icon={"gg:menu-left-alt"} size={24} />
+										<Iconify icon={"gg:menu-right"} size={24} />
 									</IconButton>
 								) : null}
 
@@ -95,6 +97,6 @@ export default function Navbar(props: Props) {
 				</AppBar>
 			</ElevationScroll>
 			<Toolbar />
-		</React.Fragment>
+		</Box>
 	);
 }
