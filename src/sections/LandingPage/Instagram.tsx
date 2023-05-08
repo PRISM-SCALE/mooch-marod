@@ -20,7 +20,9 @@ const SlideWrapper = styled(Slider)(({theme}) => ({
 const SlideChildWrapper = styled(Box)(({theme}) => ({}));
 
 const Slide = styled(Box)(({theme}) => ({
-	margin: "0 1rem",
+	marginLeft: "1rem",
+	display: "flex",
+	justifyContent: "center",
 }));
 
 const Instagram = () => {
@@ -65,10 +67,11 @@ const Instagram = () => {
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,
+					centerMode: true,
 				},
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 500,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,

@@ -18,7 +18,7 @@ const SlideWrapper = styled(Slider)(({theme}) => ({}));
 const SlideChildWrapper = styled(Box)(({theme}) => ({}));
 
 const Slide = styled(Box)(({theme}) => ({
-	margin: "0 1rem",
+	marginRight: "1rem",
 }));
 
 const ReviewCarousel = () => {
@@ -30,36 +30,9 @@ const ReviewCarousel = () => {
 		slidesToScroll: 1,
 		initialSlide: 0,
 		draggable: true,
-		lazyLoad: "ondemand",
 		arrows: false,
 		autoplay: true,
-
-		// responsive: [
-		// 	{
-		// 		breakpoint: 1024,
-		// 		settings: {
-		// 			slidesToShow: 1,
-		// 			slidesToScroll: 3,
-		// 			infinite: true,
-		// 			dots: true,
-		// 		},
-		// 	},
-		// 	{
-		// 		breakpoint: 600,
-		// 		settings: {
-		// 			slidesToShow: 2,
-		// 			slidesToScroll: 2,
-		// 			initialSlide: 2,
-		// 		},
-		// 	},
-		// 	{
-		// 		breakpoint: 480,
-		// 		settings: {
-		// 			slidesToShow: 1,
-		// 			slidesToScroll: 1,
-		// 		},
-		// 	},
-		// ],
+		// centerMode: true,
 	};
 	return (
 		<SlideWrapper {...settings}>
