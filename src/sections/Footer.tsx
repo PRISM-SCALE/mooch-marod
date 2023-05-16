@@ -1,4 +1,4 @@
-import {Box, Container, Typography, alpha, useTheme} from "@mui/material";
+import {Box, Container, Typography, alpha} from "@mui/material";
 import logo_white from "/icons/logo_notag_white.svg";
 import {Link} from "react-router-dom";
 import {footerLinks} from "../utils/links";

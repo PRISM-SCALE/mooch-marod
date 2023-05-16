@@ -34,6 +34,7 @@ const ReviewCarousel = () => {
 		autoplay: true,
 		// centerMode: true,
 	};
+	
 	return (
 		<SlideWrapper {...settings}>
 			{testimonials.map(({id, name, comment, image, location, rating}) => (
