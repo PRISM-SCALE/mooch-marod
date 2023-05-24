@@ -33,7 +33,7 @@ const MenuDetail = ({menuList}: Props): JSX.Element => {
 									color={theme.palette.custom.achar}
 									fontWeight={600}
 								>
-									${price}
+									₹{price}
 								</Typography>
 							</Box>
 							<Typography

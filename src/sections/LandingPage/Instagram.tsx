@@ -2,7 +2,7 @@ import {Box, styled, useTheme} from "@mui/material";
 import Slider, {Settings} from "react-slick";
 
 // JSON
-import {insta} from "../../_mock/instagarm.json";
+import {insta} from "../../_mock/instagram.json";
 
 // COMPONENTS
 import InstaCard from "../../components/InstaCard";
@@ -36,7 +36,6 @@ const Instagram = () => {
 		slidesToScroll: 1,
 		initialSlide: 0,
 		draggable: true,
-		lazyLoad: "ondemand",
 		arrows: false,
 		autoplay: true,
 
@@ -67,7 +66,7 @@ const Instagram = () => {
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,
-					centerMode: true,
+					// centerMode: true,
 				},
 			},
 			{
