@@ -115,7 +115,7 @@ const Menu = () => {
 				<Box sx={{textAlign: "center"}}>
 					<Typography
 						variant="caption"
-						sx={{color: theme.palette.custom.achar, fontSize: {xs: "0.8rem", md: "1rem"}}}
+						sx={{color: theme.palette.custom.achar, fontSize: {xs: "0.8rem"}}}
 					>
 						PICK YOUR FAVORITES
 					</Typography>

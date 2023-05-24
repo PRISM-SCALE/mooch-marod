@@ -1,8 +1,11 @@
+import { Box } from "@mui/material";
+import MoochStory from "../sections/About/MoochStory";
+
 const About = () => {
 	return (
-		<div>
-			<h1>ABOUT PAGE</h1>
-		</div>
+		<Box >
+			<MoochStory />
+		</Box>
 	);
 };
 

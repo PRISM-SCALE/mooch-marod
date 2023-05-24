@@ -12,7 +12,11 @@ const GoogleReviews = () => {
 				<Box sx={{textAlign: "center", mb: 8}}>
 					<Typography
 						variant="caption"
-						sx={{color: theme.palette.custom.achar, fontSize: {xs: "0.8rem", md: "1rem"}}}
+						sx={{
+							color: theme.palette.custom.achar,
+							fontSize: {xs: "0.8rem"},
+							textTransform: "uppercase",
+						}}
 					>
 						Testimonials
 					</Typography>
