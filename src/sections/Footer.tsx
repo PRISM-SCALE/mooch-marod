@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import {footerLinks} from "../utils/links";
 import FooterGallery from "../components/FooterGallery";
 import {useResponsive} from "../hooks/useResponsive";
+import SocialIcons from "../components/SocialIcons";
 
 interface Styles {
 	[key: string]: string | number | object;
@@ -107,7 +108,7 @@ const Footer = () => {
 						))}
 					</Box>
 
-					<Box sx={{color: "#aaa", fontSize: ".8rem"}}>SOCIAL ICONS</Box>
+					<Box sx={{color: "#aaa", fontSize: ".8rem"}}>{/* <SocialIcons /> */}</Box>
 				</Box>
 
 				<Box sx={{textAlign: "center"}}>

@@ -1,5 +1,6 @@
 import {Avatar, Box, Rating, Typography, useTheme} from "@mui/material";
 import Iconify from "./Iconify";
+import {useResponsive} from "../hooks/useResponsive";
 
 type Props = {
 	rating: number;
@@ -11,6 +12,7 @@ type Props = {
 
 const TestimonialCard = ({rating, name, reviewText, location}: Props) => {
 	const theme = useTheme();
+	const {smallScreenAndUp} = useResponsive();
 	return (
 		<Box
 			sx={{
@@ -42,7 +44,9 @@ const TestimonialCard = ({rating, name, reviewText, location}: Props) => {
 			</Box> */}
 
 			<Box sx={{p: 4}}>
-				<Iconify icon={"bxs:quote-alt-left"} size={52} color={theme.palette.custom.achar} />
+				{smallScreenAndUp && (
+					<Iconify icon={"bxs:quote-alt-left"} size={52} color={theme.palette.custom.achar} />
+				)}
 				<Typography variant="body1" mb={3} width={{xs: "100%"}} sx={{fontSize: "1rem", mt: 4}}>
 					{reviewText}
 				</Typography>

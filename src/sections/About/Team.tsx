@@ -1,6 +1,6 @@
 import {Box, Container, Typography} from "@mui/material";
 import {useTheme} from "@mui/material/styles";
-
+import ChefCard from "../../components/About/ChefCard";
 
 const Team = () => {
 	const theme = useTheme();
@@ -26,6 +26,19 @@ const Team = () => {
 					>
 						Behind the taste
 					</Typography>
+				</Box>
+
+				<Box
+					sx={{
+						display: "grid",
+						gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+						gridGap: "20px",
+					}}
+				>
+					<ChefCard chefName="Sofia Richie" chefTitle="chef chef" src="/images/chef1.png" />
+					<ChefCard chefName="Emilia Clarke" chefTitle="chef chef" src="/images/chef2.png" />
+					<ChefCard chefName="Harvey Dent" chefTitle="chef chef" src="/images/chef3.png" />
+					<ChefCard chefName="Sam Claflin" chefTitle="chef chef" src="/images/chef4.png" />
 				</Box>
 			</Container>
 		</Box>

@@ -10,6 +10,8 @@ export const useResponsive = () => {
 
 	const isXSmallScreen = useMediaQuery(theme.breakpoints.up("xs"));
 
+	const smallScreenAndUp = useMediaQuery(theme.breakpoints.up("sm"));
+
 	const isSmallScreen = useMediaQuery(theme.breakpoints.between("xs", "sm"));
 
 	const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
@@ -22,6 +24,7 @@ export const useResponsive = () => {
 	// const matchScreenTo = useMediaQuery(customBreakpoint);
 
 	return {
+		smallScreenAndUp,
 		isXSmallScreen,
 		isSmallScreen,
 		isMediumScreen,
