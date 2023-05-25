@@ -9,10 +9,13 @@ import {themeSettings} from "./theme";
 // LAYOUT
 import RootLayout from "./pages/RootLayout.tsx";
 
+// NOT FOUND (404)
+import NotFound from "./sections/NotFound.tsx";
+
 // PAGES
 import Home from "./pages/Home.tsx";
 import About from "./pages/About.tsx";
-import NotFound from "./sections/NotFound.tsx";
+import Contact from "./pages/Contact.tsx";
 
 const App = () => {
 	const theme = useMemo(() => createTheme(themeSettings), []);
@@ -27,6 +30,10 @@ const App = () => {
 				{
 					path: "/about",
 					element: <About />,
+				},
+				{
+					path: "/contact",
+					element: <Contact />,
 				},
 			],
 		},

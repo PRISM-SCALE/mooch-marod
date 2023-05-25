@@ -11,7 +11,7 @@ export const menuLinks = [
 	{link: "/menu", path: "Menu"},
 	{link: "/offers", path: "Offers"},
 	{link: "/outlets", path: "Outlets"},
-	{link: "/contacts", path: "Contacts"},
+	{link: "/contact", path: "Contact"},
 ];
 
 export const footerImageUrl = [

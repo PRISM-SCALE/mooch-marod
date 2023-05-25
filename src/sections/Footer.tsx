@@ -74,7 +74,9 @@ const Footer = () => {
 					sx={{
 						display: "flex",
 						alignItems: "center",
-						justifyContent: "space-between",
+						justifyContent: {xs: "center", md: "space-between"},
+						flexDirection: { xs: "column", md: "row" },
+						
 						mb: 6,
 						pt: 4,
 						borderTop: `1px solid ${alpha("#aaa", 0.4)}`,
@@ -85,7 +87,7 @@ const Footer = () => {
 							display: "flex",
 							alignItems: "center",
 							justifyContent: "space-between",
-							width: "40%",
+							width: {xs: "100%", sm: "40%"},
 						}}
 					>
 						{footerLinks.map((item, index) => (
@@ -98,6 +100,7 @@ const Footer = () => {
 									textDecoration: "none",
 									fontSize: ".8rem",
 									transition: ".5s ease-out",
+									my: 2,
 									"&:hover": {
 										color: "white",
 									},
@@ -108,7 +111,15 @@ const Footer = () => {
 						))}
 					</Box>
 
-					<Box sx={{color: "#aaa", fontSize: ".8rem"}}>{/* <SocialIcons /> */}</Box>
+					<Box sx={{color: "#aaa", fontSize: ".8rem"}}>
+						<SocialIcons
+							width={40}
+							height={40}
+							size={30}
+							justifyContent={"center"}
+							sx={{marginY: 2}}
+						/>
+					</Box>
 				</Box>
 
 				<Box sx={{textAlign: "center"}}>
