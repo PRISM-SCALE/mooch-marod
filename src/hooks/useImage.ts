@@ -33,9 +33,9 @@ const useImage = (initialSrc: string): ImageState => {
 				if (isMounted) {
 					setImage({src: objectURL, isLoading: false, error: null});
 				}
-			} catch (error) {
+			} catch (error: unknown) {
 				if (isMounted) {
-					setImage({src: initialSrc, isLoading: false, error});
+					setImage({src: initialSrc, isLoading: false, error: error as Error});
 				}
 			}
 		};
