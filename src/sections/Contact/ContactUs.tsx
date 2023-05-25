@@ -78,7 +78,15 @@ const ContactUs = () => {
 						</Box>
 					</Box>
 
-					<Box sx={{width: {xs: "100%", md: "45%"}}}>
+					<Box
+						sx={{
+							mt: 4,
+							width: {xs: "100%", md: "45%"},
+							[theme.breakpoints.down("md")]: {
+								textAlign: "center",
+							},
+						}}
+					>
 						{/* ------------------------------------------------- */}
 						{/* CONTACT FORM */}
 						<Typography variant="h2" color={theme.palette.custom.paratha}>
