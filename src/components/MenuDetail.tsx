@@ -15,8 +15,6 @@ type Props = {
 const MenuDetail = ({menuList}: Props): JSX.Element => {
 	const theme = useTheme();
 
-	console.log(menuList);
-
 	return (
 		<>
 			{menuList.map(({name, description, price}) => {

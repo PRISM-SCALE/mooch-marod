@@ -14,13 +14,26 @@ const Hero = () => {
 				justifyContent: "center",
 				flexDirection: "column",
 				overflow: "hidden",
+				position: "relative",
+				zIndex: -10,
 			}}
 		>
-			{/* HERO Section Navigation */}
-
+			<img
+				src="/images/jabardast_desi.png"
+				alt="jabardast_desi"
+				style={{
+					height: 760,
+					position: "absolute",
+					top: "50%",
+					left: "50%",
+					transform: "translate(-50%, -50%) rotate(-15deg)",
+					zIndex: -5,
+					opacity: 0.25,
+				}}
+			/>
 			<Container>
-				<Box>
-					<Box sx={{position: "relative", zIndex: 10}}>
+				<Box sx={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
+					<Box>
 						<Box sx={{display: "flex", alignItems: "center"}}>
 							<Typography color={theme.palette.custom.paratha} fontWeight={600} fontSize={".8rem"}>
 								PARATHA TIME
@@ -43,6 +56,8 @@ const Hero = () => {
 							share your love
 							<br /> for paratha!
 						</Typography>
+
+						{/* ------------------------------------------ */}
 
 						<Button
 							sx={{
@@ -84,49 +99,17 @@ const Hero = () => {
 						>
 							Bulk order
 						</Button>
+
+						{/* ------------------------------------------ */}
 					</Box>
 
 					<Box sx={{position: "relative"}}>
-						<img
-							src="/images/jabardast_desi.png"
-							alt="jabardast_desi"
-							style={{
-								height: 760,
-								position: "absolute",
-								top: "50%",
-								left: "50%",
-								transform: "translate(-50%, -70%) rotate(-15deg)",
-								zIndex: 0,
-								opacity: 0.25,
-							}}
-						/>
-
 						<Box
 							component="img"
-							src="/images/tWO.webp"
-							alt="image"
+							src="/images/1.webp"
+							alt="paratha_animation"
 							sx={{
-								height: 380,
-								[theme.breakpoints.up("md")]: {
-									position: "absolute",
-									right: -400,
-									top: -50,
-									transform: "translate(-50%, -70%)",
-								},
-							}}
-						/>
-						<Box
-							component="img"
-							src="/images/WBP.webp"
-							alt="tag"
-							sx={{
-								height: 280,
-								[theme.breakpoints.up("md")]: {
-									position: "absolute",
-									right: -280,
-									top: -320,
-									transform: "translate(-50%, -70%)",
-								},
+								height: 420,
 							}}
 						/>
 					</Box>
