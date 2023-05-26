@@ -5,14 +5,11 @@ import {useTheme} from "@mui/material/styles";
 import {useResponsive} from "../../hooks/useResponsive";
 
 // COMPONENTS
-import ReponsiveImage from "../../components/ReponsiveImage";
-
-import Portrait from "../../../public/images/portrait.jpg";
-import Portrait2 from "../../../public/images/portrait2.jpg";
+import ResponsiveImage from "../../components/ResponsiveImage";
 
 const MoochStory = () => {
 	const theme = useTheme();
-	const {isMediumScreen, isSmallScreen, isLargeScreen, isXlargeScreen} = useResponsive();
+	const {isMediumScreen, isSmallScreen, isLargeScreen, largeScreenAndUp} = useResponsive();
 
 	return (
 		<Box component="section" py={{xs: "2rem", md: "4rem"}}>
@@ -79,12 +76,12 @@ const MoochStory = () => {
 
 					{/* Portrait Image */}
 					<Box sx={{width: {xs: "100%", md: "25%"}}}>
-						{(isXlargeScreen || isLargeScreen) && (
-							<ReponsiveImage src={Portrait} alt="portrait-image" width="380px" />
+						{(largeScreenAndUp || isLargeScreen) && (
+							<ResponsiveImage src={"/images/portrait.jpg"} alt="portrait-image" width="380px" />
 						)}
 
 						{(isSmallScreen || isMediumScreen) && (
-							<ReponsiveImage src={Portrait2} alt="portrait-image" width="100%" />
+							<ResponsiveImage src={"/images/portrait2.jpg"} alt="portrait-image" width="100%" />
 						)}
 					</Box>
 				</Box>

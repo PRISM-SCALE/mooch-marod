@@ -4,7 +4,7 @@ type Props = {
 	width: string;
 };
 
-const ReponsiveImage = ({src, alt, width}: Props) => {
+const ResponsiveImage = ({src, alt, width}: Props) => {
 	return (
 		<img
 			src={src}
@@ -20,4 +20,4 @@ const ReponsiveImage = ({src, alt, width}: Props) => {
 	);
 };
 
-export default ReponsiveImage;
+export default ResponsiveImage;

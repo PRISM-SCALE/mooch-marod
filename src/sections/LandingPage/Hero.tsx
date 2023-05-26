@@ -36,7 +36,7 @@ const Hero = () => {
 						</Box>
 						<Typography
 							variant="h1"
-							fontSize={{xs: "2.2rem", sm: "2.8rem", md: "4rem"}}
+							fontSize={{xs: "2.2rem", sm: "2.8rem", md: "4.8rem"}}
 							color="white"
 							sx={{textTransform: "uppercase"}}
 						>
@@ -91,24 +91,42 @@ const Hero = () => {
 							src="/images/jabardast_desi.png"
 							alt="jabardast_desi"
 							style={{
+								height: 760,
 								position: "absolute",
 								top: "50%",
-								left: "80%",
+								left: "50%",
 								transform: "translate(-50%, -70%) rotate(-15deg)",
 								zIndex: 0,
-								opacity: 0.5,
+								opacity: 0.25,
 							}}
 						/>
 
-						<img
+						<Box
+							component="img"
 							src="/images/tWO.webp"
-							alt=""
-							style={{
+							alt="image"
+							sx={{
 								height: 380,
-								position: "absolute",
-								right: -300,
-								top: -50,
-								transform: "translate(-50%, -70%)",
+								[theme.breakpoints.up("md")]: {
+									position: "absolute",
+									right: -400,
+									top: -50,
+									transform: "translate(-50%, -70%)",
+								},
+							}}
+						/>
+						<Box
+							component="img"
+							src="/images/WBP.png"
+							alt="tag"
+							sx={{
+								height: 280,
+								[theme.breakpoints.up("md")]: {
+									position: "absolute",
+									right: -280,
+									top: -320,
+									transform: "translate(-50%, -70%)",
+								},
 							}}
 						/>
 					</Box>
