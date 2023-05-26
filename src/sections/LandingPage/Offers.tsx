@@ -1,16 +1,21 @@
 import {Box, Button, Container, Grid, Typography, useTheme} from "@mui/material";
 
 const Offers = () => {
-	const theme = useTheme()
+	const theme = useTheme();
 	return (
-		<Box component="section" id="offers_section" py={{xs: "2rem", md: "4rem"}}>
+		<Box
+			component="section"
+			id="offers_section"
+			py={{xs: "2rem", md: "4rem"}}
+			// sx={{overflow: "hidden"}}
+		>
 			<Container>
 				<Grid container spacing={2}>
 					<Grid item xs={12}>
 						<Box
 							sx={{
 								backgroundImage: `url(/images/offers_banner.webp)`,
-								height: {xs: 340, md: 280},
+								height: 280,
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
 								p: "2rem",
@@ -23,7 +28,6 @@ const Offers = () => {
 							sx={{
 								backgroundImage: `url(/images/offer_sq_temp_1.webp)`,
 								height: 280,
-								width: 280,
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
 							}}
@@ -34,17 +38,17 @@ const Offers = () => {
 							sx={{
 								backgroundImage: `url(/images/offer_sq_temp_2.webp)`,
 								height: 280,
-								width: 280,
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
 							}}
 						></Box>
 					</Grid>
+
 					<Grid item xs={12} lg={6}>
 						<Box
 							sx={{
 								backgroundImage: `url(/images/offer_email_subs.jpeg)`,
-								height: 280,
+								height: {xs: "auto", md: 280},
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
 								p: 4,
