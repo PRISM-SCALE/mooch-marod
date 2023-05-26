@@ -1,9 +1,12 @@
-
+import {Box} from "@mui/material";
+import Hero from "../sections/Menu/Hero";
 
 const Menu = () => {
-  return (
-   <h1>MENU</h1>
-  )
-}
+	return (
+		<Box>
+			<Hero />
+		</Box>
+	);
+};
 
-export default Menu
+export default Menu;

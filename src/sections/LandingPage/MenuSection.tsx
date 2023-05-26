@@ -184,7 +184,7 @@ const MenuSection = () => {
 							>
 								<Grid container columnSpacing={4}>
 									{/* MAPPING THE MENU-LIST */}
-									<MenuDetail menuList={menuList} />
+									<MenuDetail menuList={menuList.slice(0, 10)} />
 								</Grid>
 							</Fade>
 						</TabPanelWrapper>
