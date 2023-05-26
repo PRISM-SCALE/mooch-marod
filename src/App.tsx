@@ -16,6 +16,7 @@ import NotFound from "./sections/NotFound.tsx";
 import Home from "./pages/Home.tsx";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
+import Menu from "./pages/Menu.tsx";
 
 const App = () => {
 	const theme = useMemo(() => createTheme(themeSettings), []);
@@ -34,6 +35,10 @@ const App = () => {
 				{
 					path: "/contact",
 					element: <Contact />,
+				},
+				{
+					path: "/menu",
+					element: <Menu />,
 				},
 			],
 		},

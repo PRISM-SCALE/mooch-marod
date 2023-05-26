@@ -117,7 +117,7 @@ const Hero = () => {
 						/>
 						<Box
 							component="img"
-							src="/images/WBP.png"
+							src="/images/WBP.webp"
 							alt="tag"
 							sx={{
 								height: 280,

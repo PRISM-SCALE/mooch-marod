@@ -4,7 +4,7 @@ import {Box} from "@mui/material";
 import Hero from "../sections/LandingPage/Hero.tsx";
 import Counts from "../sections/LandingPage/Counts.tsx";
 import Offers from "../sections/LandingPage/Offers.tsx";
-import Menu from "../sections/LandingPage/Menu.tsx";
+import MenuSection from "../sections/LandingPage/MenuSection.tsx";
 import ParathaBanner from "../sections/LandingPage/ParathaBanner.tsx";
 import GoogleReviews from "../sections/LandingPage/GoogleReviews.tsx";
 import Instagram from "../sections/LandingPage/Instagram.tsx";
@@ -16,7 +16,7 @@ const Home = () => {
 			<Hero />
 			<Counts />
 			<Offers />
-			<Menu />
+			<MenuSection />
 			<ParathaBanner />
 			<GoogleReviews />
 			<Instagram />

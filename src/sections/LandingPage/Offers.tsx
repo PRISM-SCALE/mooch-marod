@@ -1,6 +1,7 @@
-import {Box, Button, Container, Grid, Typography} from "@mui/material";
+import {Box, Button, Container, Grid, Typography, useTheme} from "@mui/material";
 
 const Offers = () => {
+	const theme = useTheme()
 	return (
 		<Box component="section" id="offers_section" py={{xs: "2rem", md: "4rem"}}>
 			<Container>
@@ -8,25 +9,21 @@ const Offers = () => {
 					<Grid item xs={12}>
 						<Box
 							sx={{
-								backgroundImage: `url(/images/offers_banner.png)`,
+								backgroundImage: `url(/images/offers_banner.webp)`,
 								height: {xs: 340, md: 280},
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
-								p: '2rem'
+								p: "2rem",
 							}}
-						>
-							<Typography variant="h3" sx={{color: "white"}}>
-								OFFERS
-							</Typography>
-							<Typography variant='body1' fontSize='1rem' color='white'>We offer a wide range of parathas</Typography>
-						</Box>
+						/>
 					</Grid>
 
 					<Grid item xs={12} md={6} lg={3}>
 						<Box
 							sx={{
-								backgroundImage: `url(/images/offer_sq_temp_1.png)`,
-								height: 260,
+								backgroundImage: `url(/images/offer_sq_temp_1.webp)`,
+								height: 280,
+								width: 280,
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
 							}}
@@ -35,8 +32,9 @@ const Offers = () => {
 					<Grid item xs={12} md={6} lg={3}>
 						<Box
 							sx={{
-								backgroundImage: `url(/images/offer_sq_temp_2.png)`,
-								height: 260,
+								backgroundImage: `url(/images/offer_sq_temp_2.webp)`,
+								height: 280,
+								width: 280,
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
 							}}
@@ -45,10 +43,11 @@ const Offers = () => {
 					<Grid item xs={12} lg={6}>
 						<Box
 							sx={{
-								backgroundImage: `url(/images/offer_email_subs.jpg)`,
-								height: 260,
+								backgroundImage: `url(/images/offer_email_subs.jpeg)`,
+								height: 280,
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
+								p: 4,
 							}}
 						>
 							<Typography
@@ -96,9 +95,9 @@ const Offers = () => {
 									variant="contained"
 									sx={{
 										py: "0.7rem",
-										backgroundColor: "#D93423",
+										backgroundColor: theme.palette.custom.paratha,
 										"&:hover": {
-											backgroundColor: "#D93423",
+											backgroundColor: theme.palette.custom.paratha,
 										},
 										width: {xs: "40%!important", md: "30%!important"},
 									}}
