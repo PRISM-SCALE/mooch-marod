@@ -23,14 +23,14 @@ const MenuDetail = ({menuList}: Props): JSX.Element => {
 						<Box sx={{width: {xs: "100%"}}}>
 							<Box sx={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
 								<Typography
-									fontSize={{xs: "1.2rem", sm: "1.2rem"}}
+									fontSize={{xs: "1rem", sm: "1.2rem"}}
 									color={theme.palette.custom.paratha}
 									fontWeight={600}
 								>
 									{name}
 								</Typography>
 								<Typography
-									fontSize={{xs: "1.2rem", sm: "1.2rem"}}
+									fontSize={{xs: "1rem", sm: "1.2rem"}}
 									color={theme.palette.custom.achar}
 									fontWeight={600}
 								>
