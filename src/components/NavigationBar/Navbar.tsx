@@ -35,7 +35,7 @@ function ElevationScroll(props: Props) {
 	return React.cloneElement(children as React.ReactElement, {
 		elevation: trigger ? 4 : 0,
 		style: {
-			backgroundColor: theme.palette.custom.achar,
+			backgroundColor: trigger ? theme.palette.custom.achar : "transparent",
 		},
 	});
 }
@@ -102,7 +102,7 @@ export default function Navbar(props: Props) {
 				</AppBar>
 			</ElevationScroll>
 
-			<Toolbar sx={{height: "80px"}} />
+			{/* <Toolbar sx={{height: "80px", backgroundColor: "transparent"}} /> */}
 		</Box>
 	);
 }

@@ -21,7 +21,7 @@ const Hero = () => {
 			id="hero_section"
 			sx={{
 				background: theme.palette.custom.achar,
-				height: "95vh",
+				height: "100vh",
 				width: "100%",
 				display: "flex",
 				justifyContent: "center",

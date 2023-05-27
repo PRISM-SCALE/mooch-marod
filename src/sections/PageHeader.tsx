@@ -1,6 +1,11 @@
 import {Box, Container, Typography, useTheme} from "@mui/material";
 
-const Hero = () => {
+type Props = {
+	tagline: string;
+	title: string;
+};
+
+const PageHeader = ({tagline, title}: Props) => {
 	const theme = useTheme();
 	return (
 		<Box
@@ -31,7 +36,7 @@ const Hero = () => {
 						fontSize={".8rem"}
 						sx={{textTransform: "uppercase"}}
 					>
-						Choose your Paratha
+						{tagline}
 					</Typography>
 					<Typography
 						variant="h2"
@@ -39,7 +44,7 @@ const Hero = () => {
 						color="white"
 						sx={{textTransform: "uppercase"}}
 					>
-						RESTAURANT MENU
+						{title}
 					</Typography>
 				</Box>
 			</Container>
@@ -47,4 +52,4 @@ const Hero = () => {
 	);
 };
 
-export default Hero;
+export default PageHeader;

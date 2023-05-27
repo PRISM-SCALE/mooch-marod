@@ -10,17 +10,8 @@ import MenuDetail from "../../components/MenuDetail";
 // JSON DATA
 import {menu} from "../../_mock/menu.json";
 
-interface MenuItem {
-	name: string;
-	category: string;
-	description: string;
-	price: number;
-	priority: number;
-}
-
-interface GroupedMenuData {
-	[category: string]: MenuItem[];
-}
+// INTERFACE
+import {GroupedMenuData, groupData} from "../../utils/groupby";
 
 interface StyledTabsProps {
 	children?: React.ReactNode;
@@ -102,17 +93,7 @@ const MenuSection = () => {
 	const theme = useTheme();
 	const [value, setValue] = useState(0);
 
-	const menuData: MenuItem[] = menu;
-
-	const groupedMenuData: GroupedMenuData = {};
-
-	menuData.forEach((menuItem) => {
-		if (groupedMenuData[menuItem.category]) {
-			groupedMenuData[menuItem.category].push(menuItem);
-		} else {
-			groupedMenuData[menuItem.category] = [menuItem];
-		}
-	});
+	const groupedMenuData: GroupedMenuData = groupData(menu);
 
 	const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
 		setValue(newValue);

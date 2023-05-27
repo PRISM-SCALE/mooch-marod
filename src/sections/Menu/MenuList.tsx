@@ -1,20 +1,9 @@
-import {Box, Container, Typography, useTheme} from "@mui/material";
+import {Box, Container, Grid, Typography, useTheme} from "@mui/material";
 
 // JSON DATA
 import {menu} from "../../_mock/menu.json";
 import MenuDetail from "../../components/MenuDetail";
-
-interface MenuItem {
-	name: string;
-	category: string;
-	description: string;
-	price: number;
-	priority: number;
-}
-
-interface GroupedMenuData {
-	[category: string]: MenuItem[];
-}
+import {GroupedMenuData, groupData} from "../../utils/groupby";
 
 interface CustomPalette {
 	paratha: string;
@@ -36,19 +25,8 @@ const tabData: TabData = {
 
 const MenuList = () => {
 	const theme = useTheme();
-	const menuData: MenuItem[] = menu;
-
-	const groupedMenuData: GroupedMenuData = {};
-
-	menuData.forEach((menuItem) => {
-		if (groupedMenuData[menuItem.category]) {
-			groupedMenuData[menuItem.category].push(menuItem);
-		} else {
-			groupedMenuData[menuItem.category] = [menuItem];
-		}
-	});
-
-	console.log(groupedMenuData);
+	// Grouped data returned from 
+	const groupedMenuData: GroupedMenuData = groupData(menu);
 
 	return (
 		<Box component="section" id="main_menu_section" py={{xs: "2rem", md: "4rem"}}>
@@ -70,7 +48,9 @@ const MenuList = () => {
 								{category.toUpperCase()}
 							</Typography>
 							{/* Menu Detail Component */}
-							<MenuDetail menuList={menuList} />
+							<Grid container columnSpacing={4}>
+								<MenuDetail menuList={menuList} />
+							</Grid>
 						</Box>
 					);
 				})}

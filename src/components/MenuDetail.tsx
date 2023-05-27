@@ -1,12 +1,5 @@
 import {Box, Grid, Typography, useTheme} from "@mui/material";
-
-interface MenuItem {
-	name: string;
-	category: string;
-	description: string;
-	price: number;
-	priority: number;
-}
+import {MenuItem} from "../utils/groupby";
 
 type Props = {
 	menuList: MenuItem[];

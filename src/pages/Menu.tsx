@@ -1,11 +1,11 @@
 import {Box} from "@mui/material";
-import Hero from "../sections/Menu/Hero";
+import PageHeader from "../sections/PageHeader";
 import MenuList from "../sections/Menu/MenuList";
 
 const Menu = () => {
 	return (
 		<Box>
-			<Hero />
+			<PageHeader tagline="Choose your Paratha" title="RESTAURANT MENU" />
 			<MenuList />
 		</Box>
 	);
