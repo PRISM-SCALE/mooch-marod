@@ -26,7 +26,7 @@ interface StyledTabsProps {
 	children?: React.ReactNode;
 	value: number;
 	onChange: (event: React.SyntheticEvent, newValue: number) => void;
-	centered: boolean;
+	centered?: boolean;
 }
 
 interface CustomPalette {
@@ -49,7 +49,7 @@ const tabData: TabData = {
 
 const StyledTabs = styled((props: StyledTabsProps) => (
 	<Tabs {...props} TabIndicatorProps={{children: <span className="MuiTabs-indicatorSpan" />}} />
-))({
+))(({theme}) => ({
 	"& .MuiTabs-indicator": {
 		display: "flex",
 		justifyContent: "center",
@@ -61,7 +61,15 @@ const StyledTabs = styled((props: StyledTabsProps) => (
 		width: 0,
 		backgroundColor: "red",
 	},
-});
+
+	"& .MuiTabs-flexContainer": {
+		flexWrap: "wrap",
+		justifyContent: "center",
+		[theme.breakpoints.between("xs", "sm")]: {
+			// justifyContent: "space-evenly",
+		},
+	},
+}));
 
 interface StyledTabProps {
 	label: string;
@@ -75,6 +83,7 @@ const StyledTab = styled((props: StyledTabProps) => <Tab disableRipple {...props
 		fontSize: theme.typography.pxToRem(15),
 		marginRight: theme.spacing(1),
 		color: alpha(theme.palette.common.black, 0.7),
+		marginTop: 8,
 
 		"&.Mui-focusVisible": {
 			backgroundColor: "transparent",
@@ -134,7 +143,7 @@ const MenuSection = () => {
 
 				{/* TAB BUTTONS */}
 				<Box sx={{mt: "1rem"}}>
-					<StyledTabs value={value} onChange={handleChange} centered>
+					<StyledTabs value={value} onChange={handleChange}>
 						{Object.keys(groupedMenuData).map((category, index) => {
 							const data = tabData[category as keyof typeof tabData];
 							const color = theme.palette.custom[data as keyof CustomPalette];

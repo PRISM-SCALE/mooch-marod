@@ -1,6 +1,6 @@
 import * as React from "react";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import {AppBar, Toolbar, CssBaseline, Box, Button, Container, IconButton} from "@mui/material";
+import {AppBar, Toolbar, Box, Button, Container, IconButton} from "@mui/material";
 import {useTheme} from "@mui/material/styles";
 
 // HOOKS
