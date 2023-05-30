@@ -5,7 +5,7 @@ import MenuList from "../sections/Menu/MenuList";
 const Menu = () => {
 	return (
 		<Box>
-			<PageHeader tagline="Choose your Paratha" title="RESTAURANT MENU" />
+			<PageHeader tagline="Choose your menu" title="RESTAURANT MENU" />
 			<MenuList />
 		</Box>
 	);

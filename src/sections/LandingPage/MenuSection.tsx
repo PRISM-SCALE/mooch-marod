@@ -12,6 +12,7 @@ import {menu} from "../../_mock/menu.json";
 
 // INTERFACE
 import {GroupedMenuData, groupData} from "../../utils/groupby";
+import {Link} from "react-router-dom";
 
 interface StyledTabsProps {
 	children?: React.ReactNode;
@@ -114,7 +115,10 @@ const MenuSection = () => {
 						sx={{textTransform: "uppercase", fontSize: {xs: 26, md: 42}}}
 						gutterBottom
 					>
-						Mooch Marod's Paratha, THE BEST IN TOWN
+						<Box component={"span"} fontWeight={500}>
+							Mooch Marod's
+						</Box>{" "}
+						Paratha, THE BEST IN TOWN
 					</Typography>
 					<Typography variant="body1" sx={{width: {xs: "100%", md: "50%"}, marginX: "auto"}}>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu in pretium
@@ -182,6 +186,8 @@ const MenuSection = () => {
 
 					<Box textAlign={"center"} mt={6}>
 						<Button
+							component={Link}
+							to="/menu"
 							sx={{
 								borderRadius: 30,
 								background: theme.palette.custom.achar,

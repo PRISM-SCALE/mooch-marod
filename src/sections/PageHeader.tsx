@@ -13,14 +13,34 @@ const PageHeader = ({tagline, title}: Props) => {
 			id="menu_header"
 			sx={{
 				background: theme.palette.custom.achar,
-				height: "40vh",
+				// backgroundImage: `url(/images/head_banner.png)`,
+				backgroundPosition: "center center",
+				backgroundRepeat: "no-repeat",
+				backgroundSize: "cover",
+				height: "45vh",
 				width: "100%",
 				display: "flex",
 				justifyContent: "center",
 				flexDirection: "column",
-				overflow: "hidden",
+				// overflow: "hidden",
+				// position: "relative",
+				// zIndex: -10,
 			}}
 		>
+			{/* <img
+				src="/images/jabardast_desi.png"
+				alt="jabardast_desi"
+				style={{
+					height: 360,
+					position: "absolute",
+					top: "50%",
+					left: "50%",
+					transform: "translate(-50%, -50%) ",
+					zIndex: -5,
+					opacity: 0.25,
+				}}
+				loading="lazy"
+			/> */}
 			<Container>
 				<Box
 					sx={{
@@ -31,7 +51,7 @@ const PageHeader = ({tagline, title}: Props) => {
 					}}
 				>
 					<Typography
-						color={theme.palette.custom.paratha}
+						color={theme.palette.custom.achar}
 						fontWeight={600}
 						fontSize={".8rem"}
 						sx={{textTransform: "uppercase"}}
