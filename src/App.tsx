@@ -9,8 +9,6 @@ import {themeSettings} from "./theme";
 // LAYOUT
 import RootLayout from "./pages/RootLayout.tsx";
 
-
-
 // NOT FOUND (404)
 import NotFound from "./sections/NotFound.tsx";
 
@@ -19,6 +17,8 @@ import Home from "./pages/Home.tsx";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
 import Menu from "./pages/Menu.tsx";
+import Outlets from "./pages/Outlets.tsx";
+import Offers from "./pages/Offers.tsx";
 
 const App = () => {
 	const theme = useMemo(() => createTheme(themeSettings), []);
@@ -41,6 +41,14 @@ const App = () => {
 				{
 					path: "/menu",
 					element: <Menu />,
+				},
+				{
+					path: "/outlets",
+					element: <Outlets />,
+				},
+				{
+					path: "/offers",
+					element: <Offers />,
 				},
 			],
 		},

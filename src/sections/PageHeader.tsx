@@ -51,7 +51,7 @@ const PageHeader = ({tagline, title}: Props) => {
 					}}
 				>
 					<Typography
-						color={theme.palette.custom.achar}
+						color={theme.palette.custom.paratha}
 						fontWeight={600}
 						fontSize={".8rem"}
 						sx={{textTransform: "uppercase"}}
