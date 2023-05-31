@@ -4,8 +4,9 @@ import {Box} from "@mui/material";
 import NavItem from "./NavItem";
 
 // Navigation Links
-import {menuLinks} from "../../utils/links";
+import {ROOT_LINK, menuLinks} from "../../utils/links";
 import Logo from "../Logo";
+import {Link} from "react-router-dom";
 
 const NavbarList = () => {
 	const firstThree = [...menuLinks.slice(0, 3)];
@@ -25,7 +26,9 @@ const NavbarList = () => {
 			{firstThree.map(({link, path}, key) => (
 				<NavItem link={link} path={path} key={key} />
 			))}
-			<Logo />
+			<Link to={ROOT_LINK}>
+				<Logo />
+			</Link>
 			{lastThree.map(({link, path}, key) => (
 				<NavItem link={link} path={path} key={key} />
 			))}

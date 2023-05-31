@@ -19,6 +19,7 @@ import Contact from "./pages/Contact.tsx";
 import Menu from "./pages/Menu.tsx";
 import Outlets from "./pages/Outlets.tsx";
 import Offers from "./pages/Offers.tsx";
+import LandingPage from "./pages/LandingPage.tsx";
 
 const App = () => {
 	const theme = useMemo(() => createTheme(themeSettings), []);
@@ -29,7 +30,11 @@ const App = () => {
 			element: <RootLayout />,
 			// errorElement: <ErrorPage />,
 			children: [
-				{index: true, element: <Home />},
+				// {index: true, element: <LandingPage />},
+				{
+					path: "/home",
+					element: <Home />,
+				},
 				{
 					path: "/about",
 					element: <About />,
@@ -52,6 +57,12 @@ const App = () => {
 				},
 			],
 		},
+
+		{
+			index: true,
+			element: <LandingPage />,
+		},
+
 		{
 			path: "*",
 			element: <NotFound />,
