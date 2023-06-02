@@ -59,7 +59,7 @@ export default function Navbar(props: Props) {
 							sx={{
 								width: "100%",
 								flexDirection: {xs: "row-reverse", md: "row"},
-								height: "80px",
+								height: "100px",
 								...spaceBetween,
 							}}
 							disableGutters

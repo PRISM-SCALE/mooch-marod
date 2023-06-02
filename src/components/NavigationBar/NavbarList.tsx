@@ -27,7 +27,7 @@ const NavbarList = () => {
 				<NavItem link={link} path={path} key={key} />
 			))}
 			<Link to={ROOT_LINK}>
-				<Logo />
+				<Logo width={100} />
 			</Link>
 			{lastThree.map(({link, path}, key) => (
 				<NavItem link={link} path={path} key={key} />

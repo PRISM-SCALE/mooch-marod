@@ -28,7 +28,7 @@ const Hero = () => {
 				flexDirection: "column",
 				overflow: "hidden",
 				position: "relative",
-				zIndex: -10,
+				zIndex: 5,
 			}}
 		>
 			<img
@@ -40,7 +40,7 @@ const Hero = () => {
 					top: "50%",
 					left: "50%",
 					transform: "translate(-50%, -50%) rotate(-15deg)",
-					zIndex: -5,
+					zIndex: 10,
 					opacity: 0.25,
 				}}
 				loading="lazy"
@@ -108,7 +108,13 @@ const Hero = () => {
 						flexDirection: {xs: "column", md: "row"},
 					}}
 				>
-					<Box sx={{[theme.breakpoints.down("md")]: {textAlign: "center"}}}>
+					<Box
+						sx={{
+							[theme.breakpoints.down("md")]: {textAlign: "center"},
+							position: "relative",
+							zIndex: 20,
+						}}
+					>
 						<Box
 							sx={{
 								display: "flex",
@@ -129,6 +135,7 @@ const Hero = () => {
 								}}
 							/>
 						</Box>
+
 						<Typography
 							variant="h1"
 							fontSize={{xs: "2.2rem", sm: "2.8rem", md: "4.8rem"}}
@@ -157,7 +164,7 @@ const Hero = () => {
 								mr: 2,
 							}}
 							disableElevation
-							disableRipple
+							// disableRipple
 						>
 							Book a table
 						</Button>
@@ -177,7 +184,7 @@ const Hero = () => {
 								},
 							}}
 							disableElevation
-							disableRipple
+							// disableRipple
 						>
 							Bulk order
 						</Button>
@@ -185,7 +192,7 @@ const Hero = () => {
 						{/* ------------------------------------------ */}
 					</Box>
 
-					<Box sx={{position: "relative", [theme.breakpoints.down("md")]: {mt: 8}}}>
+					<Box sx={{position: "relative", zIndex: 20, [theme.breakpoints.down("md")]: {mt: 8}}}>
 						<Box
 							component={animated.img}
 							src="/images/1.webp"
