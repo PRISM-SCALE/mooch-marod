@@ -1,47 +1,21 @@
-import React, {useState} from "react";
-import {Box, Button, TextField, TextFieldProps, useTheme} from "@mui/material";
+import {Box, Button, TextField, useTheme} from "@mui/material";
 import {TimePicker} from "@mui/x-date-pickers";
+import { FormData } from "../types/ReservationForm";
 
-interface FormData {
-	name: string;
-	phone: string;
-	email: string;
-	timeSlot: Date | null;
-}
-
-const initialFormData: FormData = {
-	name: "",
-	phone: "",
-	email: "",
-	timeSlot: null,
+type Props = {
+	handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+	handleTimeSlotChange: (time: Date | null) => void;
+	handleSubmit: (event: React.FormEvent<HTMLFormElement>) => Promise<void>;
+	formData: FormData;
 };
 
-export default function ReservationForm() {
+export default function ReservationForm({
+	handleInputChange,
+	handleTimeSlotChange,
+	handleSubmit,
+	formData,
+}: Props) {
 	const theme = useTheme();
-	const [formData, setFormData] = useState<FormData>(initialFormData);
-
-	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-		event.preventDefault();
-		// Handle form submission here
-		console.log(formData);
-		// Reset form after submission
-		setFormData(initialFormData);
-	};
-
-	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const {name, value} = event.target;
-		setFormData((prevFormData) => ({
-			...prevFormData,
-			[name]: value,
-		}));
-	};
-
-	const handleTimeSlotChange = (time: Date | null) => {
-		setFormData((prevFormData) => ({
-			...prevFormData,
-			timeSlot: time,
-		}));
-	};
 
 	const marginStyle = {
 		marginTop: 2,
