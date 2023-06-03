@@ -1,34 +1,14 @@
-import React, {useState} from "react";
 import {TextField, Button, Box, useTheme} from "@mui/material";
+import {ContactFormState} from "../types/ContactForm";
 
-interface ContactFormState {
-	name: string;
-	email: string;
-	phone: string;
-	message: string;
-}
+type Props = {
+	formData: ContactFormState;
+	handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+	handleSubmit: (event: React.FormEvent<HTMLFormElement>) => Promise<void>;
+};
 
-const ContactUsForm: React.FC = () => {
+const ContactUsForm = ({formData, handleChange, handleSubmit}: Props) => {
 	const theme = useTheme();
-	const [formData, setFormData] = useState<ContactFormState>({
-		name: "",
-		email: "",
-		phone: "",
-		message: "",
-	});
-
-	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setFormData({
-			...formData,
-			[event.target.name]: event.target.value,
-		});
-	};
-
-	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-		event.preventDefault();
-		// Add your logic to handle form submission here
-		console.log(formData);
-	};
 
 	return (
 		<Box component="form" onSubmit={handleSubmit}>

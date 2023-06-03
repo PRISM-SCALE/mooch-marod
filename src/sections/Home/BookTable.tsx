@@ -3,14 +3,7 @@ import {Box, Container, Typography, useTheme} from "@mui/material";
 import ReservationForm from "../../components/ReservationForm";
 
 // TYPES
-import {FormData} from "../../types/ReservationForm";
-
-const initialFormData: FormData = {
-	name: "",
-	phone: "",
-	email: "",
-	timeSlot: null,
-};
+import {FormData, initialFormData} from "../../types/ReservationForm";
 
 const BookTable = () => {
 	const theme = useTheme();

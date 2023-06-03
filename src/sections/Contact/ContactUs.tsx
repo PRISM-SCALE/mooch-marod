@@ -1,8 +1,45 @@
+import {useState} from "react";
 import {Box, Container, Typography, useTheme} from "@mui/material";
 import ContactUsForm from "../../components/ContactUsForm";
+import {ContactFormState, initialFormData} from "../../types/ContactForm";
 
 const ContactUs = () => {
 	const theme = useTheme();
+	const [formData, setFormData] = useState<ContactFormState>(initialFormData);
+
+	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setFormData({
+			...formData,
+			[event.target.name]: event.target.value,
+		});
+	};
+
+	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		// Add your logic to handle form submission here
+
+		// Handle form submission here
+		try {
+			const response = await fetch("<YOUR_AZURE_FUNCTION_URL>", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(formData),
+			});
+
+			if (response.ok) {
+				console.log("Form data sent successfully");
+				// Reset the form
+				setFormData(initialFormData);
+			} else {
+				console.error("Error occurred while sending form data");
+			}
+		} catch (error) {
+			console.error("An error occurred:", error);
+		}
+		console.log(formData);
+	};
 	return (
 		<Box component="section" py={{xs: "2rem", md: "4rem"}}>
 			<Container>
@@ -92,7 +129,11 @@ const ContactUs = () => {
 						<Typography variant="h2" color={theme.palette.custom.paratha}>
 							Ask us anything!
 						</Typography>
-						<ContactUsForm />
+						<ContactUsForm
+							formData={formData}
+							handleChange={handleChange}
+							handleSubmit={handleSubmit}
+						/>
 					</Box>
 				</Box>
 			</Container>

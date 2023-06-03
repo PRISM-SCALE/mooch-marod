@@ -4,3 +4,10 @@ export interface FormData {
 	email: string;
 	timeSlot: Date | null;
 }
+
+export const initialFormData: FormData = {
+	name: "",
+	phone: "",
+	email: "",
+	timeSlot: null,
+};

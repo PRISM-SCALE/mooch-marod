@@ -6,6 +6,7 @@ interface Image {
 export const footerLinks = ["About", "Menu", "Blog", "Gallery", "Faq", "Contact"];
 
 export const ROOT_LINK = "/";
+export const HOME_LINK = "/home";
 
 export const menuLinks = [
 	{link: "/home", path: "Home"},
