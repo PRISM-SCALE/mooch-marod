@@ -2,7 +2,10 @@ import {Box} from "@mui/material";
 import LocationCard from "../../components/Outlets/LocationCard";
 import MapboxGL from "../../components/MapboxGL";
 
+import {features, type} from "../../_mock/locations.json";
+
 const Address = () => {
+	const stores = {type, features};
 	return (
 		<Box
 			component="section"
@@ -11,7 +14,7 @@ const Address = () => {
 			// sx={{display: "flex", alignItems: "center"}}
 		>
 			<Box>
-				<MapboxGL />
+				<MapboxGL stores={stores} />
 			</Box>
 			<Box
 				py={{xs: "2rem", md: "4rem"}}

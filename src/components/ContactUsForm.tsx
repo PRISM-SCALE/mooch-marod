@@ -1,5 +1,5 @@
 import {TextField, Button, Box, useTheme} from "@mui/material";
-import {ContactFormState} from "../types/ContactForm";
+import {ContactFormState} from "../types/ContactForm.types";
 
 type Props = {
 	formData: ContactFormState;

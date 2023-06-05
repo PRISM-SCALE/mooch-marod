@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {Box, Container, Typography, useTheme} from "@mui/material";
 import ContactUsForm from "../../components/ContactUsForm";
-import {ContactFormState, initialFormData} from "../../types/ContactForm";
+import {ContactFormState, initialFormData} from "../../types/ContactForm.types";
 
 const ContactUs = () => {
 	const theme = useTheme();

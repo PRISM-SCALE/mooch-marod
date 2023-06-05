@@ -1,39 +1,52 @@
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import mapboxgl, {Map} from "mapbox-gl";
 import {Box} from "@mui/material";
+import {MapData} from "../types/map.types";
+
+type Props = {stores: MapData};
 
 mapboxgl.accessToken =
 	"pk.eyJ1Ijoic2VzaDEwMjIiLCJhIjoiY2xpYWE5aGs4MDFyYjNkbXRldWVtamozYSJ9.QYKM62CgV7gy0jFrgmQW3g";
 
-const MapboxGL = () => {
-	const mapContainer = useRef<HTMLDivElement | null>(null);
-	const map = useRef<Map | null>(null);
-	const [lng, setLng] = useState(77.6292);
-	const [lat, setLat] = useState(12.9804);
-	const [zoom, setZoom] = useState(10.5);
+const MapboxGL = ({stores}: Props) => {
+	const [map, setMap] = useState<Map>();
+	const [pageIsMounted, setPageIsMounted] = useState(false);
 
 	useEffect(() => {
-		if (map.current) return; // initialize map only once
-		map.current = new mapboxgl.Map({
-			container: mapContainer.current,
-			style: "mapbox://styles/mapbox/streets-v12",
-			center: [lng, lat],
-			zoom: zoom,
+		setPageIsMounted(true);
+		const newMap = new mapboxgl.Map({
+			container: "map",
+			style: "mapbox://styles/mapbox/light-v10",
+			center: [12.980711036401607, 77.59041302396872],
+			zoom: 12.5,
+			// scrollZoom: false
 		});
-	}, [lng, lat, zoom]); // Add dependencies to re-initialize map when values change
+
+		// Add zoom and rotation controls to the map.
+		newMap.addControl(new mapboxgl.NavigationControl(), "top-right");
+		setMap(newMap);
+
+		return () => {
+			newMap.remove();
+		};
+	}, []); // Add dependencies to re-initialize map when values change
 
 	useEffect(() => {
-		if (!map.current) return; // wait for map to initialize
-		map.current.on("move", () => {
-			setLng(map.current.getCenter().lng.toFixed(4));
-			setLat(map.current.getCenter().lat.toFixed(4));
-			setZoom(map.current.getZoom().toFixed(2));
-		});
+		if (pageIsMounted && stores) {
+			map.on("load", () => {
+				map.addSource("places", {
+					type: "geojson",
+					data: stores,
+				});
+				// buildLocationList(features);
+				// addMarkers();
+			});
+		}
 	});
 
 	return (
-		<Box sx={{position: "relative"}}>
-			<Box
+		<Box className="map">
+			{/* <Box
 				sx={{
 					backgroundColor: "rgba(35, 55, 75, 0.9)",
 					color: "#fff",
@@ -48,9 +61,9 @@ const MapboxGL = () => {
 				}}
 			>
 				Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
-			</Box>
+			</Box> */}
 
-			<Box ref={mapContainer} sx={{height: "500px"}} />
+			<Box sx={{height: "500px"}} />
 		</Box>
 	);
 };

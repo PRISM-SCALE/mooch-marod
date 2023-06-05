@@ -1,6 +1,6 @@
 import {Box, Button, TextField, useTheme} from "@mui/material";
 import {TimePicker} from "@mui/x-date-pickers";
-import { FormData } from "../types/ReservationForm";
+import {FormData} from "../types/ReservationForm.types";
 
 type Props = {
 	handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
