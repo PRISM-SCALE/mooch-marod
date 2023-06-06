@@ -1,4 +1,4 @@
-import {Box} from "@mui/material";
+import {Box, useTheme} from "@mui/material";
 import {Link} from "react-router-dom";
 
 type Props = {
@@ -10,6 +10,7 @@ type Props = {
 };
 
 const BrandingCard = ({logo, background, alt, path, sx}: Props) => {
+	const theme = useTheme();
 	return (
 		<Box
 			component={Link}
@@ -19,17 +20,23 @@ const BrandingCard = ({logo, background, alt, path, sx}: Props) => {
 				mixBlendMode: "multiply",
 				display: "grid",
 				placeContent: "center",
-				height: "100vh",
+				height: {xs: "50vh", md: "100vh"},
 				...sx,
 			}}
 		>
-			<img
+			<Box
+				component={"img"}
 				src={logo}
 				alt={alt}
-				style={{
+				sx={{
 					filter: "drop-shadow(30px 30px 20px rgba(0, 0, 0, 0.15))",
 					width: 400,
 					height: 400,
+
+					[theme.breakpoints.down("md")]: {
+						width: 200,
+						height: 200,
+					},
 				}}
 			/>
 		</Box>
