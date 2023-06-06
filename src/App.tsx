@@ -1,8 +1,8 @@
 import {useMemo} from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {createTheme, ThemeProvider} from "@mui/material";
-import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
 import {LocalizationProvider} from "@mui/x-date-pickers/LocalizationProvider";
+import {AdapterDateFns} from "@mui/x-date-pickers/AdapterDateFns";
 import {ParallaxProvider} from "react-scroll-parallax";
 
 // THEMING
@@ -74,7 +74,7 @@ const App = () => {
 	return (
 		<ThemeProvider theme={theme}>
 			<ParallaxProvider>
-				<LocalizationProvider dateAdapter={AdapterDayjs}>
+				<LocalizationProvider dateAdapter={AdapterDateFns}>
 					<RouterProvider router={router} />
 				</LocalizationProvider>
 			</ParallaxProvider>

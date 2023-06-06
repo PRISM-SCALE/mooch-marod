@@ -1,9 +1,21 @@
-import {Box, Button, TextField, useTheme} from "@mui/material";
-import {TimePicker} from "@mui/x-date-pickers";
+import {
+	Box,
+	Button,
+	FormControl,
+	InputLabel,
+	MenuItem,
+	Select,
+	SelectChangeEvent,
+	TextField,
+	useTheme,
+} from "@mui/material";
+import {MobileTimePicker, TimePicker} from "@mui/x-date-pickers";
+import {addHours, setHours, setMinutes, startOfDay} from "date-fns";
 import {FormData} from "../types/ReservationForm.types";
 
 type Props = {
 	handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+	handleLocationChange: (event: SelectChangeEvent<string>) => void;
 	handleTimeSlotChange: (time: Date | null) => void;
 	handleSubmit: (event: React.FormEvent<HTMLFormElement>) => Promise<void>;
 	formData: FormData;
@@ -12,10 +24,14 @@ type Props = {
 export default function ReservationForm({
 	handleInputChange,
 	handleTimeSlotChange,
+	handleLocationChange,
 	handleSubmit,
 	formData,
 }: Props) {
 	const theme = useTheme();
+
+	// const startTime = setHours(setMinutes(startOfDay(new Date()), 0), 11);
+	// const endTime = setHours(setMinutes(startOfDay(new Date()), 0), 22);
 
 	const marginStyle = {
 		marginTop: 2,
@@ -41,23 +57,30 @@ export default function ReservationForm({
 				fullWidth
 				sx={{...marginStyle}}
 			/>
-			<TextField
-				name="email"
-				label="Email"
-				type="email"
-				value={formData.email}
-				onChange={handleInputChange}
-				required
-				fullWidth
-				sx={{...marginStyle}}
-			/>
-			<TimePicker
+			<FormControl fullWidth margin="normal">
+				<InputLabel id="location-label">Location</InputLabel>
+				<Select
+					labelId="location-label"
+					label="Location"
+					name="location"
+					value={formData.location}
+					onChange={handleLocationChange}
+					required
+				>
+					<MenuItem value="Location 1">Location 1</MenuItem>
+					<MenuItem value="Location 2">Location 2</MenuItem>
+					<MenuItem value="Location 3">Location 3</MenuItem>
+				</Select>
+			</FormControl>
+			<MobileTimePicker
 				label="Time Slot"
 				value={formData.timeSlot}
 				onChange={handleTimeSlotChange}
+				// defaultValue={startTime}
 				// renderInput={(props: JSX.IntrinsicAttributes & TextFieldProps) => <TextField {...props} fullWidth />}
 				ampm={true}
-				minutesStep={5}
+				// minTime={startTime}
+				// maxTime={endTime}
 				sx={{width: "100%", ...marginStyle}}
 			/>
 			<Box sx={{textAlign: "center", ...marginStyle}}>

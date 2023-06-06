@@ -1,5 +1,6 @@
 import {useState} from "react";
-import {Box, Container, Typography, useTheme} from "@mui/material";
+import {parseISO} from "date-fns";
+import {Box, Container, SelectChangeEvent, Typography, useTheme} from "@mui/material";
 import ReservationForm from "../../components/ReservationForm";
 
 // TYPES
@@ -47,11 +48,26 @@ const BookTable = () => {
 		}));
 	};
 
-	const handleTimeSlotChange = (time: Date | null) => {
+	const handleLocationChange = (event: SelectChangeEvent<string>) => {
 		setFormData((prevFormData) => ({
 			...prevFormData,
-			timeSlot: time,
+			location: event.target.value as string,
 		}));
+	};
+
+	const handleTimeSlotChange = (time: Date | null | string) => {
+		if (typeof time === "string") {
+			const parsedTime = parseISO(time);
+			setFormData((prevFormData) => ({
+				...prevFormData,
+				timeSlot: parsedTime,
+			}));
+		} else {
+			setFormData((prevFormData) => ({
+				...prevFormData,
+				timeSlot: time,
+			}));
+		}
 	};
 	return (
 		<Box component={"section"} id={"reservation_section"} py={{xs: "2rem", md: "4rem"}}>
@@ -82,6 +98,7 @@ const BookTable = () => {
 						handleSubmit={handleSubmit}
 						handleInputChange={handleInputChange}
 						handleTimeSlotChange={handleTimeSlotChange}
+						handleLocationChange={handleLocationChange}
 					/>
 				</Box>
 			</Container>

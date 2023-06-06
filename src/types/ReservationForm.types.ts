@@ -1,13 +1,13 @@
 export interface FormData {
 	name: string;
 	phone: string;
-	email: string;
+	location: string;
 	timeSlot: Date | null;
 }
 
 export const initialFormData: FormData = {
 	name: "",
 	phone: "",
-	email: "",
+	location: "",
 	timeSlot: null,
 };
