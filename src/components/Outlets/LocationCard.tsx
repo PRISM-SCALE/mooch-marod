@@ -1,4 +1,4 @@
-import {Box, Button, Card, CardContent, CardMedia, Typography, useTheme} from "@mui/material";
+import {Box, Button, Typography, useTheme} from "@mui/material";
 import Iconify from "../Iconify";
 import {useResponsive} from "../../hooks/useResponsive";
 
