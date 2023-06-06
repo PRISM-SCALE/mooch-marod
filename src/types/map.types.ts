@@ -1,3 +1,5 @@
+import {Point, Feature, GeoJsonProperties, FeatureCollection} from "geojson";
+
 export interface GeoData {
 	type: string;
 	coordinates: number[];
@@ -11,6 +13,7 @@ export interface AddressData {
 	country: string;
 	pincode: number;
 	state: string;
+	id?: number | string;
 }
 
 export interface MapFeaturesData {
@@ -19,7 +22,7 @@ export interface MapFeaturesData {
 	properties: AddressData;
 }
 
-export interface MapData {
-	type: string;
-	features: MapFeaturesData[];
+export interface MapData extends FeatureCollection<Point, GeoJsonProperties> {
+	type: "FeatureCollection";
+	features: Feature<Point, GeoJsonProperties>[];
 }

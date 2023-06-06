@@ -8,7 +8,7 @@
 				"coordinates": [77.62266848623325, 12.955253369851137]
 			},
 			"properties": {
-				"phoneFormatted": "(888) 448-8930",
+				"location": "Koramangala, Bengaluru",
 				"phone": 8884488930,
 				"address": "466, 1st Floor, 17th G Main Rd, 6th Block, Koramangala, Bengaluru, Karnataka 560095",
 				"city": "Bengaluru",
@@ -25,7 +25,7 @@
 				"coordinates": [77.6589235319118, 12.87731406540923]
 			},
 			"properties": {
-				"phoneFormatted": "(888) 448-8540",
+				"location": "Kempegowda Avenue, Hosa Rd",
 				"phone": 8884488540,
 				"address": "Shiva Shakti Food Court Kempegowda Avenue, Hosa Rd, Karnataka 560100",
 				"city": "Bengaluru",
@@ -42,7 +42,7 @@
 				"coordinates": [77.6563541506248, 12.981979800001161]
 			},
 			"properties": {
-				"phoneFormatted": "(888) 448-8680",
+				"location": "Jeevan Bima Nagar Main Rd",
 				"phone": 8884488680,
 				"address": "No 39, Jeevan Bima Nagar Main Rd, opp. IOC Petrol Bunk, Karnataka 560075",
 				"city": "Bengaluru",
@@ -59,7 +59,7 @@
 				"coordinates": [77.7637173648509, 12.988883502048473]
 			},
 			"properties": {
-				"phoneFormatted": "(888) 448-8690",
+				"location": "Chansandra, J, Whitefield",
 				"phone": 8884488690,
 				"address": "Prasanthi Complex, Channasandra Main Rd, Chansandra, J, Whitefield, Bengaluru, Karnataka 560067",
 				"city": "Bengaluru",

@@ -6,20 +6,23 @@ type Props = {
 	address: string;
 	phone: number | string;
 	time: string;
+	onClick?: () => void;
 };
 
-const LocationCard = ({location, address, phone, time}: Props) => {
+const LocationCard = ({location, address, phone, time, onClick}: Props) => {
 	const theme = useTheme();
 	return (
-		<Card sx={{display: "flex", mb: 4}} elevation={0}>
+		<Card sx={{display: "flex"}} elevation={0}>
 			<Box sx={{display: "flex", flexDirection: {xs: "column", md: "row"}, alignItems: "center"}}>
 				{/* IMAGE */}
-				<CardMedia
-					component="img"
-					sx={{height: 250, width: 250}}
-					image="/images/resto.jpg"
-					alt={location}
-				/>
+				<Box>
+					<CardMedia
+						component="img"
+						sx={{height: 250, width: 250}}
+						image="/images/resto.jpg"
+						alt={location}
+					/>
+				</Box>
 
 				{/* Content */}
 				<CardContent>
@@ -54,10 +57,11 @@ const LocationCard = ({location, address, phone, time}: Props) => {
 							},
 							mr: 2,
 						}}
+						onClick={onClick}
 						disableElevation
 						disableRipple
 					>
-						Book a table
+						View in Map
 					</Button>
 				</CardContent>
 			</Box>
