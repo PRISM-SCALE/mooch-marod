@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Box} from "@mui/material";
+import {Box, useTheme} from "@mui/material";
 
 // MAPBOX
 import mapboxgl, {LngLatLike, Map} from "mapbox-gl";
@@ -13,7 +13,11 @@ import MapboxGL from "../../components/MapboxGL";
 import {features} from "../../_mock/locations.json";
 import {MapData} from "../../types/map.types";
 
-const Address = () => {
+mapboxgl.accessToken =
+	"pk.eyJ1Ijoic2VzaDEwMjIiLCJhIjoiY2xpYWE5aGs4MDFyYjNkbXRldWVtamozYSJ9.QYKM62CgV7gy0jFrgmQW3g";
+
+const DesktopAddress = () => {
+	const theme = useTheme();
 	const [mapData, setMap] = useState<Map | null>();
 	const [pageIsMounted, setPageIsMounted] = useState(false);
 
@@ -33,9 +37,9 @@ const Address = () => {
 
 		const newMap = new mapboxgl.Map({
 			container: "map_container",
-			style: "mapbox://styles/mapbox/outdoors-v12",
+			style: "mapbox://styles/mapbox/streets-v12",
 			center: [77.59041302396872, 12.980711036401607],
-			zoom: 10,
+			zoom: 11,
 			// scrollZoom: false
 		});
 
@@ -57,37 +61,22 @@ const Address = () => {
 				});
 
 				// buildLocationList(stores.features);
-				// addMarkers();
+				addMarkers();
 			});
 		}
 	});
 
+	/**
+	 * Create a marker using the div element
+	 * defined above and add it to the map.
+	 **/
 	function addMarkers() {
-		/* For each feature in the GeoJSON object above: */
 		for (const marker of stores.features) {
-			/* Create a div element for the marker. */
-			const el = document.createElement("div");
-			/* Assign a unique `id` to the marker. */
-			el.id = `marker-${marker?.properties?.id}`;
-
-			/* Assign the `marker` class to each marker for styling. */
-			el.className = "marker";
-
-			/**
-			 * Create a marker using the div element
-			 * defined above and add it to the map.
-			 **/
-
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			const el = document.getElementById(`marker-${marker.id}`)!;
 			new mapboxgl.Marker(el, {offset: [0, -23]})
 				.setLngLat(marker.geometry.coordinates as LngLatLike)
 				.addTo(mapData as Map);
-
-			/**
-			 * Listen to the element and when it is clicked, do three things:
-			 * 1. Fly to the point
-			 * 2. Close all other popups and display popup for clicked store
-			 * 3. Highlight listing in sidebar (and remove highlight for all other listings)
-			 **/
 		}
 	}
 
@@ -105,22 +94,20 @@ const Address = () => {
 	/**
 	 * Create a Mapbox GL JS `Popup`.
 	 **/
+	// ! .setHTML(`<h3>${currentFeature?.properties?.location}</h3><h4>${currentFeature?.properties?.address}</h4>`)
 	// function createPopUp(currentFeature: Feature<Point, GeoJsonProperties>) {
 	// 	const popUps = document.getElementsByClassName("mapboxgl-popup");
 	// 	if (popUps[0]) popUps[0].remove();
-	// 	const popup = new mapboxgl.Popup({closeOnClick: false})
+	// 	new mapboxgl.Popup({closeOnClick: false})
 	// 		.setLngLat(currentFeature.geometry.coordinates as LngLatLike)
-	// 		.setHTML(
-	// 			`<h3>${currentFeature?.properties?.location}</h3><h4>${currentFeature?.properties?.address}</h4>`
-	// 		)
 	// 		.addTo(mapData as Map);
 	// }
 
 	return (
-		<Box component="section" id="outlet_section">
+		<Box component="section" id="outlet_section" sx={{}}>
 			<Box
 				sx={{
-					minHeight: "120vh",
+					minHeight: "155vh",
 					flex: "1",
 					display: "flex",
 					flexDirection: "column",
@@ -132,7 +119,7 @@ const Address = () => {
 				<Box
 					sx={{
 						position: "absolute",
-						width: "40%",
+						width: {xs: "100%", lg: "40%"},
 						height: "100%",
 						top: "0",
 						left: "0",
@@ -157,23 +144,18 @@ const Address = () => {
 				<Box
 					className="map"
 					id="map"
-					sx={{position: "absolute", left: "40%", width: "60%", top: "0", bottom: "0"}}
+					sx={{
+						position: "absolute",
+						left: "40%",
+						width: "60%",
+						top: "0",
+						bottom: "0",
+					}}
 				>
 					{/* ********************************************************** */}
 					{/* Add a marker to the map for every store listing. */}
 					{/* ********************************************************** */}
-					{stores.features.map(({geometry, id}) => {
-						/**
-						 * Create a marker using the div element
-						 * defined above and add it to the map.
-						 **/
-
-						// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-						const el = document.getElementById(`marker-${id}`)!;
-						new mapboxgl.Marker(el, {offset: [0, -23]})
-							.setLngLat(geometry.coordinates as LngLatLike)
-							.addTo(mapData as Map);
-
+					{stores.features.map(({id}) => {
 						return (
 							<Box
 								id={`marker-${id}`}
@@ -187,11 +169,11 @@ const Address = () => {
 							/>
 						);
 					})}
-					<MapboxGL stores={stores} />
+					<MapboxGL />
 				</Box>
 			</Box>
 		</Box>
 	);
 };
 
-export default Address;
+export default DesktopAddress;

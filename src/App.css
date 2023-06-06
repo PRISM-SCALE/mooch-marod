@@ -6,8 +6,6 @@
   bottom: 0;
 }
 
-.marker {}
-
 /* Marker tweaks */
 .mapboxgl-popup {
   padding-bottom: 50px;

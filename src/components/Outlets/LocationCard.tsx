@@ -1,5 +1,6 @@
 import {Box, Button, Card, CardContent, CardMedia, Typography, useTheme} from "@mui/material";
 import Iconify from "../Iconify";
+import {useResponsive} from "../../hooks/useResponsive";
 
 type Props = {
 	location: string;
@@ -11,21 +12,23 @@ type Props = {
 
 const LocationCard = ({location, address, phone, time, onClick}: Props) => {
 	const theme = useTheme();
+	const {isSmallScreen} = useResponsive();
 	return (
-		<Card sx={{display: "flex"}} elevation={0}>
-			<Box sx={{display: "flex", flexDirection: {xs: "column", md: "row"}, alignItems: "center"}}>
+		<Box sx={{mb: 2, borderRadius: 0}}>
+			<Box sx={{display: "flex", flexDirection: {xs: "column", sm: "row"}}}>
 				{/* IMAGE */}
-				<Box>
-					<CardMedia
-						component="img"
-						sx={{height: 250, width: 250}}
-						image="/images/resto.jpg"
-						alt={location}
-					/>
-				</Box>
+				{!isSmallScreen && (
+					<Box sx={{flex: 1, maxWidth: {xs: "100%", sm: 200}, alignSelf: "center"}}>
+						<img
+							style={{height: 250, width: "100%", objectFit: "cover"}}
+							src="/images/resto.jpg"
+							alt={location}
+						/>
+					</Box>
+				)}
 
-				{/* Content */}
-				<CardContent>
+				{/* CONTENT */}
+				<Box sx={{flex: 1, p: 2}}>
 					<Typography variant="h2" fontWeight={500}>
 						{location}
 					</Typography>
@@ -63,9 +66,9 @@ const LocationCard = ({location, address, phone, time, onClick}: Props) => {
 					>
 						View in Map
 					</Button>
-				</CardContent>
+				</Box>
 			</Box>
-		</Card>
+		</Box>
 	);
 };
 
