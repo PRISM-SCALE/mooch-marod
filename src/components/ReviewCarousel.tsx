@@ -13,11 +13,17 @@ interface SliderSettings extends Settings {
 	customSetting?: string;
 }
 
-const SlideWrapper = styled(Slider)(({theme}) => ({}));
+const SlideWrapper = styled(Slider)(({theme}) => ({
+	[theme.breakpoints.up("xs")]: {},
+}));
 
-const SlideChildWrapper = styled(Box)(({theme}) => ({}));
+const SlideChildWrapper = styled(Box)(({theme}) => ({
+	[theme.breakpoints.up("xs")]: {},
+}));
 
 const Slide = styled(Box)(({theme}) => ({
+	[theme.breakpoints.up("xs")]: {},
+
 	marginRight: "1rem",
 }));
 
@@ -34,7 +40,7 @@ const ReviewCarousel = () => {
 		autoplay: true,
 		// centerMode: true,
 	};
-	
+
 	return (
 		<SlideWrapper {...settings}>
 			{testimonials.map(({id, name, comment, image, location, rating}) => (

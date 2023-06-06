@@ -1,4 +1,4 @@
-import {Box, styled, useTheme} from "@mui/material";
+import {Box, styled} from "@mui/material";
 import Slider, {Settings} from "react-slick";
 
 // JSON
@@ -13,21 +13,25 @@ interface SliderSettings extends Settings {
 }
 
 const SlideWrapper = styled(Slider)(({theme}) => ({
+	[theme.breakpoints.up("xs")]: {},
+
 	// 	pt={{xs: "2rem", md: "4rem"}}
 	// 	pb={2}
 }));
 
-const SlideChildWrapper = styled(Box)(({theme}) => ({}));
+const SlideChildWrapper = styled(Box)(({theme}) => ({
+	[theme.breakpoints.up("xs")]: {},
+}));
 
 const Slide = styled(Box)(({theme}) => ({
+	[theme.breakpoints.up("xs")]: {},
+
 	marginLeft: "1rem",
 	display: "flex",
 	justifyContent: "center",
 }));
 
 const Instagram = () => {
-	const theme = useTheme();
-
 	const settings: SliderSettings = {
 		dots: false,
 		infinite: true,
@@ -80,7 +84,7 @@ const Instagram = () => {
 		],
 	};
 	return (
-		<Box component={"section"} id="instagarm_section" pt={{xs: "2rem", md: "4rem"}} pb={2}>
+		<Box component={"section"} id="instagram_section" pt={{xs: "2rem", md: "4rem"}} pb={2}>
 			<SlideWrapper {...settings}>
 				{insta.map(({id, src}) => (
 					<SlideChildWrapper key={id}>

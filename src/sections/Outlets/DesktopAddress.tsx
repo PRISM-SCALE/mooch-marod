@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Box, useTheme} from "@mui/material";
+import {Box} from "@mui/material";
 
 // MAPBOX
 import mapboxgl, {LngLatLike, Map} from "mapbox-gl";
@@ -17,7 +17,6 @@ mapboxgl.accessToken =
 	"pk.eyJ1Ijoic2VzaDEwMjIiLCJhIjoiY2xpYWE5aGs4MDFyYjNkbXRldWVtamozYSJ9.QYKM62CgV7gy0jFrgmQW3g";
 
 const DesktopAddress = () => {
-	const theme = useTheme();
 	const [mapData, setMap] = useState<Map | null>();
 	const [pageIsMounted, setPageIsMounted] = useState(false);
 
