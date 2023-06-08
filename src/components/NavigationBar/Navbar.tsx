@@ -47,7 +47,7 @@ export default function Navbar(props: Props) {
 	const spaceBetween = {
 		display: "flex",
 		alignItems: "center",
-		justifyContent: "space-between",
+		justifyContent: "center",
 	};
 
 	return (
@@ -71,11 +71,11 @@ export default function Navbar(props: Props) {
 									</IconButton>
 								) : null}
 
-								{isMediumScreen !== isSmallScreen ? null : <SearchBar />}
+								{/* {isMediumScreen !== isSmallScreen ? null : <SearchBar />} */}
 
 								<NavbarList />
 
-								{isMediumScreen !== isSmallScreen ? null : (
+								{/* {isMediumScreen !== isSmallScreen ? null : (
 									<Button
 										sx={{
 											backgroundColor: theme.palette.custom.paratha,
@@ -95,7 +95,7 @@ export default function Navbar(props: Props) {
 									>
 										Book a table
 									</Button>
-								)}
+								)} */}
 							</>
 						</Toolbar>
 					</Container>

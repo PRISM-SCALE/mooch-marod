@@ -19,7 +19,21 @@ const DiscountOffers = () => {
 						size={150}
 						title="Offer Title"
 					/>
+					<OfferCard
+						details={{line1: "Reason for line 1", line2: "reason for line 2"}}
+						img="/images/juice.png"
+						off={25}
+						size={150}
+						title="Offer Title"
+					/>
 
+					<OfferCard
+						details={{line1: "Reason for line 1", line2: "reason for line 2"}}
+						img="/images/juice.png"
+						off={25}
+						size={150}
+						title="Offer Title"
+					/>
 					<OfferCard
 						details={{line1: "Reason for line 1", line2: "reason for line 2"}}
 						img="/images/juice.png"

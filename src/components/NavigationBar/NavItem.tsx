@@ -9,7 +9,7 @@ type Props = {
 const LinkWrapper = styled(NavLink)(({theme}) => ({
 	textDecoration: "none",
 	color: theme.palette.common.white,
-	fontSize: ".8rem",
+	fontSize: ".925rem",
 
 	transition: theme.transitions.create("color"),
 	"&:hover": {
