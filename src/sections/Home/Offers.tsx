@@ -1,7 +1,23 @@
+import {useState} from "react";
 import {Box, Button, Container, Grid, Typography, useTheme} from "@mui/material";
+import {BANNER_HEIGHT} from "../../utils/common";
+import OffersCarousel from "../../components/OffersCarousel";
+import EmailSubscriptionForm from "../../components/EmailSubscriptionForm";
 
 const Offers = () => {
 	const theme = useTheme();
+	const [email, setEmail] = useState("");
+
+	const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setEmail(event.target.value);
+	};
+
+	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		// Here you can add the logic to submit the email
+		console.log(email);
+		setEmail("");
+	};
 	return (
 		<Box
 			component="section"
@@ -12,22 +28,14 @@ const Offers = () => {
 			<Container maxWidth="xl">
 				<Grid container spacing={2}>
 					<Grid item xs={12}>
-						<Box
-							sx={{
-								backgroundImage: `url(/images/offers_banner.webp)`,
-								height: 280,
-								backgroundSize: "cover",
-								backgroundRepeat: "no-repeat",
-								p: "2rem",
-							}}
-						/>
+						<OffersCarousel />
 					</Grid>
 
 					<Grid item xs={12} md={6} lg={3}>
 						<Box
 							sx={{
 								backgroundImage: `url(/images/offer_sq_temp_1.webp)`,
-								height: 280,
+								height: BANNER_HEIGHT,
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
 							}}
@@ -37,7 +45,7 @@ const Offers = () => {
 						<Box
 							sx={{
 								backgroundImage: `url(/images/offer_sq_temp_2.webp)`,
-								height: 280,
+								height: BANNER_HEIGHT,
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
 							}}
@@ -48,7 +56,7 @@ const Offers = () => {
 						<Box
 							sx={{
 								backgroundImage: `url(/images/offer_email_subs.jpeg)`,
-								height: {xs: "auto", md: 280},
+								height: {xs: "auto", md: BANNER_HEIGHT},
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
 								p: 4,
@@ -66,51 +74,13 @@ const Offers = () => {
 							>
 								Find Mooch Marod <br /> location near
 							</Typography>
+
 							{/* Add Email form input */}
-							<Box
-								component="form"
-								sx={{
-									"& > :not(style)": {m: 1, width: "25ch"},
-									pt: "1rem",
-									pl: "1rem",
-									pr: "1rem",
-									display: "flex",
-									alignItems: "center",
-									flexDirection: {xs: "column", md: "row"},
-								}}
-								autoComplete="off"
-							>
-								<Box
-									component="input"
-									type="email"
-									name="email"
-									id="email"
-									placeholder="Email"
-									sx={{
-										padding: "1rem 0.5rem",
-										outline: "none",
-										border: "2px solid #000",
-										borderRadius: 1,
-										width: {xs: "100%!important", md: "50%!important"},
-										margin: "0!important",
-									}}
-								/>
-								<Button
-									variant="contained"
-									sx={{
-										py: "0.7rem",
-										backgroundColor: theme.palette.custom.paratha,
-										"&:hover": {
-											backgroundColor: theme.palette.custom.paratha,
-										},
-										width: {xs: "40%!important", md: "30%!important"},
-									}}
-									disableRipple
-									disableElevation
-								>
-									Subscribe
-								</Button>
-							</Box>
+							<EmailSubscriptionForm
+								email={email}
+								handleEmailChange={handleEmailChange}
+								handleSubmit={handleSubmit}
+							/>
 						</Box>
 					</Grid>
 				</Grid>

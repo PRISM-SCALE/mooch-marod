@@ -5,13 +5,15 @@ import CountUp from "react-countup";
 type Props = {
 	count: number;
 	text: string;
+	character: string;
 };
 
-const CountCard = ({count, text}: Props) => {
+const CountCard = ({count, text, character}: Props) => {
 	const [ref, inView] = useInView({
 		threshold: 0.3,
 		triggerOnce: true,
 	});
+
 	return (
 		<Box
 			sx={{
@@ -22,7 +24,8 @@ const CountCard = ({count, text}: Props) => {
 		>
 			{/* Component for counts+ */}
 			<Typography component="span" variant="h1" fontWeight={600}>
-				<CountUp duration={5} end={inView ? count : 0} useEasing={true} />+
+				<CountUp duration={5} end={inView ? count : 0} useEasing={true} />
+				{character}
 			</Typography>
 			<br />
 			<Typography component="span" sx={{fontSize: "1.2rem"}}>

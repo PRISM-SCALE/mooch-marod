@@ -1,4 +1,4 @@
-import { Box, Container } from "@mui/material";
+import {Box, Container} from "@mui/material";
 
 // COMPONENTS
 import CountCard from "../../components/CountCard.tsx";
@@ -6,18 +6,22 @@ import CountCard from "../../components/CountCard.tsx";
 const _data = [
 	{
 		count: 2000,
+		character: "+",
 		text: "Parathas Served",
 	},
 	{
-		count: 10,
-		text: "Years of Experience",
+		count: 95,
+		character: "%",
+		text: "Customer Comeback",
 	},
 	{
-		count: 200,
-		text: "Happy Customers",
+		count: 23000,
+		character: "+",
+		text: "People Served",
 	},
 	{
 		count: 4,
+		character: "+",
 		text: "Outlets in Bangalore",
 	},
 ];
@@ -34,8 +38,8 @@ const Counts = () => {
 						flexDirection: {xs: "column", md: "row"},
 					}}
 				>
-					{_data.map(({count, text}, index) => (
-						<CountCard key={index} count={count} text={text} />
+					{_data.map(({count, text, character}, index) => (
+						<CountCard key={index} count={count} text={text} character={character} />
 					))}
 				</Box>
 			</Container>

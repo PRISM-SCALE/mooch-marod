@@ -121,8 +121,7 @@ const MenuSection = () => {
 						Paratha, THE BEST IN TOWN
 					</Typography>
 					<Typography variant="body1" sx={{width: {xs: "100%", md: "50%"}, marginX: "auto"}}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu in pretium
-						molestie. Interdum et malesuada fames ac.
+						Explore our delicious, one-of-a-kind menu with a massive 3000+ paratha combinations.
 					</Typography>
 				</Box>
 
