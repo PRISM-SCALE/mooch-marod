@@ -35,6 +35,7 @@ const InstaCard = ({image}: Props) => {
 					transition: theme.transitions.create(["background-color", "opacity"], {
 						duration: 700,
 					}),
+					overflow: "hidden",
 
 					"&:hover": {
 						backgroundColor: theme.palette.custom.butter,

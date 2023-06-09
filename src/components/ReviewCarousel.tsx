@@ -46,6 +46,7 @@ const ReviewCarousel = () => {
 			{testimonials.map(({id, name, comment, image, location, rating}) => (
 				<Slide key={id}>
 					<TestimonialCard
+						key={id}
 						name={name}
 						image={image}
 						location={location}

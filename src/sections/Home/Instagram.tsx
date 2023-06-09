@@ -19,17 +19,17 @@ const SlideWrapper = styled(Slider)(({theme}) => ({
 	// 	pb={2}
 }));
 
-const SlideChildWrapper = styled(Box)(({theme}) => ({
-	[theme.breakpoints.up("xs")]: {},
-}));
+// const SlideChildWrapper = styled(Box)(({theme}) => ({
+// 	[theme.breakpoints.up("xs")]: {},
+// }));
 
-const Slide = styled(Box)(({theme}) => ({
-	[theme.breakpoints.up("xs")]: {},
+// const Slide = styled(Box)(({theme}) => ({
+// 	[theme.breakpoints.up("xs")]: {},
 
-	marginLeft: "1rem",
-	display: "flex",
-	justifyContent: "center",
-}));
+// 	// marginLeft: "1rem",
+// 	display: "flex",
+// 	justifyContent: "center",
+// }));
 
 const Instagram = () => {
 	const settings: SliderSettings = {
@@ -41,7 +41,7 @@ const Instagram = () => {
 		initialSlide: 0,
 		draggable: true,
 		arrows: false,
-		autoplay: true,
+		// autoplay: true,
 
 		responsive: [
 			{
@@ -87,11 +87,7 @@ const Instagram = () => {
 		<Box component={"section"} id="instagram_section" pt={{xs: "2rem", md: "4rem"}} pb={2}>
 			<SlideWrapper {...settings}>
 				{insta.map(({id, src}) => (
-					<SlideChildWrapper key={id}>
-						<Slide>
-							<InstaCard image={src} />
-						</Slide>
-					</SlideChildWrapper>
+					<InstaCard image={src} key={id} />
 				))}
 			</SlideWrapper>
 		</Box>
