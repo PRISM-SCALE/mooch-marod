@@ -90,7 +90,7 @@ const Hero = () => {
 
 						<Typography
 							variant="h1"
-							fontSize={{xs: "2.2rem", sm: "2.8rem", md: "4.8rem"}}
+							fontSize={{xs: "2rem", sm: "2.8rem", md: "4.8rem"}}
 							color="white"
 							sx={{textTransform: "uppercase", fontWeight: 700}}
 						>
@@ -106,8 +106,8 @@ const Hero = () => {
 								px: {xs: 2, md: 4},
 								py: 1,
 								color: "white",
-								mt: 4,
-								fontSize: {xs: ".8rem", md: "1rem"},
+								mt: {xs: 2, md: 4},
+								fontSize: {xs: ".6rem", sm: ".8rem", md: "1rem"},
 								fontWeight: 400,
 								"&:hover": {
 									backgroundColor: theme.palette.custom.paratha,
@@ -127,8 +127,8 @@ const Hero = () => {
 								px: {xs: 2, md: 4},
 								py: 1,
 								color: "white",
-								mt: 4,
-								fontSize: {xs: "8.rem", md: "1rem"},
+								mt: {xs: 2, md: 4},
+								fontSize: {xs: ".6rem", sm: ".8rem", md: "1rem"},
 								fontWeight: 400,
 								"&:hover": {
 									backgroundColor: "transparent",
@@ -143,7 +143,7 @@ const Hero = () => {
 						{/* ------------------------------------------ */}
 					</Box>
 
-					<Box sx={{position: "relative", zIndex: 20, [theme.breakpoints.down("md")]: {mt: 8}}}>
+					<Box sx={{position: "relative", zIndex: 20, [theme.breakpoints.down("md")]: {mt: 6}}}>
 						<Box
 							component={animated.img}
 							src="/images/1.webp"

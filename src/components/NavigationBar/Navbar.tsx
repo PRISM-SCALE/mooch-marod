@@ -61,26 +61,25 @@ export default function Navbar(props: Props) {
 						<Toolbar
 							sx={{
 								width: "100%",
-								flexDirection: {xs: "row-reverse", md: "row"},
-								height: "80px",
+								flexDirection: {xs: "row", md: "row"},
+								height: {xs: "60px", md: "80px"},
 								...spaceBetween,
 							}}
 							disableGutters
 						>
 							<>
+								<Link to={ROOT_LINK}>
+									<Logo width={{xs: 60, md: 80}} height={{xs: 60, md: 80}} />
+								</Link>
+
 								{isSmallScreen === !isMediumScreen ? (
 									<IconButton sx={{color: "white"}}>
 										<Iconify icon={"gg:menu-right"} size={24} />
 									</IconButton>
 								) : null}
 
-								<Link to={ROOT_LINK}>
-									<Logo width={80} />
-								</Link>
-
 								{/* {isMediumScreen !== isSmallScreen ? null : <SearchBar />} */}
-
-								<NavbarList />
+								{isMediumScreen !== isSmallScreen ? null : <NavbarList />}
 
 								{isMediumScreen !== isSmallScreen ? null : (
 									<Button

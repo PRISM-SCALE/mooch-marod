@@ -54,7 +54,6 @@ const OffersCarousel = () => {
 		draggable: true,
 		arrows: false,
 		autoplay: true,
-		// centerMode: true,
 	};
 	return (
 		<SlideWrapper {...settings}>
