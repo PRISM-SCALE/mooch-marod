@@ -9,8 +9,8 @@ import Logo from "../Logo";
 import {Link} from "react-router-dom";
 
 const NavbarList = () => {
-	const firstThree = [...menuLinks.slice(0, 3)];
-	const lastThree = [...menuLinks.slice(-3)];
+	// const firstThree = [...menuLinks.slice(0, 3)];
+	// const lastThree = [...menuLinks.slice(-3)];
 	return (
 		<Box
 			textAlign={"center"}
@@ -23,13 +23,8 @@ const NavbarList = () => {
 				columnGap: 4,
 			}}
 		>
-			{firstThree.map(({link, path}, key) => (
-				<NavItem link={link} path={path} key={key} />
-			))}
-			<Link to={ROOT_LINK}>
-				<Logo width={100} />
-			</Link>
-			{lastThree.map(({link, path}, key) => (
+
+			{menuLinks.map(({link, path}, key) => (
 				<NavItem link={link} path={path} key={key} />
 			))}
 		</Box>

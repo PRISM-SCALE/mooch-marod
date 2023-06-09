@@ -13,7 +13,7 @@ const MoochStory = () => {
 
 	return (
 		<Box component="section" py={{xs: "2rem", md: "4rem"}}>
-			<Container>
+			<Container maxWidth="xl">
 				<Box
 					sx={{
 						display: "flex",

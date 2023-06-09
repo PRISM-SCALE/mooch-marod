@@ -41,7 +41,7 @@ const PageHeader = ({tagline, title}: Props) => {
 				}}
 				loading="lazy"
 			/> */}
-			<Container>
+			<Container maxWidth="xl">
 				<Box
 					sx={{
 						display: "flex",

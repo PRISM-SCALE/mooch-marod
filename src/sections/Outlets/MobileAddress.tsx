@@ -25,7 +25,7 @@ const MobileAddress = () => {
 
 	return (
 		<Box component="section" id="outlet_section" sx={{py: {xs: "2rem", md: "4rem"}}}>
-			<Container>
+			<Container maxWidth="xl">
 				<Box
 					sx={{
 						display: "grid",

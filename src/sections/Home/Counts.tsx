@@ -25,7 +25,7 @@ const _data = [
 const Counts = () => {
 	return (
 		<Box component="section" id="count_section" py={{xs: "2rem", md: "4rem"}}>
-			<Container>
+			<Container maxWidth="xl">
 				<Box
 					sx={{
 						display: "flex",

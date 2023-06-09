@@ -94,8 +94,7 @@ const Hero = () => {
 							color="white"
 							sx={{textTransform: "uppercase", fontWeight: 700}}
 						>
-							share your <br /> love for <br />
-							paratha!
+							experience bangalore's largest paratha!
 						</Typography>
 
 						{/* ------------------------------------------ */}
@@ -118,7 +117,7 @@ const Hero = () => {
 							disableElevation
 							// disableRipple
 						>
-							Book a table
+							Own A Franchise
 						</Button>
 						<Button
 							sx={{

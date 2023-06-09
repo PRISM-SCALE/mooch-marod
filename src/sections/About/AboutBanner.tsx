@@ -10,7 +10,7 @@ const AboutBanner = () => {
 			layers={[{image: "/images/city.jpg", speed: -20}]}
 			sx={{height: 460}}
 		>
-			<Container sx={{position: "relative"}}>
+			<Container maxWidth="xl" sx={{position: "relative"}}>
 				<Box
 					sx={{
 						position: "absolute",

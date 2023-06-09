@@ -4,7 +4,7 @@ import OfferCard from "../../components/Offers/OfferCard";
 const DiscountOffers = () => {
 	return (
 		<Box component="section" id="offers_section" py={{xs: "2rem", md: "4rem"}}>
-			<Container>
+			<Container maxWidth="xl">
 				<Box
 					sx={{
 						display: "grid",

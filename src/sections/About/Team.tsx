@@ -7,7 +7,7 @@ const Team = () => {
 
 	return (
 		<Box component="section" py={{xs: "2rem", md: "4rem"}}>
-			<Container>
+			<Container maxWidth="xl">
 				<Box sx={{textAlign: "center", mb: 8}}>
 					<Typography
 						variant="caption"

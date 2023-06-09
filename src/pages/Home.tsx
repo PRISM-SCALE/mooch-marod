@@ -8,7 +8,7 @@ import MenuSection from "../sections/Home/MenuSection.tsx";
 import ParathaBanner from "../sections/Home/ParathaBanner.tsx";
 import GoogleReviews from "../sections/Home/GoogleReviews.tsx";
 import Instagram from "../sections/Home/Instagram.tsx";
-import BookTable from "../sections/Home/BookTable.tsx";
+// import BookTable from "../sections/Home/BookTable.tsx";
 
 const Home = () => {
 	return (
@@ -18,7 +18,7 @@ const Home = () => {
 			<Offers />
 			<MenuSection />
 			<ParathaBanner />
-			<BookTable />
+			{/* <BookTable /> */}
 			<GoogleReviews />
 			<Instagram />
 		</Box>

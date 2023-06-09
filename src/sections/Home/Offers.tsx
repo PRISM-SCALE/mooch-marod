@@ -9,7 +9,7 @@ const Offers = () => {
 			py={{xs: "2rem", md: "4rem"}}
 			// sx={{overflow: "hidden"}}
 		>
-			<Container>
+			<Container maxWidth="xl">
 				<Grid container spacing={2}>
 					<Grid item xs={12}>
 						<Box

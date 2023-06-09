@@ -30,7 +30,7 @@ const Footer = () => {
 				background: "#222",
 			}}
 		>
-			<Container>
+			<Container maxWidth="xl">
 				<Box textAlign={"center"}>
 					<img src={logo_white} alt="logo" width={120} height={120} />
 				</Box>
@@ -75,8 +75,8 @@ const Footer = () => {
 						display: "flex",
 						alignItems: "center",
 						justifyContent: {xs: "center", md: "space-between"},
-						flexDirection: { xs: "column", md: "row" },
-						
+						flexDirection: {xs: "column", md: "row"},
+
 						mb: 6,
 						pt: 4,
 						borderTop: `1px solid ${alpha("#aaa", 0.4)}`,

@@ -6,7 +6,7 @@ const MMHeroElements = () => {
 			<Box
 				component={"img"}
 				src="/images/leaf_2.png"
-				sx={{position: "absolute", height: 120, top: 15, left: 80, zIndex: -3}}
+				sx={{position: "absolute", height: 100, top: 80, left: 80, zIndex: -3}}
 				loading="lazy"
 			/>
 			<Box

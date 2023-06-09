@@ -10,6 +10,9 @@ import {useResponsive} from "../../hooks/useResponsive";
 import SearchBar from "../SearchBar";
 import NavbarList from "./NavbarList";
 import Iconify from "../Iconify";
+import {Link} from "react-router-dom";
+import {ROOT_LINK} from "../../utils/links";
+import Logo from "../Logo";
 
 interface Props {
 	window?: () => Window;
@@ -47,19 +50,19 @@ export default function Navbar(props: Props) {
 	const spaceBetween = {
 		display: "flex",
 		alignItems: "center",
-		justifyContent: "center",
+		justifyContent: "space-between",
 	};
 
 	return (
 		<Box component="header">
 			<ElevationScroll {...props}>
 				<AppBar position="fixed" sx={{top: 0}} component="nav">
-					<Container>
+					<Container maxWidth="xl">
 						<Toolbar
 							sx={{
 								width: "100%",
 								flexDirection: {xs: "row-reverse", md: "row"},
-								height: "100px",
+								height: "80px",
 								...spaceBetween,
 							}}
 							disableGutters
@@ -71,11 +74,15 @@ export default function Navbar(props: Props) {
 									</IconButton>
 								) : null}
 
+								<Link to={ROOT_LINK}>
+									<Logo width={80} />
+								</Link>
+
 								{/* {isMediumScreen !== isSmallScreen ? null : <SearchBar />} */}
 
 								<NavbarList />
 
-								{/* {isMediumScreen !== isSmallScreen ? null : (
+								{isMediumScreen !== isSmallScreen ? null : (
 									<Button
 										sx={{
 											backgroundColor: theme.palette.custom.paratha,
@@ -93,9 +100,9 @@ export default function Navbar(props: Props) {
 										disableElevation
 										disableRipple
 									>
-										Book a table
+										Own A Franchise
 									</Button>
-								)} */}
+								)}
 							</>
 						</Toolbar>
 					</Container>

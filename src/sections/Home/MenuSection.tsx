@@ -101,7 +101,7 @@ const MenuSection = () => {
 	};
 	return (
 		<Box component="section" id="menu_section" py={{xs: "2rem", md: "4rem"}}>
-			<Container>
+			<Container maxWidth="xl">
 				{/* TITLE FOR THE SECTION */}
 				<Box sx={{textAlign: "center"}}>
 					<Typography

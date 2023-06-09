@@ -30,7 +30,7 @@ const MenuList = () => {
 
 	return (
 		<Box component="section" id="main_menu_section" py={{xs: "2rem", md: "4rem"}}>
-			<Container>
+			<Container maxWidth="xl">
 				{/* Map sorted object */}
 				{Object.entries(groupedMenuData).map(([category, menuList]) => {
 					const data = tabData[category as keyof typeof tabData];

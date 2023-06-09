@@ -8,7 +8,7 @@ const GoogleReviews = () => {
 	const theme = useTheme();
 	return (
 		<Box component="section" id="review_section" py={{xs: "2rem", md: "4rem"}}>
-			<Container>
+			<Container maxWidth="xl">
 				<Box sx={{textAlign: "center", mb: 8}}>
 					<Typography
 						variant="caption"

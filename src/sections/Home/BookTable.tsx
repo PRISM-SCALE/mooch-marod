@@ -71,7 +71,7 @@ const BookTable = () => {
 	};
 	return (
 		<Box component={"section"} id={"reservation_section"} py={{xs: "2rem", md: "4rem"}}>
-			<Container>
+			<Container maxWidth="xl">
 				<Box sx={{textAlign: "center", mb: 4}}>
 					<Typography
 						variant="caption"
