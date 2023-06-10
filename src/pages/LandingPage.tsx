@@ -1,19 +1,20 @@
 import {Box} from "@mui/material";
 import BrandingCard from "../components/BrandingCard";
+import {fk_background, mm_background} from "../utils/common";
 
 const LandingPage = () => {
 	return (
 		<Box sx={{display: "flex", flexDirection: {xs: "column", md: "row"}}}>
 			<BrandingCard
 				alt="Food Kasoot"
-				background={`linear-gradient(359.53deg, #000000 0.43%, #242424 53.13%, #000000 96.53%), url(/images/brick_wall.png)`}
+				background={fk_background}
 				logo="/images/fk_white.png"
 				path="/home"
 				sx={{width: {xs: "100%", md: "50%"}}}
 			/>
 			<BrandingCard
 				alt="Mooch Marod"
-				background={`linear-gradient(359.53deg, #D93423 0.43%, #F15443 53.13%, #D93423 96.53%), url(/images/brick_wall.png)`}
+				background={mm_background}
 				logo="/images/mm_logo.webp"
 				path="/home"
 				sx={{width: {xs: "100%", md: "50%"}}}
