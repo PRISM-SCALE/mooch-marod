@@ -9,12 +9,12 @@ export const ROOT_LINK = "/";
 export const HOME_LINK = "/home";
 
 export const menuLinks = [
-	{link: "/home", path: "Home"},
-	{link: "/about", path: "About"},
-	{link: "/menu", path: "Menu"},
-	{link: "/offers", path: "Offers"},
-	{link: "/outlets", path: "Outlets"},
-	{link: "/contact", path: "Contact"},
+	{link: "/home", path: "Home", icon: "majesticons:home"},
+	{link: "/about", path: "About", icon: "icon-park-solid:english-mustache"},
+	{link: "/menu", path: "Menu", icon: "ic:round-restaurant-menu"},
+	{link: "/offers", path: "Offers", icon: "icon-park-outline:weixin-cards-offers"},
+	{link: "/outlets", path: "Outlets", icon: "mdi:locations"},
+	{link: "/contact", path: "Contact", icon: "fluent:contact-card-24-filled"},
 ];
 
 export const footerImageUrl = [
