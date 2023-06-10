@@ -22,7 +22,7 @@
 					{"type": "king", "rate": 489, "inch": 20},
 					{"type": "emperor", "rate": 589, "inch": 24}
 				],
-				"description": "A flavorful paratha filled with aloo (potatoes) and onions.",
+				"description": "A flavorful paratha filled with aloo and onions.",
 				"category": "Classic Parathas",
 				"isVeg": true,
 				"categoryPriority": 1,
@@ -36,7 +36,7 @@
 					{"type": "king", "rate": 489, "inch": 20},
 					{"type": "emperor", "rate": 589, "inch": 24}
 				],
-				"description": "A delightful paratha filled with aloo (potatoes), gobhi (cauliflower), and onions.",
+				"description": "A delightful paratha filled with aloo, gobhi, and onions.",
 				"category": "Classic Parathas",
 				"isVeg": true,
 				"categoryPriority": 1,
@@ -64,7 +64,7 @@
 					{"type": "king", "rate": 489, "inch": 20},
 					{"type": "emperor", "rate": 589, "inch": 24}
 				],
-				"description": "A flavorful paratha filled with gobhi (cauliflower) and onions.",
+				"description": "A flavorful paratha filled with gobhi and onions.",
 				"category": "Classic Parathas",
 				"isVeg": true,
 				"categoryPriority": 1,
@@ -72,13 +72,27 @@
 				"genre": "parathas"
 			},
 			{
-				"name": "Mooli Mooli Onion",
+				"name": "Mooli",
 				"price": [
 					{"type": "queen", "rate": 329, "inch": 15},
 					{"type": "king", "rate": 489, "inch": 20},
 					{"type": "emperor", "rate": 589, "inch": 24}
 				],
-				"description": "A unique paratha filled with the goodness of radish (mooli) and onions.",
+				"description": "A unique paratha filled with the goodness of radish.",
+				"category": "Classic Parathas",
+				"isVeg": true,
+				"categoryPriority": 1,
+				"priority": 1,
+				"genre": "parathas"
+			},
+			{
+				"name": "Mooli Onion",
+				"price": [
+					{"type": "queen", "rate": 329, "inch": 15},
+					{"type": "king", "rate": 489, "inch": 20},
+					{"type": "emperor", "rate": 589, "inch": 24}
+				],
+				"description": "A unique paratha filled with the goodness of radish and onions.",
 				"category": "Classic Parathas",
 				"isVeg": true,
 				"categoryPriority": 1,
@@ -176,7 +190,7 @@
 					{"type": "king", "rate": 499, "inch": 20},
 					{"type": "emperor", "rate": 599, "inch": 24}
 				],
-				"description": "A tasty paratha filled with aloo (potatoes) and bell peppers.",
+				"description": "A tasty paratha filled with aloo and bell peppers.",
 				"category": "Delight Parathas",
 				"isVeg": true,
 				"categoryPriority": 2,
@@ -484,7 +498,7 @@
 		"make_your_own_paratha": [
 			{
 				"name": "Veg Paratha",
-				"description": "Enjoy the perfect blend of spices, vegetables, and herbs in every bite.",
+				"description": "A perfect blend of spices, vegetables, and herbs in every bite.",
 				"price": [
 					{"type": "queen", "rate": 399, "inch": 15},
 					{"type": "king", "rate": 569, "inch": 20},
@@ -498,7 +512,7 @@
 			},
 			{
 				"name": "Nonveg Paratha",
-				"description": "A delectable delight with juicy meat and aromatic spices, offering a burst of flavors in every bite.",
+				"description": "A delectable delight with juicy meat and aromatic spices",
 				"price": [
 					{"type": "queen", "rate": 549, "inch": 15},
 					{"type": "king", "rate": 699, "inch": 20},

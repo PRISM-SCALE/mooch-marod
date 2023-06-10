@@ -1,9 +1,15 @@
-import {Box, Container, Grid, Typography, useTheme} from "@mui/material";
+import {Box, Container, Divider, Grid, Typography, useTheme} from "@mui/material";
 
 // JSON DATA
-import {menu} from "../../_mock/menu.json";
-import MenuDetail from "../../components/MenuDetail";
-import {GroupedMenuData, groupData} from "../../utils/groupby";
+import {MM_Menu} from "../../_mock/menuV2.json";
+
+// UTILS
+import {groupData} from "../../utils/groupby";
+
+// COMPONENTS
+import MenuDetail from "../../components/Menu/MenuDetail";
+import TitleWithMooch from "../../components/TitleWithMooch";
+import GroupedMenu from "../../components/Menu/GroupedMenu";
 
 interface CustomPalette {
 	paratha: string;
@@ -18,39 +24,31 @@ type TabData = {
 
 const tabData: TabData = {
 	parathas: "paratha",
-	lassi: "pani",
-	starters: "achar",
-	"food kasoot": "conceot",
+	make_your_own_paratha: "pani",
+	kebabs: "achar",
+	lassi: "conceot",
 };
 
 const MenuList = () => {
 	const theme = useTheme();
-	// Grouped data returned from 
-	const groupedMenuData: GroupedMenuData = groupData(menu);
+	// Grouped data returned from
+	// const groupedMenuData: GroupedMenuData = groupData(MM_Menu);
 
 	return (
 		<Box component="section" id="main_menu_section" py={{xs: "2rem", md: "4rem"}}>
 			<Container maxWidth="xl">
 				{/* Map sorted object */}
-				{Object.entries(groupedMenuData).map(([category, menuList]) => {
-					const data = tabData[category as keyof typeof tabData];
+				{Object.entries(MM_Menu).map(([genre, menuList]) => {
+					const data = tabData[genre as keyof typeof tabData];
 					const color = theme.palette.custom[data as keyof CustomPalette];
 
 					return (
-						<Box key={category} sx={{mb: 6}}>
-							{/* Categoty Name */}
-							<Typography
-								variant="h3"
-								color={color}
-								sx={{fontSize: {xs: 24, sm: 26, md: 32}}}
-								gutterBottom
-							>
-								{category.toUpperCase()}
-							</Typography>
+						<Box key={genre} sx={{mb: 6}}>
+							{/* Genre Name */}
+							<TitleWithMooch title={genre.replaceAll("_", " ").toUpperCase()} color={color} />
+
 							{/* Menu Detail Component */}
-							<Grid container columnSpacing={4}>
-								<MenuDetail menuList={menuList} />
-							</Grid>
+							<GroupedMenu menuList={menuList} genre={genre} color={color} />
 						</Box>
 					);
 				})}

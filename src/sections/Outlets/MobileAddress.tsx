@@ -37,11 +37,11 @@ const MobileAddress = () => {
 						},
 					}}
 				>
-					{stores.features.map((currentFeature) => {
+					{stores.features.map((currentFeature, index) => {
 						const {properties, id} = currentFeature;
 						return (
 							<LocationCard
-								key={id}
+								key={index}
 								location={properties?.location}
 								address={properties?.address}
 								phone={properties?.phone}

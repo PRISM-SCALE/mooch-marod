@@ -125,11 +125,11 @@ const DesktopAddress = () => {
 						overflow: "hidden",
 					}}
 				>
-					{stores.features.map((currentFeature) => {
+					{stores.features.map((currentFeature, index) => {
 						const {properties, id} = currentFeature;
 						return (
 							<LocationCard
-								key={id}
+								key={index}
 								location={properties?.location}
 								address={properties?.address}
 								phone={properties?.phone}
@@ -154,9 +154,10 @@ const DesktopAddress = () => {
 					{/* ********************************************************** */}
 					{/* Add a marker to the map for every store listing. */}
 					{/* ********************************************************** */}
-					{stores.features.map(({id}) => {
+					{stores.features.map(({id}, index) => {
 						return (
 							<Box
+								key={index}
 								id={`marker-${id}`}
 								sx={{
 									border: "none",
