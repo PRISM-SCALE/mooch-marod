@@ -4,7 +4,11 @@ import {AppBar, Toolbar, Box, Button, Container, IconButton} from "@mui/material
 import {useTheme} from "@mui/material/styles";
 
 // HOOKS
-import {useResponsive} from "../../hooks/useResponsive";
+import { useResponsive } from "../../hooks/useResponsive";
+
+// UTILS
+import {ROOT_LINK} from "../../utils/links";
+import {logo_white} from "../../utils/common";
 
 // COMPONENTS
 // import SearchBar from "../SearchBar";
@@ -69,14 +73,18 @@ export default function Navbar(props: Props) {
 						>
 							<>
 								<Link to={ROOT_LINK}>
-									<Logo width={{xs: 60, md: 80}} height={{xs: 60, md: 80}} />
+									<Logo width={{xs: 60, md: 100}} height={{xs: 60, md: 100}} logo={logo_white} />
 								</Link>
 
 								{isSmallScreen === !isMediumScreen ? (
-									<IconButton sx={{color: "white"}}>
+									<IconButton sx={{color: "white"}} onClick={handleMenuClick}>
 										<Iconify icon={"gg:menu-right"} size={24} />
 									</IconButton>
 								) : null}
+
+								{!mediumScreenAndUp && (
+									<Sidebar anchor="right" onClose={handleSidebarClose} open={isSidebarOpen} />
+								)}
 
 								{/* {isMediumScreen !== isSmallScreen ? null : <SearchBar />} */}
 								{isMediumScreen !== isSmallScreen ? null : <NavbarList />}
