@@ -4,19 +4,18 @@ import {AppBar, Toolbar, Box, Button, Container, IconButton} from "@mui/material
 import {useTheme} from "@mui/material/styles";
 
 // HOOKS
-import { useResponsive } from "../../hooks/useResponsive";
+import {useResponsive} from "../../hooks/useResponsive";
 
 // UTILS
 import {ROOT_LINK} from "../../utils/links";
 import {logo_white} from "../../utils/common";
 
 // COMPONENTS
-// import SearchBar from "../SearchBar";
 import NavbarList from "./NavbarList";
 import Iconify from "../Iconify";
 import {Link} from "react-router-dom";
-import {ROOT_LINK} from "../../utils/links";
 import Logo from "../Logo";
+import Sidebar from "./Sidebar";
 
 interface Props {
 	window?: () => Window;
