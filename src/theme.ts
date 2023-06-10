@@ -6,8 +6,14 @@ export const themeSettings = {
 			paratha: "#E69B39",
 			conceot: "#9A3685",
 			butter: "#F2E1AB",
+			
+			black: "#111111",
+			mustard: "#e1ad01",
+			red: "#db4e2d",
+			white: "#f1f1f1",
 		},
 	},
+
 	typography: {
 		fontFamily: ["Poppins", "sans-serif"].join(","),
 		fontSize: 12,

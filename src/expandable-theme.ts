@@ -10,6 +10,10 @@ declare module "@mui/material/styles" {
 		paratha: string;
 		conceot: string;
 		butter: string;
+		black: string;
+		mustard: string;
+		red: string;
+		white: string;
 	}
 
 	interface PaletteOptions {
@@ -19,6 +23,10 @@ declare module "@mui/material/styles" {
 			paratha: string;
 			conceot: string;
 			butter: string;
+			black: string;
+			mustard: string;
+			red: string;
+			white: string;
 		};
 	}
 

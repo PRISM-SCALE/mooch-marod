@@ -22,7 +22,7 @@ interface Props {
 
 function ElevationScroll(props: Props) {
 	const {children, window} = props;
-	const theme = useTheme();
+	// const theme = useTheme();
 	// Note that you normally won't need to set the window ref as useScrollTrigger
 	// will default to window.
 	// This is only being set here because the demo is in an iframe.
@@ -39,7 +39,7 @@ function ElevationScroll(props: Props) {
 	return React.cloneElement(children as React.ReactElement, {
 		elevation: trigger ? 4 : 0,
 		style: {
-			backgroundColor: trigger ? theme.palette.custom.achar : "transparent",
+			backgroundColor: trigger ? "#111" : "transparent",
 		},
 	});
 }

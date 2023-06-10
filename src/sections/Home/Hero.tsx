@@ -3,7 +3,7 @@ import {useSpring, animated} from "@react-spring/web";
 import {useResponsive} from "../../hooks/useResponsive";
 import MMHeroElements from "../../components/MMHeroElements";
 import {TypeAnimation} from "react-type-animation";
-import { fk_background } from "../../utils/common";
+import {fk_background} from "../../utils/common";
 
 const Hero = () => {
 	const theme = useTheme();
@@ -150,13 +150,13 @@ const Hero = () => {
 
 					<Box sx={{position: "relative", zIndex: 20, [theme.breakpoints.down("md")]: {mt: 6}}}>
 						<Box
-							component={animated.img}
-							src="/images/1.webp"
+							component={"img"}
+							src="/images/fk_hero.png"
 							alt="paratha_animation"
 							sx={{
 								height: {xs: 260, sm: 340, md: 420, lg: 580},
 							}}
-							style={{transform}}
+							// style={{transform}}
 							loading="lazy"
 						/>
 						<Box
