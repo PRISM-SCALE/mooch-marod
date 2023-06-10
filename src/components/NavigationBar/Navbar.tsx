@@ -49,7 +49,16 @@ function ElevationScroll(props: Props) {
 
 export default function Navbar(props: Props) {
 	const theme = useTheme();
-	const {isMediumScreen, isSmallScreen} = useResponsive();
+	const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+	const {isMediumScreen, isSmallScreen, mediumScreenAndUp} = useResponsive();
+
+	const handleMenuClick = () => {
+		setIsSidebarOpen(!isSidebarOpen);
+	};
+
+	const handleSidebarClose = () => {
+		setIsSidebarOpen(false);
+	};
 
 	const spaceBetween = {
 		display: "flex",
