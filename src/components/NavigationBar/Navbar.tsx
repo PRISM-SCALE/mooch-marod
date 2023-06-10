@@ -1,17 +1,18 @@
 import * as React from "react";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
+import {Link} from "react-router-dom";
 import {AppBar, Toolbar, Box, Button, Container, IconButton} from "@mui/material";
 import {useTheme} from "@mui/material/styles";
 
 // HOOKS
 import {useResponsive} from "../../hooks/useResponsive";
 
+// UTILS
+import {ROOT_LINK} from "../../utils/links";
+
 // COMPONENTS
-import SearchBar from "../SearchBar";
 import NavbarList from "./NavbarList";
 import Iconify from "../Iconify";
-import {Link} from "react-router-dom";
-import {ROOT_LINK} from "../../utils/links";
 import Logo from "../Logo";
 
 interface Props {
@@ -63,13 +64,14 @@ export default function Navbar(props: Props) {
 								width: "100%",
 								flexDirection: {xs: "row", md: "row"},
 								height: {xs: "60px", md: "80px"},
+								py: 2,
 								...spaceBetween,
 							}}
 							disableGutters
 						>
 							<>
 								<Link to={ROOT_LINK}>
-									<Logo width={{xs: 60, md: 80}} height={{xs: 60, md: 80}} />
+									<Logo width={{xs: 60, md: 100}} height={{xs: 60, md: 100}} />
 								</Link>
 
 								{isSmallScreen === !isMediumScreen ? (

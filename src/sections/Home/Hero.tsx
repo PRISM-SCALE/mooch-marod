@@ -3,6 +3,7 @@ import {useSpring, animated} from "@react-spring/web";
 import {useResponsive} from "../../hooks/useResponsive";
 import MMHeroElements from "../../components/MMHeroElements";
 import {TypeAnimation} from "react-type-animation";
+import { fk_background } from "../../utils/common";
 
 const Hero = () => {
 	const theme = useTheme();
@@ -22,7 +23,8 @@ const Hero = () => {
 			component={"section"}
 			id="hero_section"
 			sx={{
-				background: theme.palette.custom.achar,
+				background: fk_background,
+				mixBlendMode: "multiply",
 				height: "100vh",
 				width: "100%",
 				display: "flex",
@@ -34,7 +36,7 @@ const Hero = () => {
 			}}
 		>
 			<img
-				src="/images/jabardast_desi.png"
+				src="/images/jd_white.png"
 				alt="jabardast_desi"
 				style={{
 					height: 760,
@@ -43,7 +45,7 @@ const Hero = () => {
 					left: "50%",
 					transform: "translate(-50%, -50%) rotate(-15deg)",
 					zIndex: 10,
-					opacity: 0.25,
+					opacity: 0.01,
 				}}
 				loading="lazy"
 			/>

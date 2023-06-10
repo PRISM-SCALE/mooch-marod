@@ -1,5 +1,5 @@
 import {Box, styled} from "@mui/material";
-import logo from "/icons/logo_notag_white.svg";
+import logo from "/images/fk_white.png";
 
 type Props = {
 	width?: number | {xs: number; md: number};
