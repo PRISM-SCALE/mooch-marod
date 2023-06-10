@@ -1,4 +1,4 @@
-import {Box, Container, Typography, alpha} from "@mui/material";
+import {Box, Container, Divider, Typography, alpha} from "@mui/material";
 
 import {Link} from "react-router-dom";
 import {footerLinks} from "../utils/links";
@@ -33,7 +33,19 @@ const Footer = () => {
 		>
 			<Container maxWidth="xl">
 				<Box textAlign={"center"}>
-					<img src={logo_with_tag} alt="logo" width={120} height={120} />
+					<Divider
+						sx={{
+							width: "100%",
+							mx: "auto",
+							"&.MuiDivider-root::before, &.MuiDivider-root::after": {
+								borderTop: `2px solid ${alpha("#fff", 0.2)}`,
+							},
+							display: "flex",
+							alignItems: "center",
+						}}
+					>
+						<img src={logo_with_tag} alt="logo" width={120} height={120} />
+					</Divider>
 				</Box>
 
 				<Box
