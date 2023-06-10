@@ -1,55 +1,112 @@
-import React from "react";
-import {Box, Button, useTheme} from "@mui/material";
+import React, {useState} from "react";
+// import {decode} from "html-entities";
+import {Box, Button, TextField, useTheme} from "@mui/material";
+import {EmailFormFields} from "react-mailchimp-subscribe";
 
 type Props = {
-	email: string;
-	handleEmailChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-	handleSubmit: (event: React.FormEvent<HTMLFormElement>) => Promise<void>;
+	status: "error" | "success" | "sending" | null;
+	message: string | Error | null;
+	onSubmitted: (data: EmailFormFields) => void;
 };
 
-const EmailSubscriptionForm = ({email, handleEmailChange, handleSubmit}: Props) => {
+const EmailSubscriptionForm = ({status, message, onSubmitted}: Props) => {
 	const theme = useTheme();
+	const [email, setEmail] = useState("");
+	const [emailError, setEmailError] = useState<string | null>(null);
+
+	console.log(message);
+
+	const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setEmail(event.target.value);
+	};
+
+	const handleBlur = () => {
+		const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+
+		if (!emailRegex.test(email)) {
+			setEmailError("Invalid email address");
+		} else {
+			setEmailError("");
+		}
+	};
+
+	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		setEmailError(null);
+
+		// Here you can add the logic to submit the email
+		const isFormValidated = onSubmitted({EMAIL: email});
+		setEmail("");
+		return email && email.indexOf("@") > -1 && isFormValidated;
+	};
+
+	/**
+	 * Extract message from string.
+	 *
+	 * @param {String} message
+	 * @return {null|*}
+	 */
+	// const getMessage = (message: any) => {
+	// 	if (!message) {
+	// 		return null;
+	// 	}
+	// 	const result = message?.split("-") ?? null;
+	// 	if ("0" !== result?.[0]?.trim()) {
+	// 		return decode(message);
+	// 	}
+	// 	const formattedMessage = result?.[1]?.trim() ?? null;
+	// 	return formattedMessage ? decode(formattedMessage) : null;
+	// };
+
+	let buttonText: string;
+
+	if (status === "sending") {
+		buttonText = "Loading...";
+	} else if (status === "success") {
+		buttonText = "Subscribed";
+	} else {
+		buttonText = "Subscribe";
+	}
 
 	return (
 		<Box
 			component="form"
 			onSubmit={handleSubmit}
 			sx={{
-				"& > :not(style)": {m: 1, width: "25ch"},
-				pt: "1rem",
-				px: "1rem",
+				"& > :not(style)": {m: 1, width: "100%"},
+
 				display: "flex",
 				alignItems: "center",
 				flexDirection: {xs: "column", md: "row"},
+
+				[theme.breakpoints.up("sm")]: {
+					pt: "1rem",
+					px: "1rem",
+				},
 			}}
 			autoComplete="off"
 		>
-			{/* <TextField
-				label="Email"
+			<TextField
+				placeholder="Email"
 				variant="outlined"
 				type="email"
 				value={email}
 				onChange={handleEmailChange}
-				required
-				fullWidth
-			/> */}
-			<Box
-				component="input"
-				type="email"
-				name="email"
-				id="email"
-				value={email}
-				onChange={handleEmailChange}
-				placeholder="Email"
+				onBlur={handleBlur}
+				// InputProps={{
+				// 	endAdornment: <InputAdornment position="end"></InputAdornment>,
+				// }}
+				error={status === "error" || !!emailError}
+				helperText={(status === "error" && `Something went wrong!!`) || emailError}
 				sx={{
-					padding: "1rem 0.5rem",
+					borderRadius: "4px",
+					backgroundColor: "white",
 					outline: "none",
-					border: "2px solid #000",
-					borderRadius: 1,
-					width: {xs: "100%!important", md: "50%!important"},
-					margin: "0!important",
+					"& fieldset": {border: "none", width: "50%"},
 				}}
+				required
 			/>
+
 			<Button
 				type="submit"
 				variant="contained"
@@ -59,12 +116,12 @@ const EmailSubscriptionForm = ({email, handleEmailChange, handleSubmit}: Props) 
 					"&:hover": {
 						backgroundColor: theme.palette.custom.paratha,
 					},
-					width: {xs: "40%!important", md: "30%!important"},
+					width: {xs: "80%!important", sm: "30%!important"},
 				}}
 				disableRipple
 				disableElevation
 			>
-				Subscribe
+				{buttonText}
 			</Button>
 		</Box>
 	);
