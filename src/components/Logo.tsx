@@ -1,9 +1,9 @@
 import {Box, styled} from "@mui/material";
-import logo from "/icons/logo_notag_white.svg";
 
 type Props = {
 	width?: number | {xs: number; md: number};
 	height?: number | {xs: number; md: number};
+	logo: string;
 };
 
 const ImageWrapper = styled(Box)(({theme}) => ({
@@ -28,7 +28,7 @@ const Image = styled("img")(({theme}) => ({
 	},
 }));
 
-const Logo = ({width, height}: Props) => {
+const Logo = ({width, height, logo}: Props) => {
 	return (
 		<ImageWrapper>
 			<Image src={logo} alt="logo" loading="lazy" sx={{width: width, height: height}} />
