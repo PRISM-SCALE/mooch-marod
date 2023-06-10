@@ -37,13 +37,13 @@ const Hero = () => {
 		>
 			<img
 				src="/images/jd_white.png"
-				alt="jabardast_desi"
+				alt="Absolute_Jabardast"
 				style={{
 					height: 760,
 					position: "absolute",
 					top: "50%",
 					left: "50%",
-					transform: "translate(-50%, -50%) rotate(-15deg)",
+					transform: "translate(-50%, -50%) rotate(-10deg)",
 					zIndex: 10,
 					opacity: 0.01,
 				}}
@@ -99,7 +99,7 @@ const Hero = () => {
 						>
 							SHARE YOUR <br />
 							LOVE FOR <br />
-							<TypeAnimation sequence={["BANGALORE", 2000, "PARATHA", 2000]} repeat={Infinity} />
+							<TypeAnimation sequence={["BANGALORE", 2000, "SIZZLERS", 2000]} repeat={Infinity} />
 						</Typography>
 
 						{/* ------------------------------------------ */}

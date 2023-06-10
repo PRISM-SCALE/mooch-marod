@@ -9,11 +9,13 @@ import {useResponsive} from "../../hooks/useResponsive";
 
 // UTILS
 import {ROOT_LINK} from "../../utils/links";
+import {logo_white} from "../../utils/common";
 
 // COMPONENTS
 import NavbarList from "./NavbarList";
 import Iconify from "../Iconify";
 import Logo from "../Logo";
+import Sidebar from "./Sidebar";
 
 interface Props {
 	window?: () => Window;
@@ -46,7 +48,16 @@ function ElevationScroll(props: Props) {
 
 export default function Navbar(props: Props) {
 	const theme = useTheme();
-	const {isMediumScreen, isSmallScreen} = useResponsive();
+	const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+	const {isMediumScreen, isSmallScreen, mediumScreenAndUp} = useResponsive();
+
+	const handleMenuClick = () => {
+		setIsSidebarOpen(!isSidebarOpen);
+	};
+
+	const handleSidebarClose = () => {
+		setIsSidebarOpen(false);
+	};
 
 	const spaceBetween = {
 		display: "flex",
@@ -71,16 +82,21 @@ export default function Navbar(props: Props) {
 						>
 							<>
 								<Link to={ROOT_LINK}>
-									<Logo width={{xs: 60, md: 100}} height={{xs: 60, md: 100}} />
+									<Logo width={{xs: 60, md: 100}} height={{xs: 60, md: 100}} logo={logo_white} />
 								</Link>
 
 								{isSmallScreen === !isMediumScreen ? (
-									<IconButton sx={{color: "white"}}>
+									<IconButton sx={{color: "white"}} onClick={handleMenuClick}>
 										<Iconify icon={"gg:menu-right"} size={24} />
 									</IconButton>
 								) : null}
 
+								{!mediumScreenAndUp && (
+									<Sidebar anchor="right" onClose={handleSidebarClose} open={isSidebarOpen} />
+								)}
+
 								{/* {isMediumScreen !== isSmallScreen ? null : <SearchBar />} */}
+
 								{isMediumScreen !== isSmallScreen ? null : <NavbarList />}
 
 								{isMediumScreen !== isSmallScreen ? null : (
