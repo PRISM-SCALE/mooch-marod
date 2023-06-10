@@ -7,7 +7,7 @@ import {useTheme} from "@mui/material/styles";
 import {useResponsive} from "../../hooks/useResponsive";
 
 // COMPONENTS
-import SearchBar from "../SearchBar";
+// import SearchBar from "../SearchBar";
 import NavbarList from "./NavbarList";
 import Iconify from "../Iconify";
 import {Link} from "react-router-dom";
