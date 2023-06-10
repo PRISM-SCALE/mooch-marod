@@ -11,7 +11,9 @@
 				"description": "A classic paratha filled with delicious mashed potatoes.",
 				"category": "Classic Parathas",
 				"isVeg": true,
-				"priority": 1
+				"categoryPriority": 1,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Aloo Onion",
@@ -23,7 +25,9 @@
 				"description": "A flavorful paratha filled with aloo (potatoes) and onions.",
 				"category": "Classic Parathas",
 				"isVeg": true,
-				"priority": 1
+				"categoryPriority": 1,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Aloo Gobhi Onion",
@@ -35,7 +39,9 @@
 				"description": "A delightful paratha filled with aloo (potatoes), gobhi (cauliflower), and onions.",
 				"category": "Classic Parathas",
 				"isVeg": true,
-				"priority": 1
+				"categoryPriority": 1,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Gobhi",
@@ -47,7 +53,9 @@
 				"description": "A classic paratha filled with the goodness of fresh cauliflower.",
 				"category": "Classic Parathas",
 				"isVeg": true,
-				"priority": 1
+				"categoryPriority": 1,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Gobhi Onion",
@@ -59,7 +67,9 @@
 				"description": "A flavorful paratha filled with gobhi (cauliflower) and onions.",
 				"category": "Classic Parathas",
 				"isVeg": true,
-				"priority": 1
+				"categoryPriority": 1,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Mooli Mooli Onion",
@@ -71,7 +81,9 @@
 				"description": "A unique paratha filled with the goodness of radish (mooli) and onions.",
 				"category": "Classic Parathas",
 				"isVeg": true,
-				"priority": 1
+				"categoryPriority": 1,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Green Peas",
@@ -83,7 +95,9 @@
 				"description": "A delightful paratha filled with the goodness of green peas.",
 				"category": "Delight Parathas",
 				"isVeg": true,
-				"priority": 2
+				"categoryPriority": 2,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Baby corn",
@@ -95,7 +109,9 @@
 				"description": "A flavorful paratha with the crunch of baby corn.",
 				"category": "Delight Parathas",
 				"isVeg": true,
-				"priority": 2
+				"categoryPriority": 2,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Methi Aloo",
@@ -107,7 +123,9 @@
 				"description": "A delicious combination of fenugreek leaves and potatoes in a paratha.",
 				"category": "Delight Parathas",
 				"isVeg": true,
-				"priority": 2
+				"categoryPriority": 2,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Palak Aloo",
@@ -119,7 +137,9 @@
 				"description": "A nutritious paratha filled with spinach and potatoes.",
 				"category": "Delight Parathas",
 				"isVeg": true,
-				"priority": 2
+				"categoryPriority": 2,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Baby corn Onion",
@@ -131,7 +151,9 @@
 				"description": "A delectable paratha filled with baby corn and onions.",
 				"category": "Delight Parathas",
 				"isVeg": true,
-				"priority": 2
+				"categoryPriority": 2,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Green Peas Onion",
@@ -143,7 +165,9 @@
 				"description": "A flavorful paratha with the combination of green peas and onions.",
 				"category": "Delight Parathas",
 				"isVeg": true,
-				"priority": 2
+				"categoryPriority": 2,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Aloo Bell pepper",
@@ -155,7 +179,9 @@
 				"description": "A tasty paratha filled with aloo (potatoes) and bell peppers.",
 				"category": "Delight Parathas",
 				"isVeg": true,
-				"priority": 2
+				"categoryPriority": 2,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Mixed Veg",
@@ -167,7 +193,9 @@
 				"description": "A delightful combination of mixed vegetables in a paratha.",
 				"category": "Signature Parathas",
 				"isVeg": true,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Paneer",
@@ -179,7 +207,9 @@
 				"description": "A classic paratha stuffed with flavorful paneer.",
 				"category": "Signature Parathas",
 				"isVeg": true,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Palak Paneer",
@@ -191,7 +221,9 @@
 				"description": "Healthy and tasty paratha filled with spinach and paneer.",
 				"category": "Signature Parathas",
 				"isVeg": true,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Paneer Onion",
@@ -203,7 +235,9 @@
 				"description": "A lip-smacking combination of paneer and onions in a paratha.",
 				"category": "Signature Parathas",
 				"isVeg": true,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Gobhi Paneer",
@@ -215,7 +249,9 @@
 				"description": "A delicious blend of cauliflower and paneer in a paratha.",
 				"category": "Signature Parathas",
 				"isVeg": true,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Methi Paneer",
@@ -227,7 +263,9 @@
 				"description": "A flavorful paratha with a combination of fenugreek leaves and paneer.",
 				"category": "Signature Parathas",
 				"isVeg": true,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Carrot Paneer",
@@ -239,7 +277,9 @@
 				"description": "A unique paratha filled with grated carrots and paneer.",
 				"category": "Signature Parathas",
 				"isVeg": true,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Aloo Paneer",
@@ -251,7 +291,9 @@
 				"description": "A delightful combination of potatoes and paneer in a paratha.",
 				"category": "Signature Parathas",
 				"isVeg": true,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 
 			{
@@ -264,7 +306,9 @@
 				"description": "Delicious paratha with a combination of green peas and paneer.",
 				"category": "Supreme Parathas",
 				"isVeg": true,
-				"priority": 4
+				"categoryPriority": 4,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Bell Pepper Paneer",
@@ -276,7 +320,9 @@
 				"description": "Flavorful paratha filled with bell peppers and paneer.",
 				"category": "Supreme Parathas",
 				"isVeg": true,
-				"priority": 4
+				"categoryPriority": 4,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Paneer Sweet Corn",
@@ -288,7 +334,9 @@
 				"description": "Mouth-watering paratha stuffed with paneer and sweet corn.",
 				"category": "Supreme Parathas",
 				"isVeg": true,
-				"priority": 4
+				"categoryPriority": 4,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Paneer Mushroom",
@@ -300,7 +348,9 @@
 				"description": "Savory paratha filled with paneer and mushrooms.",
 				"category": "Supreme Parathas",
 				"isVeg": true,
-				"priority": 4
+				"categoryPriority": 4,
+				"priority": 1,
+				"genre": "parathas"
 			},
 
 			{
@@ -313,7 +363,9 @@
 				"description": "Delicious paratha with chicken keema and onions.",
 				"category": "Signature Parathas",
 				"isVeg": false,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Chicken Keema Bell Pepper",
@@ -325,7 +377,9 @@
 				"description": "Savory paratha filled with chicken keema and bell peppers.",
 				"category": "Signature Parathas",
 				"isVeg": false,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Chicken Keema Paneer",
@@ -337,7 +391,9 @@
 				"description": "Flavorful paratha stuffed with chicken keema and paneer.",
 				"category": "Signature Parathas",
 				"isVeg": false,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Angara Chicken Keema Onion",
@@ -349,7 +405,9 @@
 				"description": "Spicy paratha with angara chicken keema and onions.",
 				"category": "Signature Parathas",
 				"isVeg": false,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Angara Chicken Keema Paneer",
@@ -361,7 +419,9 @@
 				"description": "Fiery paratha filled with angara chicken keema and paneer.",
 				"category": "Signature Parathas",
 				"isVeg": false,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Angara Chicken Keema Bell Pepper",
@@ -373,7 +433,9 @@
 				"description": "Hot and tangy paratha stuffed with angara chicken keema and bell peppers.",
 				"category": "Signature Parathas",
 				"isVeg": false,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Afghani Chicken Keema Onion",
@@ -385,7 +447,9 @@
 				"description": "Rich and creamy paratha with afghani chicken keema and onions.",
 				"category": "Signature Parathas",
 				"isVeg": false,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Afghani Chicken Keema Paneer",
@@ -397,7 +461,9 @@
 				"description": "Creamy and flavorful paratha stuffed with afghani chicken keema and paneer.",
 				"category": "Signature Parathas",
 				"isVeg": false,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			},
 			{
 				"name": "Afghani Chicken Keema Bell Pepper",
@@ -409,52 +475,42 @@
 				"description": "Mildly spicy paratha filled with afghani chicken keema and bell peppers.",
 				"category": "Signature Parathas",
 				"isVeg": false,
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 1,
+				"genre": "parathas"
 			}
 		],
 
-		"make_your_own_paratha": {
-			"ingredients": [
-				{"image": "/ingredients/aloo.png", "name": "Aloo"},
-				{"image": "/ingredients/onion.png", "name": "Onion"},
-				{"image": "/ingredients/palak.png", "name": "Palak"},
-				{"image": "/ingredients/methi.png", "name": "Methi"},
-				{"image": "/ingredients/paneer.png", "name": "Paneer"},
-				{"image": "/ingredients/mushroom.png", "name": "Mushroom"},
-				{"image": "/ingredients/bell_pepper.png", "name": "Bell Pepper"},
-				{"image": "/ingredients/baby_corn.png", "name": "Baby Corn"},
-				{"image": "/ingredients/sweetcorn.png", "name": "Sweetcorn"},
-				{"image": "/ingredients/green_peas.png", "name": "Green Peas"},
-				{"image": "/ingredients/kheema.png", "name": "Gobhi"},
-				{"image": "/ingredients/mooli.png", "name": "Mooli"},
-				{"image": "/ingredients/carrot.png", "name": "Carrot"},
-				{"image": "/ingredients/kheema.png", "name": "Chicken Kheema"},
-				{"image": "/ingredients/kheema.png", "name": "Angara Chicken Keema"},
-				{"image": "/ingredients/kheema.png", "name": "Afghani Chicken Keema"}
-			],
-			"veg": {
+		"make_your_own_paratha": [
+			{
 				"name": "Veg Paratha",
-				"description": "A delightful Indian bread filled with flavorful vegetarian ingredients. Enjoy the perfect blend of spices, vegetables, and herbs in every bite. Served with yogurt or chutney, it's a wholesome and satisfying choice for breakfast, lunch, or dinner.",
+				"description": "Enjoy the perfect blend of spices, vegetables, and herbs in every bite.",
 				"price": [
 					{"type": "queen", "rate": 399, "inch": 15},
 					{"type": "king", "rate": 569, "inch": 20},
 					{"type": "emperor", "rate": 659, "inch": 24}
 				],
 				"isVeg": true,
-				"priority": 1
+				"genre": "make_your_own_paratha",
+				"categoryPriority": 1,
+				"priority": 2,
+				"category": "custom paratha"
 			},
-			"nonveg": {
+			{
 				"name": "Nonveg Paratha",
-				"description": "A delectable delight with juicy meat and aromatic spices, offering a burst of flavors in every bite. Perfect for meat lovers seeking a satisfying and indulgent meal.",
+				"description": "A delectable delight with juicy meat and aromatic spices, offering a burst of flavors in every bite.",
 				"price": [
 					{"type": "queen", "rate": 549, "inch": 15},
 					{"type": "king", "rate": 699, "inch": 20},
 					{"type": "emperor", "rate": 999, "inch": 24}
 				],
 				"isVeg": false,
-				"priority": 1
+				"genre": "make_your_own_paratha",
+				"categoryPriority": 1,
+				"priority": 2,
+				"category": "custom paratha"
 			}
-		},
+		],
 
 		"kebabs": [
 			{
@@ -464,7 +520,10 @@
 					{"rate": 279, "type": "Charcoal Grilled"}
 				],
 				"description": "Delicious Tandoori chicken marinated with aromatic spices.",
-				"isVeg": false
+				"isVeg": false,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Afghani Chicken",
@@ -473,7 +532,10 @@
 					{"rate": 279, "type": "Charcoal Grilled"}
 				],
 				"description": "Tender and flavorful Afghani-style grilled chicken.",
-				"isVeg": false
+				"isVeg": false,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Malai Tikka",
@@ -482,7 +544,10 @@
 					{"rate": 290, "type": "Charcoal Grilled"}
 				],
 				"description": "Creamy and succulent Malai Tikka with a hint of spices.",
-				"isVeg": false
+				"isVeg": false,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Tangadi Kebab",
@@ -491,7 +556,10 @@
 					{"rate": 279, "type": "Charcoal Grilled"}
 				],
 				"description": "Juicy and tender Tangadi Kebab cooked to perfection.",
-				"isVeg": false
+				"isVeg": false,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Chicken kali Mirch",
@@ -500,7 +568,10 @@
 					{"rate": 279, "type": "Charcoal Grilled"}
 				],
 				"description": "Chicken marinated with black pepper and aromatic spices.",
-				"isVeg": false
+				"isVeg": false,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Chicken Seekh kebab",
@@ -509,7 +580,10 @@
 					{"rate": 290, "type": "Charcoal Grilled"}
 				],
 				"description": "Tasty and succulent chicken seekh kebabs.",
-				"isVeg": false
+				"isVeg": false,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Chicken Angara",
@@ -518,7 +592,10 @@
 					{"rate": 279, "type": "Charcoal Grilled"}
 				],
 				"description": "Spicy and smoky Chicken Angara grilled to perfection.",
-				"isVeg": false
+				"isVeg": false,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Chicken Tikka",
@@ -527,7 +604,10 @@
 					{"rate": 280, "type": "Charcoal Grilled"}
 				],
 				"description": "Classic and flavorful Chicken Tikka prepared with care.",
-				"isVeg": false
+				"isVeg": false,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Afghani Chicken Wings",
@@ -536,7 +616,10 @@
 					{"rate": 290, "type": "Charcoal Grilled"}
 				],
 				"description": "Tender and juicy chicken wings marinated in Afghani spices.",
-				"isVeg": false
+				"isVeg": false,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Angara Chicken Wing",
@@ -545,7 +628,10 @@
 					{"rate": 290, "type": "Charcoal Grilled"}
 				],
 				"description": "Spicy and fiery Angara chicken wings grilled to perfection.",
-				"isVeg": false
+				"isVeg": false,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Paneer Achari Tikka",
@@ -554,7 +640,10 @@
 					{"rate": 229, "type": "Charcoal Grilled"}
 				],
 				"description": "Flavorful and tangy Paneer Achari Tikka with pickled spices.",
-				"isVeg": true
+				"isVeg": true,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Paneer Tikka",
@@ -563,7 +652,10 @@
 					{"rate": 229, "type": "Charcoal Grilled"}
 				],
 				"description": "Classic and delicious Paneer Tikka prepared with care.",
-				"isVeg": true
+				"isVeg": true,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Afghani Paneer",
@@ -572,7 +664,10 @@
 					{"rate": 229, "type": "Charcoal Grilled"}
 				],
 				"description": "Creamy and flavorful Afghani-style grilled Paneer.",
-				"isVeg": true
+				"isVeg": true,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Malai Paneer Tikka",
@@ -581,7 +676,10 @@
 					{"rate": 229, "type": "Charcoal Grilled"}
 				],
 				"description": "Rich and creamy Malai Paneer Tikka with aromatic spices.",
-				"isVeg": true
+				"isVeg": true,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Paneer Kali Mirch",
@@ -590,7 +688,10 @@
 					{"rate": 229, "type": "Charcoal Grilled"}
 				],
 				"description": "Paneer marinated with black pepper and aromatic spices.",
-				"isVeg": true
+				"isVeg": true,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Methi Malai Paneer",
@@ -599,7 +700,10 @@
 					{"rate": 229, "type": "Charcoal Grilled"}
 				],
 				"description": "Creamy and flavorful Methi Malai Paneer with fresh fenugreek.",
-				"isVeg": true
+				"isVeg": true,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Paneer Angara",
@@ -608,7 +712,10 @@
 					{"rate": 229, "type": "Charcoal Grilled"}
 				],
 				"description": "Spicy and smoky Paneer Angara grilled to perfection.",
-				"isVeg": true
+				"isVeg": true,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Aloo Tandoori",
@@ -617,7 +724,10 @@
 					{"rate": 199, "type": "Charcoal Grilled"}
 				],
 				"description": "Delicious Tandoori potatoes marinated with spices.",
-				"isVeg": true
+				"isVeg": true,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Afghani Mushroom",
@@ -626,7 +736,10 @@
 					{"rate": 199, "type": "Charcoal Grilled"}
 				],
 				"description": "Succulent and flavorful grilled Afghani mushrooms.",
-				"isVeg": true
+				"isVeg": true,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			},
 			{
 				"name": "Mushroom Tandoori",
@@ -635,7 +748,10 @@
 					{"rate": 199, "type": "Charcoal Grilled"}
 				],
 				"description": "Tandoori-style grilled mushrooms with aromatic spices.",
-				"isVeg": true
+				"isVeg": true,
+				"priority": 3,
+				"genre": "kebabs",
+				"category": "kebabs"
 			}
 		],
 
@@ -651,7 +767,9 @@
 				],
 				"description": "Refreshing and creamy Sweet Lassi, perfect for a hot summer day.",
 				"category": "Classic Lassi",
-				"priority": 1
+				"categoryPriority": 1,
+				"priority": 4,
+				"genre": "lassi"
 			},
 			{
 				"name": "Salty Chaas",
@@ -664,7 +782,9 @@
 				],
 				"description": "Traditional and tangy Salty Chaas, a perfect accompaniment to a spicy meal.",
 				"category": "Classic Lassi",
-				"priority": 1
+				"categoryPriority": 1,
+				"priority": 4,
+				"genre": "lassi"
 			},
 			{
 				"name": "Pudina Chaas",
@@ -677,7 +797,9 @@
 				],
 				"description": "Refreshing and cooling Pudina Chaas with a hint of mint flavor.",
 				"category": "Delight Butter Milk",
-				"priority": 2
+				"categoryPriority": 2,
+				"priority": 4,
+				"genre": "lassi"
 			},
 			{
 				"name": "Jeera Chaas",
@@ -690,7 +812,9 @@
 				],
 				"description": "Flavorful and tangy Jeera Chaas with the essence of cumin.",
 				"category": "Delight Butter Milk",
-				"priority": 2
+				"categoryPriority": 2,
+				"priority": 4,
+				"genre": "lassi"
 			},
 			{
 				"name": "Masala Chaas",
@@ -703,7 +827,9 @@
 				],
 				"description": "Spiced and flavorful Masala Chaas with a blend of aromatic spices.",
 				"category": "Delight Butter Milk",
-				"priority": 2
+				"categoryPriority": 2,
+				"priority": 4,
+				"genre": "lassi"
 			},
 			{
 				"name": "Salt & Pepper",
@@ -716,7 +842,9 @@
 				],
 				"description": "Savory and zesty Salt & Pepper flavored Butter Milk.",
 				"category": "Delight Butter Milk",
-				"priority": 2
+				"categoryPriority": 2,
+				"priority": 4,
+				"genre": "lassi"
 			},
 			{
 				"name": "Litchi",
@@ -729,7 +857,9 @@
 				],
 				"description": "Delicious and refreshing Litchi flavored Signature Lassi.",
 				"category": "Signature Lassi",
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 4,
+				"genre": "lassi"
 			},
 			{
 				"name": "Mango",
@@ -742,7 +872,9 @@
 				],
 				"description": "Sweet and tangy Mango flavored Signature Lassi.",
 				"category": "Signature Lassi",
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 4,
+				"genre": "lassi"
 			},
 			{
 				"name": "Elachi",
@@ -755,7 +887,9 @@
 				],
 				"description": "Aromatic and flavorful Elachi (Cardamom) flavored Signature Lassi.",
 				"category": "Signature Lassi",
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 4,
+				"genre": "lassi"
 			},
 			{
 				"name": "Jaggary",
@@ -768,7 +902,9 @@
 				],
 				"description": "Rich and traditional Jaggery flavored Signature Lassi.",
 				"category": "Signature Lassi",
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 4,
+				"genre": "lassi"
 			},
 			{
 				"name": "Gulkand",
@@ -781,7 +917,9 @@
 				],
 				"description": "Floral and sweet Gulkand flavored Signature Lassi.",
 				"category": "Signature Lassi",
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 4,
+				"genre": "lassi"
 			},
 			{
 				"name": "Rooh Afzah",
@@ -794,7 +932,9 @@
 				],
 				"description": "Refreshing and aromatic Rooh Afzah flavored Signature Lassi.",
 				"category": "Signature Lassi",
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 4,
+				"genre": "lassi"
 			},
 			{
 				"name": "Red Rose",
@@ -807,7 +947,9 @@
 				],
 				"description": "Fragrant and delightful Red Rose flavored Signature Lassi.",
 				"category": "Signature Lassi",
-				"priority": 3
+				"categoryPriority": 3,
+				"priority": 4,
+				"genre": "lassi"
 			},
 			{
 				"name": "Mooch Marod's Special Lassi",
@@ -820,7 +962,9 @@
 				],
 				"description": "A special and indulgent Supreme Lassi with a unique blend of flavors.",
 				"category": "Supreme Lassi",
-				"priority": 4
+				"categoryPriority": 4,
+				"priority": 4,
+				"genre": "lassi"
 			},
 			{
 				"name": "Kesar Pista",
@@ -833,9 +977,12 @@
 				],
 				"description": "A rich and creamy Supreme Lassi infused with the flavors of saffron (kesar) and pistachio (pista).",
 				"category": "Supreme Lassi",
-				"priority": 4
+				"categoryPriority": 4,
+				"priority": 4,
+				"genre": "lassi"
 			}
 		]
 	},
+
 	"FK_Menu": {}
 }

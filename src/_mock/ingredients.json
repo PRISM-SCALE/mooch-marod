@@ -1,0 +1,20 @@
+{
+	"ingredients": [
+		{"image": "/ingredients/aloo.png", "name": "Aloo"},
+		{"image": "/ingredients/onion.png", "name": "Onion"},
+		{"image": "/ingredients/palak.png", "name": "Palak"},
+		{"image": "/ingredients/methi.png", "name": "Methi"},
+		{"image": "/ingredients/paneer.png", "name": "Paneer"},
+		{"image": "/ingredients/mushroom.png", "name": "Mushroom"},
+		{"image": "/ingredients/bell_pepper.png", "name": "Bell Pepper"},
+		{"image": "/ingredients/baby_corn.png", "name": "Baby Corn"},
+		{"image": "/ingredients/sweetcorn.png", "name": "Sweetcorn"},
+		{"image": "/ingredients/green_peas.png", "name": "Green Peas"},
+		{"image": "/ingredients/kheema.png", "name": "Gobhi"},
+		{"image": "/ingredients/mooli.png", "name": "Mooli"},
+		{"image": "/ingredients/carrot.png", "name": "Carrot"},
+		{"image": "/ingredients/kheema.png", "name": "Chicken Kheema"},
+		{"image": "/ingredients/kheema.png", "name": "Angara Chicken Keema"},
+		{"image": "/ingredients/kheema.png", "name": "Afghani Chicken Keema"}
+	]
+}
