@@ -1,10 +1,11 @@
 import {Box, Container, Typography, alpha} from "@mui/material";
-import logo_white from "/icons/logo_notag_white.svg";
+
 import {Link} from "react-router-dom";
 import {footerLinks} from "../utils/links";
 import FooterGallery from "../components/FooterGallery";
 import {useResponsive} from "../hooks/useResponsive";
 import SocialIcons from "../components/SocialIcons";
+import {logo_with_tag} from "../utils/common";
 
 interface Styles {
 	[key: string]: string | number | object;
@@ -32,7 +33,7 @@ const Footer = () => {
 		>
 			<Container maxWidth="xl">
 				<Box textAlign={"center"}>
-					<img src={logo_white} alt="logo" width={120} height={120} />
+					<img src={logo_with_tag} alt="logo" width={120} height={120} />
 				</Box>
 
 				<Box

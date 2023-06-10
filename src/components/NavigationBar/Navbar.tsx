@@ -81,7 +81,7 @@ export default function Navbar(props: Props) {
 						>
 							<>
 								<Link to={ROOT_LINK}>
-									<Logo width={{xs: 60, md: 100}} height={{xs: 60, md: 100}} logo={logo_white} />
+									<Logo width={{xs: 60, md: 80}} height={{xs: 60, md: 80}} logo={logo_white} />
 								</Link>
 
 								{isSmallScreen === !isMediumScreen ? (
