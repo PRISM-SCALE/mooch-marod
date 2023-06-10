@@ -1,5 +1,6 @@
 import {Box, Grid, Typography, useTheme} from "@mui/material";
 import {MenuItem, MenuPrice} from "../../types/Menu.types";
+import Iconify from "../Iconify";
 
 type Props = {
 	list: MenuItem[];
@@ -10,7 +11,7 @@ const MenuDetail = ({list}: Props): JSX.Element => {
 
 	return (
 		<>
-			{list.map(({name, description, price}) => {
+			{list.map(({name, description, price, isVeg}) => {
 				return (
 					<Grid item xs={12} md={6} key={name} sx={{mb: 2}}>
 						<Box
