@@ -2,6 +2,7 @@ import {Box, Button, Container, Typography, useTheme} from "@mui/material";
 import {useSpring, animated} from "@react-spring/web";
 import {useResponsive} from "../../hooks/useResponsive";
 import MMHeroElements from "../../components/MMHeroElements";
+import {TypeAnimation} from "react-type-animation";
 
 const Hero = () => {
 	const theme = useTheme();
@@ -55,7 +56,7 @@ const Hero = () => {
 					sx={{
 						display: "flex",
 						alignItems: "center",
-						justifyContent: "space-evenly",
+						justifyContent: "space-around",
 						// columnGap: 3,
 						flexDirection: {xs: "column", md: "row"},
 					}}
@@ -94,7 +95,9 @@ const Hero = () => {
 							color="white"
 							sx={{textTransform: "uppercase", fontWeight: 700}}
 						>
-							experience bangalore's largest paratha!
+							SHARE YOUR <br />
+							LOVE FOR <br />
+							<TypeAnimation sequence={["BANGALORE", 2000, "PARATHA", 2000]} repeat={Infinity} />
 						</Typography>
 
 						{/* ------------------------------------------ */}
@@ -149,7 +152,7 @@ const Hero = () => {
 							src="/images/1.webp"
 							alt="paratha_animation"
 							sx={{
-								height: {xs: 260, sm: 340, md: 420, lg: 620},
+								height: {xs: 260, sm: 340, md: 420, lg: 580},
 							}}
 							style={{transform}}
 							loading="lazy"
