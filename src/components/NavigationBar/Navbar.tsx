@@ -81,9 +81,11 @@ export default function Navbar(props: Props) {
 							disableGutters
 						>
 							<>
-								<Link to={ROOT_LINK}>
-									<Logo width={{xs: 60, md: 100}} height={{xs: 60, md: 100}} logo={logo_white} />
-								</Link>
+								<Box>
+									<Link to={ROOT_LINK}>
+										<Logo width={{xs: 60, md: 100}} height={{xs: 60, md: 100}} logo={logo_white} />
+									</Link>
+								</Box>
 
 								{isSmallScreen === !isMediumScreen ? (
 									<IconButton sx={{color: "white"}} onClick={handleMenuClick}>

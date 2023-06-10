@@ -8,7 +8,7 @@ type Props = {
 
 const ImageWrapper = styled(Box)(({theme}) => ({
 	width: "100px",
-	// maxWidth: "80px",
+	maxWidth: "80px",
 	// overflow: "hidden",
 	display: "inline-block",
 	margin: "0 1rem",
@@ -23,6 +23,7 @@ const Image = styled("img")(({theme}) => ({
 	height: "auto",
 	width: "80px",
 	objectFit: "cover",
+
 	[theme.breakpoints.down("sm")]: {
 		width: "70px",
 	},
@@ -31,7 +32,7 @@ const Image = styled("img")(({theme}) => ({
 const Logo = ({width, height, logo}: Props) => {
 	return (
 		<ImageWrapper>
-			<Image src={logo} alt="logo" loading="lazy" sx={{width: width, height: height}} />
+			<Image src={logo} alt="logo" loading="lazy" sx={{width: width, height: height, py: "1rem"}} />
 		</ImageWrapper>
 	);
 };
