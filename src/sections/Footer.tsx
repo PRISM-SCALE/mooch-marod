@@ -1,10 +1,10 @@
-import {Box, Container, Typography, alpha} from "@mui/material";
-import logo_white from "/icons/logo_notag_white.svg";
+import {Box, Container, Divider, Typography, alpha} from "@mui/material";
 import {Link} from "react-router-dom";
 import {footerLinks} from "../utils/links";
 import FooterGallery from "../components/FooterGallery";
 import {useResponsive} from "../hooks/useResponsive";
 import SocialIcons from "../components/SocialIcons";
+import {logo_white} from "../utils/common";
 
 interface Styles {
 	[key: string]: string | number | object;
@@ -32,7 +32,19 @@ const Footer = () => {
 		>
 			<Container maxWidth="xl">
 				<Box textAlign={"center"}>
-					<img src={logo_white} alt="logo" width={120} height={120} />
+					<Divider
+						sx={{
+							width: "100%",
+							mx: "auto",
+							"&.MuiDivider-root::before, &.MuiDivider-root::after": {
+								borderTop: `2px solid ${alpha("#fff", 0.2)}`,
+							},
+							display: "flex",
+							alignItems: "center",
+						}}
+					>
+						<img src={logo_white} alt="logo" width={140} height={140} />
+					</Divider>
 				</Box>
 
 				<Box
