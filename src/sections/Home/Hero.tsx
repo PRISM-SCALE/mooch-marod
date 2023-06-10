@@ -22,7 +22,8 @@ const Hero = () => {
 			component={"section"}
 			id="hero_section"
 			sx={{
-				background: theme.palette.custom.achar,
+				background: `linear-gradient(359.53deg, #D93423 0.43%, #F15443 53.13%, #D93423 96.53%), url(/images/brick_wall.png)`,
+				mixBlendMode: "multiply",
 				height: "100vh",
 				width: "100%",
 				display: "flex",
