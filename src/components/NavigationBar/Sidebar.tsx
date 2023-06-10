@@ -6,7 +6,7 @@ import {ROOT_LINK, menuLinks} from "../../utils/links";
 import {logo_black} from "../../utils/common";
 
 // TYPES
-import {Anchor} from "../../types/Anchor";
+import {Anchor} from "../../types/anchor";
 
 // COMPONENTS
 import Iconify from "../Iconify";
