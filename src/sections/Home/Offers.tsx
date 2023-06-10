@@ -74,7 +74,7 @@ const Offers = () => {
 										<EmailSubscriptionForm
 											status={status}
 											message={message}
-											subscribe={subscribe}
+											onSubmitted={(formData) => subscribe(formData)}
 										/>
 									</Box>
 								)}

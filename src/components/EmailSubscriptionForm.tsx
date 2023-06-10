@@ -1,17 +1,18 @@
 import React, {useState} from "react";
+// import {decode} from "html-entities";
 import {Box, Button, TextField, useTheme} from "@mui/material";
 import {EmailFormFields} from "react-mailchimp-subscribe";
 
 type Props = {
 	status: "error" | "success" | "sending" | null;
 	message: string | Error | null;
-	subscribe: (data: EmailFormFields) => void;
+	onSubmitted: (data: EmailFormFields) => void;
 };
 
-const EmailSubscriptionForm = ({status, message, subscribe}: Props) => {
+const EmailSubscriptionForm = ({status, message, onSubmitted}: Props) => {
 	const theme = useTheme();
 	const [email, setEmail] = useState("");
-	const [emailError, setEmailError] = useState("");
+	const [emailError, setEmailError] = useState<string | null>(null);
 
 	console.log(message);
 
@@ -31,10 +32,12 @@ const EmailSubscriptionForm = ({status, message, subscribe}: Props) => {
 
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		// Here you can add the logic to submit the email
-		subscribe({EMAIL: email});
+		setEmailError(null);
 
+		// Here you can add the logic to submit the email
+		const isFormValidated = onSubmitted({EMAIL: email});
 		setEmail("");
+		return email && email.indexOf("@") > -1 && isFormValidated;
 	};
 
 	/**
@@ -43,7 +46,7 @@ const EmailSubscriptionForm = ({status, message, subscribe}: Props) => {
 	 * @param {String} message
 	 * @return {null|*}
 	 */
-	// const getMessage = (message) => {
+	// const getMessage = (message: any) => {
 	// 	if (!message) {
 	// 		return null;
 	// 	}
@@ -101,7 +104,6 @@ const EmailSubscriptionForm = ({status, message, subscribe}: Props) => {
 					outline: "none",
 					"& fieldset": {border: "none", width: "50%"},
 				}}
-				// dangerouslySetInnerHTML={{__html: error || getMessage(message)}}
 				required
 			/>
 
