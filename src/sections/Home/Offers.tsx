@@ -5,8 +5,7 @@ import {BANNER_HEIGHT} from "../../utils/common";
 import OffersCarousel from "../../components/OffersCarousel";
 import EmailSubscriptionForm from "../../components/EmailSubscriptionForm";
 
-const url =
-	"https://gmail.us21.list-manage.com/subscribe/post?u=df01cb0e908fd7c2333212809&amp;id=1c0a3c998b&amp;f_id=0003d7e6f0";
+const url = `${import.meta.env.VITE_MAILCHIMP_EMAIL_URL}`;
 
 const Offers = () => {
 	return (

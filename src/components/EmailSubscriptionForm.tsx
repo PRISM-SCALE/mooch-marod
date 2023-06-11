@@ -1,12 +1,11 @@
 import React, {useState} from "react";
 // import {decode} from "html-entities";
-import {Box, Button, TextField, useTheme} from "@mui/material";
-import {EmailFormFields} from "react-mailchimp-subscribe";
+import {Box, Button, TextField, Typography, useTheme} from "@mui/material";
 
 type Props = {
 	status: "error" | "success" | "sending" | null;
 	message: string | Error | null;
-	onSubmitted: (data: EmailFormFields) => void;
+	onSubmitted: (data: any) => void;
 };
 
 const EmailSubscriptionForm = ({status, message, onSubmitted}: Props) => {
@@ -30,14 +29,14 @@ const EmailSubscriptionForm = ({status, message, onSubmitted}: Props) => {
 		}
 	};
 
-	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		setEmailError(null);
 
 		// Here you can add the logic to submit the email
-		const isFormValidated = onSubmitted({EMAIL: email});
+
+		email && email.indexOf("@") > -1 && onSubmitted({EMAIL: email});
 		setEmail("");
-		return email && email.indexOf("@") > -1 && isFormValidated;
 	};
 
 	/**
@@ -86,26 +85,38 @@ const EmailSubscriptionForm = ({status, message, onSubmitted}: Props) => {
 			}}
 			autoComplete="off"
 		>
-			<TextField
-				placeholder="Email"
-				variant="outlined"
-				type="email"
-				value={email}
-				onChange={handleEmailChange}
-				onBlur={handleBlur}
-				// InputProps={{
-				// 	endAdornment: <InputAdornment position="end"></InputAdornment>,
-				// }}
-				error={status === "error" || !!emailError}
-				helperText={(status === "error" && `Something went wrong!!`) || emailError}
-				sx={{
-					borderRadius: "4px",
-					backgroundColor: "white",
-					outline: "none",
-					"& fieldset": {border: "none", width: "50%"},
-				}}
-				required
-			/>
+			<Box>
+				<TextField
+					placeholder="Email"
+					variant="outlined"
+					type="email"
+					value={email}
+					onChange={handleEmailChange}
+					onBlur={handleBlur}
+					// InputProps={{
+					// 	endAdornment: <InputAdornment position="end"></InputAdornment>,
+					// }}
+					// error={status === "error" || !!emailError}
+					// helperText={}
+					sx={{
+						display: "block",
+						borderRadius: "4px",
+						backgroundColor: "white",
+						outline: "none",
+						"& fieldset": {border: "none"},
+					}}
+					required
+					fullWidth
+				/>
+				{(status === "error" && `Something went wrong!!`) || emailError ? (
+					<Typography
+						variant="caption"
+						sx={{display: "block", color: theme.palette.custom.paratha}}
+					>
+						{emailError}
+					</Typography>
+				) : null}
+			</Box>
 
 			<Button
 				type="submit"
