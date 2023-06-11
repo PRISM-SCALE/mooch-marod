@@ -33,7 +33,11 @@ const MenuDetail = ({list}: Props): JSX.Element => {
 									>
 										{name}
 									</Typography>
-									{isVeg && <Iconify icon={"openmoji:leafy-green"} size={30} />}
+									{isVeg ? (
+										<Iconify icon={"openmoji:leafy-green"} size={25} />
+									) : (
+										<Iconify icon={"openmoji:meat-on-bone"} size={25} />
+									)}
 								</Box>
 								<Typography
 									variant="caption"
