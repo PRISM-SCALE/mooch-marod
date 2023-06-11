@@ -12,6 +12,8 @@ const ContactUsForm = ({status, message, onSubmitted}: Props) => {
 	const theme = useTheme();
 	const [formData, setFormData] = useState<ContactFormState>(initialFormData);
 
+	console.log(message);
+
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setFormData({
 			...formData,
