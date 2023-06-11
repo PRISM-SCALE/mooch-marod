@@ -1,13 +1,12 @@
-import {Box, Container, Divider, Grid, Typography, useTheme} from "@mui/material";
+import {Box, Container, useTheme} from "@mui/material";
 
 // JSON DATA
-import {MM_Menu} from "../../_mock/menuV2.json";
+import {FK_Menu} from "../../_mock/menuV2.json";
 
 // UTILS
-import {groupData} from "../../utils/groupby";
+import {groupGenre} from "../../utils/groupby";
 
 // COMPONENTS
-import MenuDetail from "../../components/Menu/MenuDetail";
 import TitleWithMooch from "../../components/TitleWithMooch";
 import GroupedMenu from "../../components/Menu/GroupedMenu";
 
@@ -32,13 +31,13 @@ const tabData: TabData = {
 const MenuList = () => {
 	const theme = useTheme();
 	// Grouped data returned from
-	// const groupedMenuData: GroupedMenuData = groupData(MM_Menu);
+	const groupedGenreData = groupGenre(FK_Menu);
 
 	return (
 		<Box component="section" id="main_menu_section" py={{xs: "2rem", md: "4rem"}}>
 			<Container maxWidth="xl">
 				{/* Map sorted object */}
-				{Object.entries(MM_Menu).map(([genre, menuList]) => {
+				{Object.entries(groupedGenreData).map(([genre, menuList]) => {
 					const data = tabData[genre as keyof typeof tabData];
 					const color = theme.palette.custom[data as keyof CustomPalette];
 

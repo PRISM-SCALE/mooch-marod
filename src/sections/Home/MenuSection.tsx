@@ -4,10 +4,11 @@ import {alpha, styled} from "@mui/material/styles";
 import {Box, Button, Container, Grid, Fade, Tab, Tabs, Typography, useTheme} from "@mui/material";
 
 // JSON DATA
-import {MM_Menu} from "../../_mock/menuV2.json";
+import {MM_Menu, FK_Menu} from "../../_mock/menuV2.json";
 
 // UTILS
 import {a11yProps} from "../../utils/tabs";
+import {groupCategory} from "../../utils/groupby";
 
 // COMPONENTS
 import TabPanelWrapper from "../../components/TabPanelWrapper";
@@ -37,10 +38,10 @@ type TabData = {
 };
 
 const tabData: TabData = {
-	parathas: "paratha",
-	make_your_own_paratha: "pani",
-	kebabs: "achar",
-	lassi: "conceot",
+	momos: "paratha",
+	"sizzler chinese momos": "pani",
+	"sizzler chinese starters": "achar",
+	"sizzlers chinese fried rice/noodles": "conceot",
 };
 
 const StyledTabs = styled((props: StyledTabsProps) => (
@@ -90,7 +91,7 @@ const NewMenu = () => {
 		setValue(newValue);
 	};
 
-	// console.log(Object.entries(MM_Menu));
+	const groupedCategoryData = groupCategory(FK_Menu);
 
 	return (
 		<Box component="section" id="menu_section" py={{xs: "2rem", md: "4rem"}}>
@@ -121,7 +122,7 @@ const NewMenu = () => {
 				{/* TAB BUTTONS */}
 				<Box sx={{mt: "1rem"}}>
 					<StyledTabs value={value} onChange={handleChange}>
-						{Object.keys(MM_Menu).map((genre, index) => {
+						{Object.keys(groupedCategoryData).map((genre, index) => {
 							const data = tabData[genre as keyof typeof tabData];
 							const color = theme.palette.custom[data as keyof CustomPalette];
 
@@ -161,8 +162,8 @@ const NewMenu = () => {
 				{/* MENU LIST */}
 				<Box sx={{mt: "4rem"}}>
 					{/* MAP THE MENU LIST */}
-					{Object.entries(MM_Menu).map(([genre, menuList], index) => (
-						<TabPanelWrapper key={genre} value={value} index={index}>
+					{Object.entries(groupedCategoryData).map(([category, menuList], index) => (
+						<TabPanelWrapper key={category} value={value} index={index}>
 							<Fade
 								in={value === index}
 								timeout={{enter: 900, exit: 1500}}

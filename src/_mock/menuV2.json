@@ -783,6 +783,7 @@
 				"category": "Classic Lassi",
 				"categoryPriority": 1,
 				"priority": 4,
+
 				"genre": "lassi"
 			},
 			{
@@ -798,6 +799,7 @@
 				"category": "Classic Lassi",
 				"categoryPriority": 1,
 				"priority": 4,
+
 				"genre": "lassi"
 			},
 			{
@@ -813,6 +815,7 @@
 				"category": "Delight Butter Milk",
 				"categoryPriority": 2,
 				"priority": 4,
+
 				"genre": "lassi"
 			},
 			{
@@ -828,6 +831,7 @@
 				"category": "Delight Butter Milk",
 				"categoryPriority": 2,
 				"priority": 4,
+
 				"genre": "lassi"
 			},
 			{
@@ -843,6 +847,7 @@
 				"category": "Delight Butter Milk",
 				"categoryPriority": 2,
 				"priority": 4,
+
 				"genre": "lassi"
 			},
 			{
@@ -858,6 +863,7 @@
 				"category": "Delight Butter Milk",
 				"categoryPriority": 2,
 				"priority": 4,
+
 				"genre": "lassi"
 			},
 			{
@@ -873,6 +879,7 @@
 				"category": "Signature Lassi",
 				"categoryPriority": 3,
 				"priority": 4,
+
 				"genre": "lassi"
 			},
 			{
@@ -888,6 +895,7 @@
 				"category": "Signature Lassi",
 				"categoryPriority": 3,
 				"priority": 4,
+
 				"genre": "lassi"
 			},
 			{
@@ -903,6 +911,7 @@
 				"category": "Signature Lassi",
 				"categoryPriority": 3,
 				"priority": 4,
+
 				"genre": "lassi"
 			},
 			{
@@ -918,6 +927,7 @@
 				"category": "Signature Lassi",
 				"categoryPriority": 3,
 				"priority": 4,
+
 				"genre": "lassi"
 			},
 			{
@@ -933,6 +943,7 @@
 				"category": "Signature Lassi",
 				"categoryPriority": 3,
 				"priority": 4,
+
 				"genre": "lassi"
 			},
 			{
@@ -948,6 +959,7 @@
 				"category": "Signature Lassi",
 				"categoryPriority": 3,
 				"priority": 4,
+
 				"genre": "lassi"
 			},
 			{
@@ -963,6 +975,7 @@
 				"category": "Signature Lassi",
 				"categoryPriority": 3,
 				"priority": 4,
+
 				"genre": "lassi"
 			},
 			{
@@ -978,6 +991,7 @@
 				"category": "Supreme Lassi",
 				"categoryPriority": 4,
 				"priority": 4,
+
 				"genre": "lassi"
 			},
 			{
@@ -993,10 +1007,377 @@
 				"category": "Supreme Lassi",
 				"categoryPriority": 4,
 				"priority": 4,
+
 				"genre": "lassi"
 			}
 		]
 	},
 
-	"FK_Menu": {}
+	"FK_Menu": [
+		{
+			"name": "Veg Momos (10 pc)",
+			"description": "Dumplings stuffed with a lightly spiced vegetable filling",
+			"price": [
+				{"type": "steamed", "rate": 129},
+				{"type": "fried", "rate": 129}
+			],
+			"genre": "momos",
+			"category": "momos",
+			"isVeg": true,
+			"priority": 1
+		},
+		{
+			"name": "Mushroom Momos (10 pc)",
+			"description": "Dumplings stuffed with a lightly spiced mushroom filling",
+			"price": [
+				{"type": "steamed", "rate": 129},
+				{"type": "fried", "rate": 129}
+			],
+			"genre": "momos",
+			"category": "momos",
+			"isVeg": true,
+			"priority": 1
+		},
+		{
+			"name": "Paneer Momos (10 pc)",
+			"description": "Dumplings stuffed with a lightly spiced paneer filling",
+			"price": [
+				{"type": "steamed", "rate": 129},
+				{"type": "fried", "rate": 129}
+			],
+			"genre": "momos",
+			"isVeg": true,
+			"category": "momos",
+			"priority": 1
+		},
+		{
+			"name": "Chicken Momos (10 pc)",
+			"description": "Dumplings stuffed with a lightly spiced chicken filling",
+			"price": [
+				{"type": "steamed", "rate": 129},
+				{"type": "fried", "rate": 129}
+			],
+			"genre": "momos",
+			"category": "momos",
+			"isVeg": false,
+			"priority": 1
+		},
+
+		{
+			"name": "Veg Momos",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Dumplings stuffed with a lightly spiced veg filling with different flavours",
+			"price": [
+				{"type": "Manchurian", "rate": 249},
+				{"type": "Chilli", "rate": 249},
+				{"type": "Schezwan", "rate": 249},
+				{"type": "Honey Chilli", "rate": 249},
+				{"type": "Garlic Chilli", "rate": 249}
+			],
+			"genre": "sizzlers",
+			"category": "sizzler chinese momos",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Mushroom Momos",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Dumplings stuffed with a lightly spiced mushroom filling with different flavours",
+			"price": [
+				{"type": "Manchurian", "rate": 249},
+				{"type": "Chilli", "rate": 249},
+				{"type": "Schezwan", "rate": 249},
+				{"type": "Honey Chilli", "rate": 249},
+				{"type": "Garlic Chilli", "rate": 249}
+			],
+			"genre": "sizzlers",
+			"category": "sizzler chinese momos",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Paneer Momos",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Dumplings stuffed with a lightly spiced paneer filling with different flavours",
+			"price": [
+				{"type": "Manchurian", "rate": 249},
+				{"type": "Chilli", "rate": 249},
+				{"type": "Schezwan", "rate": 249},
+				{"type": "Honey Chilli", "rate": 249},
+				{"type": "Garlic Chilli", "rate": 249}
+			],
+			"genre": "sizzlers",
+			"category": "sizzler chinese momos",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Chicken Momos",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Dumplings stuffed with a lightly spiced chicken filling with different flavours",
+			"price": [
+				{"type": "Manchurian", "rate": 249},
+				{"type": "Chilli", "rate": 249},
+				{"type": "Schezwan", "rate": 249},
+				{"type": "Honey Chilli", "rate": 249},
+				{"type": "Garlic Chilli", "rate": 249}
+			],
+			"genre": "sizzlers",
+			"category": "sizzler chinese momos",
+			"isVeg": false,
+			"priority": 2
+		},
+		{
+			"name": "Gobhi",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Delicious sizzler Chinese starter with flavorful Gobhi florets.",
+			"price": [
+				{"type": "Manchurian", "rate": 249},
+				{"type": "Chilli", "rate": 249},
+				{"type": "Schezwan", "rate": 249},
+				{"type": "Honey Chilli", "rate": 249},
+				{"type": "Garlic Chilli", "rate": 249}
+			],
+			"genre": "sizzlers",
+			"category": "sizzler chinese starters",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Paneer",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Tempting sizzler Chinese starter featuring succulent Paneer cubes.",
+			"price": [
+				{"type": "Manchurian", "rate": 249},
+				{"type": "Chilli", "rate": 249},
+				{"type": "Schezwan", "rate": 249},
+				{"type": "Honey Chilli", "rate": 249},
+				{"type": "Garlic Chilli", "rate": 249}
+			],
+			"genre": "sizzlers",
+			"category": "sizzler chinese starters",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Mushroom",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Irresistible sizzler Chinese starter loaded with flavorful Mushroom pieces.",
+			"price": [
+				{"type": "Manchurian", "rate": 249},
+				{"type": "Chilli", "rate": 249},
+				{"type": "Schezwan", "rate": 249},
+				{"type": "Honey Chilli", "rate": 249},
+				{"type": "Garlic Chilli", "rate": 249}
+			],
+			"genre": "sizzlers",
+			"category": "sizzler chinese starters",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Babycorn",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Flavorful sizzler Chinese starter showcasing tender Babycorn pieces in every bite.",
+			"price": [
+				{"type": "Manchurian", "rate": 249},
+				{"type": "Chilli", "rate": 249},
+				{"type": "Schezwan", "rate": 249},
+				{"type": "Honey Chilli", "rate": 249},
+				{"type": "Garlic Chilli", "rate": 249}
+			],
+			"genre": "sizzlers",
+			"category": "sizzler chinese starters",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Potato",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Delicious sizzler Chinese starter featuring seasoned and crispy Potato slices.",
+			"price": [
+				{"type": "Manchurian", "rate": 249},
+				{"type": "Chilli", "rate": 249},
+				{"type": "Schezwan", "rate": 249},
+				{"type": "Honey Chilli", "rate": 249},
+				{"type": "Garlic Chilli", "rate": 249}
+			],
+			"genre": "sizzlers",
+			"category": "sizzler chinese starters",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Chicken",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Tempting sizzler Chinese starter with juicy and succulent Chicken chunks.",
+			"price": [
+				{"type": "Manchurian", "rate": 249},
+				{"type": "Chilli", "rate": 249},
+				{"type": "Schezwan", "rate": 249},
+				{"type": "Honey Chilli", "rate": 249},
+				{"type": "Garlic Chilli", "rate": 249}
+			],
+			"genre": "sizzlers",
+			"category": "sizzler chinese starters",
+			"isVeg": false,
+			"priority": 2
+		},
+		{
+			"name": "Desi Veg",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Classic sizzler with a medley of vegetables and flavorful sauce.",
+			"price": [
+				{"type": "Fired Rice", "rate": 199},
+				{"type": "Noodles", "rate": 199}
+			],
+			"genre": "sizzlers",
+			"category": "sizzlers chinese fried rice/noodles",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Paneer",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Sizzler packed with succulent paneer and tantalizing spices.",
+			"price": [
+				{"type": "Fired Rice", "rate": 199},
+				{"type": "Noodles", "rate": 199}
+			],
+			"genre": "sizzlers",
+			"category": "sizzlers chinese fried rice/noodles",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Mushroom",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Sizzler featuring earthy mushrooms and delectable Chinese spices.",
+			"price": [
+				{"type": "Fired Rice", "rate": 199},
+				{"type": "Noodles", "rate": 199}
+			],
+			"genre": "sizzlers",
+			"category": "sizzlers chinese fried rice/noodles",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Hakka",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Authentic sizzler with Hakka-style fried rice or noodles.",
+			"price": [
+				{"type": "Fired Rice", "rate": 199},
+				{"type": "Noodles", "rate": 199}
+			],
+			"genre": "sizzlers",
+			"category": "sizzlers chinese fried rice/noodles",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Singapore",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "A tantalizing sizzler inspired by the vibrant flavors of Singapore.",
+			"price": [
+				{"type": "Fired Rice", "rate": 199},
+				{"type": "Noodles", "rate": 199}
+			],
+			"genre": "sizzlers",
+			"category": "sizzlers chinese fried rice/noodles",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Schezwan",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Fiery sizzler featuring bold Schezwan flavors in rice or noodles.",
+			"price": [
+				{"type": "Fired Rice", "rate": 199},
+				{"type": "Noodles", "rate": 199}
+			],
+			"genre": "sizzlers",
+			"category": "sizzlers chinese fried rice/noodles",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Chilli Garlic",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "A sizzling combination of spicy chilli and aromatic garlic.",
+			"price": [
+				{"type": "Fired Rice", "rate": 199},
+				{"type": "Noodles", "rate": 199}
+			],
+			"genre": "sizzlers",
+			"category": "sizzlers chinese fried rice/noodles",
+			"isVeg": true,
+			"priority": 2
+		},
+		{
+			"name": "Desi Egg",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Indulgent sizzler with desi-style egg fried rice or noodles.",
+			"price": [
+				{"type": "Fired Rice", "rate": 199},
+				{"type": "Noodles", "rate": 199}
+			],
+			"genre": "sizzlers",
+			"category": "sizzlers chinese fried rice/noodles",
+			"isVeg": false,
+			"priority": 2
+		},
+		{
+			"name": "Desi Chicken",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Sizzler featuring succulent chicken cooked in desi-style spices.",
+			"price": [
+				{"type": "Fired Rice", "rate": 199},
+				{"type": "Noodles", "rate": 199}
+			],
+			"genre": "sizzlers",
+			"category": "sizzlers chinese fried rice/noodles",
+			"isVeg": false,
+			"priority": 2
+		},
+		{
+			"name": "Mixed",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "A delightful mix of vegetables, paneer, and chicken in one sizzler.",
+			"price": [
+				{"type": "Fired Rice", "rate": 199},
+				{"type": "Noodles", "rate": 199}
+			],
+			"genre": "sizzlers",
+			"category": "sizzlers chinese fried rice/noodles",
+			"isVeg": false,
+			"priority": 2
+		},
+		{
+			"name": "Schezwan chicken",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "Spicy and flavorful sizzler featuring Schezwan-style chicken and rice or noodles.",
+			"price": [
+				{"type": "Fired Rice", "rate": 199},
+				{"type": "Noodles", "rate": 199}
+			],
+			"genre": "sizzlers",
+			"category": "sizzlers chinese fried rice/noodles",
+			"isVeg": false,
+			"priority": 2
+		},
+		{
+			"name": "Chilli Garlic Chicken",
+			"flavors": ["Manchurian", "Chilli", "Schezwan", "Honey Chilli", "Garlic Chilli"],
+			"description": "A lip-smacking sizzler with tender chicken, spicy chilli, and aromatic garlic.",
+			"price": [
+				{"type": "Fired Rice", "rate": 199},
+				{"type": "Noodles", "rate": 199}
+			],
+			"genre": "sizzlers",
+			"category": "sizzlers chinese fried rice/noodles",
+			"isVeg": false,
+			"priority": 2
+		}
+	]
 }

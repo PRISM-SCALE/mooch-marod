@@ -12,7 +12,7 @@ export interface MenuItem {
 	priority: number;
 	categoryPriority?: number;
 	isVeg?: boolean;
-	genre?: string;
+	genre: string;
 }
 
 export interface GroupedMenuData {
