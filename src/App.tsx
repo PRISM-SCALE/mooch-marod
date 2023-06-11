@@ -83,3 +83,9 @@ const App = () => {
 };
 
 export default App;
+
+// VITE_MAILCHIMP_EMAIL_URL=https://gmail.us21.list-manage.com/subscribe/post?u=df01cb0e908fd7c2333212809&amp;id=1c0a3c998b&amp;f_id=0003d7e6f0
+
+// VITE_MAILCHIMP_CONTACT_URL=https://gmail.us21.list-manage.com/subscribe/post
+// VITE_MAILCHIMP_U=df01cb0e908fd7c2333212809
+// VITE_MAILCHIMP_ID=1c0a3c998b
