@@ -1,13 +1,12 @@
-import {Box, Container, Divider, Grid, Typography, useTheme} from "@mui/material";
+import {Box, Container, useTheme} from "@mui/material";
 
 // JSON DATA
 import {MM_Menu} from "../../_mock/menuV2.json";
 
 // UTILS
-import {groupData} from "../../utils/groupby";
+// import {groupData} from "../../utils/groupby";
 
 // COMPONENTS
-import MenuDetail from "../../components/Menu/MenuDetail";
 import TitleWithMooch from "../../components/TitleWithMooch";
 import GroupedMenu from "../../components/Menu/GroupedMenu";
 
