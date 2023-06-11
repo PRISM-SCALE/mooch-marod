@@ -8,6 +8,7 @@ import {groupData} from "../../utils/groupby";
 
 // COMPONENTS
 import MenuDetail from "./MenuDetail";
+import React from "react";
 
 type Props = {
 	menuList: MenuItem[];
@@ -15,7 +16,7 @@ type Props = {
 	color?: string;
 };
 
-const GroupedMenu = ({menuList, genre, color}: Props) => {
+const GroupedMenu: React.FC<Props> = ({menuList, genre, color}: Props) => {
 	const theme = useTheme();
 	const groupedMenuData = groupData(menuList);
 
