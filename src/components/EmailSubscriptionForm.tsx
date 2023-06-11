@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 // import {decode} from "html-entities";
 import {Box, Button, TextField, useTheme} from "@mui/material";
-import {EmailFormFields} from "react-mailchimp-subscribe";
+// import {EmailFormFields} from "react-mailchimp-subscribe";
 
 type Props = {
 	status: "error" | "success" | "sending" | null;
 	message: string | Error | null;
-	onSubmitted: (data: EmailFormFields) => void;
+	onSubmitted: (data: any) => void;
 };
 
 const EmailSubscriptionForm = ({status, message, onSubmitted}: Props) => {
