@@ -1,4 +1,5 @@
 import {Box, Container, Typography, useTheme} from "@mui/material";
+import {fk_background} from "../utils/common";
 
 type Props = {
 	tagline: string;
@@ -12,7 +13,7 @@ const PageHeader = ({tagline, title}: Props) => {
 			component={"section"}
 			id="menu_header"
 			sx={{
-				background: theme.palette.custom.achar,
+				background: fk_background,
 				// backgroundImage: `url(/images/head_banner.png)`,
 				backgroundPosition: "center center",
 				backgroundRepeat: "no-repeat",
