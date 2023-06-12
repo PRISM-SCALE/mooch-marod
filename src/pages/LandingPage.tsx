@@ -16,7 +16,7 @@ const LandingPage = () => {
 				alt="Mooch Marod"
 				background={mm_background}
 				logo="/images/mm_logo.webp"
-				path="/home"
+				path={`${import.meta.env.VITE_BRAND_URL}`}
 				sx={{width: {xs: "100%", md: "50%"}}}
 			/>
 		</Box>
