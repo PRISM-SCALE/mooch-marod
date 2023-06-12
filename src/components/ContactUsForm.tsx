@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {TextField, Button, Box, useTheme} from "@mui/material";
 import {ContactFormState, initialFormData} from "../types/ContactForm.types";
-import {EmailFormFields} from "react-mailchimp-subscribe";
+// import {EmailFormFields} from "react-mailchimp-subscribe";
 
 type Props = {
 	status: "error" | "success" | "sending" | null;
@@ -12,6 +12,8 @@ type Props = {
 const ContactUsForm = ({status, message, onSubmitted}: Props) => {
 	const theme = useTheme();
 	const [formData, setFormData] = useState<ContactFormState>(initialFormData);
+
+	console.log(message)
 
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setFormData({
