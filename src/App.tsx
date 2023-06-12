@@ -15,7 +15,7 @@ import RootLayout from "./pages/RootLayout.tsx";
 import NotFound from "./sections/NotFound.tsx";
 
 // HOC
-import DynamicImport from "./hoc/DynamicComponentLoader.tsx";
+import DynamicImport from "./hoc/DynamicImport.tsx";
 
 // PAGES
 const Home = () => import("./pages/Home.tsx");
