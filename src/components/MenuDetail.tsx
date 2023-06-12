@@ -1,5 +1,5 @@
 import {Box, Grid, Typography, useTheme} from "@mui/material";
-import {MenuItem, MenuPrice} from "../utils/groupby";
+import {MenuItem, MenuPrice} from "../types/Menu.types";
 
 type Props = {
 	menuList: MenuItem[];
@@ -40,8 +40,8 @@ const MenuDetail = ({menuList}: Props): JSX.Element => {
 							</Box>
 
 							<Box sx={{display: "flex", gap: 2}}>
-								{price.map(({type, rate, inch}, index) => {
-									return <PricingList key={index} type={type} rate={rate} inch={inch} />;
+								{price.map(({type, rate, inch}: MenuPrice) => {
+									return <PricingList key={type} type={type} rate={rate} inch={inch} />;
 								})}
 							</Box>
 						</Box>

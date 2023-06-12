@@ -4,7 +4,7 @@ import {alpha, styled} from "@mui/material/styles";
 import {Box, Button, Container, Grid, Fade, Tab, Tabs, Typography, useTheme} from "@mui/material";
 
 // JSON DATA
-import {MM_Menu, FK_Menu} from "../../_mock/menuV2.json";
+import {FK_Menu} from "../../_mock/menuV2.json";
 
 // UTILS
 import {a11yProps} from "../../utils/tabs";

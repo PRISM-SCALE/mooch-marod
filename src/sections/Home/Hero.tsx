@@ -1,5 +1,5 @@
 import {Box, Button, Container, Typography, useTheme} from "@mui/material";
-import {useSpring, animated} from "@react-spring/web";
+// import {useSpring, animated} from "@react-spring/web";
 import {useResponsive} from "../../hooks/useResponsive";
 import MMHeroElements from "../../components/MMHeroElements";
 import {TypeAnimation} from "react-type-animation";
@@ -9,14 +9,14 @@ const Hero = () => {
 	const theme = useTheme();
 	const {mediumScreenAndUp} = useResponsive();
 
-	const {transform} = useSpring({
-		from: {transform: "rotate(0deg)"},
-		to: {transform: "rotate(-20deg)"},
-		config: {mass: 1, tension: 150, friction: 80, clamp: true, duration: 2500},
-		loop: {
-			reverse: true,
-		},
-	});
+	// const {transform} = useSpring({
+	// 	from: {transform: "rotate(0deg)"},
+	// 	to: {transform: "rotate(-20deg)"},
+	// 	config: {mass: 1, tension: 150, friction: 80, clamp: true, duration: 2500},
+	// 	loop: {
+	// 		reverse: true,
+	// 	},
+	// });
 
 	return (
 		<Box

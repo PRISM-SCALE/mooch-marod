@@ -126,7 +126,7 @@ const DesktopAddress = () => {
 					}}
 				>
 					{stores.features.map((currentFeature, index) => {
-						const {properties, id} = currentFeature;
+						const {properties} = currentFeature;
 						return (
 							<LocationCard
 								key={index}
