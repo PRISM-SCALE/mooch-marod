@@ -9,7 +9,7 @@ const LandingPage = () => {
 				alt="Food Kasoot"
 				background={fk_background}
 				logo="/images/fk_white.png"
-				path="/home"
+				path="https://food-kasoot.netlify.app/"
 				sx={{width: {xs: "100%", md: "50%"}}}
 			/>
 			<BrandingCard
