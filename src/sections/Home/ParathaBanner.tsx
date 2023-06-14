@@ -7,7 +7,7 @@ const ParathaBanner = () => {
 			component={ParallaxBanner}
 			layers={[{image: "/images/preview_paratha_banner.jpeg", speed: -15}]}
 			sx={{
-				height: {xs: 320, lg: 580},
+				height: {xs: 320, lg: 560},
 				"& div": {
 					inset: "20px 0px !important",
 				},

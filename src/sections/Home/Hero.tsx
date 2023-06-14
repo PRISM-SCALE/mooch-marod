@@ -1,8 +1,12 @@
 import {Box, Button, Container, Typography, useTheme} from "@mui/material";
-import {useSpring, animated} from "@react-spring/web";
-import {useResponsive} from "../../hooks/useResponsive";
-import MMHeroElements from "../../components/MMHeroElements";
 import {TypeAnimation} from "react-type-animation";
+import {useSpring, animated} from "@react-spring/web";
+
+// HOOKS
+import {useResponsive} from "../../hooks/useResponsive";
+
+// COMPONENTS
+import MMHeroElements from "../../components/MMHeroElements";
 
 const Hero = () => {
 	const theme = useTheme();
@@ -15,6 +19,49 @@ const Hero = () => {
 		loop: {
 			reverse: true,
 		},
+	});
+
+	// TEXT ANIMATION
+	const captionProps = useSpring({
+		transform: "translateY(0px)",
+		opacity: 1,
+		from: {transform: "translateY(20px)", opacity: 0},
+		delay: 700,
+	});
+
+	const titleProps = useSpring({
+		transform: "translateY(0px)",
+		opacity: 1,
+		from: {transform: "translateY(30px)", opacity: 0},
+		delay: 900,
+	});
+
+	const buttonProps = useSpring({
+		transform: "translateY(0px)",
+		opacity: 1,
+		from: {transform: "translateY(30px)", opacity: 0},
+		delay: 1300,
+	});
+
+	const heroImageProps = useSpring({
+		transform: "scale(1)",
+		opacity: 1,
+		from: {transform: "scale(1.2)", opacity: 0},
+		delay: 100,
+	});
+
+	const banner1Props = useSpring({
+		transform: "translateY(0px)",
+		opacity: 1,
+		from: {transform: "translateY(-20px)", opacity: 0},
+		delay: 400,
+	});
+
+	const banner2Props = useSpring({
+		transform: "translateY(0px)",
+		opacity: 1,
+		from: {transform: "translateY(20px)", opacity: 0},
+		delay: 600,
 	});
 
 	return (
@@ -67,9 +114,14 @@ const Hero = () => {
 							[theme.breakpoints.down("md")]: {textAlign: "center"},
 							position: "relative",
 							zIndex: 20,
+							px: 1,
 						}}
 					>
+						{/* ------------------------------------------ */}
+
 						<Box
+							component={animated.div}
+							style={captionProps}
 							sx={{
 								display: "flex",
 								alignItems: "center",
@@ -90,80 +142,85 @@ const Hero = () => {
 							/>
 						</Box>
 
-						<Typography
-							variant="h1"
-							fontSize={{xs: "2rem", sm: "2.8rem", md: "4.8rem"}}
-							color="white"
-							sx={{textTransform: "uppercase", fontWeight: 700}}
-						>
-							SHARE YOUR <br />
-							LOVE FOR <br />
-							<TypeAnimation sequence={["BANGALORE", 2000, "PARATHA", 2000]} repeat={Infinity} />
-						</Typography>
+						<Box component={animated.div} style={titleProps}>
+							<Typography
+								variant="h1"
+								fontSize={{xs: "2rem", sm: "2.8rem", md: "4.8rem"}}
+								color="white"
+								sx={{textTransform: "uppercase", fontWeight: 700}}
+							>
+								SHARE YOUR <br />
+								LOVE FOR <br />
+								<TypeAnimation sequence={[" BANGALORE", 2000, "PARATHA", 2000]} repeat={Infinity} />
+							</Typography>
+						</Box>
 
 						{/* ------------------------------------------ */}
 
-						<Button
-							sx={{
-								backgroundColor: theme.palette.custom.paratha,
-								borderRadius: 30,
-								px: {xs: 2, md: 4},
-								py: 1,
-								color: "white",
-								mt: {xs: 2, md: 4},
-								fontSize: {xs: ".6rem", sm: ".8rem", md: "1rem"},
-								fontWeight: 400,
-								"&:hover": {
+						<Box component={animated.div} style={buttonProps}>
+							<Button
+								sx={{
 									backgroundColor: theme.palette.custom.paratha,
-								},
-								mr: 2,
-							}}
-							disableElevation
-							// disableRipple
-						>
-							Own A Franchise
-						</Button>
-						<Button
-							sx={{
-								border: `3px solid ${theme.palette.custom.paratha}`,
-								backgroundColor: "transparent",
-								borderRadius: 30,
-								px: {xs: 2, md: 4},
-								py: 1,
-								color: "white",
-								mt: {xs: 2, md: 4},
-								fontSize: {xs: ".6rem", sm: ".8rem", md: "1rem"},
-								fontWeight: 400,
-								"&:hover": {
+									borderRadius: 30,
+									px: {xs: 2, md: 4},
+									py: 1,
+									color: "white",
+									mt: {xs: 2, md: 4},
+									fontSize: {xs: ".6rem", sm: ".8rem", md: "1rem"},
+									fontWeight: 400,
+									"&:hover": {
+										backgroundColor: theme.palette.custom.paratha,
+									},
+									mr: 2,
+								}}
+								disableElevation
+								// disableRipple
+							>
+								Own A Franchise
+							</Button>
+							<Button
+								sx={{
+									border: `3px solid ${theme.palette.custom.paratha}`,
 									backgroundColor: "transparent",
-								},
-							}}
-							disableElevation
-							// disableRipple
-						>
-							Bulk order
-						</Button>
+									borderRadius: 30,
+									px: {xs: 2, md: 4},
+									py: 1,
+									color: "white",
+									mt: {xs: 2, md: 4},
+									fontSize: {xs: ".6rem", sm: ".8rem", md: "1rem"},
+									fontWeight: 400,
+									"&:hover": {
+										backgroundColor: "transparent",
+									},
+								}}
+								disableElevation
+								// disableRipple
+							>
+								Bulk order
+							</Button>
+						</Box>
 
 						{/* ------------------------------------------ */}
 					</Box>
 
 					<Box sx={{position: "relative", zIndex: 20, [theme.breakpoints.down("md")]: {mt: 6}}}>
+						<Box component={animated.div} style={heroImageProps}>
+							<Box
+								component={animated.img}
+								src="/images/1.webp"
+								alt="paratha_animation"
+								sx={{
+									height: {xs: 260, sm: 340, md: 420, lg: 580},
+								}}
+								style={{transform}}
+								loading="lazy"
+							/>
+						</Box>
+
 						<Box
-							component={animated.img}
-							src="/images/1.webp"
-							alt="paratha_animation"
+							component={animated.div}
+							style={banner1Props}
 							sx={{
-								height: {xs: 260, sm: 340, md: 420, lg: 580},
-							}}
-							style={{transform}}
-							loading="lazy"
-						/>
-						<Box
-							component="img"
-							src="/images/banner_image_2.png"
-							alt="paratha_animation"
-							sx={{
-								height: {xs: 180, sm: 220, md: 320, lg: 380},
 								position: "absolute",
 								left: 130,
 								top: -100,
@@ -173,14 +230,22 @@ const Hero = () => {
 									top: -30,
 								},
 							}}
-							loading="lazy"
-						/>
+						>
+							<Box
+								component="img"
+								src="/images/banner_image_2.png"
+								alt="paratha_animation"
+								sx={{
+									height: {xs: 180, sm: 220, md: 320, lg: 380},
+								}}
+								loading="lazy"
+							/>
+						</Box>
+
 						<Box
-							component="img"
-							src="/images/banner_image_3.png"
-							alt="paratha_animation"
+							component={animated.div}
+							style={banner2Props}
 							sx={{
-								height: {xs: 180, sm: 220, md: 320, lg: 380},
 								position: "absolute",
 								left: 0,
 								bottom: -120,
@@ -189,8 +254,17 @@ const Hero = () => {
 									bottom: -40,
 								},
 							}}
-							loading="lazy"
-						/>
+						>
+							<Box
+								component="img"
+								src="/images/banner_image_3.png"
+								alt="paratha_animation"
+								sx={{
+									height: {xs: 180, sm: 220, md: 320, lg: 380},
+								}}
+								loading="lazy"
+							/>
+						</Box>
 					</Box>
 				</Box>
 			</Container>
