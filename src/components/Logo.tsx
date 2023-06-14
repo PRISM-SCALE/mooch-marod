@@ -26,6 +26,7 @@ const Image = styled("img")(({theme}) => ({
 	[theme.breakpoints.down("sm")]: {
 		width: "70px",
 	},
+	transition: "all .3s ease-out",
 }));
 
 const Logo = ({width, height, logo}: Props) => {

@@ -47,9 +47,16 @@ function ElevationScroll(props: Props) {
 }
 
 export default function Navbar(props: Props) {
+	const {window} = props;
 	const theme = useTheme();
 	const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 	const {isMediumScreen, isSmallScreen, mediumScreenAndUp} = useResponsive();
+
+	const trigger = useScrollTrigger({
+		disableHysteresis: true,
+		threshold: 100,
+		target: window ? window() : undefined,
+	});
 
 	const handleMenuClick = () => {
 		setIsSidebarOpen(!isSidebarOpen);
@@ -74,14 +81,19 @@ export default function Navbar(props: Props) {
 							sx={{
 								width: "100%",
 								flexDirection: {xs: "row", md: "row"},
-								height: {xs: "60px", md: "80px"},
+								height: trigger ? {xs: "60px", md: "80px"} : {xs: "60px", md: "100px"},
 								...spaceBetween,
+								transition: "all .3s ease-out",
 							}}
 							disableGutters
 						>
 							<>
 								<Link to={ROOT_LINK}>
-									<Logo width={{xs: 60, md: 80}} height={{xs: 60, md: 80}} logo={logo_white} />
+									<Logo
+										width={{xs: 60, md: trigger ? 60 : 80}}
+										height={{xs: 60, md: trigger ? 60 : 80}}
+										logo={logo_white}
+									/>
 								</Link>
 
 								{isSmallScreen === !isMediumScreen ? (
