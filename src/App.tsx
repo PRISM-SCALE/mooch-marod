@@ -92,3 +92,5 @@ export default App;
 // VITE_MAILCHIMP_CONTACT_URL=https://gmail.us21.list-manage.com/subscribe/post
 // VITE_MAILCHIMP_U=df01cb0e908fd7c2333212809
 // VITE_MAILCHIMP_ID=1c0a3c998b
+
+// VITE_BRAND_URL=https://food-kasoot.netlify.app/
