@@ -111,10 +111,13 @@ const Hero = () => {
 				>
 					<Box
 						sx={{
+							[theme.breakpoints.up("md")]: {
+								width: "500px",
+							},
+
 							[theme.breakpoints.down("md")]: {textAlign: "center"},
 							position: "relative",
 							zIndex: 20,
-							px: 1,
 						}}
 					>
 						{/* ------------------------------------------ */}
