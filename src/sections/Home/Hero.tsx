@@ -47,7 +47,7 @@ const Hero = () => {
 		transform: "scale(1)",
 		opacity: 1,
 		from: {transform: "scale(1.2)", opacity: 0},
-		delay: 100,
+		delay: 200,
 	});
 
 	const banner1Props = useSpring({
