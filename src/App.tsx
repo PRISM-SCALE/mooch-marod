@@ -31,6 +31,11 @@ const App = () => {
 
 	const router = createBrowserRouter([
 		{
+			index: true,
+			element: <DynamicImport load={LandingPage} />,
+		},
+
+		{
 			path: "/",
 			element: <RootLayout />,
 			// errorElement: <ErrorPage />,
@@ -61,11 +66,6 @@ const App = () => {
 					element: <DynamicImport load={Offers} />,
 				},
 			],
-		},
-
-		{
-			index: true,
-			element: <DynamicImport load={LandingPage} />,
 		},
 
 		{
