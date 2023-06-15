@@ -3,6 +3,7 @@ import Iconify from "./Iconify";
 
 type Props = {
 	image: string;
+	title: string;
 };
 
 const InstaCard = ({image}: Props) => {
