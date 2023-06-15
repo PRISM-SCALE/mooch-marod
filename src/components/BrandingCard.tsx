@@ -16,7 +16,9 @@ const BrandingCard = ({logo, background, alt, path, sx}: Props) => {
 			component={Link}
 			to={path}
 			sx={{
-				background: background,
+				backgroundImage: background,
+				backgroundSize: "cover",
+				backgroundRepeat: "no-repeat",
 				mixBlendMode: "multiply",
 				display: "grid",
 				placeContent: "center",

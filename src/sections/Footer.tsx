@@ -1,24 +1,17 @@
-import {Box, Container, Divider, Typography, alpha} from "@mui/material";
+import {Box, Container, Typography, alpha, useTheme} from "@mui/material";
 
-import {Link} from "react-router-dom";
-import {footerLinks} from "../utils/links";
 import FooterGallery from "../components/FooterGallery";
 import {useResponsive} from "../hooks/useResponsive";
 import SocialIcons from "../components/SocialIcons";
 import {logo_with_tag} from "../utils/common";
 
-interface Styles {
-	[key: string]: string | number | object;
-}
-
-const styles: Styles = {
-	mt: 2,
-	color: "#aaa",
-	mx: "auto",
-};
+// interface Styles {
+// 	[key: string]: string | number | object;
+// }
 
 const Footer = () => {
-	const {isMediumScreen, isSmallScreen} = useResponsive();
+	const {isMediumScreen, isSmallScreen, mediumScreenAndUp} = useResponsive();
+	const theme = useTheme();
 	return (
 		<Box
 			component="footer"
@@ -29,58 +22,87 @@ const Footer = () => {
 				// backgroundSize: "cover",
 				// backgroundRepeat: "no-repeat",
 				background: "#222",
+				// background: theme.palette.custom.achar,
 			}}
 		>
 			<Container maxWidth="xl">
-				<Box textAlign={"center"}>
-					<Divider
-						sx={{
-							width: "100%",
-							mx: "auto",
-							"&.MuiDivider-root::before, &.MuiDivider-root::after": {
-								borderTop: `2px solid ${alpha("#fff", 0.2)}`,
-							},
-							display: "flex",
-							alignItems: "center",
-						}}
-					>
-						<img src={logo_with_tag} alt="logo" width={120} height={120} />
-					</Divider>
-				</Box>
-
 				<Box
 					sx={{
 						display: "flex",
 						flexWrap: isMediumScreen !== isSmallScreen ? "wrap" : "nowrap",
-						alignItems: "center",
 						justifyContent: isMediumScreen !== isSmallScreen ? "center" : "space-between",
 						gap: 6,
-						p: isMediumScreen !== isSmallScreen ? 2 : 6,
+						py: 4,
 					}}
 				>
-					<Box sx={{textAlign: "center"}}>
-						<Typography variant="h3" fontWeight={400} sx={{color: "#fff"}}>
-							Address
-						</Typography>
-						<Typography sx={styles}>
-							570 8th Ave, New York,
-							<br /> NY 10018 United States
-						</Typography>
+					<Box>
+						<Box
+							component={"img"}
+							src={logo_with_tag}
+							alt="logo"
+							sx={{
+								width: {xs: 120, md: 200},
+								height: {xs: 120, md: 200},
+							}}
+						/>
 					</Box>
 
-					<Box sx={{textAlign: "center"}}>
-						<Typography variant="h3" fontWeight={400} sx={{color: "#fff"}}>
-							Opening hours
+					<Box>
+						<Typography
+							variant="h3"
+							fontWeight={400}
+							sx={{color: theme.palette.custom.paratha, textTransform: "uppercase", mb: 2}}
+						>
+							Working Hours
 						</Typography>
-						<Typography sx={styles}>
+						<Typography sx={{color: "#fff"}}>
 							Monday - Friday <br /> 10.00 AM - 11.00 PM
 						</Typography>
 					</Box>
 
-					{/* FOOTER GALLERY */}
 					<Box>
-						<FooterGallery />
+						<Typography
+							variant="h3"
+							fontWeight={400}
+							sx={{color: theme.palette.custom.paratha, textTransform: "uppercase", mb: 2}}
+						>
+							Contact us
+						</Typography>
+
+						<Box sx={{mb: 2}}>
+							<Typography variant="caption" sx={{color: theme.palette.custom.butter}}>
+								Location:
+							</Typography>
+							<Typography variant="body1" color={"#fff"}>
+								55 main Street, New York
+							</Typography>
+						</Box>
+
+						<Box sx={{mb: 2}}>
+							<Typography variant="caption" sx={{color: theme.palette.custom.butter}}>
+								Email Address
+							</Typography>
+							<Typography variant="body1" color={"#fff"}>
+								testing@test.com
+							</Typography>
+						</Box>
+
+						<Box sx={{mb: 2}}>
+							<Typography variant="caption" sx={{color: theme.palette.custom.butter}}>
+								Phone Number
+							</Typography>
+							<Typography variant="body1" color={"#fff"}>
+								+91 (808) 643 9045
+							</Typography>
+						</Box>
 					</Box>
+
+					{/* FOOTER GALLERY */}
+					{mediumScreenAndUp ? (
+						<Box>
+							<FooterGallery />
+						</Box>
+					) : null}
 				</Box>
 
 				<Box
@@ -90,9 +112,8 @@ const Footer = () => {
 						justifyContent: {xs: "center", md: "space-between"},
 						flexDirection: {xs: "column", md: "row"},
 
-						mb: 6,
-						pt: 4,
-						borderTop: `1px solid ${alpha("#aaa", 0.4)}`,
+						pt: 2,
+						borderTop: `1px solid ${alpha(theme.palette.custom.butter, 0.2)}`,
 					}}
 				>
 					<Box
@@ -100,31 +121,14 @@ const Footer = () => {
 							display: "flex",
 							alignItems: "center",
 							justifyContent: "space-between",
-							width: {xs: "100%", sm: "40%"},
 						}}
 					>
-						{footerLinks.map((item, index) => (
-							<Box
-								key={index}
-								component={Link}
-								to={`/${item.toLowerCase()}`}
-								sx={{
-									color: "#aaa",
-									textDecoration: "none",
-									fontSize: ".8rem",
-									transition: ".5s ease-out",
-									my: 2,
-									"&:hover": {
-										color: "white",
-									},
-								}}
-							>
-								{item}
-							</Box>
-						))}
+						<Typography sx={{color: theme.palette.custom.butter, fontSize: ".8rem"}}>
+							Copyright © 2023 PRISMSCALE. All Right Reserved
+						</Typography>
 					</Box>
 
-					<Box sx={{color: "#aaa", fontSize: ".8rem"}}>
+					<Box>
 						<SocialIcons
 							width={40}
 							height={40}
@@ -133,12 +137,6 @@ const Footer = () => {
 							sx={{marginY: 2}}
 						/>
 					</Box>
-				</Box>
-
-				<Box sx={{textAlign: "center"}}>
-					<Typography sx={{color: "#aaa", fontSize: ".8rem"}}>
-						Copyright © 2023 PRISMSCALE. All Right Reserved
-					</Typography>
 				</Box>
 			</Container>
 		</Box>

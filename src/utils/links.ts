@@ -28,27 +28,39 @@ export const footerImageUrl = [
 
 export const images: Image[] = [
 	{
-		title: "naan",
-		imageUrl: "/images/footer_naan.jpg",
+		title: "noodles",
+		imageUrl: "/images/footer_1.png",
 	},
 	{
 		title: "paratha",
-		imageUrl: "/images/footer_paratha.jpg",
+		imageUrl: "/images/footer_2.png",
 	},
 	{
-		title: "roti",
-		imageUrl: "/images/footer_roti.jpg",
+		title: "fires",
+		imageUrl: "/images/footer_3.png",
 	},
 	{
-		title: "naan",
-		imageUrl: "/images/footer_naan.jpg",
+		title: "sharbath",
+		imageUrl: "/images/footer_4.png",
 	},
 	{
-		title: "paratha",
-		imageUrl: "/images/footer_paratha.jpg",
+		title: "sizzler",
+		imageUrl: "/images/footer_5.png",
 	},
 	{
-		title: "roti",
-		imageUrl: "/images/footer_roti.jpg",
+		title: "curry",
+		imageUrl: "/images/footer_6.png",
+	},
+	{
+		title: "panner",
+		imageUrl: "/images/footer_7.png",
+	},
+	{
+		title: "lassi",
+		imageUrl: "/images/footer_8.png",
+	},
+	{
+		title: "chicken",
+		imageUrl: "/images/footer_9.png",
 	},
 ];
