@@ -1,16 +1,22 @@
 import {Box, Button, Container, Typography, useTheme} from "@mui/material";
 import {TypeAnimation} from "react-type-animation";
 import {useSpring, animated} from "@react-spring/web";
+import {Link} from "react-router-dom";
 
 // HOOKS
 import {useResponsive} from "../../hooks/useResponsive";
 
+// UTILS
+import {ROOT_LINK} from "../../utils/links";
+import {logo_white} from "../../utils/common";
+
 // COMPONENTS
 import MMHeroElements from "../../components/MMHeroElements";
+import Logo from "../../components/Logo";
 
 const Hero = () => {
 	const theme = useTheme();
-	const {mediumScreenAndUp} = useResponsive();
+	const {mediumScreenAndUp, smallScreenAndUp} = useResponsive();
 
 	const {transform} = useSpring({
 		from: {transform: "rotate(0deg)"},
@@ -81,10 +87,19 @@ const Hero = () => {
 				zIndex: 5,
 			}}
 		>
-			<img
+			{!mediumScreenAndUp ? (
+				<Box sx={{position: "absolute", top: 15, left: 15}}>
+					<Link to={ROOT_LINK}>
+						<Logo width={{xs: 70, md: 85}} height={{xs: 70, md: 85}} logo={logo_white} />
+					</Link>
+				</Box>
+			) : null}
+
+			<Box
+				component={"img"}
 				src="/images/jabardast_desi.png"
 				alt="jabardast_desi"
-				style={{
+				sx={{
 					height: 760,
 					position: "absolute",
 					top: "50%",
@@ -92,12 +107,19 @@ const Hero = () => {
 					transform: "translate(-50%, -50%) rotate(-15deg)",
 					zIndex: 10,
 					opacity: 0.25,
+
+					[theme.breakpoints.down("md")]: {
+						height: 250,
+						top: "40%",
+						left: "55%",
+					},
 				}}
 				loading="lazy"
 			/>
+
 			{/* -------------------------------------------------- */}
 			{/* IMAGE ELEMENTS */}
-			{mediumScreenAndUp && <MMHeroElements />}
+			{smallScreenAndUp && <MMHeroElements />}
 			{/* -------------------------------------------------- */}
 			<Container maxWidth="xl">
 				<Box
@@ -105,8 +127,8 @@ const Hero = () => {
 						display: "flex",
 						alignItems: "center",
 						justifyContent: "space-around",
-						// columnGap: 3,
-						flexDirection: {xs: "column", md: "row"},
+						gap: 6,
+						flexDirection: {xs: "column-reverse", md: "row"},
 					}}
 				>
 					<Box

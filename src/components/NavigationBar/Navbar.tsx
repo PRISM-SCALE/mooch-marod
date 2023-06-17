@@ -81,21 +81,26 @@ export default function Navbar(props: Props) {
 							sx={{
 								width: "100%",
 								flexDirection: {xs: "row", md: "row"},
-								height: trigger ? {xs: "60px", md: "80px"} : {xs: "60px", md: "100px"},
+								height: trigger ? {xs: "80px", md: "80px"} : {xs: "80px", md: "100px"},
 								...spaceBetween,
 								transition: "all .3s ease-out",
+
+								// [theme.breakpoints.down("md")]: {
+								// 	justifyContent: "center",
+								// },
 							}}
 							disableGutters
 						>
 							<>
 								<Link to={ROOT_LINK}>
 									<Logo
-										width={{xs: 60, md: trigger ? 60 : 80}}
-										height={{xs: 60, md: trigger ? 60 : 80}}
+										width={{xs: 50, md: trigger ? 65 : 85}}
+										height={{xs: 50, md: trigger ? 65 : 85}}
 										logo={logo_white}
 									/>
 								</Link>
 
+								{/* 
 								{isSmallScreen === !isMediumScreen ? (
 									<IconButton sx={{color: "white"}} onClick={handleMenuClick}>
 										<Iconify icon={"gg:menu-right"} size={24} />
@@ -104,7 +109,7 @@ export default function Navbar(props: Props) {
 
 								{!mediumScreenAndUp && (
 									<Sidebar anchor="right" onClose={handleSidebarClose} open={isSidebarOpen} />
-								)}
+								)} */}
 
 								{/* {isMediumScreen !== isSmallScreen ? null : <SearchBar />} */}
 								{isMediumScreen !== isSmallScreen ? null : <NavbarList />}

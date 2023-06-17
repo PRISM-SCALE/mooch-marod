@@ -23,7 +23,7 @@ const About = () => import("./pages/About.tsx");
 const Menu = () => import("./pages/Menu.tsx");
 const Contact = () => import("./pages/Contact.tsx");
 const Outlets = () => import("./pages/Outlets.tsx");
-const Offers = () => import("./pages/Offers.tsx");
+// const Offers = () => import("./pages/Offers.tsx");
 const LandingPage = () => import("./pages/LandingPage.tsx");
 
 const App = () => {
@@ -61,10 +61,10 @@ const App = () => {
 					path: "/outlets",
 					element: <DynamicImport load={Outlets} />,
 				},
-				{
-					path: "/offers",
-					element: <DynamicImport load={Offers} />,
-				},
+				// {
+				// 	path: "/offers",
+				// 	element: <DynamicImport load={Offers} />,
+				// },
 			],
 		},
 

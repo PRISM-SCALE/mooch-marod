@@ -13,18 +13,20 @@ const ImageWrapper = styled(Box)(({theme}) => ({
 	display: "inline-block",
 	margin: "0 1rem",
 	[theme.breakpoints.down("sm")]: {
-		width: "70px",
-		maxWidth: "70px",
+		// width: "70px",
+		// maxWidth: "70px",
 		margin: 0,
 	},
 }));
 
 const Image = styled("img")(({theme}) => ({
 	height: "auto",
-	width: "80px",
-	objectFit: "cover",
+	objectFit: "contain",
+
+	margin: "4px 0",
+
 	[theme.breakpoints.down("sm")]: {
-		width: "70px",
+		// width: "70px",
 	},
 	transition: "all .3s ease-out",
 }));

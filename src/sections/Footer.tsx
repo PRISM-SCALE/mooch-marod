@@ -30,7 +30,7 @@ const Footer = () => {
 					sx={{
 						display: "flex",
 						flexWrap: isMediumScreen !== isSmallScreen ? "wrap" : "nowrap",
-						justifyContent: isMediumScreen !== isSmallScreen ? "center" : "space-between",
+						justifyContent: isMediumScreen !== isSmallScreen ? "flex-start" : "space-between",
 						gap: 6,
 						py: 4,
 					}}
@@ -110,7 +110,7 @@ const Footer = () => {
 						display: "flex",
 						alignItems: "center",
 						justifyContent: {xs: "center", md: "space-between"},
-						flexDirection: {xs: "column", md: "row"},
+						flexDirection: {xs: "column-reverse", md: "row"},
 
 						pt: 2,
 						borderTop: `1px solid ${alpha(theme.palette.custom.butter, 0.2)}`,
