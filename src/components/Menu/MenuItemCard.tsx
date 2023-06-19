@@ -1,7 +1,8 @@
 import {Box, Grid, Typography, useTheme} from "@mui/material";
+import {useLocation} from "react-router-dom";
 
 // TYPES
-import {MenuItem} from "../../types/Menu.types";
+import {MenuItem, MenuPrice} from "../../types/Menu.types";
 
 // COMPONENTS
 import Iconify from "../Iconify";
@@ -12,26 +13,30 @@ type Props = {
 
 const MenuItemCard = ({list}: Props) => {
 	const theme = useTheme();
+	const {pathname} = useLocation();
+
 	return (
 		<>
 			{list.map(({name, description, price, isVeg}) => {
 				return (
-					<Grid item xs={12} md={6} sx={{mb: 2}}>
+					<Grid item xs={12} md={6} sx={{mb: 2}} key={description}>
 						<Box
 							sx={{
 								width: {xs: "100%"},
 								display: "flex",
 								justifyContent: "space-between",
 								[theme.breakpoints.down("sm")]: {
-									flexDirection: "column",
+									flexDirection: "row-reverse",
+									justifyContent: "flex-end",
+									gap: 2,
 								},
 							}}
 						>
 							<Box>
-								<Box sx={{display: "flex", alignItems: "center", gap: 1}}>
+								<Box sx={{display: "flex", alignItems: "center", flex: 1}}>
 									<Typography
 										fontSize={{xs: "1rem", sm: "1.2rem"}}
-										color={theme.palette.custom.achar}
+										color={isVeg ? "#036F08" : theme.palette.custom.achar}
 										fontWeight={600}
 									>
 										{name}
@@ -42,6 +47,23 @@ const MenuItemCard = ({list}: Props) => {
 										<Iconify icon={"openmoji:meat-on-bone"} size={25} />
 									)}
 								</Box>
+								{pathname === "/home" ? null : (
+									<Box
+										sx={{
+											display: "flex",
+											gap: 2,
+											[theme.breakpoints.down("sm")]: {
+												mt: 1,
+											},
+										}}
+									>
+										{price.map((priceDetails: MenuPrice) => {
+											const {type, rate, inch} = priceDetails;
+
+											return <PricingList key={type} type={type} rate={rate} inch={inch} />;
+										})}
+									</Box>
+								)}
 								<Typography
 									variant="caption"
 									fontSize={"0.8rem"}
@@ -52,13 +74,36 @@ const MenuItemCard = ({list}: Props) => {
 								</Typography>
 							</Box>
 							<Box>
-								<Box component={"img"} sx={{maxWidth: "100%", height: "auto"}} src="" alt={name} />
+								<Box
+									component={"img"}
+									sx={{
+										maxWidth: "100px",
+										[theme.breakpoints.up("md")]: {
+											maxWidth: "100%",
+											height: "auto",
+										},
+									}}
+									src="/images/menu_image.png"
+									alt={name}
+								/>
 							</Box>
 						</Box>
 					</Grid>
 				);
 			})}
 		</>
+	);
+};
+
+const PricingList = (data: MenuPrice) => {
+	const {rate} = data;
+	const theme = useTheme();
+	return (
+		<Box sx={{display: "flex", flexDirection: "column"}}>
+			<Typography fontSize={{xs: ".925rem"}} color={theme.palette.custom.conceot} fontWeight={600}>
+				₹{rate}
+			</Typography>
+		</Box>
 	);
 };
 

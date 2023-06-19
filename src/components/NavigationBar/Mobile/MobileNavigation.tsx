@@ -2,7 +2,6 @@ import {useState} from "react";
 import {
 	BottomNavigation,
 	BottomNavigationAction,
-	Box,
 	Paper,
 	Slide,
 	useScrollTrigger,
@@ -35,20 +34,20 @@ const MobileNavigation = () => {
 				elevation={3}
 			>
 				<BottomNavigation
-					showLabels
 					value={value}
 					onChange={handleChange}
 					sx={{background: theme.palette.custom.achar}}
+					showLabels
 				>
 					{menuLinks.map(({icon, link, path}) => (
-						<Link to={link} key={icon}>
-							<BottomNavigationAction
-								// key={icon}
-								label={path}
-								icon={<Iconify icon={icon} size={20} sx={{color: "white"}} />}
-								sx={{minWidth: "auto"}}
-							/>
-						</Link>
+						<BottomNavigationAction
+							component={Link}
+							to={link}
+							key={icon}
+							label={path}
+							icon={<Iconify icon={icon} size={20} sx={{color: "white"}} />}
+							sx={{minWidth: "auto"}}
+						/>
 					))}
 				</BottomNavigation>
 			</Paper>

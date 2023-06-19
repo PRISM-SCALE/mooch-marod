@@ -18,7 +18,7 @@ const PageHeader = ({tagline, title}: Props) => {
 				backgroundPosition: "center center",
 				backgroundRepeat: "no-repeat",
 				backgroundSize: "cover",
-				height: "45vh",
+				height: "40vh",
 				width: "100%",
 				display: "flex",
 				justifyContent: "center",

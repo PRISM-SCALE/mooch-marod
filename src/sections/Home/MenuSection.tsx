@@ -10,12 +10,15 @@ import {MM_Menu} from "../../_mock/menuV2.json";
 import {a11yProps} from "../../utils/tabs";
 import {groupGenre} from "../../utils/groupby";
 
+// HOOKS
+import {useResponsive} from "../../hooks/useResponsive";
+
 // TYPES
 import {GroupedMenuData} from "../../types/Menu.types";
 
 // COMPONENTS
 import TabPanelWrapper from "../../components/TabPanelWrapper";
-import MenuDetail from "../../components/Menu/MenuDetail";
+import MenuItemCard from "../../components/Menu/MenuItemCard";
 
 interface StyledTabsProps {
 	children?: React.ReactNode;
@@ -88,6 +91,7 @@ const StyledTab = styled((props: StyledTabProps) => <Tab disableRipple {...props
 
 const NewMenu = () => {
 	const theme = useTheme();
+	const {mediumScreenAndUp} = useResponsive();
 	const [value, setValue] = useState(0);
 
 	const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
@@ -178,7 +182,9 @@ const NewMenu = () => {
 							>
 								<Grid container columnSpacing={4}>
 									{/* MAPPING THE MENU-LIST */}
-									<MenuDetail list={menuList.slice(0, 10)} />
+									<MenuItemCard
+										list={mediumScreenAndUp ? menuList.slice(0, 10) : menuList.slice(0, 5)}
+									/>
 								</Grid>
 							</Fade>
 						</TabPanelWrapper>
