@@ -8,6 +8,10 @@ import {MM_Menu} from "../../_mock/menuV2.json";
 
 // UTILS
 import {a11yProps} from "../../utils/tabs";
+import {groupData} from "../../utils/groupby";
+
+// TYPES
+import {GroupedMenuData} from "../../types/Menu.types";
 
 // COMPONENTS
 import TabPanelWrapper from "../../components/TabPanelWrapper";
@@ -90,6 +94,9 @@ const NewMenu = () => {
 		setValue(newValue);
 	};
 
+	// Grouped data returned from
+	const groupedMenuData: GroupedMenuData = groupData(MM_Menu);
+
 	// console.log(Object.entries(MM_Menu));
 
 	return (
@@ -121,7 +128,7 @@ const NewMenu = () => {
 				{/* TAB BUTTONS */}
 				<Box sx={{mt: "1rem"}}>
 					<StyledTabs value={value} onChange={handleChange}>
-						{Object.keys(MM_Menu).map((genre, index) => {
+						{Object.keys(groupedMenuData).map((genre, index) => {
 							const data = tabData[genre as keyof typeof tabData];
 							const color = theme.palette.custom[data as keyof CustomPalette];
 
@@ -161,7 +168,7 @@ const NewMenu = () => {
 				{/* MENU LIST */}
 				<Box sx={{mt: "4rem"}}>
 					{/* MAP THE MENU LIST */}
-					{Object.entries(MM_Menu).map(([genre, menuList], index) => (
+					{Object.entries(groupedMenuData).map(([genre, menuList], index) => (
 						<TabPanelWrapper key={genre} value={value} index={index}>
 							<Fade
 								in={value === index}

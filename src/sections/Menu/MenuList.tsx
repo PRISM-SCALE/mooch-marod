@@ -4,7 +4,10 @@ import {Box, Container, useTheme} from "@mui/material";
 import {MM_Menu} from "../../_mock/menuV2.json";
 
 // UTILS
-// import {groupData} from "../../utils/groupby";
+import {groupData} from "../../utils/groupby";
+
+// TYPES
+import {GroupedMenuData} from "../../types/Menu.types";
 
 // COMPONENTS
 import TitleWithMooch from "../../components/TitleWithMooch";
@@ -31,15 +34,17 @@ const tabData: TabData = {
 const MenuList = () => {
 	const theme = useTheme();
 	// Grouped data returned from
-	// const groupedMenuData: GroupedMenuData = groupData(MM_Menu);
+	const groupedMenuData: GroupedMenuData = groupData(MM_Menu);
 
 	return (
 		<Box component="section" id="main_menu_section" py={{xs: "2rem", md: "4rem"}}>
 			<Container maxWidth="xl">
 				{/* Map sorted object */}
-				{Object.entries(MM_Menu).map(([genre, menuList]) => {
+				{Object.entries(groupedMenuData).map(([genre, menuList]) => {
 					const data = tabData[genre as keyof typeof tabData];
 					const color = theme.palette.custom[data as keyof CustomPalette];
+
+					console.log(menuList);
 
 					return (
 						<Box key={genre} sx={{mb: 6}}>
