@@ -1,6 +1,6 @@
 // import {menu} from "../_mock/menu.json";
 
-import { GroupedMenuData, MenuItem } from "../types/Menu.types";
+import {GroupedMenuData, MenuItem} from "../types/Menu.types";
 
 // Group the menu items by category
 export const groupCategory = (menu: MenuItem[]): GroupedMenuData => {
@@ -27,10 +27,12 @@ export const groupGenre = (menu: MenuItem[]): GroupedMenuData => {
 	const groupedMenuData: GroupedMenuData = {};
 
 	menuData.forEach((menuItem) => {
-		if (groupedMenuData[menuItem.genre]) {
-			groupedMenuData[menuItem.genre].push(menuItem);
-		} else {
-			groupedMenuData[menuItem.genre] = [menuItem];
+		if (menuItem.genre !== undefined && menuItem.genre !== null) {
+			if (groupedMenuData[menuItem.genre]) {
+				groupedMenuData[menuItem.genre].push(menuItem);
+			} else {
+				groupedMenuData[menuItem.genre] = [menuItem];
+			}
 		}
 	});
 

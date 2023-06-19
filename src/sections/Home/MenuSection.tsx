@@ -8,7 +8,7 @@ import {MM_Menu} from "../../_mock/menuV2.json";
 
 // UTILS
 import {a11yProps} from "../../utils/tabs";
-import {groupCategory} from "../../utils/groupby";
+import {groupGenre} from "../../utils/groupby";
 
 // TYPES
 import {GroupedMenuData} from "../../types/Menu.types";
@@ -95,7 +95,7 @@ const NewMenu = () => {
 	};
 
 	// Grouped data returned from
-	const groupedMenuData: GroupedMenuData = groupCategory(MM_Menu);
+	const groupedMenuData: GroupedMenuData = groupGenre(MM_Menu);
 
 	// console.log(Object.entries(MM_Menu));
 
