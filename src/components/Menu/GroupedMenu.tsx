@@ -4,7 +4,7 @@ import {Box, Grid, Typography, useTheme} from "@mui/material";
 import {MenuItem} from "../../types/Menu.types";
 
 // UTILS
-import {groupData} from "../../utils/groupby";
+import {groupCategory} from "../../utils/groupby";
 
 // COMPONENTS
 import MenuDetail from "./MenuDetail";
@@ -17,7 +17,7 @@ type Props = {
 
 const GroupedMenu: React.FC<Props> = ({menuList, genre, color}: Props) => {
 	const theme = useTheme();
-	const groupedMenuData = groupData(menuList);
+	const groupedMenuData = groupCategory(menuList);
 
 	return (
 		<Grid container columnSpacing={2}>

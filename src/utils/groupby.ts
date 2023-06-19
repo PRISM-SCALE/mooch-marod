@@ -3,7 +3,7 @@
 import { GroupedMenuData, MenuItem } from "../types/Menu.types";
 
 // Group the menu items by category
-export const groupData = (menu: MenuItem[]): GroupedMenuData => {
+export const groupCategory = (menu: MenuItem[]): GroupedMenuData => {
 	const menuData: MenuItem[] = menu;
 
 	const groupedMenuData: GroupedMenuData = {};
