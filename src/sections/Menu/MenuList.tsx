@@ -44,8 +44,6 @@ const MenuList = () => {
 					const data = tabData[genre as keyof typeof tabData];
 					const color = theme.palette.custom[data as keyof CustomPalette];
 
-					console.log(menuList);
-
 					return (
 						<Box key={genre} sx={{mb: 6}}>
 							{/* Genre Name */}
