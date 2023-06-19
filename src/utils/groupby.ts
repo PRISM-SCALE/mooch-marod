@@ -19,3 +19,21 @@ export const groupData = (menu: MenuItem[]): GroupedMenuData => {
 	// Log the grouped menu data for testing
 	return groupedMenuData;
 };
+
+// Group the menu items by Genre
+export const groupGenre = (menu: MenuItem[]): GroupedMenuData => {
+	const menuData: MenuItem[] = menu;
+
+	const groupedMenuData: GroupedMenuData = {};
+
+	menuData.forEach((menuItem) => {
+		if (groupedMenuData[menuItem.genre]) {
+			groupedMenuData[menuItem.genre].push(menuItem);
+		} else {
+			groupedMenuData[menuItem.genre] = [menuItem];
+		}
+	});
+
+	// Log the grouped menu data for testing
+	return groupedMenuData;
+};
