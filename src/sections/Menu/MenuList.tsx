@@ -4,7 +4,7 @@ import {Box, Container, useTheme} from "@mui/material";
 import {MM_Menu} from "../../_mock/menuV2.json";
 
 // UTILS
-import {groupCategory} from "../../utils/groupby";
+import {groupGenre} from "../../utils/groupby";
 
 // TYPES
 import {GroupedMenuData} from "../../types/Menu.types";
@@ -34,7 +34,7 @@ const tabData: TabData = {
 const MenuList = () => {
 	const theme = useTheme();
 	// Grouped data returned from
-	const groupedMenuData: GroupedMenuData = groupCategory(MM_Menu);
+	const groupedMenuData: GroupedMenuData = groupGenre(MM_Menu);
 
 	return (
 		<Box component="section" id="main_menu_section" py={{xs: "2rem", md: "4rem"}}>

@@ -28,7 +28,7 @@ const MenuDetail = ({list}: Props): JSX.Element => {
 								<Box sx={{display: "flex", alignItems: "center", gap: 1}}>
 									<Typography
 										fontSize={{xs: "1rem", sm: "1.2rem"}}
-										color={theme.palette.custom.achar}
+										color={isVeg ? "#036F08" : theme.palette.custom.achar}
 										fontWeight={600}
 									>
 										{name}
