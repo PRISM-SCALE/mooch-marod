@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, {ReactElement, useEffect, useState} from "react";
+import Loader from "../components/Loader";
 
 type ComponentType = () => Promise<{default: React.ComponentType<any>}>;
 
@@ -27,7 +29,7 @@ function DynamicImport({load}: {load: ComponentType}): ReactElement {
 		return <Component />;
 	}
 
-	return <div>Loading...</div>;
+	return <Loader />;
 }
 
 export default DynamicImport;
