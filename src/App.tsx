@@ -18,13 +18,13 @@ import NotFound from "./sections/NotFound.tsx";
 import DynamicImport from "./hoc/DynamicImport.tsx";
 
 // PAGES
+const LandingPage = () => import("./pages/LandingPage.tsx");
 const Home = () => import("./pages/Home.tsx");
 const About = () => import("./pages/About.tsx");
 const Menu = () => import("./pages/Menu.tsx");
 const Contact = () => import("./pages/Contact.tsx");
 const Outlets = () => import("./pages/Outlets.tsx");
-const Offers = () => import("./pages/Offers.tsx");
-const LandingPage = () => import("./pages/LandingPage.tsx");
+// const Offers = () => import("./pages/Offers.tsx");
 
 const App = () => {
 	const theme = useMemo(() => createTheme(themeSettings), []);
@@ -56,10 +56,10 @@ const App = () => {
 					path: "/outlets",
 					element: <DynamicImport load={Outlets} />,
 				},
-				{
-					path: "/offers",
-					element: <DynamicImport load={Offers} />,
-				},
+				// {
+				// 	path: "/offers",
+				// 	element: <DynamicImport load={Offers} />,
+				// },
 			],
 		},
 
