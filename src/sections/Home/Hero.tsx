@@ -124,8 +124,8 @@ const Hero = () => {
 						display: "flex",
 						alignItems: "center",
 						justifyContent: "space-around",
-						// columnGap: 3,
-						flexDirection: {xs: "column", md: "row"},
+						gap: 6,
+						flexDirection: {xs: "column-reverse", md: "row"},
 					}}
 				>
 					<Box
