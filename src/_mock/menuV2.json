@@ -494,35 +494,6 @@
 		},
 
 		{
-			"name": "Veg Paratha",
-			"description": "A perfect blend of spices, vegetables, and herbs in every bite.",
-			"price": [
-				{"type": "queen", "rate": 399, "inch": 15},
-				{"type": "king", "rate": 569, "inch": 20},
-				{"type": "emperor", "rate": 659, "inch": 24}
-			],
-			"isVeg": true,
-			"genre": "make_your_own_paratha",
-			"categoryPriority": 1,
-			"priority": 2,
-			"category": "custom paratha"
-		},
-		{
-			"name": "Nonveg Paratha",
-			"description": "A delectable delight with juicy meat and aromatic spices",
-			"price": [
-				{"type": "queen", "rate": 549, "inch": 15},
-				{"type": "king", "rate": 699, "inch": 20},
-				{"type": "emperor", "rate": 999, "inch": 24}
-			],
-			"isVeg": false,
-			"genre": "make_your_own_paratha",
-			"categoryPriority": 1,
-			"priority": 2,
-			"category": "custom paratha"
-		},
-
-		{
 			"name": "Tandoori Chicken",
 			"price": [
 				{"rate": 399, "type": "Sizzler"},
@@ -987,6 +958,34 @@
 			"categoryPriority": 4,
 			"priority": 4,
 			"genre": "lassi"
+		},
+		{
+			"name": "Veg Paratha",
+			"description": "A perfect blend of spices, vegetables, and herbs in every bite.",
+			"price": [
+				{"type": "queen", "rate": 399, "inch": 15},
+				{"type": "king", "rate": 569, "inch": 20},
+				{"type": "emperor", "rate": 659, "inch": 24}
+			],
+			"isVeg": true,
+			"genre": "make_your_own_paratha",
+			"categoryPriority": 1,
+			"priority": 2,
+			"category": "custom paratha"
+		},
+		{
+			"name": "Nonveg Paratha",
+			"description": "A delectable delight with juicy meat and aromatic spices",
+			"price": [
+				{"type": "queen", "rate": 549, "inch": 15},
+				{"type": "king", "rate": 699, "inch": 20},
+				{"type": "emperor", "rate": 999, "inch": 24}
+			],
+			"isVeg": false,
+			"genre": "make_your_own_paratha",
+			"categoryPriority": 1,
+			"priority": 2,
+			"category": "custom paratha"
 		}
 	]
 }

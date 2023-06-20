@@ -176,7 +176,7 @@ const Hero = () => {
 							>
 								SHARE YOUR <br />
 								LOVE FOR <br />
-								<TypeAnimation sequence={[" BANGALORE", 2000, "PARATHA", 2000]} repeat={Infinity} />
+								<TypeAnimation sequence={["BENGALURU", 2000, "PARATHA", 2000]} repeat={Infinity} />
 							</Typography>
 						</Box>
 
@@ -184,6 +184,9 @@ const Hero = () => {
 
 						<Box component={animated.div} style={buttonProps}>
 							<Button
+								component={Link}
+								to="https://wa.link/hfy0aw"
+								target="_blank"
 								sx={{
 									backgroundColor: theme.palette.custom.paratha,
 									borderRadius: 30,
@@ -201,9 +204,12 @@ const Hero = () => {
 								disableElevation
 								// disableRipple
 							>
-								Own A Franchise
+								Book a table
 							</Button>
 							<Button
+								component={Link}
+								to="https://wa.link/hfy0aw"
+								target="_blank"
 								sx={{
 									border: `3px solid ${theme.palette.custom.paratha}`,
 									backgroundColor: "transparent",

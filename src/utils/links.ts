@@ -14,7 +14,7 @@ export const menuLinks = [
 	{link: "/menu", path: "menu", icon: "ic:round-restaurant-menu"},
 	// {link: "/offers", path: "Offers", icon: "icon-park-outline:weixin-cards-offers"},
 	{link: "/outlets", path: "outlets", icon: "mdi:locations"},
-	{link: "/contact", path: "contact", icon: "fluent:contact-card-24-filled"},
+	{link: "/contact", path: "contact us", icon: "fluent:contact-card-24-filled"},
 ];
 
 export const images: Image[] = [

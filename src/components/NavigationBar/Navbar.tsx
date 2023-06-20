@@ -105,6 +105,9 @@ export default function Navbar(props: Props) {
 
 								{isMediumScreen !== isSmallScreen ? null : (
 									<Button
+										component={Link}
+										to="https://wa.link/hfy0aw"
+										target="_blank"
 										sx={{
 											backgroundColor: theme.palette.custom.paratha,
 											borderRadius: 30,
@@ -121,7 +124,7 @@ export default function Navbar(props: Props) {
 										disableElevation
 										disableRipple
 									>
-										Own A Franchise
+										BOOK A TABLE
 									</Button>
 								)}
 							</>

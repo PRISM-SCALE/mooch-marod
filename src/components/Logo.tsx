@@ -29,6 +29,7 @@ const Image = styled("img")(({theme}) => ({
 		// width: "70px",
 	},
 	transition: "all .3s ease-out",
+	paddingTop: "10px",
 }));
 
 const Logo = ({width, height, logo}: Props) => {
