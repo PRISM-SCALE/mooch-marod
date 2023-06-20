@@ -121,6 +121,10 @@ const Hero = () => {
 							[theme.breakpoints.down("md")]: {textAlign: "center"},
 							position: "relative",
 							zIndex: 20,
+
+							[theme.breakpoints.up("md")]: {
+								width: "500px",
+							},
 						}}
 					>
 						<Box
