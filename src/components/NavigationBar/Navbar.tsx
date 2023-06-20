@@ -1,6 +1,6 @@
 import * as React from "react";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import {AppBar, Toolbar, Box, Button, Container, IconButton} from "@mui/material";
+import {AppBar, Toolbar, Box, Button, Container} from "@mui/material";
 import {useTheme} from "@mui/material/styles";
 
 // HOOKS
@@ -12,10 +12,8 @@ import {logo_white} from "../../utils/common";
 
 // COMPONENTS
 import NavbarList from "./NavbarList";
-import Iconify from "../Iconify";
 import {Link} from "react-router-dom";
 import Logo from "../Logo";
-import Sidebar from "./Sidebar";
 
 interface Props {
 	window?: () => Window;
@@ -49,22 +47,13 @@ function ElevationScroll(props: Props) {
 export default function Navbar(props: Props) {
 	const {window} = props;
 	const theme = useTheme();
-	const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
-	const {isMediumScreen, isSmallScreen, mediumScreenAndUp} = useResponsive();
+	const {isMediumScreen, isSmallScreen} = useResponsive();
 
 	const trigger = useScrollTrigger({
 		disableHysteresis: true,
 		threshold: 100,
 		target: window ? window() : undefined,
 	});
-
-	const handleMenuClick = () => {
-		setIsSidebarOpen(!isSidebarOpen);
-	};
-
-	const handleSidebarClose = () => {
-		setIsSidebarOpen(false);
-	};
 
 	const spaceBetween = {
 		display: "flex",

@@ -42,6 +42,8 @@ const MenuDasboard = () => {
 	const [selectedItem, setSelectedItem] = useState("");
 	const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
+	console.log(selectedItem);
+
 	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
 		setAnchorEl(event.currentTarget);
 	};

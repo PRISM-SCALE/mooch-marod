@@ -1,9 +1,6 @@
 import {Box, styled} from "@mui/material";
 import Slider, {Settings} from "react-slick";
 
-// JSON
-import {insta} from "../../_mock/instagram.json";
-
 // COMPONENTS
 import InstaCard from "../../components/InstaCard";
 import {images} from "../../utils/links";
