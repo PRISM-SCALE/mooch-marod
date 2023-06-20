@@ -12,7 +12,6 @@ import {groupCategory} from "../../utils/groupby";
 
 // COMPONENTS
 import TabPanelWrapper from "../../components/TabPanelWrapper";
-import MenuDetail from "../../components/Menu/MenuDetail";
 import MenuItemCard from "../../components/Menu/MenuItemCard";
 
 interface StyledTabsProps {
