@@ -215,22 +215,22 @@ const Hero = () => {
 					</Box>
 
 					<Box sx={{position: "relative", zIndex: 20, [theme.breakpoints.down("md")]: {mt: 6}}}>
+						<Box component={animated.div} style={heroImageProps}>
+							<Box
+								component={"img"}
+								src="/images/fk_hero.png"
+								alt="paratha_animation"
+								sx={{
+									height: {xs: 260, sm: 340, md: 420, lg: 580},
+								}}
+								// style={{transform}}
+								loading="lazy"
+							/>
+						</Box>
 						<Box
-							component={"img"}
-							src="/images/fk_hero.png"
-							alt="paratha_animation"
+							component={animated.div}
+							style={banner1Props}
 							sx={{
-								height: {xs: 260, sm: 340, md: 420, lg: 580},
-							}}
-							// style={{transform}}
-							loading="lazy"
-						/>
-						<Box
-							component="img"
-							src="/images/banner_image_2.png"
-							alt="paratha_animation"
-							sx={{
-								height: {xs: 180, sm: 220, md: 320, lg: 380},
 								position: "absolute",
 								left: 130,
 								top: -100,
@@ -240,24 +240,41 @@ const Hero = () => {
 									top: -30,
 								},
 							}}
-							loading="lazy"
-						/>
+						>
+							<Box
+								component="img"
+								src="/images/banner_image_2.png"
+								alt="paratha_animation"
+								sx={{
+									height: {xs: 180, sm: 220, md: 320, lg: 380},
+								}}
+								loading="lazy"
+							/>
+						</Box>
+
 						<Box
-							component="img"
-							src="/images/banner_image_3.png"
-							alt="paratha_animation"
+							component={animated.div}
+							style={banner2Props}
 							sx={{
-								height: {xs: 180, sm: 220, md: 320, lg: 380},
 								position: "absolute",
-								left: 0,
-								bottom: -120,
+								left: 80,
+								bottom: -80,
 								zIndex: -1,
 								[theme.breakpoints.down("md")]: {
 									bottom: -40,
 								},
 							}}
-							loading="lazy"
-						/>
+						>
+							<Box
+								component="img"
+								src="/images/banner_image_3.png"
+								alt="paratha_animation"
+								sx={{
+									height: {xs: 180, sm: 220, md: 320, lg: 380},
+								}}
+								loading="lazy"
+							/>
+						</Box>
 					</Box>
 				</Box>
 			</Container>
