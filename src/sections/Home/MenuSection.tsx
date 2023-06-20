@@ -89,7 +89,7 @@ const StyledTab = styled((props: StyledTabProps) => <Tab disableRipple {...props
 	})
 );
 
-const NewMenu = () => {
+const MenuSection = () => {
 	const theme = useTheme();
 	const {mediumScreenAndUp} = useResponsive();
 	const [value, setValue] = useState(0);
@@ -218,7 +218,7 @@ const NewMenu = () => {
 	);
 };
 
-export default NewMenu;
+export default MenuSection;
 
 /*
 const items = Array.from(Array(10).keys());
