@@ -110,9 +110,9 @@ const NewMenu = () => {
 						gutterBottom
 					>
 						<Box component={"span"} fontWeight={500}>
-							Mooch Marod's
+							Food Kasoot's
 						</Box>{" "}
-						Paratha, THE BEST IN TOWN
+						Sizzlers, THE BEST IN TOWN
 					</Typography>
 					<Typography variant="body1" sx={{width: {xs: "100%", md: "50%"}, marginX: "auto"}}>
 						Explore our delicious, one-of-a-kind menu with a massive 3000+ paratha combinations.

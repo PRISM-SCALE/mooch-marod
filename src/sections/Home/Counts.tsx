@@ -7,7 +7,7 @@ const _data = [
 	{
 		count: 2000,
 		character: "+",
-		text: "Parathas Served",
+		text: "Sizzlers Served",
 	},
 	{
 		count: 95,
