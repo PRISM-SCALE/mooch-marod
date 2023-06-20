@@ -1,4 +1,4 @@
-import {Box, Fab, Paper, Popover, useTheme} from "@mui/material";
+import {Box, Fab, IconButton, Paper, Popover, useTheme} from "@mui/material";
 import {useRef, useState} from "react";
 
 // JSON DATA
@@ -43,10 +43,17 @@ const MenuDasboard = () => {
 	const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
 	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+		if (mediumScreenAndUp) {
+			setAnchorEl(null);
+		}
 		setAnchorEl(event.currentTarget);
 	};
 
 	const handleClose = () => {
+		if (mediumScreenAndUp) {
+			setAnchorEl(null);
+		}
+
 		setAnchorEl(null);
 	};
 
@@ -79,15 +86,9 @@ const MenuDasboard = () => {
 			<Box
 				ref={containerRef}
 				sx={{
-					// [theme.breakpoints.up("md")]: {
-					// height: "100vh",
-					// overflowY: "scroll",
 					py: {xs: "2rem", md: "4rem"},
 					display: "flex",
 					gap: 2,
-
-					// },
-
 					p: 2,
 				}}
 			>
@@ -115,7 +116,20 @@ const MenuDasboard = () => {
 								},
 							}}
 						>
-							<MenuNavigation handleItemClick={handleItemClick} handleClose={handleClose} />
+							<IconButton
+								sx={{
+									position: "absolute",
+									top: 5,
+									right: 5,
+									color: theme.palette.custom.achar,
+									cursor: "pointer",
+									zIndex: 30,
+								}}
+								onClick={handleClose}
+							>
+								<Iconify icon={"ph:x-circle-bold"} size={24} />
+							</IconButton>
+							<MenuNavigation handleItemClick={handleItemClick} />
 						</Popover>
 						<Fab
 							sx={{

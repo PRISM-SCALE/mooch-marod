@@ -1,4 +1,4 @@
-import {Box, Grid, Typography, useTheme} from "@mui/material";
+import {Box, Grid, Typography} from "@mui/material";
 
 // TYPES
 import {MenuItem} from "../../types/Menu.types";
@@ -16,8 +16,8 @@ type Props = {
 	color?: string;
 };
 
-const GroupedMenu: React.FC<Props> = ({menuList, color}: Props) => {
-	const theme = useTheme();
+const GroupedMenu: React.FC<Props> = ({menuList, genre, color}: Props) => {
+	// const theme = useTheme();
 	const {mediumScreenAndUp} = useResponsive();
 	const groupedMenuData = groupCategory(menuList);
 
@@ -36,24 +36,28 @@ const GroupedMenu: React.FC<Props> = ({menuList, color}: Props) => {
 						<Box id={`${category.replaceAll(" ", "_").toLowerCase()}`} />
 						<Grid item xs={12} sx={{mb: 2}}>
 							<>
-								<Typography
-									sx={{
-										textTransform: "uppercase",
-										fontWeight: 700,
-										fontSize: {xs: "1.625rem", md: "1.5rem"},
-										color: color,
-									}}
-								>
-									{category}
-								</Typography>
-								<Box
-									sx={{
-										width: "100px",
-										height: "2.5px",
-										backgroundColor: color,
-										[theme.breakpoints.down("md")]: {display: "none"},
-									}}
-								/>
+								{genre === category ? null : (
+									<>
+										<Typography
+											sx={{
+												textTransform: "uppercase",
+												fontWeight: 700,
+												fontSize: {xs: "1.275rem", md: "1.5rem"},
+												color: color,
+											}}
+										>
+											{category}
+										</Typography>
+										<Box
+											sx={{
+												width: "100px",
+												height: "2.5px",
+												backgroundColor: color,
+												// [theme.breakpoints.down("md")]: {display: "none"},
+											}}
+										/>
+									</>
+								)}
 							</>
 						</Grid>
 						<MenuItemCard list={list} />
