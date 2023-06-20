@@ -133,7 +133,6 @@ const Hero = () => {
 								}}
 							/>
 						</Box>
-
 						<Typography
 							variant="h1"
 							fontSize={{xs: "2rem", sm: "2.8rem", md: "4.8rem"}}
@@ -144,9 +143,7 @@ const Hero = () => {
 							LOVE FOR <br />
 							<TypeAnimation sequence={["BANGALORE", 2000, "SIZZLERS", 2000]} repeat={Infinity} />
 						</Typography>
-
 						{/* ------------------------------------------ */}
-
 						<Button
 							sx={{
 								backgroundColor: theme.palette.custom.paratha,
@@ -186,8 +183,55 @@ const Hero = () => {
 							// disableRipple
 						>
 							Bulk order
-						</Button>
-
+						</Button>{" "}
+						<Box component={animated.div} style={buttonProps}>
+							<Button
+								component={Link}
+								to="https://wa.link/hfy0aw"
+								target="_blank"
+								sx={{
+									backgroundColor: theme.palette.custom.paratha,
+									borderRadius: 30,
+									px: {xs: 2, md: 4},
+									py: 1,
+									color: "white",
+									mt: {xs: 2, md: 4},
+									fontSize: {xs: ".6rem", sm: ".8rem", md: "1rem"},
+									fontWeight: 400,
+									"&:hover": {
+										backgroundColor: theme.palette.custom.paratha,
+									},
+									mr: 2,
+								}}
+								disableElevation
+								// disableRipple
+							>
+								Book a table
+							</Button>
+							<Button
+								component={Link}
+								to="https://wa.link/hfy0aw"
+								target="_blank"
+								sx={{
+									border: `3px solid ${theme.palette.custom.paratha}`,
+									backgroundColor: "transparent",
+									borderRadius: 30,
+									px: {xs: 2, md: 4},
+									py: 1,
+									color: "white",
+									mt: {xs: 2, md: 4},
+									fontSize: {xs: ".6rem", sm: ".8rem", md: "1rem"},
+									fontWeight: 400,
+									"&:hover": {
+										backgroundColor: "transparent",
+									},
+								}}
+								disableElevation
+								// disableRipple
+							>
+								Bulk order
+							</Button>
+						</Box>
 						{/* ------------------------------------------ */}
 					</Box>
 
