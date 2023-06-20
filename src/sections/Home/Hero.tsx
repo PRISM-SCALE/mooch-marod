@@ -12,6 +12,15 @@ const Hero = () => {
 	const theme = useTheme();
 	const {mediumScreenAndUp} = useResponsive();
 
+	const heroMain = useSpring({
+		from: {y: 0},
+		to: {y: -20},
+		loop: true,
+		config: {
+			duration: 1000,
+		},
+	});
+
 	// const {transform} = useSpring({
 	// 	from: {transform: "rotate(0deg)"},
 	// 	to: {transform: "rotate(-20deg)"},
