@@ -116,7 +116,8 @@ const MenuSection = () => {
 						Sizzlers, THE BEST IN TOWN
 					</Typography>
 					<Typography variant="body1" sx={{width: {xs: "100%", md: "50%"}, marginX: "auto"}}>
-						Explore our delicious, one-of-a-kind menu with a massive 3000+ paratha combinations.
+						Vibrant shots of sizzling platters and mouthwatering dishes, Where Flavors Ignite and
+						Tantalize. Elevating the Sizzle Experience
 					</Typography>
 				</Box>
 
