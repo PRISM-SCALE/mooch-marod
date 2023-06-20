@@ -1,5 +1,5 @@
 import {Box, Button, Container, Typography, useTheme} from "@mui/material";
-// import {useSpring, animated} from "@react-spring/web";
+import {useSpring, animated} from "@react-spring/web";
 import {useResponsive} from "../../hooks/useResponsive";
 import MMHeroElements from "../../components/MMHeroElements";
 import {TypeAnimation} from "react-type-animation";
@@ -17,6 +17,49 @@ const Hero = () => {
 	// 		reverse: true,
 	// 	},
 	// });
+
+	// TEXT ANIMATION
+	const captionProps = useSpring({
+		transform: "translateY(0px)",
+		opacity: 1,
+		from: {transform: "translateY(20px)", opacity: 0},
+		delay: 1300,
+	});
+
+	const titleProps = useSpring({
+		transform: "translateY(0px)",
+		opacity: 1,
+		from: {transform: "translateY(30px)", opacity: 0},
+		delay: 1500,
+	});
+
+	const buttonProps = useSpring({
+		transform: "translateY(0px)",
+		opacity: 1,
+		from: {transform: "translateY(30px)", opacity: 0},
+		delay: 1800,
+	});
+
+	const heroImageProps = useSpring({
+		transform: "scale(1)",
+		opacity: 1,
+		from: {transform: "scale(1.2)", opacity: 0},
+		delay: 400,
+	});
+
+	const banner1Props = useSpring({
+		transform: "translateY(0px)",
+		opacity: 1,
+		from: {transform: "translateY(-20px)", opacity: 0},
+		delay: 700,
+	});
+
+	const banner2Props = useSpring({
+		transform: "translateY(0px)",
+		opacity: 1,
+		from: {transform: "translateY(20px)", opacity: 0},
+		delay: 1000,
+	});
 
 	return (
 		<Box
