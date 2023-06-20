@@ -5,7 +5,7 @@ import MMHeroElements from "../../components/MMHeroElements";
 import {TypeAnimation} from "react-type-animation";
 import {fk_background, logo_white} from "../../utils/common";
 import {Link} from "react-router-dom";
-import { ROOT_LINK } from "../../utils/links";
+import {ROOT_LINK} from "../../utils/links";
 import Logo from "../../components/Logo";
 
 const Hero = () => {
@@ -145,16 +145,18 @@ const Hero = () => {
 								}}
 							/>
 						</Box>
-						<Typography
-							variant="h1"
-							fontSize={{xs: "2rem", sm: "2.8rem", md: "4.8rem"}}
-							color="white"
-							sx={{textTransform: "uppercase", fontWeight: 700}}
-						>
-							SHARE YOUR <br />
-							LOVE FOR <br />
-							<TypeAnimation sequence={["BANGALORE", 2000, "SIZZLERS", 2000]} repeat={Infinity} />
-						</Typography>
+						<Box component={animated.div} style={titleProps}>
+							<Typography
+								variant="h1"
+								fontSize={{xs: "2rem", sm: "2.8rem", md: "4.8rem"}}
+								color="white"
+								sx={{textTransform: "uppercase", fontWeight: 700}}
+							>
+								SHARE YOUR <br />
+								LOVE FOR <br />
+								<TypeAnimation sequence={["BANGALORE", 2000, "SIZZLERS", 2000]} repeat={Infinity} />
+							</Typography>
+						</Box>
 						{/* ------------------------------------------ */}
 
 						<Box component={animated.div} style={buttonProps}>
