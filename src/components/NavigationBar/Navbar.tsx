@@ -1,7 +1,7 @@
 import * as React from "react";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import {AppBar, Toolbar, Box, Button, Container} from "@mui/material";
-import {alpha, useTheme} from "@mui/material/styles";
+import {AppBar, Toolbar, Button, Container} from "@mui/material";
+import {useTheme} from "@mui/material/styles";
 
 // HOOKS
 import {useResponsive} from "../../hooks/useResponsive";
@@ -22,7 +22,6 @@ interface Props {
 
 function ElevationScroll(props: Props) {
 	const {children, window} = props;
-	const theme = useTheme();
 	// Note that you normally won't need to set the window ref as useScrollTrigger
 	// will default to window.
 	// This is only being set here because the demo is in an iframe.

@@ -1,5 +1,4 @@
 import {Box, Container, Typography, useTheme} from "@mui/material";
-import {mm_background} from "../utils/common";
 
 type Props = {
 	tagline: string;
