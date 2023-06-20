@@ -12,4 +12,4 @@ export const fk_background =
 export const mm_background_image = "url(/images/mm_back.webp)";
 export const fk_background_image = "url(/images/fk_back.webp)";
 
-export const mm_background = `linear-gradient(359.53deg, #D93423 0.43%, #F15443 53.13%, #D93423 96.53%), url(/images/brick_wall.png)`;
+export const mm_background = `linear-gradient(359.53deg, #EF1600 0.43%, #D93423 53.13%, #EF1600 96.53%), url(/images/brick_wall.png)`;

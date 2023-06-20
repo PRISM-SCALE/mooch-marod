@@ -5,7 +5,7 @@ import MenuDasboard from "../sections/Menu/MenuDasboard";
 const Menu = () => {
 	return (
 		<Box>
-			<PageHeader tagline="Choose your menu" title="RESTAURANT MENU" />
+			<PageHeader tagline="Choose your delicacy" title="JABARDAST MENU" />
 			<MenuDasboard />
 		</Box>
 	);

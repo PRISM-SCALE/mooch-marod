@@ -40,7 +40,14 @@ const MenuNavigation = ({handleItemClick, handleClose}: Props) => {
 		<List
 			id="menu_navigation"
 			component="nav"
-			sx={{width: "100%", overflow: "auto", maxHeight: "50vh", px: 2, py: 3}}
+			sx={{
+				width: 500,
+				maxWidth: 300,
+				// overflow: "auto",
+				// maxHeight: "50vh",
+				px: 2,
+				py: 3,
+			}}
 		>
 			{Object.entries(groupedGenreData).map(([genre, value], index) => {
 				const groupedCategoryData: GroupedMenuData = groupCategory(value);

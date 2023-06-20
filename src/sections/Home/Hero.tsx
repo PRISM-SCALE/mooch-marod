@@ -70,12 +70,21 @@ const Hero = () => {
 		delay: 1000,
 	});
 
+	const taglineProps = useSpring({
+		transform: "translateY(0px)",
+		opacity: 1,
+		from: {transform: "translateY(20px)", opacity: 0},
+		delay: 1200,
+	});
+
 	return (
 		<Box
 			component={"section"}
 			id="hero_section"
 			sx={{
-				background: `linear-gradient(359.53deg, #D93423 0.43%, #F15443 53.13%, #D93423 96.53%), url(/images/brick_wall.png)`,
+				backgroundImage: `url(/images/MM.webp)`,
+				backgroundPosition: "center",
+				backgroundSize: "cover",
 				mixBlendMode: "multiply",
 				height: "100vh",
 				width: "100%",
@@ -95,6 +104,7 @@ const Hero = () => {
 				</Box>
 			) : null}
 
+			{/* 
 			<Box
 				component={"img"}
 				src="/images/jabardast_desi.png"
@@ -115,7 +125,7 @@ const Hero = () => {
 					},
 				}}
 				loading="lazy"
-			/>
+			/> */}
 
 			{/* -------------------------------------------------- */}
 			{/* IMAGE ELEMENTS */}
@@ -292,6 +302,32 @@ const Hero = () => {
 								alt="paratha_animation"
 								sx={{
 									height: {xs: 180, sm: 220, md: 320, lg: 380},
+								}}
+								loading="lazy"
+							/>
+						</Box>
+						<Box
+							component={animated.div}
+							style={taglineProps}
+							sx={{
+								position: "absolute",
+								left: -140,
+								bottom: -60,
+								zIndex: 1,
+								[theme.breakpoints.down("md")]: {
+									bottom: -40,
+								},
+								[theme.breakpoints.down("sm")]: {
+									left: -40,
+								},
+							}}
+						>
+							<Box
+								component="img"
+								src="/images/tagline_mm.webp"
+								alt="paratha_animation"
+								sx={{
+									height: {xs: 140, md: 220, lg: 300},
 								}}
 								loading="lazy"
 							/>

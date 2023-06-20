@@ -1,7 +1,7 @@
 export const themeSettings = {
 	palette: {
 		custom: {
-			achar: "#D93423",
+			achar: "#EF1600",
 			pani: "#06B6A9",
 			paratha: "#E69B39",
 			conceot: "#9A3685",

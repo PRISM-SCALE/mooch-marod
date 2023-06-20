@@ -1,4 +1,4 @@
-import {Box, Fab, Popover, useTheme} from "@mui/material";
+import {Box, Fab, Paper, Popover, useTheme} from "@mui/material";
 import {useRef, useState} from "react";
 
 // JSON DATA
@@ -11,7 +11,7 @@ import {groupGenre} from "../../utils/groupby";
 import {GroupedMenuData} from "../../types/Menu.types";
 
 // COMPONENTS
-// import TitleWithMooch from "../../components/TitleWithMooch";
+import TitleWithMooch from "../../components/TitleWithMooch";
 import GroupedMenu from "../../components/Menu/GroupedMenu";
 import MenuNavigation from "../../components/Menu/MenuNavigation";
 import {useResponsive} from "../../hooks/useResponsive";
@@ -42,8 +42,6 @@ const MenuDasboard = () => {
 	const [selectedItem, setSelectedItem] = useState("");
 	const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
-	console.log(selectedItem);
-
 	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
 		setAnchorEl(event.currentTarget);
 	};
@@ -60,42 +58,46 @@ const MenuDasboard = () => {
 		setSelectedItem(item);
 		const selectedElement = document.getElementById(item); // Assumes unique IDs
 
-		// selectedElement && selectedElement.scrollIntoView({behavior: "smooth", block: "start"});
+		selectedElement && selectedElement.scrollIntoView({behavior: "smooth", block: "center"});
 
-		if (selectedElement && containerRef.current) {
-			const customOffset = -340; // Customize the offset value as per your needs
-			const containerTop = containerRef.current.offsetTop;
-			const selectedTop = selectedElement.offsetTop - containerTop;
-			containerRef.current.scrollTo({
-				top: selectedTop - customOffset,
-				behavior: "smooth",
-			});
-		}
+		// if (selectedElement && containerRef.current) {
+		// 	const customOffset = -100; // Customize the offset value as per your needs
+		// 	const containerTop = containerRef.current.offsetTop;
+		// 	const selectedTop = selectedElement.offsetTop - containerTop;
+		// 	containerRef.current.scrollTo({
+		// 		top: selectedTop - customOffset,
+		// 		behavior: "smooth",
+		// 	});
+		// }
+		console.log(`YOU HAVE SCROLLED TO ${selectedItem}`);
 	};
 
 	const groupedGenreData: GroupedMenuData = groupGenre(MM_Menu);
 
 	return (
-		<Box component="section" id="main_menu_section" sx={{overflow: "hidden"}}>
+		<Box component="section" id="main_menu_section" sx={{position: "relative"}}>
 			<Box
 				ref={containerRef}
 				sx={{
 					// [theme.breakpoints.up("md")]: {
-					height: "100vh",
-					overflowY: "scroll",
-					pb: {xs: "2rem", md: "4rem"},
+					// height: "100vh",
+					// overflowY: "scroll",
+					py: {xs: "2rem", md: "4rem"},
 					display: "flex",
 					gap: 2,
-					position: "relative",
+
 					// },
 
 					p: 2,
 				}}
 			>
 				{mediumScreenAndUp ? (
-					<Box width="20%" sx={{position: "sticky", top: 0}}>
+					<Paper
+						elevation={1}
+						sx={{position: "sticky", top: "100px", width: 300, maxHeight: 640, py: 2}}
+					>
 						<MenuNavigation handleItemClick={handleItemClick} />
-					</Box>
+					</Paper>
 				) : (
 					<>
 						<Popover
@@ -135,7 +137,13 @@ const MenuDasboard = () => {
 					</>
 				)}
 
-				<Box sx={{width: {xs: "100%", md: "80%"}, height: {xs: "10500px", md: "6500px"}}}>
+				<Box
+					sx={{
+						width: {xs: "100%", md: "80%"},
+						height: {xs: "10500px", md: "6500px"},
+						flex: 1,
+					}}
+				>
 					{/* Map sorted object */}
 					{Object.entries(groupedGenreData).map(([genre, menuList]) => {
 						const data = category[genre as keyof typeof category];
@@ -152,7 +160,7 @@ const MenuDasboard = () => {
 								}}
 							>
 								{/* Genre Name */}
-								{/* <TitleWithMooch title={genre.replaceAll("_", " ").toUpperCase()} color={color} /> */}
+								<TitleWithMooch title={genre.replaceAll("_", " ").toUpperCase()} color={color} />
 
 								{/* Menu Detail Component */}
 								<GroupedMenu menuList={menuList} genre={genre} color={color} />

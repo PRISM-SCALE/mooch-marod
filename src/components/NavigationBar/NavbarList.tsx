@@ -18,7 +18,7 @@ const NavbarList = () => {
 				// "& > *:not(:last-child)": {
 				// 	marginRight: {xs: 0, md: "2rem"},
 				// },
-				columnGap: 4,
+				columnGap: 2,
 			}}
 		>
 			{menuLinks.map(({link, path}, key) => (

@@ -47,23 +47,23 @@ const MenuItemCard = ({list}: Props) => {
 										<Iconify icon={"openmoji:meat-on-bone"} size={25} />
 									)}
 								</Box>
-								{pathname === "/home" ? null : (
-									<Box
-										sx={{
-											display: "flex",
-											gap: 2,
-											[theme.breakpoints.down("sm")]: {
-												mt: 1,
-											},
-										}}
-									>
-										{price.map((priceDetails: MenuPrice) => {
-											const {type, rate, inch} = priceDetails;
+								{/* {pathname === "/home" ? null : (
+								)} */}
+								<Box
+									sx={{
+										display: "flex",
+										gap: 2,
+										[theme.breakpoints.down("sm")]: {
+											mt: 1,
+										},
+									}}
+								>
+									{price.map((priceDetails: MenuPrice) => {
+										const {type, rate, inch} = priceDetails;
 
-											return <PricingList key={type} type={type} rate={rate} inch={inch} />;
-										})}
-									</Box>
-								)}
+										return <PricingList key={type} type={type} rate={rate} inch={inch} />;
+									})}
+								</Box>
 								<Typography
 									variant="caption"
 									fontSize={"0.8rem"}
@@ -96,11 +96,14 @@ const MenuItemCard = ({list}: Props) => {
 };
 
 const PricingList = (data: MenuPrice) => {
-	const {rate} = data;
+	const {rate, type} = data;
 	const theme = useTheme();
 	return (
 		<Box sx={{display: "flex", flexDirection: "column"}}>
-			<Typography fontSize={{xs: ".925rem"}} color={theme.palette.custom.conceot} fontWeight={600}>
+			<Typography fontSize={{xs: ".625rem"}} color={theme.palette.custom.paratha} fontWeight={600}>
+				{type.toUpperCase()}
+			</Typography>
+			<Typography fontSize={{xs: ".975rem"}} color={theme.palette.custom.conceot} fontWeight={600}>
 				₹{rate}
 			</Typography>
 		</Box>
