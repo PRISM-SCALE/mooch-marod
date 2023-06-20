@@ -21,8 +21,6 @@ const GroupedMenu: React.FC<Props> = ({menuList, color}: Props) => {
 	const {mediumScreenAndUp} = useResponsive();
 	const groupedMenuData = groupCategory(menuList);
 
-	clg;
-
 	return (
 		<Grid container columnSpacing={2} sx={{overflow: "auto"}}>
 			{Object.entries(groupedMenuData).map(([category, list], index) => {
