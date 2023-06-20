@@ -57,9 +57,9 @@ const MenuItemCard = ({list}: Props) => {
 									}}
 								>
 									{price.map((priceDetails: MenuPrice) => {
-										const {type, rate, inch} = priceDetails;
+										const {type, rate,} = priceDetails;
 
-										return <PricingList key={type} type={type} rate={rate} inch={inch} />;
+										return <PricingList key={type} type={type} rate={rate}  />;
 									})}
 								</Box>
 								<Typography

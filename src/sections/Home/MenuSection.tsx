@@ -13,6 +13,7 @@ import {groupCategory} from "../../utils/groupby";
 // COMPONENTS
 import TabPanelWrapper from "../../components/TabPanelWrapper";
 import MenuDetail from "../../components/Menu/MenuDetail";
+import MenuItemCard from "../../components/Menu/MenuItemCard";
 
 interface StyledTabsProps {
 	children?: React.ReactNode;
@@ -83,7 +84,7 @@ const StyledTab = styled((props: StyledTabProps) => <Tab disableRipple {...props
 	})
 );
 
-const NewMenu = () => {
+const MenuSection = () => {
 	const theme = useTheme();
 	const [value, setValue] = useState(0);
 
@@ -172,7 +173,7 @@ const NewMenu = () => {
 							>
 								<Grid container columnSpacing={4}>
 									{/* MAPPING THE MENU-LIST */}
-									<MenuDetail list={menuList.slice(0, 10)} />
+									<MenuItemCard list={menuList.slice(0, 10)} />
 								</Grid>
 							</Fade>
 						</TabPanelWrapper>
@@ -206,7 +207,7 @@ const NewMenu = () => {
 	);
 };
 
-export default NewMenu;
+export default MenuSection;
 
 /*
 const items = Array.from(Array(10).keys());
