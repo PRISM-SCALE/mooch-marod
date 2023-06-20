@@ -116,7 +116,7 @@ const MMOutlets = () => {
 
 						[theme.breakpoints.down("md")]: {
 							width: "100%",
-							maxHeight: "66.6666%",
+							maxHeight: 700,
 						},
 					}}
 				>

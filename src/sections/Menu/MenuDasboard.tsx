@@ -154,7 +154,7 @@ const MenuDasboard = () => {
 				<Box
 					sx={{
 						width: {xs: "100%", md: "80%"},
-						height: {xs: "10500px", md: "6500px"},
+						// height: {xs: "10500px", md: "6500px"},
 						flex: 1,
 					}}
 				>

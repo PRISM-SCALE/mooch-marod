@@ -6,9 +6,9 @@ import {Box} from "@mui/material";
 // SECTIONS
 import PageHeader from "../sections/PageHeader";
 import MMOutlets from "../sections/Outlets/MMOutlets";
+// import StoreLocator from "../sections/Outlets/StoreLocator";
 // import DesktopAddress from "../sections/Outlets/DesktopAddress";
 // import MobileAddress from "../sections/Outlets/MobileAddress";
-// import StoreLocator from "../sections/Outlets/StoreLocator";
 
 const Outlets = () => {
 	// const {largeScreenAndUp, isSmallScreen, isMediumScreen, isLargeScreen} = useResponsive();

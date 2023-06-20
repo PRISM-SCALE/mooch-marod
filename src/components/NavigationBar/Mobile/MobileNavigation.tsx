@@ -31,7 +31,7 @@ const MobileNavigation = () => {
 					right: 0,
 					zIndex: theme.zIndex.drawer + 1,
 				}}
-				elevation={3}
+				elevation={0}
 			>
 				<BottomNavigation
 					value={value}
@@ -39,14 +39,19 @@ const MobileNavigation = () => {
 					sx={{background: theme.palette.custom.achar}}
 					// showLabels
 				>
-					{menuLinks.map(({icon, link, path}) => (
+					{menuLinks.map(({icon, link}) => (
 						<BottomNavigationAction
 							component={Link}
 							to={link}
 							key={icon}
-							label={path}
+							// label={path}
 							icon={<Iconify icon={icon} size={20} sx={{color: "white"}} />}
-							sx={{minWidth: "auto"}}
+							sx={{
+								minWidth: "auto",
+								color: theme.palette.custom.paratha,
+								textTransform: "uppercase",
+								fontWeight: 700,
+							}}
 						/>
 					))}
 				</BottomNavigation>

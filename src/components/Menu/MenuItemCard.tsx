@@ -1,5 +1,4 @@
 import {Box, Grid, Typography, useTheme} from "@mui/material";
-import {useLocation} from "react-router-dom";
 
 // TYPES
 import {MenuItem, MenuPrice} from "../../types/Menu.types";
@@ -13,7 +12,6 @@ type Props = {
 
 const MenuItemCard = ({list}: Props) => {
 	const theme = useTheme();
-	const {pathname} = useLocation();
 
 	return (
 		<>
@@ -77,10 +75,11 @@ const MenuItemCard = ({list}: Props) => {
 								<Box
 									component={"img"}
 									sx={{
-										maxWidth: "100px",
+										maxWidth: "60px",
 										[theme.breakpoints.up("md")]: {
-											maxWidth: "100%",
-											height: "auto",
+											width: "80px",
+											height: "80px",
+											objectFit: "contain",
 										},
 									}}
 									src="/images/menu_image.png"
