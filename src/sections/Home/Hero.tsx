@@ -4,6 +4,7 @@ import {useResponsive} from "../../hooks/useResponsive";
 import MMHeroElements from "../../components/MMHeroElements";
 import {TypeAnimation} from "react-type-animation";
 import {fk_background} from "../../utils/common";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
 	const theme = useTheme();
