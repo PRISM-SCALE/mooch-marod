@@ -1,6 +1,6 @@
 import {Box, List, ListItemButton, ListItemText, Typography, useTheme} from "@mui/material";
 // JSON DATA
-import {MM_Menu} from "../../_mock/menuV2.json";
+import {FK_Menu} from "../../_mock/menuV2.json";
 
 // UTILS
 import {groupCategory, groupGenre} from "../../utils/groupby";
@@ -34,7 +34,7 @@ const category: Category = {
 const MenuNavigation = ({handleItemClick, handleClose}: Props) => {
 	const theme = useTheme();
 	// Grouped data returned from
-	const groupedGenreData: GroupedMenuData = groupGenre(MM_Menu);
+	const groupedGenreData: GroupedMenuData = groupGenre(FK_Menu);
 
 	return (
 		<List
