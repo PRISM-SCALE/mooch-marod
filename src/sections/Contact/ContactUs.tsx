@@ -1,8 +1,14 @@
 import {Box, Container, Typography, useTheme} from "@mui/material";
+
+// JSON DATA
+import {features} from "../../_mock/locations.json";
 import ContactUsForm from "../../components/ContactUsForm";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+import Iconify from "../../components/Iconify";
 
-const url = `${import.meta.env.VITE_MAILCHIMP_CONTACT_URL}?u=${import.meta.env.VITE_MAILCHIMP_U}&id=${import.meta.env.VITE_MAILCHIMP_ID}`;
+const url = `${import.meta.env.VITE_MAILCHIMP_CONTACT_URL}?u=${
+	import.meta.env.VITE_MAILCHIMP_U
+}&id=${import.meta.env.VITE_MAILCHIMP_ID}`;
 
 const ContactUs = () => {
 	const theme = useTheme();
@@ -56,29 +62,9 @@ const ContactUs = () => {
 								[theme.breakpoints.up("md")]: {gridTemplateColumns: "repeat(2, 1fr)"},
 							}}
 						>
-							<AddressDetails
-								title="TORRE ANNUNZIATA"
-								address="1614 E. Bell Rd #104. Salerno, AZ 85022"
-								phone="(989) 867-1010"
-							/>
-
-							<AddressDetails
-								title="TORRE DEL GRECO"
-								address="Vale Puglia 54 Torre Del Greco AZ 85022"
-								phone="(989) 867-1010"
-							/>
-
-							<AddressDetails
-								title="POSILLIPO"
-								address="204 E. Pizzetta Tommaso Sorrento, AZ 85022"
-								phone="(989) 867-1010"
-							/>
-
-							<AddressDetails
-								title="NAPLES MERCATO"
-								address="Corso Itali AA Naples, AZ 85022"
-								phone="(989) 867-1010"
-							/>
+							{features.map(({properties: {location, address, phone}}) => (
+								<AddressDetails title={location} address={address} phone={phone} />
+							))}
 						</Box>
 					</Box>
 
@@ -122,7 +108,7 @@ const ContactUs = () => {
 type Props = {
 	title: string;
 	address: string;
-	phone: string;
+	phone: number;
 };
 
 const AddressDetails = ({title, address, phone}: Props) => {
@@ -139,11 +125,15 @@ const AddressDetails = ({title, address, phone}: Props) => {
 			<Typography variant="body1" color="#858585" gutterBottom>
 				{address}
 			</Typography>
-			<Typography variant="body1" color="#858585" sx={{fontWeight: 500}} gutterBottom>
-				{phone}
-			</Typography>
+			<Box sx={{display: "flex", alignItems: "center", mb: 2, gap: 2}}>
+				<Iconify icon="ph:phone-fill" size={24} />
+				<Typography>+91 {phone}</Typography>
+			</Box>
 
-			<Typography sx={{mt: 2}}>Open today from 10AM - 11PM</Typography>
+			<Box sx={{display: "flex", alignItems: "center", gap: 2}}>
+				<Iconify icon="charm:clock" size={24} />
+				<Typography>11:30 am - 9:30 pm | Mon - Sun</Typography>
+			</Box>
 		</Box>
 	);
 };
