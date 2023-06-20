@@ -8,14 +8,14 @@ const FooterGallery = () => {
 			sx={{
 				display: "grid",
 				gridTemplateColumns: "repeat(3, 1fr)",
-				gridGap: "10px",
+				// gridGap: "10px",
 
 				// [theme.breakpoints.between("sm", "md")]: {
 				// 	gridTemplateColumns: "repeat(2, 1fr)",
 				// },
 
 				[theme.breakpoints.down("md")]: {
-					gridTemplateColumns: "repeat(2, 1fr)",
+					gridTemplateColumns: "repeat(4, 1fr)",
 				},
 			}}
 		>
@@ -25,6 +25,13 @@ const FooterGallery = () => {
 						width: 100,
 						height: 100,
 						position: "relative",
+						overflow: "hidden",
+
+						"& > img:hover": {
+							transition: "all 5s ease-out",
+
+							transform: "scale(1.2)",
+						},
 					}}
 					key={index}
 				>
@@ -36,8 +43,9 @@ const FooterGallery = () => {
 							height: "100%",
 							// maxWidth: "100%",
 							// height: "auto",
+							// borderRadius: 6,
 							objectFit: "cover",
-							borderRadius: 6,
+							cursor: "pointer",
 						}}
 						loading="lazy"
 					/>
