@@ -113,13 +113,11 @@ export default function Navbar(props: Props) {
 											px: {xs: 2, md: 4},
 											py: 1,
 											color: "white",
-											mt: {xs: 2, md: 4},
 											fontSize: {xs: ".6rem", sm: ".8rem", md: "1rem"},
 											fontWeight: 400,
 											"&:hover": {
 												backgroundColor: theme.palette.custom.paratha,
 											},
-											mr: 2,
 										}}
 										disableElevation
 										// disableRipple
