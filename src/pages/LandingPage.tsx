@@ -1,6 +1,6 @@
 import {Box} from "@mui/material";
 import BrandingCard from "../components/BrandingCard";
-import {fk_background, mm_background} from "../utils/common";
+import {fk_background, mm_background_image} from "../utils/common";
 
 const LandingPage = () => {
 	const PROD_OR_DEV = import.meta.env.PROD ? `${import.meta.env.VITE_BRAND_URL}home` : "/home";
@@ -16,7 +16,7 @@ const LandingPage = () => {
 			/>
 			<BrandingCard
 				alt="Mooch Marod"
-				background={mm_background}
+				background={mm_background_image}
 				logo="/images/mm_logo.webp"
 				path={PROD_OR_DEV}
 				sx={{width: {xs: "100%", md: "50%"}}}
