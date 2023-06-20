@@ -3,8 +3,10 @@ import {useSpring, animated} from "@react-spring/web";
 import {useResponsive} from "../../hooks/useResponsive";
 import MMHeroElements from "../../components/MMHeroElements";
 import {TypeAnimation} from "react-type-animation";
-import {fk_background} from "../../utils/common";
+import {fk_background, logo_white} from "../../utils/common";
 import {Link} from "react-router-dom";
+import { ROOT_LINK } from "../../utils/links";
+import Logo from "../../components/Logo";
 
 const Hero = () => {
 	const theme = useTheme();
@@ -79,6 +81,13 @@ const Hero = () => {
 				zIndex: 5,
 			}}
 		>
+			{!mediumScreenAndUp ? (
+				<Box sx={{position: "absolute", top: 15, left: 15}}>
+					<Link to={ROOT_LINK}>
+						<Logo width={{xs: 70, md: 85}} height={{xs: 70, md: 85}} logo={logo_white} />
+					</Link>
+				</Box>
+			) : null}
 			<img
 				src="/images/jd_white.png"
 				alt="Absolute_Jabardast"
@@ -115,6 +124,8 @@ const Hero = () => {
 						}}
 					>
 						<Box
+							component={animated.div}
+							style={captionProps}
 							sx={{
 								display: "flex",
 								alignItems: "center",
@@ -122,7 +133,7 @@ const Hero = () => {
 							}}
 						>
 							<Typography color={theme.palette.custom.paratha} fontWeight={600} fontSize={".8rem"}>
-								PARATHA TIME
+								SIZZLER TIME
 							</Typography>
 							<Box
 								sx={{
