@@ -12,7 +12,7 @@ export const menuLinks = [
 	{link: "/home", path: "Home", icon: "majesticons:home"},
 	{link: "/about", path: "About", icon: "icon-park-solid:english-mustache"},
 	{link: "/menu", path: "Menu", icon: "ic:round-restaurant-menu"},
-	{link: "/offers", path: "Offers", icon: "icon-park-outline:weixin-cards-offers"},
+	// {link: "/offers", path: "Offers", icon: "icon-park-outline:weixin-cards-offers"},
 	{link: "/outlets", path: "Outlets", icon: "mdi:locations"},
 	{link: "/contact", path: "Contact", icon: "fluent:contact-card-24-filled"},
 ];

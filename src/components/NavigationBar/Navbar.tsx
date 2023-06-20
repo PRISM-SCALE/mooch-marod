@@ -103,23 +103,27 @@ export default function Navbar(props: Props) {
 
 								{isMediumScreen !== isSmallScreen ? null : (
 									<Button
+										component={Link}
+										to="https://wa.link/hfy0aw"
+										target="_blank"
 										sx={{
 											backgroundColor: theme.palette.custom.paratha,
 											borderRadius: 30,
-											px: 4,
+											px: {xs: 2, md: 4},
 											py: 1,
 											color: "white",
-											fontSize: ".8rem",
+											mt: {xs: 2, md: 4},
+											fontSize: {xs: ".6rem", sm: ".8rem", md: "1rem"},
 											fontWeight: 400,
-
 											"&:hover": {
 												backgroundColor: theme.palette.custom.paratha,
 											},
+											mr: 2,
 										}}
 										disableElevation
-										disableRipple
+										// disableRipple
 									>
-										Own A Franchise
+										Book a table
 									</Button>
 								)}
 							</>
