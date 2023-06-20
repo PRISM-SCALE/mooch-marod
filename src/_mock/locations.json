@@ -5,6 +5,23 @@
 			"type": "Feature",
 			"geometry": {
 				"type": "Point",
+				"coordinates": [77.7637173648509, 12.988883502048473]
+			},
+			"properties": {
+				"location": "Chansandra, J, Whitefield",
+				"phone": 8884488690,
+				"address": "Prasanthi Complex, Channasandra Main Rd, Chansandra, J, Whitefield, Bengaluru, Karnataka 560067",
+				"city": "Bengaluru",
+				"country": "India",
+				"pincode": 560067,
+				"state": "Karnataka",
+				"direction": "https://www.google.com/maps/place/Mooch+Marod/@12.9828218,77.7645159,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae0ff498499ff3:0xa28b2cb2962fda8c!8m2!3d12.9828166!4d77.7670908!16s%2Fg%2F11h1htvk7m?entry=ttu"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
 				"coordinates": [77.62266848623325, 12.955253369851137]
 			},
 			"properties": {
@@ -14,7 +31,8 @@
 				"city": "Bengaluru",
 				"country": "India",
 				"pincode": 560095,
-				"state": "Karnataka"
+				"state": "Karnataka",
+				"direction": "https://www.google.com/maps/place/Mooch+Marod/@12.9408524,77.6217301,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae151bc6bb5017:0x238209c985c6594e!8m2!3d12.9408472!4d77.624305!16s%2Fg%2F11gkwm9k__?entry=ttu"
 			}
 		},
 
@@ -31,7 +49,8 @@
 				"city": "Bengaluru",
 				"country": "India",
 				"pincode": 560100,
-				"state": "Karnataka"
+				"state": "Karnataka",
+				"direction": "https://www.google.com/maps/place/Mooch+Marod/@12.8698998,77.6559537,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae6d34761016eb:0x3879335f7ff99f04!8m2!3d12.8698946!4d77.6585286!16s%2Fg%2F11rvg4dvgx?entry=ttu"
 			}
 		},
 
@@ -48,24 +67,8 @@
 				"city": "Bengaluru",
 				"country": "India",
 				"pincode": 560075,
-				"state": "Karnataka"
-			}
-		},
-
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [77.7637173648509, 12.988883502048473]
-			},
-			"properties": {
-				"location": "Chansandra, J, Whitefield",
-				"phone": 8884488690,
-				"address": "Prasanthi Complex, Channasandra Main Rd, Chansandra, J, Whitefield, Bengaluru, Karnataka 560067",
-				"city": "Bengaluru",
-				"country": "India",
-				"pincode": 560067,
-				"state": "Karnataka"
+				"state": "Karnataka",
+				"direction": "https://www.google.com/maps/place/Mooch+Marod/@12.9677912,77.651926,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae131f36d94baf:0x74cd30efe0804396!8m2!3d12.967786!4d77.6545009!16s%2Fg%2F11pdgdcy77?entry=ttu"
 			}
 		}
 	]

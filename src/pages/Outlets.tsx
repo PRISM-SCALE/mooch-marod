@@ -2,7 +2,7 @@ import {Box} from "@mui/material";
 
 // SECTIONS
 import PageHeader from "../sections/PageHeader";
-import FKOutlets from "../sections/Outlets/MMOutlets";
+import FKOutlets from "../sections/Outlets/FKOutlets";
 
 const Outlets = () => {
 	return (
