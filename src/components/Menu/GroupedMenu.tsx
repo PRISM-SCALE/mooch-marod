@@ -16,10 +16,12 @@ type Props = {
 	color?: string;
 };
 
-const GroupedMenu: React.FC<Props> = ({menuList, genre, color}: Props) => {
+const GroupedMenu: React.FC<Props> = ({menuList, color}: Props) => {
 	const theme = useTheme();
 	const {mediumScreenAndUp} = useResponsive();
 	const groupedMenuData = groupCategory(menuList);
+
+	clg;
 
 	return (
 		<Grid container columnSpacing={2} sx={{overflow: "auto"}}>
