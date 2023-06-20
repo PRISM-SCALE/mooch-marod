@@ -48,6 +48,7 @@ function ElevationScroll(props: Props) {
 
 export default function Navbar(props: Props) {
 	const theme = useTheme();
+	const trigger = useScrollTrigger();
 	const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 	const {isMediumScreen, isSmallScreen, mediumScreenAndUp} = useResponsive();
 
@@ -74,9 +75,9 @@ export default function Navbar(props: Props) {
 							sx={{
 								width: "100%",
 								flexDirection: {xs: "row", md: "row"},
-								height: {xs: "60px", md: "80px"},
-								py: 2,
+								height: trigger ? {xs: "80px", md: "80px"} : {xs: "80px", md: "100px"},
 								...spaceBetween,
+								transition: "all .3s ease-out",
 							}}
 							disableGutters
 						>
