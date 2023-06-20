@@ -13,11 +13,14 @@ const Hero = () => {
 	const {mediumScreenAndUp} = useResponsive();
 
 	const heroMain = useSpring({
-		from: {y: 0},
-		to: {y: -20},
-		loop: true,
+		transform: "translateY(0)",
+		from: {transform: "translateY(-10px)"},
+		to: {transform: "translateY(10px)"},
+		loop: {
+			reverse: true,
+		},
 		config: {
-			duration: 1000,
+			duration: 2500,
 		},
 	});
 
@@ -226,13 +229,13 @@ const Hero = () => {
 					<Box sx={{position: "relative", zIndex: 20, [theme.breakpoints.down("md")]: {mt: 6}}}>
 						<Box component={animated.div} style={heroImageProps}>
 							<Box
-								component={"img"}
+								component={animated.img}
 								src="/images/fk_hero.png"
 								alt="paratha_animation"
 								sx={{
 									height: {xs: 260, sm: 340, md: 420, lg: 580},
 								}}
-								// style={{transform}}
+								style={heroMain}
 								loading="lazy"
 							/>
 						</Box>
