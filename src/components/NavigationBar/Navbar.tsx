@@ -1,7 +1,7 @@
 import * as React from "react";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import {Link} from "react-router-dom";
-import {AppBar, Toolbar, Box, Button, Container, IconButton} from "@mui/material";
+import {AppBar, Toolbar, Box, Button, Container} from "@mui/material";
 import {useTheme} from "@mui/material/styles";
 
 // HOOKS
@@ -13,9 +13,7 @@ import {logo_white} from "../../utils/common";
 
 // COMPONENTS
 import NavbarList from "./NavbarList";
-import Iconify from "../Iconify";
 import Logo from "../Logo";
-import Sidebar from "./Sidebar";
 
 interface Props {
 	window?: () => Window;
@@ -49,16 +47,7 @@ function ElevationScroll(props: Props) {
 export default function Navbar(props: Props) {
 	const theme = useTheme();
 	const trigger = useScrollTrigger();
-	const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
-	const {isMediumScreen, isSmallScreen, mediumScreenAndUp} = useResponsive();
-
-	const handleMenuClick = () => {
-		setIsSidebarOpen(!isSidebarOpen);
-	};
-
-	const handleSidebarClose = () => {
-		setIsSidebarOpen(false);
-	};
+	const {isMediumScreen, isSmallScreen} = useResponsive();
 
 	const spaceBetween = {
 		display: "flex",
@@ -87,16 +76,6 @@ export default function Navbar(props: Props) {
 										<Logo width={{xs: 60, md: 100}} height={{xs: 60, md: 100}} logo={logo_white} />
 									</Link>
 								</Box>
-
-								{isSmallScreen === !isMediumScreen ? (
-									<IconButton sx={{color: "white"}} onClick={handleMenuClick}>
-										<Iconify icon={"gg:menu-right"} size={24} />
-									</IconButton>
-								) : null}
-
-								{!mediumScreenAndUp && (
-									<Sidebar anchor="right" onClose={handleSidebarClose} open={isSidebarOpen} />
-								)}
 
 								{/* {isMediumScreen !== isSmallScreen ? null : <SearchBar />} */}
 

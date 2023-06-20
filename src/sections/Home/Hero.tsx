@@ -84,7 +84,7 @@ const Hero = () => {
 			{!mediumScreenAndUp ? (
 				<Box sx={{position: "absolute", top: 15, left: 15}}>
 					<Link to={ROOT_LINK}>
-						<Logo width={{xs: 70, md: 85}} height={{xs: 70, md: 85}} logo={logo_white} />
+						<Logo width={{xs: 90, md: 100}} height={{xs: 90, md: 100}} logo={logo_white} />
 					</Link>
 				</Box>
 			) : null}
