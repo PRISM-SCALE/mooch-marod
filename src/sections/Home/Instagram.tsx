@@ -1,11 +1,9 @@
 import {Box, styled} from "@mui/material";
 import Slider, {Settings} from "react-slick";
 
-// JSON
-import {insta} from "../../_mock/instagram.json";
-
 // COMPONENTS
 import InstaCard from "../../components/InstaCard";
+import {images} from "../../utils/links";
 
 interface SliderSettings extends Settings {
 	// Define any additional properties you want to add to the settings object
@@ -41,7 +39,8 @@ const Instagram = () => {
 		initialSlide: 0,
 		draggable: true,
 		arrows: false,
-		// autoplay: true,
+		autoplay: true,
+		autoplaySpeed: 4000,
 
 		responsive: [
 			{
@@ -83,11 +82,12 @@ const Instagram = () => {
 			},
 		],
 	};
+
 	return (
 		<Box component={"section"} id="instagram_section" pt={{xs: "2rem", md: "4rem"}} pb={2}>
 			<SlideWrapper {...settings}>
-				{insta.map(({id, src}) => (
-					<InstaCard image={src} key={id} />
+				{images.map(({imageUrl, title}, index) => (
+					<InstaCard image={imageUrl} key={index} title={title} />
 				))}
 			</SlideWrapper>
 		</Box>
