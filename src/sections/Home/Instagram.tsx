@@ -82,6 +82,7 @@ const Instagram = () => {
 			},
 		],
 	};
+
 	return (
 		<Box component={"section"} id="instagram_section" pt={{xs: "2rem", md: "4rem"}} pb={2}>
 			<SlideWrapper {...settings}>
