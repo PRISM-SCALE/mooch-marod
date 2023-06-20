@@ -1,5 +1,5 @@
 import {Box, Container, Typography, useTheme} from "@mui/material";
-import { mm_background } from "../utils/common";
+import {mm_background} from "../utils/common";
 
 type Props = {
 	tagline: string;
@@ -18,7 +18,7 @@ const PageHeader = ({tagline, title}: Props) => {
 				backgroundPosition: "center center",
 				backgroundRepeat: "no-repeat",
 				backgroundSize: "cover",
-				height: "40vh",
+				height: "45vh",
 				width: "100%",
 				display: "flex",
 				justifyContent: "center",

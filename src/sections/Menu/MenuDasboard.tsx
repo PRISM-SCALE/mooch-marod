@@ -5,7 +5,7 @@ import {useRef, useState} from "react";
 import {MM_Menu} from "../../_mock/menuV2.json";
 
 // UTILS
-import {groupCategory, groupGenre} from "../../utils/groupby";
+import {groupGenre} from "../../utils/groupby";
 
 // TYPES
 import {GroupedMenuData} from "../../types/Menu.types";
@@ -140,7 +140,15 @@ const MenuDasboard = () => {
 						const color = theme.palette.custom[data as keyof CustomPalette];
 
 						return (
-							<Box key={genre} sx={{mb: 6}}>
+							<Box
+								key={genre}
+								sx={{
+									mb: 6,
+									[theme.breakpoints.up("md")]: {
+										px: 8,
+									},
+								}}
+							>
 								{/* Genre Name */}
 								{/* <TitleWithMooch title={genre.replaceAll("_", " ").toUpperCase()} color={color} /> */}
 

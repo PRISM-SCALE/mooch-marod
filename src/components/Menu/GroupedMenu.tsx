@@ -1,8 +1,5 @@
 import {Box, Grid, Typography, useTheme} from "@mui/material";
 
-// JSON DATA
-import {MM_Menu} from "../../_mock/menuV2.json";
-
 // TYPES
 import {MenuItem} from "../../types/Menu.types";
 

@@ -37,7 +37,7 @@ const MobileNavigation = () => {
 					value={value}
 					onChange={handleChange}
 					sx={{background: theme.palette.custom.achar}}
-					showLabels
+					// showLabels
 				>
 					{menuLinks.map(({icon, link, path}) => (
 						<BottomNavigationAction
