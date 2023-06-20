@@ -7,8 +7,7 @@ import {MenuItem} from "../../types/Menu.types";
 import {groupCategory} from "../../utils/groupby";
 
 // COMPONENTS
-import MenuDetail from "./MenuDetail";
-import React from "react";
+import MenuItemCard from "./MenuItemCard";
 
 type Props = {
 	menuList: MenuItem[];
@@ -49,7 +48,7 @@ const GroupedMenu: React.FC<Props> = ({menuList, genre, color}: Props) => {
 								</>
 							)}
 						</Grid>
-						<MenuDetail list={list} />
+						<MenuItemCard list={list} />
 					</Grid>
 				);
 			})}
