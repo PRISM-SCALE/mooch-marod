@@ -7,11 +7,15 @@ type Props = {
 };
 
 const ImageWrapper = styled(Box)(({theme}) => ({
-	width: "100px",
+	// width: "100px",
 	// maxWidth: "80px",
 	// overflow: "hidden",
-	display: "inline-block",
-	margin: "0 1rem",
+	// display: "inline-block",
+	paddingLeft: "80px",
+	[theme.breakpoints.down("md")]: {
+		paddingLeft: 0,
+	},
+
 	[theme.breakpoints.down("sm")]: {
 		// width: "70px",
 		// maxWidth: "70px",
@@ -22,8 +26,6 @@ const ImageWrapper = styled(Box)(({theme}) => ({
 const Image = styled("img")(({theme}) => ({
 	height: "auto",
 	objectFit: "contain",
-
-	margin: "4px 0",
 
 	[theme.breakpoints.down("sm")]: {
 		// width: "70px",

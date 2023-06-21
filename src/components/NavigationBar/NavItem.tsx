@@ -48,11 +48,12 @@ const LinkWrapper = styled(NavLink)(({theme}) => ({
 	// },
 }));
 
-const NavItem = ({link, path}: Props) => {
+const NavItem = ({link, path, onClick}: Props) => {
 	return (
 		<LinkWrapper
 			to={link}
 			className={({isActive, isPending}) => (isPending ? "pending" : isActive ? "active" : "")}
+			onClick={onClick}
 		>
 			{path.toUpperCase()}
 		</LinkWrapper>

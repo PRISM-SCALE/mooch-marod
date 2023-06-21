@@ -1,4 +1,4 @@
-import {Menu, MenuItem} from "@mui/material";
+import {Menu} from "@mui/material";
 import NavItem from "./NavItem";
 import {menuLinks} from "../../utils/links";
 

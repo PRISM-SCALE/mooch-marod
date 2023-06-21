@@ -1,7 +1,8 @@
 import * as React from "react";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import {AppBar, Toolbar, Button, Container, IconButton} from "@mui/material";
+import {AppBar, Toolbar, Button, Container, IconButton, Box} from "@mui/material";
 import {useTheme} from "@mui/material/styles";
+import {Link} from "react-router-dom";
 
 // HOOKS
 import {useResponsive} from "../../hooks/useResponsive";
@@ -11,8 +12,6 @@ import {ROOT_LINK} from "../../utils/links";
 import {logo_butter} from "../../utils/common";
 
 // COMPONENTS
-import NavbarList from "./NavbarList";
-import {Link} from "react-router-dom";
 import Logo from "../Logo";
 import Iconify from "../Iconify";
 import NavList from "./NavList";
@@ -73,7 +72,8 @@ export default function Navbar(props: Props) {
 	};
 
 	const spaceBetween = {
-		display: "flex",
+		display: "grid",
+		gridTemplateColumns: "auto 1fr auto",
 		alignItems: "center",
 		justifyContent: "space-between",
 	};
