@@ -1,4 +1,4 @@
-import {Box, Button, Container, Typography, useTheme} from "@mui/material";
+import {Box, Button, Container, Typography, styled, useTheme} from "@mui/material";
 import {TypeAnimation} from "react-type-animation";
 import {useSpring, animated} from "@react-spring/web";
 import {Link} from "react-router-dom";
@@ -13,6 +13,7 @@ import {logo_white} from "../../utils/common";
 // COMPONENTS
 import MMHeroElements from "../../components/MMHeroElements";
 import Logo from "../../components/Logo";
+import MarqueePatterns from "../../components/MarqueePatterns";
 
 const Hero = () => {
 	const theme = useTheme();
@@ -335,6 +336,8 @@ const Hero = () => {
 					</Box>
 				</Box>
 			</Container>
+
+			{/* <MarqueePatterns /> */}
 		</Box>
 	);
 };

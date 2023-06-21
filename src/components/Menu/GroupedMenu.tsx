@@ -22,13 +22,13 @@ const GroupedMenu: React.FC<Props> = ({menuList, genre, color}: Props) => {
 	const groupedMenuData = groupCategory(menuList);
 
 	return (
-		<Grid container columnSpacing={2} sx={{overflow: "auto"}}>
+		<Grid container columnSpacing={4} sx={{overflow: "auto"}}>
 			{Object.entries(groupedMenuData).map(([category, list], index) => {
 				return (
 					<Grid
 						item
 						container
-						columnSpacing={mediumScreenAndUp ? 4 : 0}
+						columnSpacing={mediumScreenAndUp ? 8 : 0}
 						xs={12}
 						key={index}
 						sx={{mb: 4}}

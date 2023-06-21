@@ -3,6 +3,7 @@ export const BANNER_HEIGHT = 340;
 export const mooch_icon = "/mooch.svg";
 export const logo_white = "/images/mm_logo_white.png";
 export const logo_black = "/images/mm_logo_black.png";
+export const logo_butter = "/images/mm_logo_butter.webp";
 
 export const logo_with_tag = "/images/mm_logo_white.png"; // WHITE
 

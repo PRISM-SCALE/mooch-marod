@@ -17,7 +17,7 @@ const MenuItemCard = ({list}: Props) => {
 		<>
 			{list.map(({name, description, price, isVeg}) => {
 				return (
-					<Grid item xs={12} md={6} sx={{mb: 2}} key={description}>
+					<Grid item xs={12} lg={6} sx={{mb: 2}} key={description}>
 						<Box
 							sx={{
 								width: {xs: "100%"},

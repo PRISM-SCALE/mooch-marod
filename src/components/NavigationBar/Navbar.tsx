@@ -8,7 +8,7 @@ import {useResponsive} from "../../hooks/useResponsive";
 
 // UTILS
 import {ROOT_LINK} from "../../utils/links";
-import {logo_white} from "../../utils/common";
+import {logo_butter} from "../../utils/common";
 
 // COMPONENTS
 import NavbarList from "./NavbarList";
@@ -88,7 +88,7 @@ export default function Navbar(props: Props) {
 								<Logo
 									width={{xs: 50, md: trigger ? 65 : 85}}
 									height={{xs: 50, md: trigger ? 65 : 85}}
-									logo={logo_white}
+									logo={logo_butter}
 								/>
 							</Link>
 

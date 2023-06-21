@@ -3,7 +3,7 @@ export const themeSettings = {
 		custom: {
 			achar: "#EF1600",
 			pani: "#06B6A9",
-			paratha: "#E69B39",
+			paratha: "#E79C39",
 			conceot: "#9A3685",
 			butter: "#F2E1AB",
 		},

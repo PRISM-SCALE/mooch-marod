@@ -1,4 +1,4 @@
-import {Box, Fab, IconButton, Paper, Popover, useTheme} from "@mui/material";
+import {Box, Container, Fab, IconButton, Paper, Popover, useTheme} from "@mui/material";
 import {useRef, useState} from "react";
 
 // JSON DATA
@@ -76,6 +76,7 @@ const MenuDasboard = () => {
 		// 		behavior: "smooth",
 		// 	});
 		// }
+
 		console.log(`YOU HAVE SCROLLED TO ${selectedItem}`);
 	};
 
@@ -83,106 +84,115 @@ const MenuDasboard = () => {
 
 	return (
 		<Box component="section" id="main_menu_section" sx={{position: "relative"}}>
-			<Box
-				ref={containerRef}
-				sx={{
-					py: {xs: "2rem", md: "4rem"},
-					display: "flex",
-					gap: 2,
-					p: 2,
-				}}
-			>
-				{mediumScreenAndUp ? (
-					<Paper
-						elevation={1}
-						sx={{position: "sticky", top: "100px", width: 300, maxHeight: 640, py: 2}}
-					>
-						<MenuNavigation handleItemClick={handleItemClick} />
-					</Paper>
-				) : (
-					<>
-						<Popover
-							id={id}
-							open={open}
-							anchorEl={anchorEl}
-							onClose={handleClose}
-							anchorOrigin={{
-								vertical: "bottom",
-								horizontal: "left",
-							}}
-							sx={{
-								"	.MuiPopover-root": {
-									maxWidth: "700px",
-								},
-							}}
-						>
-							<IconButton
-								sx={{
-									position: "absolute",
-									top: 5,
-									right: 5,
-									color: theme.palette.custom.achar,
-									cursor: "pointer",
-									zIndex: 30,
-								}}
-								onClick={handleClose}
-							>
-								<Iconify icon={"ph:x-circle-bold"} size={24} />
-							</IconButton>
-							<MenuNavigation handleItemClick={handleItemClick} />
-						</Popover>
-						<Fab
-							sx={{
-								position: "fixed",
-								bottom: 80,
-								right: 16,
-								backgroundColor: theme.palette.custom.achar,
-								color: theme.palette.custom.butter,
-								"&:hover": {
-									backgroundColor: theme.palette.custom.achar,
-									color: theme.palette.custom.butter,
-								},
-							}}
-							onClick={handleClick}
-							disableFocusRipple
-						>
-							<Iconify icon={"ic:round-restaurant-menu"} size={24} />
-						</Fab>
-					</>
-				)}
-
+			<Container maxWidth="xl">
 				<Box
+					ref={containerRef}
 					sx={{
-						width: {xs: "100%", md: "80%"},
-						// height: {xs: "10500px", md: "6500px"},
-						flex: 1,
+						pt: {xs: "2rem", md: "4rem"},
+						display: "flex",
+						gap: 2,
+						// p: 2,
 					}}
 				>
-					{/* Map sorted object */}
-					{Object.entries(groupedGenreData).map(([genre, menuList]) => {
-						const data = category[genre as keyof typeof category];
-						const color = theme.palette.custom[data as keyof CustomPalette];
-
-						return (
-							<Box
-								key={genre}
+					{mediumScreenAndUp ? (
+						<Paper
+							elevation={0}
+							sx={{
+								position: "sticky",
+								top: "100px",
+								width: 300,
+								maxHeight: 700,
+								border: "1px solid #eee",
+								mb: 4,
+							}}
+						>
+							<MenuNavigation handleItemClick={handleItemClick} />
+						</Paper>
+					) : (
+						<>
+							<Popover
+								id={id}
+								open={open}
+								anchorEl={anchorEl}
+								onClose={handleClose}
+								anchorOrigin={{
+									vertical: "bottom",
+									horizontal: "left",
+								}}
 								sx={{
-									mb: 6,
-									[theme.breakpoints.up("md")]: {
-										px: 8,
+									"	.MuiPopover-root": {
+										maxWidth: "700px",
 									},
 								}}
 							>
-								{/* Genre Name */}
-								<TitleWithMooch title={genre.replaceAll("_", " ").toUpperCase()} color={color} />
+								<IconButton
+									sx={{
+										position: "absolute",
+										top: 5,
+										right: 5,
+										color: theme.palette.custom.achar,
+										cursor: "pointer",
+										zIndex: 30,
+									}}
+									onClick={handleClose}
+								>
+									<Iconify icon={"ph:x-circle-bold"} size={24} />
+								</IconButton>
+								<MenuNavigation handleItemClick={handleItemClick} />
+							</Popover>
+							<Fab
+								sx={{
+									position: "fixed",
+									bottom: 80,
+									right: 16,
+									backgroundColor: theme.palette.custom.achar,
+									color: theme.palette.custom.butter,
+									"&:hover": {
+										backgroundColor: theme.palette.custom.achar,
+										color: theme.palette.custom.butter,
+									},
+								}}
+								onClick={handleClick}
+								disableFocusRipple
+							>
+								<Iconify icon={"ic:round-restaurant-menu"} size={24} />
+							</Fab>
+						</>
+					)}
 
-								{/* Menu Detail Component */}
-								<GroupedMenu menuList={menuList} genre={genre} color={color} />
-							</Box>
-						);
-					})}
+					<Box
+						sx={{
+							width: {xs: "100%", md: "80%"},
+							// height: {xs: "10500px", md: "6500px"},
+							flex: 1,
+						}}
+					>
+						{/* Map sorted object */}
+						{Object.entries(groupedGenreData).map(([genre, menuList]) => {
+							const data = category[genre as keyof typeof category];
+							const color = theme.palette.custom[data as keyof CustomPalette];
+
+							return (
+								<Box
+									key={genre}
+									sx={{
+										mb: 6,
+										[theme.breakpoints.up("md")]: {
+											px: 6,
+										},
+									}}
+								>
+									{/* Genre Name */}
+									<TitleWithMooch title={genre.replaceAll("_", " ").toUpperCase()} color={color} />
+
+									{/* Menu Detail Component */}
+									<GroupedMenu menuList={menuList} genre={genre} color={color} />
+								</Box>
+							);
+						})}
+					</Box>
 				</Box>
-			</Box>
+			</Container>
 		</Box>
 	);
 };
