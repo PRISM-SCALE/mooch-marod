@@ -30,6 +30,9 @@ type Category = {
 type Props = {
 	handleItemClick: (item: string) => void;
 	handleClose?: () => void;
+
+	selectedItem?: string;
+	offsetTop?: number | null;
 };
 
 const category: Category = {
@@ -39,7 +42,7 @@ const category: Category = {
 	lassi: "conceot",
 };
 
-const MenuNavigation = ({handleItemClick, handleClose}: Props) => {
+const MenuNavigation = ({handleItemClick, handleClose, selectedItem, offsetTop}: Props) => {
 	const theme = useTheme();
 	// Grouped data returned from
 	const groupedGenreData: GroupedMenuData = groupGenre(MM_Menu);
@@ -71,7 +74,9 @@ const MenuNavigation = ({handleItemClick, handleClose}: Props) => {
 				>
 					Categories
 					<Box
+						component={"span"}
 						sx={{
+							display: "block",
 							width: "100px",
 							height: "2.5px",
 							backgroundColor: theme.palette.custom.achar,
@@ -94,9 +99,25 @@ const MenuNavigation = ({handleItemClick, handleClose}: Props) => {
 						</Typography>
 
 						{Object.keys(groupedCategoryData).map((category, index) => {
+							const targetElement = document.getElementById(
+								category.replaceAll(" ", "_").toLowerCase()
+							);
+
+							let offsetPosition;
+
+							if (targetElement) {
+								const {top} = targetElement.getBoundingClientRect();
+								offsetPosition = top;
+							}
+
 							return (
 								<ListItemButton
-									sx={{pl: 4}}
+									sx={{
+										pl: 4,
+										"&.Mui-selected": {
+											borderLeft: "4px solid #333",
+										},
+									}}
 									key={index}
 									onClick={() => {
 										handleItemClick(`${category.replaceAll(" ", "_").toLowerCase()}`);
@@ -104,6 +125,10 @@ const MenuNavigation = ({handleItemClick, handleClose}: Props) => {
 											handleClose();
 										}
 									}}
+									selected={
+										selectedItem === category.replaceAll(" ", "_").toLowerCase() ||
+										offsetPosition === offsetTop
+									}
 								>
 									<ListItemText primary={category} sx={{textTransform: "capitalize"}} />
 								</ListItemButton>

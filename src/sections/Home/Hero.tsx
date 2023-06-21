@@ -29,27 +29,6 @@ const Hero = () => {
 	});
 
 	// TEXT ANIMATION
-	const captionProps = useSpring({
-		transform: "translateY(0px)",
-		opacity: 1,
-		from: {transform: "translateY(20px)", opacity: 0},
-		delay: 1300,
-	});
-
-	const titleProps = useSpring({
-		transform: "translateY(0px)",
-		opacity: 1,
-		from: {transform: "translateY(30px)", opacity: 0},
-		delay: 1500,
-	});
-
-	const buttonProps = useSpring({
-		transform: "translateY(0px)",
-		opacity: 1,
-		from: {transform: "translateY(30px)", opacity: 0},
-		delay: 1800,
-	});
-
 	const heroImageProps = useSpring({
 		transform: "scale(1)",
 		opacity: 1,
@@ -75,7 +54,28 @@ const Hero = () => {
 		transform: "translateY(0px)",
 		opacity: 1,
 		from: {transform: "translateY(20px)", opacity: 0},
-		delay: 1200,
+		delay: 1300,
+	});
+
+	const captionProps = useSpring({
+		transform: "translateY(0px)",
+		opacity: 1,
+		from: {transform: "translateY(20px)", opacity: 0},
+		delay: 1500,
+	});
+
+	const titleProps = useSpring({
+		transform: "translateY(0px)",
+		opacity: 1,
+		from: {transform: "translateY(30px)", opacity: 0},
+		delay: 1800,
+	});
+
+	const buttonProps = useSpring({
+		transform: "translateY(0px)",
+		opacity: 1,
+		from: {transform: "translateY(30px)", opacity: 0},
+		delay: 2100,
 	});
 
 	return (
@@ -312,7 +312,7 @@ const Hero = () => {
 							style={taglineProps}
 							sx={{
 								position: "absolute",
-								left: -140,
+								left: -100,
 								bottom: -60,
 								zIndex: 1,
 								[theme.breakpoints.down("md")]: {
@@ -328,7 +328,7 @@ const Hero = () => {
 								src="/images/tagline_mm.webp"
 								alt="paratha_animation"
 								sx={{
-									height: {xs: 140, md: 220, lg: 300},
+									height: {xs: 140, md: 220, lg: 260},
 								}}
 								loading="lazy"
 							/>
@@ -337,7 +337,7 @@ const Hero = () => {
 				</Box>
 			</Container>
 
-			{/* <MarqueePatterns /> */}
+			<MarqueePatterns />
 		</Box>
 	);
 };

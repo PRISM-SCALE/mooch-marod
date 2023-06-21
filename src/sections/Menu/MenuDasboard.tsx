@@ -39,7 +39,8 @@ const MenuDasboard = () => {
 	const theme = useTheme();
 	const {mediumScreenAndUp} = useResponsive();
 	const containerRef = useRef<HTMLDivElement>(null);
-	const [selectedItem, setSelectedItem] = useState("");
+	const [selectedItem, setSelectedItem] = useState("classic_parathas");
+	const [offsetTop, setOffsetTop] = useState<number | null>(null);
 	const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
 	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -63,9 +64,17 @@ const MenuDasboard = () => {
 	// ITEM: `${category.replaceAll(" ", "_").toLowerCase()}`
 	const handleItemClick = (item: string) => {
 		setSelectedItem(item);
+
 		const selectedElement = document.getElementById(item); // Assumes unique IDs
 
-		selectedElement && selectedElement.scrollIntoView({behavior: "smooth", block: "center"});
+		if (selectedElement) {
+			const {top} = selectedElement.getBoundingClientRect();
+
+			setOffsetTop(top);
+
+			selectedElement.scrollIntoView({behavior: "smooth", block: "center"});
+			console.log(`YOU HAVE SCROLLED TO ${selectedItem} in ${top}`);
+		}
 
 		// if (selectedElement && containerRef.current) {
 		// 	const customOffset = -100; // Customize the offset value as per your needs
@@ -76,8 +85,6 @@ const MenuDasboard = () => {
 		// 		behavior: "smooth",
 		// 	});
 		// }
-
-		console.log(`YOU HAVE SCROLLED TO ${selectedItem}`);
 	};
 
 	const groupedGenreData: GroupedMenuData = groupGenre(MM_Menu);
@@ -106,7 +113,11 @@ const MenuDasboard = () => {
 								mb: 4,
 							}}
 						>
-							<MenuNavigation handleItemClick={handleItemClick} />
+							<MenuNavigation
+								handleItemClick={handleItemClick}
+								selectedItem={selectedItem}
+								offsetTop={offsetTop}
+							/>
 						</Paper>
 					) : (
 						<>
@@ -138,7 +149,7 @@ const MenuDasboard = () => {
 								>
 									<Iconify icon={"ph:x-circle-bold"} size={24} />
 								</IconButton>
-								<MenuNavigation handleItemClick={handleItemClick} />
+								<MenuNavigation handleItemClick={handleItemClick} selectedItem={selectedItem} />
 							</Popover>
 							<Fab
 								sx={{
