@@ -211,9 +211,10 @@ const MenuSection = () => {
 								py: ".8rem",
 								px: "2rem",
 								boxShadow: "rgba(0, 0, 0, 0.15) 0px 4px 12px",
+								fontSize: ".9rem",
 							}}
 						>
-							Show More
+							Full Menu
 						</Button>
 						<Typography variant="caption" mt={4} display={"block"}>
 							* Offers available for carry-out and delivery orders only.

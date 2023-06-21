@@ -1,5 +1,4 @@
 import {Box, useTheme} from "@mui/material";
-import {Link} from "react-router-dom";
 import Iconify from "./Iconify";
 
 type Props = {
@@ -15,51 +14,49 @@ const InstaCard = ({image}: Props) => {
 				backgroundImage: `url(${image})`,
 				backgroundSize: "cover",
 				backgroundPosition: "center",
-				width: 200,
-				height: 200,
+				width: 180,
+				height: 180,
 
 				// margin: {xs: "1rem", md: "2rem"},
 				// "& > *:not(:last-child)": {},
 				cursor: "pointer",
 			}}
 		>
-			<Link to="">
-				<Box
-					className="insta-icon"
-					sx={{
-						width: "100%",
-						maxWidth: "100%",
-						// backgroundColor: "red",
-						height: "100%",
-						display: "flex",
-						justifyContent: "center",
-						alignItems: "center",
-						backgroundColor: "transparent",
-						transition: theme.transitions.create(["background-color", "opacity"], {
+			<Box
+				className="insta-icon"
+				sx={{
+					width: "100%",
+					maxWidth: "100%",
+					// backgroundColor: "red",
+					height: "100%",
+					display: "flex",
+					justifyContent: "center",
+					alignItems: "center",
+					backgroundColor: "transparent",
+					transition: theme.transitions.create(["background-color", "opacity"], {
+						duration: 700,
+					}),
+					overflow: "hidden",
+
+					"&:hover": {
+						backgroundColor: theme.palette.custom.butter,
+						opacity: 1,
+					},
+
+					"&:hover svg": {
+						opacity: 1,
+					},
+
+					"& svg": {
+						transition: theme.transitions.create("opacity", {
 							duration: 700,
 						}),
-						overflow: "hidden",
-
-						"&:hover": {
-							backgroundColor: theme.palette.custom.butter,
-							opacity: 1,
-						},
-
-						"&:hover svg": {
-							opacity: 1,
-						},
-
-						"& svg": {
-							transition: theme.transitions.create("opacity", {
-								duration: 700,
-							}),
-							opacity: 0,
-						},
-					}}
-				>
-					<Iconify icon={"fe:instagram"} size={38} color="#000" />
-				</Box>
-			</Link>
+						opacity: 0,
+					},
+				}}
+			>
+				<Iconify icon={"fe:instagram"} size={38} color="#000" />
+			</Box>
 		</Box>
 	);
 };

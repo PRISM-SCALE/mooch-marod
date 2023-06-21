@@ -62,7 +62,7 @@ const Offers = () => {
 									fontSize: {xs: "1.8rem", sm: "1.5rem", md: "2rem"},
 								}}
 							>
-								Subscribe to get exciting offers <br /> and exclusive events.
+								Subscribe to get exclusive deals <br /> and Timely updates.
 							</Typography>
 
 							{/* Add Email form input */}

@@ -1,6 +1,6 @@
 import * as React from "react";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import {AppBar, Toolbar, Button, Container, IconButton, Box} from "@mui/material";
+import {AppBar, Toolbar, Button, Container, IconButton} from "@mui/material";
 import {useTheme} from "@mui/material/styles";
 import {Link} from "react-router-dom";
 
@@ -107,7 +107,7 @@ export default function Navbar(props: Props) {
 							)}
 						</>
 
-						<Link to={ROOT_LINK}>
+						<Link to={ROOT_LINK} style={{textAlign: "center"}}>
 							<Logo
 								width={{xs: 50, md: trigger ? 80 : 90}}
 								height={{xs: 50, md: trigger ? 80 : 90}}
@@ -128,7 +128,7 @@ export default function Navbar(props: Props) {
 									px: 4,
 									py: 1,
 									color: "white",
-									fontSize: ".8rem",
+									fontSize: ".9rem",
 									fontWeight: 400,
 
 									"&:hover": {

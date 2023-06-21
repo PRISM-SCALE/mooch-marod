@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 type Props = {
 	link: string;
 	path: string;
-	onClick: () => void;
+	onClick?: () => void;
 };
 
 const LinkWrapper = styled(NavLink)(({theme}) => ({

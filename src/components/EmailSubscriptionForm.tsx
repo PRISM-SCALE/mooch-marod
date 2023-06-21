@@ -100,9 +100,10 @@ const EmailSubscriptionForm = ({status, message, onSubmitted}: Props) => {
 					// helperText={}
 					sx={{
 						display: "block",
-						borderRadius: "4px",
+						borderRadius: "30px",
 						backgroundColor: "white",
 						outline: "none",
+						pl: 2,
 						"& fieldset": {border: "none"},
 					}}
 					required

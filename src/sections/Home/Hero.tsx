@@ -1,4 +1,4 @@
-import {Box, Button, Container, Typography, styled, useTheme} from "@mui/material";
+import {Box, Button, Container, Typography, useTheme} from "@mui/material";
 import {TypeAnimation} from "react-type-animation";
 import {useSpring, animated} from "@react-spring/web";
 import {Link} from "react-router-dom";
@@ -8,7 +8,7 @@ import {useResponsive} from "../../hooks/useResponsive";
 
 // UTILS
 import {ROOT_LINK} from "../../utils/links";
-import {logo_butter, logo_white} from "../../utils/common";
+import {logo_butter} from "../../utils/common";
 
 // COMPONENTS
 import MMHeroElements from "../../components/MMHeroElements";
@@ -100,7 +100,7 @@ const Hero = () => {
 			{!mediumScreenAndUp ? (
 				<Box sx={{position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)"}}>
 					<Link to={ROOT_LINK}>
-						<Logo width={100} height={100} logo={logo_butter} />
+						<Logo width={120} height={120} logo={logo_butter} />
 					</Link>
 				</Box>
 			) : null}

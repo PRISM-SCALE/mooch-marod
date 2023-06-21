@@ -1,6 +1,9 @@
 import {Box, styled} from "@mui/material";
 import Slider, {Settings} from "react-slick";
 
+// import {Splide, SplideSlide} from "@splidejs/react-splide";
+// import {AutoScroll} from "@splidejs/splide-extension-auto-scroll";
+
 // COMPONENTS
 import InstaCard from "../../components/InstaCard";
 import {images} from "../../utils/links";
@@ -90,6 +93,43 @@ const Instagram = () => {
 					<InstaCard image={imageUrl} key={index} title={title} />
 				))}
 			</SlideWrapper>
+
+			{/* <Splide
+				options={{
+					arrows: false,
+					pagination: false,
+					type: "loop",
+					focus: "center",
+					perPage: 1,
+
+					autoplay: true,
+					mediaQuery: "min",
+					breakpoints: {
+						1524: {
+							perPage: 8,
+						},
+						1200: {
+							perPage: 7,
+						},
+						900: {
+							perPage: 4,
+						},
+						600: {
+							perPage: 3,
+						},
+						380: {
+							trimSpace: false,
+							perPage: 2,
+						},
+					},
+				}}
+			>
+				{images.map(({imageUrl, title}, index) => (
+					<SplideSlide key={index}>
+						<InstaCard image={imageUrl} title={title} />
+					</SplideSlide>
+				))}
+			</Splide> */}
 		</Box>
 	);
 };

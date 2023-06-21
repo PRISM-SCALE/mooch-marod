@@ -27,11 +27,13 @@ const Image = styled("img")(({theme}) => ({
 	height: "auto",
 	objectFit: "contain",
 
-	[theme.breakpoints.down("sm")]: {
-		// width: "70px",
-	},
 	transition: "all .3s ease-out",
 	paddingTop: "10px",
+	
+	[theme.breakpoints.down("md")]: {
+		// width: "70px",
+		paddingTop: "20px",
+	},
 }));
 
 const Logo = ({width, height, logo}: Props) => {
