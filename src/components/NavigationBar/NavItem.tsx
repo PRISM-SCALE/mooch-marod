@@ -4,26 +4,26 @@ import {NavLink} from "react-router-dom";
 type Props = {
 	link: string;
 	path: string;
+	onClick: () => void;
 };
 
 const LinkWrapper = styled(NavLink)(({theme}) => ({
 	textDecoration: "none",
-	color: theme.palette.common.white,
+	color: theme.palette.common.black,
 	fontSize: ".8rem",
 	position: "relative",
 	display: "flex",
 	alignItems: "center",
 	gap: 4,
-	// paddingLeft: "20px",
+	flex: 1,
+	paddingBottom: "15px",
+	fontWeight: 600,
 
-	transition: theme.transitions.create("color"),
+	transition: theme.transitions.create(["color", "backgroundColor"]),
 
-	"&:hover": {
-		color: theme.palette.custom.butter,
-	},
-
-	"&.active": {
-		color: theme.palette.custom.butter,
+	"&:hover, &.active": {
+		color: theme.palette.custom.paratha,
+		// borderBottom: `2px solid ${theme.palette.custom.paratha}`,
 	},
 
 	"&::before, &.active::before": {
@@ -43,9 +43,9 @@ const LinkWrapper = styled(NavLink)(({theme}) => ({
 		opacity: 1,
 	},
 
-	[theme.breakpoints.down("md")]: {
-		display: "none",
-	},
+	// [theme.breakpoints.down("md")]: {
+	// 	display: "none",
+	// },
 }));
 
 const NavItem = ({link, path}: Props) => {

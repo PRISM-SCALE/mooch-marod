@@ -8,7 +8,7 @@ import {useResponsive} from "../../hooks/useResponsive";
 
 // UTILS
 import {ROOT_LINK} from "../../utils/links";
-import {logo_white} from "../../utils/common";
+import {logo_butter, logo_white} from "../../utils/common";
 
 // COMPONENTS
 import MMHeroElements from "../../components/MMHeroElements";
@@ -98,9 +98,9 @@ const Hero = () => {
 			}}
 		>
 			{!mediumScreenAndUp ? (
-				<Box sx={{position: "absolute", top: 15, left: 15}}>
+				<Box sx={{position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)"}}>
 					<Link to={ROOT_LINK}>
-						<Logo width={{xs: 70, md: 85}} height={{xs: 70, md: 85}} logo={logo_white} />
+						<Logo width={100} height={100} logo={logo_butter} />
 					</Link>
 				</Box>
 			) : null}
@@ -317,9 +317,10 @@ const Hero = () => {
 								zIndex: 1,
 								[theme.breakpoints.down("md")]: {
 									bottom: -40,
+									left: -50,
 								},
 								[theme.breakpoints.down("sm")]: {
-									left: -40,
+									left: -10,
 								},
 							}}
 						>
@@ -328,7 +329,7 @@ const Hero = () => {
 								src="/images/tagline_mm.webp"
 								alt="paratha_animation"
 								sx={{
-									height: {xs: 140, md: 220, lg: 260},
+									height: {xs: 100, sm: 140, md: 220, lg: 260},
 								}}
 								loading="lazy"
 							/>

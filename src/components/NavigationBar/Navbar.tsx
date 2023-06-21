@@ -1,6 +1,6 @@
 import * as React from "react";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import {AppBar, Toolbar, Button, Container} from "@mui/material";
+import {AppBar, Toolbar, Button, Container, IconButton} from "@mui/material";
 import {useTheme} from "@mui/material/styles";
 
 // HOOKS
@@ -14,6 +14,8 @@ import {logo_butter} from "../../utils/common";
 import NavbarList from "./NavbarList";
 import {Link} from "react-router-dom";
 import Logo from "../Logo";
+import Iconify from "../Iconify";
+import NavList from "./NavList";
 
 interface Props {
 	window?: () => Window;
@@ -53,11 +55,22 @@ export default function Navbar(props: Props) {
 	const theme = useTheme();
 	const {isMediumScreen, isSmallScreen} = useResponsive();
 
+	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+	const open = Boolean(anchorEl);
+
 	const trigger = useScrollTrigger({
 		disableHysteresis: true,
 		threshold: 100,
 		target: window ? window() : undefined,
 	});
+
+	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+		setAnchorEl(event.currentTarget);
+	};
+
+	const handleClose = () => {
+		setAnchorEl(null);
+	};
 
 	const spaceBetween = {
 		display: "flex",
@@ -73,7 +86,7 @@ export default function Navbar(props: Props) {
 						sx={{
 							width: "100%",
 							flexDirection: {xs: "row", md: "row"},
-							height: trigger ? {xs: "80px", md: "80px"} : {xs: "80px", md: "100px"},
+							height: trigger ? {xs: "80px", md: "100px"} : {xs: "80px", md: "120px"},
 							...spaceBetween,
 							transition: "all .3s ease-out",
 
@@ -84,53 +97,50 @@ export default function Navbar(props: Props) {
 						disableGutters
 					>
 						<>
-							<Link to={ROOT_LINK}>
-								<Logo
-									width={{xs: 50, md: trigger ? 65 : 85}}
-									height={{xs: 50, md: trigger ? 65 : 85}}
-									logo={logo_butter}
-								/>
-							</Link>
-
-							{/* 
-								{isSmallScreen === !isMediumScreen ? (
-									<IconButton sx={{color: "white"}} onClick={handleMenuClick}>
-										<Iconify icon={"gg:menu-right"} size={24} />
-									</IconButton>
-								) : null}
-
-								{!mediumScreenAndUp && (
-									<Sidebar anchor="right" onClose={handleSidebarClose} open={isSidebarOpen} />
-								)} */}
-
-							{/* {isMediumScreen !== isSmallScreen ? null : <SearchBar />} */}
-							{isMediumScreen !== isSmallScreen ? null : <NavbarList />}
-
 							{isMediumScreen !== isSmallScreen ? null : (
-								<Button
-									component={Link}
-									to="https://wa.link/hfy0aw"
-									target="_blank"
-									sx={{
-										backgroundColor: theme.palette.custom.paratha,
-										borderRadius: 30,
-										px: 4,
-										py: 1,
-										color: "white",
-										fontSize: ".8rem",
-										fontWeight: 400,
-
-										"&:hover": {
-											backgroundColor: theme.palette.custom.paratha,
-										},
-									}}
-									disableElevation
-									disableRipple
-								>
-									BOOK A TABLE
-								</Button>
+								<IconButton sx={{color: "white"}} onClick={handleClick}>
+									<Iconify icon={"gg:menu-left"} size={40} />
+								</IconButton>
+							)}
+							{isMediumScreen !== isSmallScreen ? null : (
+								<NavList open={open} handleClose={handleClose} anchorEl={anchorEl} />
 							)}
 						</>
+
+						<Link to={ROOT_LINK}>
+							<Logo
+								width={{xs: 50, md: trigger ? 65 : 90}}
+								height={{xs: 50, md: trigger ? 65 : 90}}
+								logo={logo_butter}
+							/>
+						</Link>
+
+						{/* {isMediumScreen !== isSmallScreen ? null : <SearchBar />} */}
+
+						{isMediumScreen !== isSmallScreen ? null : (
+							<Button
+								component={Link}
+								to="https://wa.link/hfy0aw"
+								target="_blank"
+								sx={{
+									backgroundColor: theme.palette.custom.paratha,
+									borderRadius: 30,
+									px: 4,
+									py: 1,
+									color: "white",
+									fontSize: ".8rem",
+									fontWeight: 400,
+
+									"&:hover": {
+										backgroundColor: theme.palette.custom.paratha,
+									},
+								}}
+								disableElevation
+								disableRipple
+							>
+								BOOK A TABLE
+							</Button>
+						)}
 					</Toolbar>
 				</Container>
 			</AppBar>
