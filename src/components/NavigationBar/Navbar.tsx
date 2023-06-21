@@ -109,8 +109,8 @@ export default function Navbar(props: Props) {
 
 						<Link to={ROOT_LINK}>
 							<Logo
-								width={{xs: 50, md: trigger ? 65 : 90}}
-								height={{xs: 50, md: trigger ? 65 : 90}}
+								width={{xs: 50, md: trigger ? 80 : 90}}
+								height={{xs: 50, md: trigger ? 80 : 90}}
 								logo={logo_butter}
 							/>
 						</Link>

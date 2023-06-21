@@ -128,6 +128,7 @@ const EmailSubscriptionForm = ({status, message, onSubmitted}: Props) => {
 						backgroundColor: theme.palette.custom.paratha,
 					},
 					width: {xs: "80%!important", sm: "30%!important"},
+					borderRadius: 30,
 				}}
 				disableRipple
 				disableElevation

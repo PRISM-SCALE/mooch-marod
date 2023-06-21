@@ -1,4 +1,4 @@
-import {Box, Typography} from "@mui/material";
+import {Box, Typography, useTheme} from "@mui/material";
 import {useInView} from "react-intersection-observer";
 import CountUp from "react-countup";
 
@@ -9,6 +9,7 @@ type Props = {
 };
 
 const CountCard = ({count, text, character}: Props) => {
+	const theme = useTheme();
 	const [ref, inView] = useInView({
 		threshold: 0.3,
 		triggerOnce: true,
@@ -23,12 +24,29 @@ const CountCard = ({count, text, character}: Props) => {
 			ref={ref}
 		>
 			{/* Component for counts+ */}
-			<Typography component="span" variant="h1" fontWeight={600}>
+			<Typography
+				component="span"
+				variant="h1"
+				sx={{
+					fontWeight: {
+						xs: "1.2rem",
+						md: "2.4rem",
+						fontWeight: 500,
+					},
+				}}
+			>
 				<CountUp duration={5} end={inView ? count : 0} useEasing={true} />
 				{character}
 			</Typography>
 			<br />
-			<Typography component="span" sx={{fontSize: "1.2rem"}}>
+			<Typography
+				component="span"
+				sx={{
+					color: theme.palette.custom.achar,
+					fontWeight: 500,
+					fontSize: {xs: ".8rem", md: "1rem"},
+				}}
+			>
 				{text}
 			</Typography>
 		</Box>

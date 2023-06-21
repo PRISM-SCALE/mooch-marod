@@ -110,13 +110,17 @@ const MenuSection = () => {
 				<Box sx={{textAlign: "center"}}>
 					<Typography
 						variant="caption"
-						sx={{color: theme.palette.custom.achar, fontSize: {xs: "0.8rem"}}}
+						sx={{
+							color: theme.palette.custom.achar,
+							fontSize: {xs: "1rem"},
+							textTransform: "uppercase",
+						}}
 					>
-						PICK YOUR FAVORITES
+						A Gastronomic Delight for Every Palate
 					</Typography>
 					<Typography
 						variant="h1"
-						sx={{textTransform: "uppercase", fontSize: {xs: 26, md: 42}}}
+						sx={{textTransform: "uppercase", fontSize: {xs: "1.2rem", md: "2.4rem"}}}
 						gutterBottom
 					>
 						<Box component={"span"} fontWeight={500}>
@@ -124,7 +128,10 @@ const MenuSection = () => {
 						</Box>{" "}
 						Paratha, THE BEST IN TOWN
 					</Typography>
-					<Typography variant="body1" sx={{width: {xs: "100%", md: "50%"}, marginX: "auto"}}>
+					<Typography
+						variant="body1"
+						sx={{width: {xs: "100%", md: "50%"}, marginX: "auto", fontSize: "1rem"}}
+					>
 						Explore our delicious, one-of-a-kind menu with a massive 3000+ paratha combinations.
 					</Typography>
 				</Box>

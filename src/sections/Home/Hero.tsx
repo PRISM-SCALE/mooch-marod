@@ -164,7 +164,7 @@ const Hero = () => {
 								[theme.breakpoints.down("md")]: {justifyContent: "center"},
 							}}
 						>
-							<Typography color={theme.palette.custom.paratha} fontWeight={600} fontSize={".8rem"}>
+							<Typography color={theme.palette.custom.paratha} fontWeight={600} fontSize={"1rem"}>
 								PARATHA TIME
 							</Typography>
 							<Box
@@ -181,7 +181,7 @@ const Hero = () => {
 						<Box component={animated.div} style={titleProps}>
 							<Typography
 								variant="h1"
-								fontSize={{xs: "2rem", sm: "2.8rem", md: "4.8rem"}}
+								fontSize={{xs: "2rem", sm: "2.6rem", md: "4.8rem"}}
 								color="white"
 								sx={{textTransform: "uppercase", fontWeight: 700}}
 							>
