@@ -1,4 +1,4 @@
-import {Box, Container, Typography, alpha, useTheme} from "@mui/material";
+import {Box, Container, Link, Typography, alpha, useTheme} from "@mui/material";
 
 import FooterGallery from "../components/FooterGallery";
 import {useResponsive} from "../hooks/useResponsive";
@@ -30,24 +30,26 @@ const Footer = () => {
 					sx={{
 						display: "flex",
 						flexWrap: isMediumScreen !== isSmallScreen ? "wrap" : "nowrap",
-						justifyContent: isMediumScreen !== isSmallScreen ? "flex-start" : "space-between",
-						gap: 6,
+						justifyContent: "space-between",
+						gap: 2,
 						py: 4,
 					}}
 				>
+					{/* LOGO */}
 					<Box>
 						<Box
 							component={"img"}
 							src={logo_with_tag}
 							alt="logo"
 							sx={{
-								width: {xs: 120, md: 200},
-								height: {xs: 120, md: 200},
+								width: {xs: 120, md: 180},
+								height: {xs: 120, md: 180},
 							}}
 						/>
 					</Box>
 
-					<Box>
+					{/* WORK HOURS */}
+					<Box sx={{}}>
 						<Typography
 							variant="h3"
 							fontWeight={400}
@@ -56,10 +58,11 @@ const Footer = () => {
 							Working Hours
 						</Typography>
 						<Typography sx={{color: "#fff"}}>
-							Monday - Friday <br /> 10.00 AM - 11.00 PM
+							Monday - Sunday <br /> 11.30 AM - 9.30 PM
 						</Typography>
 					</Box>
 
+					{/* CONTACT US */}
 					<Box>
 						<Typography
 							variant="h3"
@@ -74,7 +77,11 @@ const Footer = () => {
 								Location:
 							</Typography>
 							<Typography variant="body1" color={"#fff"}>
-								55 main Street, New York
+								Mooch Marod, Prasanthi Complex,
+								<br />
+								Channasandra Main Rd, Whitefield,
+								<br />
+								Bengaluru, Karnataka 560067
 							</Typography>
 						</Box>
 
@@ -83,7 +90,12 @@ const Footer = () => {
 								Email Address
 							</Typography>
 							<Typography variant="body1" color={"#fff"}>
-								testing@test.com
+								<Link
+									href="mailto:hello@moochmarod.com"
+									sx={{cursor: "pointer", textDecoration: "none", color: "#fff"}}
+								>
+									hello@moochmarod.com
+								</Link>
 							</Typography>
 						</Box>
 
@@ -92,17 +104,18 @@ const Footer = () => {
 								Phone Number
 							</Typography>
 							<Typography variant="body1" color={"#fff"}>
-								+91 (808) 643 9045
+								<Link
+									href="tel:+91 88844 88690"
+									sx={{cursor: "pointer", textDecoration: "none", color: "#fff"}}
+								>
+									+91 (888) 448 8690
+								</Link>
 							</Typography>
 						</Box>
 					</Box>
 
 					{/* FOOTER GALLERY */}
-					{mediumScreenAndUp ? (
-						<Box>
-							<FooterGallery />
-						</Box>
-					) : null}
+					{mediumScreenAndUp ? <FooterGallery /> : null}
 				</Box>
 
 				<Box
