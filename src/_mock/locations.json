@@ -5,57 +5,6 @@
 			"type": "Feature",
 			"geometry": {
 				"type": "Point",
-				"coordinates": [77.62266848623325, 12.955253369851137]
-			},
-			"properties": {
-				"location": "Koramangala, Bengaluru",
-				"phone": 8884488930,
-				"address": "466, 1st Floor, 17th G Main Rd, 6th Block, Koramangala, Bengaluru, Karnataka 560095",
-				"city": "Bengaluru",
-				"country": "India",
-				"pincode": 560095,
-				"state": "Karnataka"
-			}
-		},
-
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [77.6589235319118, 12.87731406540923]
-			},
-			"properties": {
-				"location": "Kempegowda Avenue, Hosa Rd",
-				"phone": 8884488540,
-				"address": "Shiva Shakti Food Court Kempegowda Avenue, Hosa Rd, Karnataka 560100",
-				"city": "Bengaluru",
-				"country": "India",
-				"pincode": 560100,
-				"state": "Karnataka"
-			}
-		},
-
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
-				"coordinates": [77.6563541506248, 12.981979800001161]
-			},
-			"properties": {
-				"location": "Jeevan Bima Nagar Main Rd",
-				"phone": 8884488680,
-				"address": "No 39, Jeevan Bima Nagar Main Rd, opp. IOC Petrol Bunk, Karnataka 560075",
-				"city": "Bengaluru",
-				"country": "India",
-				"pincode": 560075,
-				"state": "Karnataka"
-			}
-		},
-
-		{
-			"type": "Feature",
-			"geometry": {
-				"type": "Point",
 				"coordinates": [77.7637173648509, 12.988883502048473]
 			},
 			"properties": {
@@ -65,7 +14,42 @@
 				"city": "Bengaluru",
 				"country": "India",
 				"pincode": 560067,
-				"state": "Karnataka"
+				"state": "Karnataka",
+				"direction": "https://www.google.com/maps/place/Mooch+Marod/@12.9828218,77.7645159,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae0ff498499ff3:0xa28b2cb2962fda8c!8m2!3d12.9828166!4d77.7670908!16s%2Fg%2F11h1htvk7m?entry=ttu"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [77.62266848623325, 12.955253369851137]
+			},
+			"properties": {
+				"location": "Koramangala, Bengaluru",
+				"phone": 8884488930,
+				"address": "466, 1st Floor, 17th G Main Rd, 6th Block, Koramangala, Bengaluru, Karnataka 560095",
+				"city": "Bengaluru",
+				"country": "India",
+				"pincode": 560095,
+				"state": "Karnataka",
+				"direction": "https://www.google.com/maps/place/Mooch+Marod/@12.9408524,77.6217301,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae151bc6bb5017:0x238209c985c6594e!8m2!3d12.9408472!4d77.624305!16s%2Fg%2F11gkwm9k__?entry=ttu"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [12.874579240984767, 77.76591603519587]
+			},
+			"properties": {
+				"location": "Yamare Village",
+				"phone": 8884488540,
+				"address": "SSH 35, Yamare Village, Bengaluru, Karnataka 562125",
+				"city": "Bengaluru",
+				"country": "India",
+				"pincode": 562125,
+				"state": "Karnataka",
+				"direction": "https://www.google.com/maps/place/Yamare+Village,+Bengaluru,+Karnataka+562125/@12.8701332,77.7629246,14.71z/data=!4m15!1m8!3m7!1s0x3bae72b7976df315:0x80338a704f7366c3!2sYamare+Village,+Bengaluru,+Karnataka+562125!3b1!8m2!3d12.8743569!4d77.7659498!16s%2Fg%2F1pt_1c9zf!3m5!1s0x3bae72b7976df315:0x80338a704f7366c3!8m2!3d12.8743569!4d77.7659498!16s%2Fg%2F1pt_1c9zf?entry=ttu"
 			}
 		}
 	]

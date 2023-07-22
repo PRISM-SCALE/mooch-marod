@@ -14,19 +14,27 @@ import RootLayout from "./pages/RootLayout.tsx";
 // NOT FOUND (404)
 import NotFound from "./sections/NotFound.tsx";
 
+// HOC
+import DynamicImport from "./hoc/DynamicImport.tsx";
+
 // PAGES
-import Home from "./pages/Home.tsx";
-import About from "./pages/About.tsx";
-import Contact from "./pages/Contact.tsx";
-import Menu from "./pages/Menu.tsx";
-import Outlets from "./pages/Outlets.tsx";
-import Offers from "./pages/Offers.tsx";
-import LandingPage from "./pages/LandingPage.tsx";
+const Home = () => import("./pages/Home.tsx");
+const About = () => import("./pages/About.tsx");
+const Menu = () => import("./pages/Menu.tsx");
+const Contact = () => import("./pages/Contact.tsx");
+const Outlets = () => import("./pages/Outlets.tsx");
+// const Offers = () => import("./pages/Offers.tsx");
+const LandingPage = () => import("./pages/LandingPage.tsx");
 
 const App = () => {
 	const theme = useMemo(() => createTheme(themeSettings), []);
 
 	const router = createBrowserRouter([
+		{
+			index: true,
+			element: <DynamicImport load={LandingPage} />,
+		},
+
 		{
 			path: "/",
 			element: <RootLayout />,
@@ -35,34 +43,29 @@ const App = () => {
 				// {index: true, element: <LandingPage />},
 				{
 					path: "/home",
-					element: <Home />,
+					element: <DynamicImport load={Home} />,
 				},
 				{
 					path: "/about",
-					element: <About />,
+					element: <DynamicImport load={About} />,
 				},
 				{
 					path: "/contact",
-					element: <Contact />,
+					element: <DynamicImport load={Contact} />,
 				},
 				{
 					path: "/menu",
-					element: <Menu />,
+					element: <DynamicImport load={Menu} />,
 				},
 				{
 					path: "/outlets",
-					element: <Outlets />,
+					element: <DynamicImport load={Outlets} />,
 				},
-				{
-					path: "/offers",
-					element: <Offers />,
-				},
+				// {
+				// 	path: "/offers",
+				// 	element: <DynamicImport load={Offers} />,
+				// },
 			],
-		},
-
-		{
-			index: true,
-			element: <LandingPage />,
 		},
 
 		{

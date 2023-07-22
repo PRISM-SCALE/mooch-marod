@@ -27,7 +27,7 @@ const MoochStory = () => {
 							variant="caption"
 							sx={{
 								color: theme.palette.custom.achar,
-								fontSize: {xs: "0.8rem"},
+								fontSize: {xs: "1rem"},
 								textTransform: "uppercase",
 							}}
 						>
@@ -35,15 +35,34 @@ const MoochStory = () => {
 						</Typography>
 						<Typography
 							variant="h2"
-							sx={{textTransform: "uppercase", fontSize: {xs: 26, md: 42}, fontWeight: 500}}
+							sx={{
+								textTransform: "uppercase",
+								fontSize: {xs: "1.4rem", md: "2.4rem"},
+								fontWeight: 500,
+							}}
 							gutterBottom
 						>
 							THE STORY ABOUT mooch marod
 						</Typography>
 
-						<Typography variant="body1" sx={{fontSize: {xs: 14, md: 18}, my: 2}} gutterBottom>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-							incididunt ut labore et dolore.
+						<Typography variant="body1" sx={{fontSize: "1rem", my: 2}} gutterBottom paragraph>
+							We are famous for our authentic parathas, Lassi & their sizes along with tandoor
+							kebabs & much more. To accompany these there is plenty of side dishes like raita,
+							chutneys, Pickles, Butter etc. All of our dishes are enhanced with our secret spice
+							recipe. We have always hand mixed the perfect spice combination in our kitchen. We
+							make our Parathas as per order, ensuring our diners receive perfectly made Parathas
+							every time. Having said that, when it comes to Indian Cuisine we prefer to keep it
+							simple by only creating the best.
+						</Typography>
+						<Typography variant="body1" sx={{fontSize: "1rem", my: 2}} gutterBottom paragraph>
+							<Box component="span" sx={{fontWeight: 500}}>
+								Mooch Marod
+							</Box>{" "}
+							is as diverse as its culture, language and region. Aromatic spices are the essence of
+							Indian cuisine. Use of particular spices such as coriander, cumin, fenugreek,
+							asafoetida etc., gives Indian food its distinct flavour. The cooking skill lies in the
+							subtle blending of a variety of spices to enhance the basic flavour of a particular
+							dish. Visit us today and experience the taste worth travelling for.
 						</Typography>
 
 						{/* ---------------------------------------------------- */}
@@ -60,16 +79,16 @@ const MoochStory = () => {
 							}}
 						>
 							<TitleDescription
-								title="our family name"
-								description="Lorem ipsum dolor sit amet, consectetur omni adipisicing elit, sed do eiusmod tempor sol incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+								title="Quality over Quantity"
+								description="Mooch Marod is truly class apart. All food items and beverages prepared at our restaurant kitchens are at par with the highest quality standards. We understand the likes and dislikes of our customers and aim to serve food that not only fills their stomach but also feeds their soul."
 							/>
 							<TitleDescription
-								title="our journey"
-								description="Lorem ipsum dolor sit amet, consectetur omni adipisicing elit, sed do eiusmod tempor sol incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+								title="People are Everything"
+								description="Mooch Marod has fully trained customer-service oriented employees with a strict emphasis on food and hygiene standards, so the next time you enjoy your meal at Mooch Marod, be rest assured that the food served on your plate is absolutely top grade."
 							/>
 							<TitleDescription
-								title="EXPERICENCE AND FOOD"
-								description="Lorem ipsum dolor sit amet, consectetur omni adipisicing elit, sed do eiusmod tempor sol incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+								title="Craftsmanship of Cooking and Tradition"
+								description="We understand the likes and dislikes of our customers and aim to serve food that not only fills their stomach but also feeds their soul. Offering classic, authentic recipes, we make wholesome food with the freshest ingredients, which is what makes our food so delectable. Rest assured that the food served on your plate is absolutely top grade."
 							/>
 						</Box>
 					</Box>
@@ -77,11 +96,19 @@ const MoochStory = () => {
 					{/* Portrait Image */}
 					<Box sx={{width: {xs: "100%", md: "25%"}}}>
 						{(largeScreenAndUp || isLargeScreen) && (
-							<ResponsiveImage src={"/images/portrait.jpg"} alt="portrait-image" width="380px" />
+							<ResponsiveImage
+								src={"https://placehold.co/370x600?text=MoochMarod Portrait"}
+								alt="portrait-image"
+								width="380px"
+							/>
 						)}
 
 						{(isSmallScreen || isMediumScreen) && (
-							<ResponsiveImage src={"/images/portrait2.jpg"} alt="portrait-image" width="100%" />
+							<ResponsiveImage
+								src={"https://placehold.co/600x400?text=MoochMarod Portrait"}
+								alt="portrait-image"
+								width="100%"
+							/>
 						)}
 					</Box>
 				</Box>

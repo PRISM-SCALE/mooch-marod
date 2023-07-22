@@ -1,5 +1,6 @@
 import {Box, Grid, Typography, useTheme} from "@mui/material";
 import {MenuItem, MenuPrice} from "../../types/Menu.types";
+import Iconify from "../Iconify";
 
 type Props = {
 	list: MenuItem[];
@@ -10,7 +11,7 @@ const MenuDetail = ({list}: Props): JSX.Element => {
 
 	return (
 		<>
-			{list.map(({name, description, price}) => {
+			{list.map(({name, description, price, isVeg}) => {
 				return (
 					<Grid item xs={12} md={6} key={name} sx={{mb: 2}}>
 						<Box
@@ -24,13 +25,20 @@ const MenuDetail = ({list}: Props): JSX.Element => {
 							}}
 						>
 							<Box>
-								<Typography
-									fontSize={{xs: "1rem", sm: "1.2rem"}}
-									color={theme.palette.custom.achar}
-									fontWeight={600}
-								>
-									{name}
-								</Typography>
+								<Box sx={{display: "flex", alignItems: "center", gap: 1}}>
+									<Typography
+										fontSize={{xs: "1rem", sm: "1.2rem"}}
+										color={isVeg ? "#036F08" : theme.palette.custom.achar}
+										fontWeight={600}
+									>
+										{name}
+									</Typography>
+									{isVeg ? (
+										<Iconify icon={"openmoji:leafy-green"} size={25} />
+									) : (
+										<Iconify icon={"openmoji:meat-on-bone"} size={25} />
+									)}
+								</Box>
 								<Typography
 									variant="caption"
 									fontSize={"0.8rem"}

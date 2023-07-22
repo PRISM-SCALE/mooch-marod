@@ -9,46 +9,49 @@ export const ROOT_LINK = "/";
 export const HOME_LINK = "/home";
 
 export const menuLinks = [
-	{link: "/home", path: "Home"},
-	{link: "/about", path: "About"},
-	{link: "/menu", path: "Menu"},
-	{link: "/offers", path: "Offers"},
-	{link: "/outlets", path: "Outlets"},
-	{link: "/contact", path: "Contact"},
-];
-
-export const footerImageUrl = [
-	"https://images.unsplash.com/photo-1552611052-33e04de081de",
-	"https://images.unsplash.com/photo-1550547660-d9450f859349",
-	"https://images.unsplash.com/photo-1598214886806-c87b84b7078b",
-	"https://images.unsplash.com/photo-1568716508386-cda5cdec6827",
-	"https://images.unsplash.com/photo-1619592982904-ef0a0da5b7e6",
-	"https://images.unsplash.com/photo-1579065472192-c3f98f86b6c6",
+	{link: "/home", path: "home", icon: "majesticons:home"},
+	{link: "/about", path: "about", icon: "icon-park-solid:english-mustache"},
+	{link: "/menu", path: "menu", icon: "ic:round-restaurant-menu"},
+	// {link: "/offers", path: "Offers", icon: "icon-park-outline:weixin-cards-offers"},
+	{link: "/outlets", path: "outlets", icon: "mdi:locations"},
+	{link: "/contact", path: "contact us", icon: "fluent:contact-card-24-filled"},
 ];
 
 export const images: Image[] = [
 	{
-		title: "naan",
-		imageUrl: "/images/footer_naan.jpg",
+		title: "noodles",
+		imageUrl: "/images/footer_1.png",
 	},
 	{
 		title: "paratha",
-		imageUrl: "/images/footer_paratha.jpg",
+		imageUrl: "/images/footer_2.png",
 	},
 	{
-		title: "roti",
-		imageUrl: "/images/footer_roti.jpg",
+		title: "fires",
+		imageUrl: "/images/footer_3.png",
 	},
 	{
-		title: "naan",
-		imageUrl: "/images/footer_naan.jpg",
+		title: "sharbath",
+		imageUrl: "/images/footer_4.png",
 	},
 	{
-		title: "paratha",
-		imageUrl: "/images/footer_paratha.jpg",
+		title: "sizzler",
+		imageUrl: "/images/footer_5.png",
 	},
 	{
-		title: "roti",
-		imageUrl: "/images/footer_roti.jpg",
+		title: "curry",
+		imageUrl: "/images/footer_6.png",
+	},
+	{
+		title: "panner",
+		imageUrl: "/images/footer_7.png",
+	},
+	{
+		title: "lassi",
+		imageUrl: "/images/footer_8.png",
+	},
+	{
+		title: "chicken",
+		imageUrl: "/images/footer_9.png",
 	},
 ];

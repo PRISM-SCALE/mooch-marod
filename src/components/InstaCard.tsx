@@ -3,6 +3,7 @@ import Iconify from "./Iconify";
 
 type Props = {
 	image: string;
+	title: string;
 };
 
 const InstaCard = ({image}: Props) => {
@@ -13,8 +14,8 @@ const InstaCard = ({image}: Props) => {
 				backgroundImage: `url(${image})`,
 				backgroundSize: "cover",
 				backgroundPosition: "center",
-				width: 200,
-				height: 200,
+				width: 180,
+				height: 180,
 
 				// margin: {xs: "1rem", md: "2rem"},
 				// "& > *:not(:last-child)": {},

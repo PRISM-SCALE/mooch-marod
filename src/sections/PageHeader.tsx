@@ -12,12 +12,12 @@ const PageHeader = ({tagline, title}: Props) => {
 			component={"section"}
 			id="menu_header"
 			sx={{
-				background: theme.palette.custom.achar,
-				// backgroundImage: `url(/images/head_banner.png)`,
+				// background: mm_background,
+				backgroundImage: `url(/images/MM.webp)`,
 				backgroundPosition: "center center",
 				backgroundRepeat: "no-repeat",
 				backgroundSize: "cover",
-				height: "45vh",
+				height: {xs: "30vh", md: "45vh"},
 				width: "100%",
 				display: "flex",
 				justifyContent: "center",

@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Box} from "@mui/material";
+import {Box, useTheme} from "@mui/material";
 
 // MAPBOX
 import mapboxgl, {LngLatLike, Map} from "mapbox-gl";
@@ -16,7 +16,8 @@ import {MapData} from "../../types/map.types";
 mapboxgl.accessToken =
 	"pk.eyJ1Ijoic2VzaDEwMjIiLCJhIjoiY2xpYWE5aGs4MDFyYjNkbXRldWVtamozYSJ9.QYKM62CgV7gy0jFrgmQW3g";
 
-const DesktopAddress = () => {
+const MMOutlets = () => {
+	const theme = useTheme();
 	const [mapData, setMap] = useState<Map | null>();
 	const [pageIsMounted, setPageIsMounted] = useState(false);
 
@@ -38,7 +39,7 @@ const DesktopAddress = () => {
 			container: "map_container",
 			style: "mapbox://styles/mapbox/streets-v12",
 			center: [77.59041302396872, 12.980711036401607],
-			zoom: 11,
+			zoom: 10,
 			// scrollZoom: false
 		});
 
@@ -90,49 +91,44 @@ const DesktopAddress = () => {
 		});
 	}
 
-	/**
-	 * Create a Mapbox GL JS `Popup`.
-	 **/
-	// ! .setHTML(`<h3>${currentFeature?.properties?.location}</h3><h4>${currentFeature?.properties?.address}</h4>`)
-	// function createPopUp(currentFeature: Feature<Point, GeoJsonProperties>) {
-	// 	const popUps = document.getElementsByClassName("mapboxgl-popup");
-	// 	if (popUps[0]) popUps[0].remove();
-	// 	new mapboxgl.Popup({closeOnClick: false})
-	// 		.setLngLat(currentFeature.geometry.coordinates as LngLatLike)
-	// 		.addTo(mapData as Map);
-	// }
-
 	return (
-		<Box component="section" id="outlet_section" sx={{}}>
+		<Box component="section" id="outlet_section" sx={{overflow: "hidden"}}>
 			<Box
 				sx={{
-					minHeight: "155vh",
-					flex: "1",
 					display: "flex",
-					flexDirection: "column",
-					justifyContent: "center",
-					alignItems: "center",
-					position: "relative",
+					height: "100vh",
+					width: "100vw",
+					maxHeight: 500,
+					[theme.breakpoints.down("md")]: {
+						flexDirection: "column-reverse",
+						pl: 0,
+					},
 				}}
 			>
 				<Box
 					sx={{
-						position: "absolute",
-						width: {xs: "100%", lg: "40%"},
-						height: "100%",
-						top: "0",
-						left: "0",
-						overflow: "hidden",
+						overflow: "auto",
+						width: "30%",
+
+						[theme.breakpoints.down("lg")]: {
+							width: "50%",
+						},
+
+						[theme.breakpoints.down("md")]: {
+							width: "100%",
+							maxHeight: 700,
+						},
 					}}
 				>
 					{stores.features.map((currentFeature, index) => {
-						const {properties, id} = currentFeature;
+						const {properties} = currentFeature;
 						return (
 							<LocationCard
 								key={index}
 								location={properties?.location}
 								address={properties?.address}
 								phone={properties?.phone}
+								direction={properties?.direction}
 								onClick={() => flyToStore(currentFeature)}
 								time="11:30 am - 9:30 pm | Mon - Sun"
 							/>
@@ -140,20 +136,17 @@ const DesktopAddress = () => {
 					})}
 				</Box>
 
+				{/* ********************************************************** */}
+				{/* Add a marker to the map for every store listing. */}
+				{/* ********************************************************** */}
 				<Box
-					className="map"
+					className="map-container mapboxgl-map"
 					id="map"
 					sx={{
-						position: "absolute",
-						left: "40%",
-						width: "60%",
-						top: "0",
-						bottom: "0",
+						// overflow: "hidden",
+						position: "relative",
 					}}
 				>
-					{/* ********************************************************** */}
-					{/* Add a marker to the map for every store listing. */}
-					{/* ********************************************************** */}
 					{stores.features.map(({id}, index) => {
 						return (
 							<Box
@@ -162,9 +155,12 @@ const DesktopAddress = () => {
 								sx={{
 									border: "none",
 									cursor: "pointer",
-									height: "56px",
-									width: "56px",
-									backgroundImage: "url(/images/marker.png)",
+									height: 40,
+									width: 40,
+									backgroundImage: "url(/images/marker-1.webp)",
+									backgroundPosition: "center",
+									backgroundSize: "contain",
+									backgroundRepeat: "no-repeat",
 								}}
 							/>
 						);
@@ -176,4 +172,4 @@ const DesktopAddress = () => {
 	);
 };
 
-export default DesktopAddress;
+export default MMOutlets;

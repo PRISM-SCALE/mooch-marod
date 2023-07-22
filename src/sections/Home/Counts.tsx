@@ -5,17 +5,17 @@ import CountCard from "../../components/CountCard.tsx";
 
 const _data = [
 	{
-		count: 2000,
+		count: 7000,
 		character: "+",
 		text: "Parathas Served",
 	},
 	{
-		count: 95,
+		count: 86,
 		character: "%",
 		text: "Customer Comeback",
 	},
 	{
-		count: 23000,
+		count: 28000,
 		character: "+",
 		text: "People Served",
 	},

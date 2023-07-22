@@ -14,7 +14,7 @@ const GoogleReviews = () => {
 						variant="caption"
 						sx={{
 							color: theme.palette.custom.achar,
-							fontSize: {xs: "0.8rem"},
+							fontSize: {xs: "1rem"},
 							textTransform: "uppercase",
 						}}
 					>
@@ -22,7 +22,7 @@ const GoogleReviews = () => {
 					</Typography>
 					<Typography
 						variant="h1"
-						sx={{textTransform: "uppercase", fontSize: {xs: 26, md: 42}}}
+						sx={{textTransform: "uppercase", fontSize: {xs: "1.2rem", md: "2.4rem"}}}
 						gutterBottom
 					>
 						Client Reviews

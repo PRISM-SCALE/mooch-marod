@@ -8,10 +8,17 @@ import {MM_Menu} from "../../_mock/menuV2.json";
 
 // UTILS
 import {a11yProps} from "../../utils/tabs";
+import {groupGenre} from "../../utils/groupby";
+
+// HOOKS
+import {useResponsive} from "../../hooks/useResponsive";
+
+// TYPES
+import {GroupedMenuData} from "../../types/Menu.types";
 
 // COMPONENTS
 import TabPanelWrapper from "../../components/TabPanelWrapper";
-import MenuDetail from "../../components/Menu/MenuDetail";
+import MenuItemCard from "../../components/Menu/MenuItemCard";
 
 interface StyledTabsProps {
 	children?: React.ReactNode;
@@ -82,13 +89,17 @@ const StyledTab = styled((props: StyledTabProps) => <Tab disableRipple {...props
 	})
 );
 
-const NewMenu = () => {
+const MenuSection = () => {
 	const theme = useTheme();
+	const {mediumScreenAndUp} = useResponsive();
 	const [value, setValue] = useState(0);
 
 	const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
 		setValue(newValue);
 	};
+
+	// Grouped data returned from
+	const groupedMenuData: GroupedMenuData = groupGenre(MM_Menu);
 
 	// console.log(Object.entries(MM_Menu));
 
@@ -99,13 +110,17 @@ const NewMenu = () => {
 				<Box sx={{textAlign: "center"}}>
 					<Typography
 						variant="caption"
-						sx={{color: theme.palette.custom.achar, fontSize: {xs: "0.8rem"}}}
+						sx={{
+							color: theme.palette.custom.achar,
+							fontSize: {xs: "1rem"},
+							textTransform: "uppercase",
+						}}
 					>
-						PICK YOUR FAVORITES
+						A Gastronomic Delight for Every Palate
 					</Typography>
 					<Typography
 						variant="h1"
-						sx={{textTransform: "uppercase", fontSize: {xs: 26, md: 42}}}
+						sx={{textTransform: "uppercase", fontSize: {xs: "1.2rem", md: "2.4rem"}}}
 						gutterBottom
 					>
 						<Box component={"span"} fontWeight={500}>
@@ -113,7 +128,10 @@ const NewMenu = () => {
 						</Box>{" "}
 						Paratha, THE BEST IN TOWN
 					</Typography>
-					<Typography variant="body1" sx={{width: {xs: "100%", md: "50%"}, marginX: "auto"}}>
+					<Typography
+						variant="body1"
+						sx={{width: {xs: "100%", md: "50%"}, marginX: "auto", fontSize: "1rem"}}
+					>
 						Explore our delicious, one-of-a-kind menu with a massive 3000+ paratha combinations.
 					</Typography>
 				</Box>
@@ -121,7 +139,7 @@ const NewMenu = () => {
 				{/* TAB BUTTONS */}
 				<Box sx={{mt: "1rem"}}>
 					<StyledTabs value={value} onChange={handleChange}>
-						{Object.keys(MM_Menu).map((genre, index) => {
+						{Object.keys(groupedMenuData).map((genre, index) => {
 							const data = tabData[genre as keyof typeof tabData];
 							const color = theme.palette.custom[data as keyof CustomPalette];
 
@@ -161,7 +179,7 @@ const NewMenu = () => {
 				{/* MENU LIST */}
 				<Box sx={{mt: "4rem"}}>
 					{/* MAP THE MENU LIST */}
-					{Object.entries(MM_Menu).map(([genre, menuList], index) => (
+					{Object.entries(groupedMenuData).map(([genre, menuList], index) => (
 						<TabPanelWrapper key={genre} value={value} index={index}>
 							<Fade
 								in={value === index}
@@ -171,7 +189,9 @@ const NewMenu = () => {
 							>
 								<Grid container columnSpacing={4}>
 									{/* MAPPING THE MENU-LIST */}
-									<MenuDetail list={menuList.slice(0, 10)} />
+									<MenuItemCard
+										list={mediumScreenAndUp ? menuList.slice(0, 10) : menuList.slice(0, 5)}
+									/>
 								</Grid>
 							</Fade>
 						</TabPanelWrapper>
@@ -191,9 +211,10 @@ const NewMenu = () => {
 								py: ".8rem",
 								px: "2rem",
 								boxShadow: "rgba(0, 0, 0, 0.15) 0px 4px 12px",
+								fontSize: ".9rem",
 							}}
 						>
-							Show More
+							Full Menu
 						</Button>
 						<Typography variant="caption" mt={4} display={"block"}>
 							* Offers available for carry-out and delivery orders only.
@@ -205,7 +226,7 @@ const NewMenu = () => {
 	);
 };
 
-export default NewMenu;
+export default MenuSection;
 
 /*
 const items = Array.from(Array(10).keys());

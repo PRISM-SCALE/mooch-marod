@@ -1,23 +1,13 @@
-import {useState} from "react";
-import {Box, Button, Container, Grid, Typography, useTheme} from "@mui/material";
+import {Box, Container, Grid, Typography} from "@mui/material";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
+
 import {BANNER_HEIGHT} from "../../utils/common";
 import OffersCarousel from "../../components/OffersCarousel";
 import EmailSubscriptionForm from "../../components/EmailSubscriptionForm";
 
+const url = `${import.meta.env.VITE_MAILCHIMP_EMAIL_URL}`;
+
 const Offers = () => {
-	const theme = useTheme();
-	const [email, setEmail] = useState("");
-
-	const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setEmail(event.target.value);
-	};
-
-	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-		event.preventDefault();
-		// Here you can add the logic to submit the email
-		console.log(email);
-		setEmail("");
-	};
 	return (
 		<Box
 			component="section"
@@ -72,14 +62,21 @@ const Offers = () => {
 									fontSize: {xs: "1.8rem", sm: "1.5rem", md: "2rem"},
 								}}
 							>
-								Subscribe to get exciting offers <br /> and exclusive events.
+								Subscribe to get exclusive deals <br /> and Timely updates.
 							</Typography>
 
 							{/* Add Email form input */}
-							<EmailSubscriptionForm
-								email={email}
-								handleEmailChange={handleEmailChange}
-								handleSubmit={handleSubmit}
+							<MailchimpSubscribe
+								url={url}
+								render={({subscribe, status, message}) => (
+									<Box>
+										<EmailSubscriptionForm
+											status={status}
+											message={message}
+											onSubmitted={(formData) => subscribe(formData)}
+										/>
+									</Box>
+								)}
 							/>
 						</Box>
 					</Grid>

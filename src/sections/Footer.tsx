@@ -1,23 +1,17 @@
-import {Box, Container, Typography, alpha} from "@mui/material";
-import logo_white from "/icons/logo_notag_white.svg";
-import {Link} from "react-router-dom";
-import {footerLinks} from "../utils/links";
+import {Box, Container, Link, Typography, alpha, useTheme} from "@mui/material";
+
 import FooterGallery from "../components/FooterGallery";
 import {useResponsive} from "../hooks/useResponsive";
 import SocialIcons from "../components/SocialIcons";
+import {logo_with_tag} from "../utils/common";
 
-interface Styles {
-	[key: string]: string | number | object;
-}
-
-const styles: Styles = {
-	mt: 2,
-	color: "#aaa",
-	mx: "auto",
-};
+// interface Styles {
+// 	[key: string]: string | number | object;
+// }
 
 const Footer = () => {
-	const {isMediumScreen, isSmallScreen} = useResponsive();
+	const {isMediumScreen, isSmallScreen, mediumScreenAndUp} = useResponsive();
+	const theme = useTheme();
 	return (
 		<Box
 			component="footer"
@@ -28,46 +22,100 @@ const Footer = () => {
 				// backgroundSize: "cover",
 				// backgroundRepeat: "no-repeat",
 				background: "#222",
+				// background: theme.palette.custom.achar,
 			}}
 		>
 			<Container maxWidth="xl">
-				<Box textAlign={"center"}>
-					<img src={logo_white} alt="logo" width={120} height={120} />
-				</Box>
-
 				<Box
 					sx={{
 						display: "flex",
 						flexWrap: isMediumScreen !== isSmallScreen ? "wrap" : "nowrap",
-						alignItems: "center",
-						justifyContent: isMediumScreen !== isSmallScreen ? "center" : "space-between",
-						gap: 6,
-						p: isMediumScreen !== isSmallScreen ? 2 : 6,
+						justifyContent: "space-between",
+						gap: 2,
+						py: 4,
 					}}
 				>
-					<Box sx={{textAlign: "center"}}>
-						<Typography variant="h3" fontWeight={400} sx={{color: "#fff"}}>
-							Address
+					{/* LOGO */}
+					<Box>
+						<Box
+							component={"img"}
+							src={logo_with_tag}
+							alt="logo"
+							sx={{
+								width: {xs: 120, md: 180},
+								height: {xs: 120, md: 180},
+							}}
+						/>
+					</Box>
+
+					{/* WORK HOURS */}
+					<Box sx={{}}>
+						<Typography
+							variant="h3"
+							fontWeight={400}
+							sx={{color: theme.palette.custom.paratha, textTransform: "uppercase", mb: 2}}
+						>
+							Working Hours
 						</Typography>
-						<Typography sx={styles}>
-							570 8th Ave, New York,
-							<br /> NY 10018 United States
+						<Typography sx={{color: "#fff"}}>
+							Monday - Sunday <br /> 11.30 AM - 9.30 PM
 						</Typography>
 					</Box>
 
-					<Box sx={{textAlign: "center"}}>
-						<Typography variant="h3" fontWeight={400} sx={{color: "#fff"}}>
-							Opening hours
+					{/* CONTACT US */}
+					<Box>
+						<Typography
+							variant="h3"
+							fontWeight={400}
+							sx={{color: theme.palette.custom.paratha, textTransform: "uppercase", mb: 2}}
+						>
+							Contact us
 						</Typography>
-						<Typography sx={styles}>
-							Monday - Friday <br /> 10.00 AM - 11.00 PM
-						</Typography>
+
+						<Box sx={{mb: 2}}>
+							<Typography variant="caption" sx={{color: theme.palette.custom.butter}}>
+								Location:
+							</Typography>
+							<Typography variant="body1" color={"#fff"}>
+								Mooch Marod, Prasanthi Complex,
+								<br />
+								Channasandra Main Rd, Whitefield,
+								<br />
+								Bengaluru, Karnataka 560067
+							</Typography>
+						</Box>
+
+						<Box sx={{mb: 2}}>
+							<Typography variant="caption" sx={{color: theme.palette.custom.butter}}>
+								Email Address
+							</Typography>
+							<Typography variant="body1" color={"#fff"}>
+								<Link
+									href="mailto:hello@moochmarod.com"
+									sx={{cursor: "pointer", textDecoration: "none", color: "#fff"}}
+								>
+									hello@moochmarod.com
+								</Link>
+							</Typography>
+						</Box>
+
+						<Box sx={{mb: 2}}>
+							<Typography variant="caption" sx={{color: theme.palette.custom.butter}}>
+								Phone Number
+							</Typography>
+							<Typography variant="body1" color={"#fff"}>
+								<Link
+									href="tel:+91 88844 88690"
+									sx={{cursor: "pointer", textDecoration: "none", color: "#fff"}}
+								>
+									+91 (888) 448 8690
+								</Link>
+							</Typography>
+						</Box>
 					</Box>
 
 					{/* FOOTER GALLERY */}
-					<Box>
-						<FooterGallery />
-					</Box>
+					{mediumScreenAndUp ? <FooterGallery /> : null}
 				</Box>
 
 				<Box
@@ -75,11 +123,10 @@ const Footer = () => {
 						display: "flex",
 						alignItems: "center",
 						justifyContent: {xs: "center", md: "space-between"},
-						flexDirection: {xs: "column", md: "row"},
+						flexDirection: {xs: "column-reverse", md: "row"},
 
-						mb: 6,
-						pt: 4,
-						borderTop: `1px solid ${alpha("#aaa", 0.4)}`,
+						pt: 2,
+						borderTop: `1px solid ${alpha(theme.palette.custom.butter, 0.2)}`,
 					}}
 				>
 					<Box
@@ -87,31 +134,14 @@ const Footer = () => {
 							display: "flex",
 							alignItems: "center",
 							justifyContent: "space-between",
-							width: {xs: "100%", sm: "40%"},
 						}}
 					>
-						{footerLinks.map((item, index) => (
-							<Box
-								key={index}
-								component={Link}
-								to={`/${item.toLowerCase()}`}
-								sx={{
-									color: "#aaa",
-									textDecoration: "none",
-									fontSize: ".8rem",
-									transition: ".5s ease-out",
-									my: 2,
-									"&:hover": {
-										color: "white",
-									},
-								}}
-							>
-								{item}
-							</Box>
-						))}
+						<Typography sx={{color: theme.palette.custom.butter, fontSize: ".8rem"}}>
+							Copyright © 2023 PRISMSCALE. All Right Reserved
+						</Typography>
 					</Box>
 
-					<Box sx={{color: "#aaa", fontSize: ".8rem"}}>
+					<Box>
 						<SocialIcons
 							width={40}
 							height={40}
@@ -120,12 +150,6 @@ const Footer = () => {
 							sx={{marginY: 2}}
 						/>
 					</Box>
-				</Box>
-
-				<Box sx={{textAlign: "center"}}>
-					<Typography sx={{color: "#aaa", fontSize: ".8rem"}}>
-						Copyright © 2023 PRISMSCALE. All Right Reserved
-					</Typography>
 				</Box>
 			</Container>
 		</Box>

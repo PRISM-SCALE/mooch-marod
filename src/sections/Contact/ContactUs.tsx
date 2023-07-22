@@ -1,45 +1,18 @@
-import {useState} from "react";
 import {Box, Container, Typography, useTheme} from "@mui/material";
+
+// JSON DATA
+import {features} from "../../_mock/locations.json";
 import ContactUsForm from "../../components/ContactUsForm";
-import {ContactFormState, initialFormData} from "../../types/ContactForm.types";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
+import Iconify from "../../components/Iconify";
+
+const url = `${import.meta.env.VITE_MAILCHIMP_CONTACT_URL}?u=${
+	import.meta.env.VITE_MAILCHIMP_U
+}&id=${import.meta.env.VITE_MAILCHIMP_ID}`;
 
 const ContactUs = () => {
 	const theme = useTheme();
-	const [formData, setFormData] = useState<ContactFormState>(initialFormData);
 
-	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setFormData({
-			...formData,
-			[event.target.name]: event.target.value,
-		});
-	};
-
-	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-		event.preventDefault();
-		// Add your logic to handle form submission here
-
-		// Handle form submission here
-		try {
-			const response = await fetch("<YOUR_AZURE_FUNCTION_URL>", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(formData),
-			});
-
-			if (response.ok) {
-				console.log("Form data sent successfully");
-				// Reset the form
-				setFormData(initialFormData);
-			} else {
-				console.error("Error occurred while sending form data");
-			}
-		} catch (error) {
-			console.error("An error occurred:", error);
-		}
-		console.log(formData);
-	};
 	return (
 		<Box component="section" py={{xs: "2rem", md: "4rem"}}>
 			<Container maxWidth="xl">
@@ -89,29 +62,9 @@ const ContactUs = () => {
 								[theme.breakpoints.up("md")]: {gridTemplateColumns: "repeat(2, 1fr)"},
 							}}
 						>
-							<AddressDetails
-								title="TORRE ANNUNZIATA"
-								address="1614 E. Bell Rd #104. Salerno, AZ 85022"
-								phone="(989) 867-1010"
-							/>
-
-							<AddressDetails
-								title="TORRE DEL GRECO"
-								address="Vale Puglia 54 Torre Del Greco AZ 85022"
-								phone="(989) 867-1010"
-							/>
-
-							<AddressDetails
-								title="POSILLIPO"
-								address="204 E. Pizzetta Tommaso Sorrento, AZ 85022"
-								phone="(989) 867-1010"
-							/>
-
-							<AddressDetails
-								title="NAPLES MERCATO"
-								address="Corso Itali AA Naples, AZ 85022"
-								phone="(989) 867-1010"
-							/>
+							{features.map(({properties: {location, address, phone}}) => (
+								<AddressDetails title={location} address={address} phone={phone} />
+							))}
 						</Box>
 					</Box>
 
@@ -129,11 +82,22 @@ const ContactUs = () => {
 						<Typography variant="h2" color={theme.palette.custom.paratha}>
 							Ask us anything!
 						</Typography>
-						<ContactUsForm
-							formData={formData}
-							handleChange={handleChange}
-							handleSubmit={handleSubmit}
+						<MailchimpSubscribe
+							url={url}
+							render={({subscribe, status, message}) => (
+								<ContactUsForm
+									status={status}
+									message={message}
+									onSubmitted={(formData) => subscribe(formData)}
+								/>
+							)}
 						/>
+
+						{/* 
+							https://gmail.us21.list-manage.com/subscribe/post
+							u df01cb0e908fd7c2333212809
+							id 1c0a3c998b
+						*/}
 					</Box>
 				</Box>
 			</Container>
@@ -144,7 +108,7 @@ const ContactUs = () => {
 type Props = {
 	title: string;
 	address: string;
-	phone: string;
+	phone: number;
 };
 
 const AddressDetails = ({title, address, phone}: Props) => {
@@ -161,11 +125,15 @@ const AddressDetails = ({title, address, phone}: Props) => {
 			<Typography variant="body1" color="#858585" gutterBottom>
 				{address}
 			</Typography>
-			<Typography variant="body1" color="#858585" sx={{fontWeight: 500}} gutterBottom>
-				{phone}
-			</Typography>
+			<Box sx={{display: "flex", alignItems: "center", mb: 2, gap: 2}}>
+				<Iconify icon="ph:phone-fill" size={24} />
+				<Typography>+91 {phone}</Typography>
+			</Box>
 
-			<Typography sx={{mt: 2}}>Open today from 10AM - 11PM</Typography>
+			<Box sx={{display: "flex", alignItems: "center", gap: 2}}>
+				<Iconify icon="charm:clock" size={24} />
+				<Typography>11:30 am - 9:30 pm | Mon - Sun</Typography>
+			</Box>
 		</Box>
 	);
 };
