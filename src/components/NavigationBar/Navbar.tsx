@@ -120,7 +120,7 @@ export default function Navbar(props: Props) {
 						{isMediumScreen !== isSmallScreen ? null : (
 							<Button
 								component={Link}
-								to="https://wa.link/hfy0aw"
+								to="https://wa.link/mu962g"
 								target="_blank"
 								sx={{
 									backgroundColor: theme.palette.custom.paratha,

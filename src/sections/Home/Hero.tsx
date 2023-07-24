@@ -196,7 +196,7 @@ const Hero = () => {
 						<Box component={animated.div} style={buttonProps}>
 							<Button
 								component={Link}
-								to="https://wa.link/hfy0aw"
+								to="https://wa.link/mu962g"
 								target="_blank"
 								sx={{
 									backgroundColor: theme.palette.custom.paratha,
