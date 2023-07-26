@@ -497,7 +497,8 @@
 			"name": "Tandoori Chicken",
 			"price": [
 				{"rate": 399, "type": "Sizzler"},
-				{"rate": 429, "type": "Charcoal Grilled (Half/Full)"}
+				{"rate": 279, "type": "Charcoal Grilled Half"},
+				{"rate": 429, "type": "Charcoal Grilled Full"}
 			],
 			"description": "Delicious Tandoori chicken marinated with aromatic spices.",
 			"isVeg": false,
@@ -509,7 +510,8 @@
 			"name": "Afghani Chicken",
 			"price": [
 				{"rate": 399, "type": "Sizzler"},
-				{"rate": 429, "type": "Charcoal Grilled (Half/Full)"}
+				{"rate": 279, "type": "Charcoal Grilled Half"},
+				{"rate": 429, "type": "Charcoal Grilled Full"}
 			],
 			"description": "Tender and flavorful Afghani-style grilled chicken.",
 			"isVeg": false,
@@ -533,7 +535,8 @@
 			"name": "Tangadi Kebab",
 			"price": [
 				{"rate": 399, "type": "Sizzler"},
-				{"rate": 429, "type": "Charcoal Grilled (Half/Full)"}
+				{"rate": 279, "type": "Charcoal Grilled Half"},
+				{"rate": 429, "type": "Charcoal Grilled Full"}
 			],
 			"description": "Juicy and tender Tangadi Kebab cooked to perfection.",
 			"isVeg": false,
@@ -545,7 +548,8 @@
 			"name": "Chicken kali Mirch",
 			"price": [
 				{"rate": 399, "type": "Sizzler"},
-				{"rate": 429, "type": "Charcoal Grilled (Half/Full)"}
+				{"rate": 279, "type": "Charcoal Grilled Half"},
+				{"rate": 429, "type": "Charcoal Grilled Full"}
 			],
 			"description": "Chicken marinated with black pepper and aromatic spices.",
 			"isVeg": false,
@@ -569,7 +573,8 @@
 			"name": "Chicken Angara",
 			"price": [
 				{"rate": 399, "type": "Sizzler"},
-				{"rate": 429, "type": "Charcoal Grilled (Half/Full)"}
+				{"rate": 279, "type": "Charcoal Grilled Half"},
+				{"rate": 429, "type": "Charcoal Grilled Full"}
 			],
 			"description": "Spicy and smoky Chicken Angara grilled to perfection.",
 			"isVeg": false,
