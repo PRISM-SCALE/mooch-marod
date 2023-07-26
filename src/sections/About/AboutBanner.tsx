@@ -7,7 +7,7 @@ const AboutBanner = () => {
 	return (
 		<Box
 			component={ParallaxBanner}
-			layers={[{image: "/images/city.jpg", speed: -20}]}
+			layers={[{image: "/images/food_banner.webp", speed: -20}]}
 			sx={{height: 460}}
 		>
 			<Container maxWidth="xl" sx={{position: "relative"}}>
@@ -32,8 +32,8 @@ const AboutBanner = () => {
 						fontWeight={600}
 						gutterBottom
 					>
-						HE RUNS THE PLACE SOME MIGHT <br />
-						SAY IT WAS HIS DESTINY.
+						Good food is the foundation <br />
+						of genuine happiness.
 					</Typography>
 					{/* <Typography
 						variant="body1"

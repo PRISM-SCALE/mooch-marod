@@ -58,7 +58,9 @@ const Footer = () => {
 							Working Hours
 						</Typography>
 						<Typography sx={{color: "#fff"}}>
-							Monday - Sunday <br /> 11.30 AM - 9.30 PM
+							Monday - Sunday <br />
+							<strong style={{color: theme.palette.custom.paratha}}>11:30 - 16:30</strong> and{" "}
+							<strong style={{color: theme.palette.custom.paratha}}>18:30 - 23:30</strong>
 						</Typography>
 					</Box>
 
@@ -126,6 +128,7 @@ const Footer = () => {
 						flexDirection: {xs: "column-reverse", md: "row"},
 
 						pt: 2,
+						pb: 8,
 						borderTop: `1px solid ${alpha(theme.palette.custom.butter, 0.2)}`,
 					}}
 				>
@@ -134,10 +137,15 @@ const Footer = () => {
 							display: "flex",
 							alignItems: "center",
 							justifyContent: "space-between",
+
+							[theme.breakpoints.down("sm")]: {
+								textAlign: "center",
+							},
 						}}
 					>
 						<Typography sx={{color: theme.palette.custom.butter, fontSize: ".8rem"}}>
-							Copyright © 2023 PRISMSCALE. All Right Reserved
+							Copyright 2023 Mooch Marod. All Right Reserved. | Designed By PrismScale Private
+							Limited
 						</Typography>
 					</Box>
 

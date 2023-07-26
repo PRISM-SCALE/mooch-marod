@@ -44,8 +44,7 @@ const ContactUs = () => {
 						</Typography>
 
 						<Typography variant="body1" sx={{fontSize: {xs: 14, md: 18}, my: 2}} gutterBottom>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-							incididunt ut labore et dolore.
+							We are at your service. Call us to book tables or for your valuable suggestions.
 						</Typography>
 
 						{/* ---------------------------------------------------- */}
@@ -132,7 +131,10 @@ const AddressDetails = ({title, address, phone}: Props) => {
 
 			<Box sx={{display: "flex", alignItems: "center", gap: 2}}>
 				<Iconify icon="charm:clock" size={24} />
-				<Typography>11:30 am - 9:30 pm | Mon - Sun</Typography>
+				<Typography>
+					<strong style={{color: theme.palette.custom.paratha}}>11:30 - 16:30</strong> and{" "}
+					<strong style={{color: theme.palette.custom.paratha}}>18:30 - 23:30</strong> | Mon - Sun
+				</Typography>
 			</Box>
 		</Box>
 	);

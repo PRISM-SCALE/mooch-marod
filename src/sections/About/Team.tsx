@@ -35,10 +35,10 @@ const Team = () => {
 						gridGap: "20px",
 					}}
 				>
-					<ChefCard chefName="Sofia Richie" chefTitle="Chef" src="/images/chef1.png" />
-					<ChefCard chefName="Emilia Clarke" chefTitle="Assistant Chef" src="/images/chef2.png" />
-					<ChefCard chefName="Harvey Dent" chefTitle="Chef" src="/images/chef3.png" />
-					<ChefCard chefName="Sam Claflin" chefTitle="Assistant Chef" src="/images/chef4.png" />
+					<ChefCard chefName="Sofia" chefTitle="Chef" src="/images/chef1.png" />
+					<ChefCard chefName="Emilia" chefTitle="Assistant Chef" src="/images/chef2.png" />
+					<ChefCard chefName="Harvey" chefTitle="Chef" src="/images/chef3.png" />
+					<ChefCard chefName="Sam" chefTitle="Assistant Chef" src="/images/chef4.png" />
 				</Box>
 			</Container>
 		</Box>

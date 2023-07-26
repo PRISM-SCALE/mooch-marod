@@ -3,9 +3,9 @@
 		{
 			"name": "Aloo",
 			"price": [
-				{"type": "queen", "rate": 329, "inch": 15},
-				{"type": "king", "rate": 489, "inch": 20},
-				{"type": "emperor", "rate": 589, "inch": 24}
+				{"type": "queen", "rate": 349, "inch": 15},
+				{"type": "king", "rate": 499, "inch": 20},
+				{"type": "emperor", "rate": 599, "inch": 24}
 			],
 			"description": "A classic paratha filled with delicious mashed potatoes.",
 			"category": "Classic Parathas",
@@ -17,9 +17,9 @@
 		{
 			"name": "Aloo Onion",
 			"price": [
-				{"type": "queen", "rate": 329, "inch": 15},
-				{"type": "king", "rate": 489, "inch": 20},
-				{"type": "emperor", "rate": 589, "inch": 24}
+				{"type": "queen", "rate": 349, "inch": 15},
+				{"type": "king", "rate": 499, "inch": 20},
+				{"type": "emperor", "rate": 599, "inch": 24}
 			],
 			"description": "A flavorful paratha filled with aloo and onions.",
 			"category": "Classic Parathas",
@@ -31,9 +31,9 @@
 		{
 			"name": "Aloo Gobhi Onion",
 			"price": [
-				{"type": "queen", "rate": 329, "inch": 15},
-				{"type": "king", "rate": 489, "inch": 20},
-				{"type": "emperor", "rate": 589, "inch": 24}
+				{"type": "queen", "rate": 349, "inch": 15},
+				{"type": "king", "rate": 499, "inch": 20},
+				{"type": "emperor", "rate": 599, "inch": 24}
 			],
 			"description": "A delightful paratha filled with aloo, gobhi, and onions.",
 			"category": "Classic Parathas",
@@ -45,9 +45,9 @@
 		{
 			"name": "Gobhi",
 			"price": [
-				{"type": "queen", "rate": 329, "inch": 15},
-				{"type": "king", "rate": 489, "inch": 20},
-				{"type": "emperor", "rate": 589, "inch": 24}
+				{"type": "queen", "rate": 349, "inch": 15},
+				{"type": "king", "rate": 499, "inch": 20},
+				{"type": "emperor", "rate": 599, "inch": 24}
 			],
 			"description": "A classic paratha filled with the goodness of fresh cauliflower.",
 			"category": "Classic Parathas",
@@ -59,9 +59,9 @@
 		{
 			"name": "Gobhi Onion",
 			"price": [
-				{"type": "queen", "rate": 329, "inch": 15},
-				{"type": "king", "rate": 489, "inch": 20},
-				{"type": "emperor", "rate": 589, "inch": 24}
+				{"type": "queen", "rate": 349, "inch": 15},
+				{"type": "king", "rate": 499, "inch": 20},
+				{"type": "emperor", "rate": 599, "inch": 24}
 			],
 			"description": "A flavorful paratha filled with gobhi and onions.",
 			"category": "Classic Parathas",
@@ -73,9 +73,9 @@
 		{
 			"name": "Mooli",
 			"price": [
-				{"type": "queen", "rate": 329, "inch": 15},
-				{"type": "king", "rate": 489, "inch": 20},
-				{"type": "emperor", "rate": 589, "inch": 24}
+				{"type": "queen", "rate": 349, "inch": 15},
+				{"type": "king", "rate": 499, "inch": 20},
+				{"type": "emperor", "rate": 599, "inch": 24}
 			],
 			"description": "A unique paratha filled with the goodness of radish.",
 			"category": "Classic Parathas",
@@ -87,9 +87,9 @@
 		{
 			"name": "Mooli Onion",
 			"price": [
-				{"type": "queen", "rate": 329, "inch": 15},
-				{"type": "king", "rate": 489, "inch": 20},
-				{"type": "emperor", "rate": 589, "inch": 24}
+				{"type": "queen", "rate": 349, "inch": 15},
+				{"type": "king", "rate": 499, "inch": 20},
+				{"type": "emperor", "rate": 599, "inch": 24}
 			],
 			"description": "A unique paratha filled with the goodness of radish and onions.",
 			"category": "Classic Parathas",
@@ -101,9 +101,9 @@
 		{
 			"name": "Green Peas",
 			"price": [
-				{"type": "queen", "rate": 349, "inch": 15},
-				{"type": "king", "rate": 499, "inch": 20},
-				{"type": "emperor", "rate": 599, "inch": 24}
+				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "king", "rate": 529, "inch": 20},
+				{"type": "emperor", "rate": 639, "inch": 24}
 			],
 			"description": "A delightful paratha filled with the goodness of green peas.",
 			"category": "Delight Parathas",
@@ -115,9 +115,9 @@
 		{
 			"name": "Baby corn",
 			"price": [
-				{"type": "queen", "rate": 349, "inch": 15},
-				{"type": "king", "rate": 499, "inch": 20},
-				{"type": "emperor", "rate": 599, "inch": 24}
+				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "king", "rate": 529, "inch": 20},
+				{"type": "emperor", "rate": 639, "inch": 24}
 			],
 			"description": "A flavorful paratha with the crunch of baby corn.",
 			"category": "Delight Parathas",
@@ -129,9 +129,9 @@
 		{
 			"name": "Methi Aloo",
 			"price": [
-				{"type": "queen", "rate": 349, "inch": 15},
-				{"type": "king", "rate": 499, "inch": 20},
-				{"type": "emperor", "rate": 599, "inch": 24}
+				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "king", "rate": 529, "inch": 20},
+				{"type": "emperor", "rate": 639, "inch": 24}
 			],
 			"description": "A delicious combination of fenugreek leaves and potatoes in a paratha.",
 			"category": "Delight Parathas",
@@ -143,9 +143,9 @@
 		{
 			"name": "Palak Aloo",
 			"price": [
-				{"type": "queen", "rate": 349, "inch": 15},
-				{"type": "king", "rate": 499, "inch": 20},
-				{"type": "emperor", "rate": 599, "inch": 24}
+				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "king", "rate": 529, "inch": 20},
+				{"type": "emperor", "rate": 639, "inch": 24}
 			],
 			"description": "A nutritious paratha filled with spinach and potatoes.",
 			"category": "Delight Parathas",
@@ -157,9 +157,9 @@
 		{
 			"name": "Baby corn Onion",
 			"price": [
-				{"type": "queen", "rate": 349, "inch": 15},
-				{"type": "king", "rate": 499, "inch": 20},
-				{"type": "emperor", "rate": 599, "inch": 24}
+				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "king", "rate": 529, "inch": 20},
+				{"type": "emperor", "rate": 639, "inch": 24}
 			],
 			"description": "A delectable paratha filled with baby corn and onions.",
 			"category": "Delight Parathas",
@@ -171,9 +171,9 @@
 		{
 			"name": "Green Peas Onion",
 			"price": [
-				{"type": "queen", "rate": 349, "inch": 15},
-				{"type": "king", "rate": 499, "inch": 20},
-				{"type": "emperor", "rate": 599, "inch": 24}
+				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "king", "rate": 529, "inch": 20},
+				{"type": "emperor", "rate": 639, "inch": 24}
 			],
 			"description": "A flavorful paratha with the combination of green peas and onions.",
 			"category": "Delight Parathas",
@@ -185,9 +185,9 @@
 		{
 			"name": "Aloo Bell pepper",
 			"price": [
-				{"type": "queen", "rate": 349, "inch": 15},
-				{"type": "king", "rate": 499, "inch": 20},
-				{"type": "emperor", "rate": 599, "inch": 24}
+				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "king", "rate": 529, "inch": 20},
+				{"type": "emperor", "rate": 639, "inch": 24}
 			],
 			"description": "A tasty paratha filled with aloo and bell peppers.",
 			"category": "Delight Parathas",
@@ -199,12 +199,12 @@
 		{
 			"name": "Mixed Veg",
 			"price": [
-				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "queen", "rate": 399, "inch": 15},
 				{"type": "king", "rate": 529, "inch": 20},
 				{"type": "emperor", "rate": 619, "inch": 24}
 			],
 			"description": "A delightful combination of mixed vegetables in a paratha.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": true,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -213,12 +213,12 @@
 		{
 			"name": "Paneer",
 			"price": [
-				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "queen", "rate": 399, "inch": 15},
 				{"type": "king", "rate": 529, "inch": 20},
 				{"type": "emperor", "rate": 619, "inch": 24}
 			],
 			"description": "A classic paratha stuffed with flavorful paneer.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": true,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -227,12 +227,12 @@
 		{
 			"name": "Palak Paneer",
 			"price": [
-				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "queen", "rate": 399, "inch": 15},
 				{"type": "king", "rate": 529, "inch": 20},
 				{"type": "emperor", "rate": 619, "inch": 24}
 			],
 			"description": "Healthy and tasty paratha filled with spinach and paneer.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": true,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -241,12 +241,12 @@
 		{
 			"name": "Paneer Onion",
 			"price": [
-				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "queen", "rate": 399, "inch": 15},
 				{"type": "king", "rate": 529, "inch": 20},
 				{"type": "emperor", "rate": 619, "inch": 24}
 			],
 			"description": "A lip-smacking combination of paneer and onions in a paratha.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": true,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -255,12 +255,12 @@
 		{
 			"name": "Gobhi Paneer",
 			"price": [
-				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "queen", "rate": 399, "inch": 15},
 				{"type": "king", "rate": 529, "inch": 20},
 				{"type": "emperor", "rate": 619, "inch": 24}
 			],
 			"description": "A delicious blend of cauliflower and paneer in a paratha.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": true,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -269,12 +269,12 @@
 		{
 			"name": "Methi Paneer",
 			"price": [
-				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "queen", "rate": 399, "inch": 15},
 				{"type": "king", "rate": 529, "inch": 20},
 				{"type": "emperor", "rate": 619, "inch": 24}
 			],
 			"description": "A flavorful paratha with a combination of fenugreek leaves and paneer.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": true,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -283,12 +283,12 @@
 		{
 			"name": "Carrot Paneer",
 			"price": [
-				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "queen", "rate": 399, "inch": 15},
 				{"type": "king", "rate": 529, "inch": 20},
 				{"type": "emperor", "rate": 619, "inch": 24}
 			],
 			"description": "A unique paratha filled with grated carrots and paneer.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": true,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -297,12 +297,12 @@
 		{
 			"name": "Aloo Paneer",
 			"price": [
-				{"type": "queen", "rate": 369, "inch": 15},
+				{"type": "queen", "rate": 399, "inch": 15},
 				{"type": "king", "rate": 529, "inch": 20},
 				{"type": "emperor", "rate": 619, "inch": 24}
 			],
 			"description": "A delightful combination of potatoes and paneer in a paratha.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": true,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -374,7 +374,7 @@
 				{"type": "emperor", "rate": 999, "inch": 24}
 			],
 			"description": "Delicious paratha with chicken keema and onions.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": false,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -388,7 +388,7 @@
 				{"type": "emperor", "rate": 999, "inch": 24}
 			],
 			"description": "Savory paratha filled with chicken keema and bell peppers.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": false,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -402,7 +402,7 @@
 				{"type": "emperor", "rate": 999, "inch": 24}
 			],
 			"description": "Flavorful paratha stuffed with chicken keema and paneer.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": false,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -416,7 +416,7 @@
 				{"type": "emperor", "rate": 999, "inch": 24}
 			],
 			"description": "Spicy paratha with angara chicken keema and onions.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": false,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -430,7 +430,7 @@
 				{"type": "emperor", "rate": 999, "inch": 24}
 			],
 			"description": "Fiery paratha filled with angara chicken keema and paneer.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": false,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -444,7 +444,7 @@
 				{"type": "emperor", "rate": 999, "inch": 24}
 			],
 			"description": "Hot and tangy paratha stuffed with angara chicken keema and bell peppers.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": false,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -458,7 +458,7 @@
 				{"type": "emperor", "rate": 999, "inch": 24}
 			],
 			"description": "Rich and creamy paratha with afghani chicken keema and onions.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": false,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -472,7 +472,7 @@
 				{"type": "emperor", "rate": 999, "inch": 24}
 			],
 			"description": "Creamy and flavorful paratha stuffed with afghani chicken keema and paneer.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": false,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -486,7 +486,7 @@
 				{"type": "emperor", "rate": 999, "inch": 24}
 			],
 			"description": "Mildly spicy paratha filled with afghani chicken keema and bell peppers.",
-			"category": "Signature Parathas",
+			"category": "Supreme Parathas",
 			"isVeg": false,
 			"categoryPriority": 3,
 			"priority": 1,
@@ -497,7 +497,7 @@
 			"name": "Tandoori Chicken",
 			"price": [
 				{"rate": 399, "type": "Sizzler"},
-				{"rate": 279, "type": "Charcoal Grilled"}
+				{"rate": 429, "type": "Charcoal Grilled (Half/Full)"}
 			],
 			"description": "Delicious Tandoori chicken marinated with aromatic spices.",
 			"isVeg": false,
@@ -509,7 +509,7 @@
 			"name": "Afghani Chicken",
 			"price": [
 				{"rate": 399, "type": "Sizzler"},
-				{"rate": 279, "type": "Charcoal Grilled"}
+				{"rate": 429, "type": "Charcoal Grilled (Half/Full)"}
 			],
 			"description": "Tender and flavorful Afghani-style grilled chicken.",
 			"isVeg": false,
@@ -521,7 +521,7 @@
 			"name": "Malai Tikka",
 			"price": [
 				{"rate": 399, "type": "Sizzler"},
-				{"rate": 290, "type": "Charcoal Grilled"}
+				{"rate": 290, "type": "Charcoal Grilled (Half/Full)"}
 			],
 			"description": "Creamy and succulent Malai Tikka with a hint of spices.",
 			"isVeg": false,
@@ -533,7 +533,7 @@
 			"name": "Tangadi Kebab",
 			"price": [
 				{"rate": 399, "type": "Sizzler"},
-				{"rate": 279, "type": "Charcoal Grilled"}
+				{"rate": 429, "type": "Charcoal Grilled (Half/Full)"}
 			],
 			"description": "Juicy and tender Tangadi Kebab cooked to perfection.",
 			"isVeg": false,
@@ -545,7 +545,7 @@
 			"name": "Chicken kali Mirch",
 			"price": [
 				{"rate": 399, "type": "Sizzler"},
-				{"rate": 279, "type": "Charcoal Grilled"}
+				{"rate": 429, "type": "Charcoal Grilled (Half/Full)"}
 			],
 			"description": "Chicken marinated with black pepper and aromatic spices.",
 			"isVeg": false,
@@ -569,7 +569,7 @@
 			"name": "Chicken Angara",
 			"price": [
 				{"rate": 399, "type": "Sizzler"},
-				{"rate": 279, "type": "Charcoal Grilled"}
+				{"rate": 429, "type": "Charcoal Grilled (Half/Full)"}
 			],
 			"description": "Spicy and smoky Chicken Angara grilled to perfection.",
 			"isVeg": false,

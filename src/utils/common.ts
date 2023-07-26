@@ -7,6 +7,8 @@ export const logo_butter = "/images/mm_logo_butter.webp";
 
 export const logo_with_tag = "/images/mm_logo_white.png"; // WHITE
 
+export const fk_logo = "/images/fk_logo.webp";
+
 export const fk_background =
 	"linear-gradient(359.53deg, #000000 0.43%, #242424 53.13%, #000000 96.53%), url(/images/brick_wall.png)";
 

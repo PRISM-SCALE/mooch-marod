@@ -32,11 +32,9 @@ const BrandingCard = ({logo, background, alt, path, sx}: Props) => {
 				alt={alt}
 				sx={{
 					filter: "drop-shadow(30px 30px 20px rgba(0, 0, 0, 0.15))",
-					width: 350,
-					height: 350,
+					height: 450,
 
 					[theme.breakpoints.down("md")]: {
-						width: 200,
 						height: 200,
 					},
 				}}
