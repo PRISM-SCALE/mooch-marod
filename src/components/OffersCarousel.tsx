@@ -10,25 +10,6 @@ interface SliderSettings extends Settings {
 
 // type Props = {};
 
-const offerBanners = [
-	{
-		id: 1,
-		image: "/images/offers_banner.webp",
-	},
-	{
-		id: 2,
-		image: "/images/offers_banner.webp",
-	},
-	{
-		id: 3,
-		image: "/images/offers_banner.webp",
-	},
-	{
-		id: 4,
-		image: "/images/offers_banner.webp",
-	},
-];
-
 const SlideWrapper = styled(Slider)(({theme}) => ({
 	[theme.breakpoints.up("xs")]: {},
 }));
@@ -44,6 +25,13 @@ const Slide = styled(Box)(({theme}) => ({
 }));
 
 const OffersCarousel = () => {
+	const offerBanners = [
+		{
+			id: 1,
+			image: "/images/offers_banner.webp",
+		},
+	];
+
 	const settings: SliderSettings = {
 		dots: false,
 		infinite: true,
@@ -55,6 +43,7 @@ const OffersCarousel = () => {
 		arrows: false,
 		autoplay: true,
 	};
+
 	return (
 		<SlideWrapper {...settings}>
 			{offerBanners.map(({id, image}) => (

@@ -24,7 +24,7 @@ const Offers = () => {
 					<Grid item xs={12} md={6} lg={3}>
 						<Box
 							sx={{
-								backgroundImage: `url(/images/offer_sq_temp_1.webp)`,
+								backgroundImage: `url(/images/2.webp)`,
 								height: BANNER_HEIGHT,
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
@@ -34,7 +34,7 @@ const Offers = () => {
 					<Grid item xs={12} md={6} lg={3}>
 						<Box
 							sx={{
-								backgroundImage: `url(/images/offer_sq_temp_2.webp)`,
+								backgroundImage: `url(/images/3.webp)`,
 								height: BANNER_HEIGHT,
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
@@ -45,7 +45,7 @@ const Offers = () => {
 					<Grid item xs={12} lg={6}>
 						<Box
 							sx={{
-								backgroundImage: `url(/images/offer_email_subs.jpeg)`,
+								backgroundImage: `url(/images/offer_email_subs.webp)`,
 								height: {xs: "auto", md: BANNER_HEIGHT},
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",

@@ -5,7 +5,7 @@ const ParathaBanner = () => {
 	return (
 		<Box
 			component={ParallaxBanner}
-			layers={[{image: "/images/preview_paratha_banner.jpeg", speed: -15}]}
+			layers={[{image: "/images/preview_paratha_banner.webp", speed: -15}]}
 			sx={{
 				height: {xs: 320, lg: 560},
 				"& div": {
