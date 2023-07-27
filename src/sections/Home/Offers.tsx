@@ -4,10 +4,13 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 import {BANNER_HEIGHT} from "../../utils/common";
 import OffersCarousel from "../../components/OffersCarousel";
 import EmailSubscriptionForm from "../../components/EmailSubscriptionForm";
+import {useResponsive} from "../../hooks/useResponsive";
 
 const url = `${import.meta.env.VITE_MAILCHIMP_EMAIL_URL}`;
 
 const Offers = () => {
+	const {smallScreenAndUp} = useResponsive();
+
 	return (
 		<Box
 			component="section"
@@ -17,9 +20,11 @@ const Offers = () => {
 		>
 			<Container maxWidth="xl">
 				<Grid container spacing={2}>
-					<Grid item xs={12}>
-						<OffersCarousel />
-					</Grid>
+					{smallScreenAndUp && (
+						<Grid item xs={12}>
+							<OffersCarousel />
+						</Grid>
+					)}
 
 					<Grid item xs={12} md={6} lg={3}>
 						<Box
