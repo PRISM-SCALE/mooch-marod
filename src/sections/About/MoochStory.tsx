@@ -96,19 +96,11 @@ const MoochStory = () => {
 					{/* Portrait Image */}
 					<Box sx={{width: {xs: "100%", md: "25%"}}}>
 						{(largeScreenAndUp || isLargeScreen) && (
-							<ResponsiveImage
-								src={"https://placehold.co/370x600?text=MoochMarod Portrait"}
-								alt="portrait-image"
-								width="380px"
-							/>
+							<ResponsiveImage src={"/images/portrait.webp"} alt="portrait-image" width="380px" />
 						)}
 
 						{(isSmallScreen || isMediumScreen) && (
-							<ResponsiveImage
-								src={"https://placehold.co/600x400?text=MoochMarod Portrait"}
-								alt="portrait-image"
-								width="100%"
-							/>
+							<ResponsiveImage src={"/images/landscape.webp"} alt="portrait-image" width="100%" />
 						)}
 					</Box>
 				</Box>
