@@ -1,4 +1,4 @@
-import {Box, Container, Grid, Typography, useTheme} from "@mui/material";
+import {Box, Container, Grid, Typography} from "@mui/material";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 import {BANNER_HEIGHT} from "../../utils/common";
@@ -10,7 +10,6 @@ const url = `${import.meta.env.VITE_MAILCHIMP_EMAIL_URL}`;
 
 const Offers = () => {
 	const {smallScreenAndUp} = useResponsive();
-	const theme = useTheme();
 
 	return (
 		<Box
