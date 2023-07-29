@@ -1,4 +1,4 @@
-import {Box, Container, Grid, Typography} from "@mui/material";
+import {Box, Container, Grid, Typography, useTheme} from "@mui/material";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 import {BANNER_HEIGHT} from "../../utils/common";
@@ -10,6 +10,7 @@ const url = `${import.meta.env.VITE_MAILCHIMP_EMAIL_URL}`;
 
 const Offers = () => {
 	const {smallScreenAndUp} = useResponsive();
+	const theme = useTheme();
 
 	return (
 		<Box
@@ -50,7 +51,7 @@ const Offers = () => {
 					<Grid item xs={12} lg={6}>
 						<Box
 							sx={{
-								backgroundImage: `url(/images/offer_email_subs.webp)`,
+								backgroundImage: `linear-gradient(to right bottom, rgba(11, 1, 18, 0.4), rgba(11, 1, 18, 0.7)), url(/images/food_banner.webp)`,
 								height: {xs: "auto", md: BANNER_HEIGHT},
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
@@ -60,7 +61,7 @@ const Offers = () => {
 							<Typography
 								variant="h3"
 								sx={{
-									color: "white",
+									color: "#fff",
 									pt: "1rem",
 									pl: "1rem",
 									fontWeight: 600,
