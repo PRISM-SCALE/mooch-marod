@@ -200,8 +200,8 @@
 			"name": "Mixed Veg",
 			"price": [
 				{"type": "queen", "rate": 399, "inch": 15},
-				{"type": "king", "rate": 529, "inch": 20},
-				{"type": "emperor", "rate": 619, "inch": 24}
+				{"type": "king", "rate": 569, "inch": 20},
+				{"type": "emperor", "rate": 699, "inch": 24}
 			],
 			"description": "A delightful combination of mixed vegetables in a paratha.",
 			"category": "Supreme Parathas",
@@ -214,8 +214,8 @@
 			"name": "Paneer",
 			"price": [
 				{"type": "queen", "rate": 399, "inch": 15},
-				{"type": "king", "rate": 529, "inch": 20},
-				{"type": "emperor", "rate": 619, "inch": 24}
+				{"type": "king", "rate": 569, "inch": 20},
+				{"type": "emperor", "rate": 699, "inch": 24}
 			],
 			"description": "A classic paratha stuffed with flavorful paneer.",
 			"category": "Supreme Parathas",
@@ -228,8 +228,8 @@
 			"name": "Palak Paneer",
 			"price": [
 				{"type": "queen", "rate": 399, "inch": 15},
-				{"type": "king", "rate": 529, "inch": 20},
-				{"type": "emperor", "rate": 619, "inch": 24}
+				{"type": "king", "rate": 569, "inch": 20},
+				{"type": "emperor", "rate": 699, "inch": 24}
 			],
 			"description": "Healthy and tasty paratha filled with spinach and paneer.",
 			"category": "Supreme Parathas",
@@ -242,8 +242,8 @@
 			"name": "Paneer Onion",
 			"price": [
 				{"type": "queen", "rate": 399, "inch": 15},
-				{"type": "king", "rate": 529, "inch": 20},
-				{"type": "emperor", "rate": 619, "inch": 24}
+				{"type": "king", "rate": 569, "inch": 20},
+				{"type": "emperor", "rate": 699, "inch": 24}
 			],
 			"description": "A lip-smacking combination of paneer and onions in a paratha.",
 			"category": "Supreme Parathas",
@@ -256,8 +256,8 @@
 			"name": "Gobhi Paneer",
 			"price": [
 				{"type": "queen", "rate": 399, "inch": 15},
-				{"type": "king", "rate": 529, "inch": 20},
-				{"type": "emperor", "rate": 619, "inch": 24}
+				{"type": "king", "rate": 569, "inch": 20},
+				{"type": "emperor", "rate": 699, "inch": 24}
 			],
 			"description": "A delicious blend of cauliflower and paneer in a paratha.",
 			"category": "Supreme Parathas",
@@ -270,8 +270,8 @@
 			"name": "Methi Paneer",
 			"price": [
 				{"type": "queen", "rate": 399, "inch": 15},
-				{"type": "king", "rate": 529, "inch": 20},
-				{"type": "emperor", "rate": 619, "inch": 24}
+				{"type": "king", "rate": 569, "inch": 20},
+				{"type": "emperor", "rate": 699, "inch": 24}
 			],
 			"description": "A flavorful paratha with a combination of fenugreek leaves and paneer.",
 			"category": "Supreme Parathas",
@@ -284,8 +284,8 @@
 			"name": "Carrot Paneer",
 			"price": [
 				{"type": "queen", "rate": 399, "inch": 15},
-				{"type": "king", "rate": 529, "inch": 20},
-				{"type": "emperor", "rate": 619, "inch": 24}
+				{"type": "king", "rate": 569, "inch": 20},
+				{"type": "emperor", "rate": 699, "inch": 24}
 			],
 			"description": "A unique paratha filled with grated carrots and paneer.",
 			"category": "Supreme Parathas",
@@ -298,8 +298,8 @@
 			"name": "Aloo Paneer",
 			"price": [
 				{"type": "queen", "rate": 399, "inch": 15},
-				{"type": "king", "rate": 529, "inch": 20},
-				{"type": "emperor", "rate": 619, "inch": 24}
+				{"type": "king", "rate": 569, "inch": 20},
+				{"type": "emperor", "rate": 699, "inch": 24}
 			],
 			"description": "A delightful combination of potatoes and paneer in a paratha.",
 			"category": "Supreme Parathas",
@@ -313,8 +313,8 @@
 			"name": "Green Peas Paneer",
 			"price": [
 				{"type": "queen", "rate": 389, "inch": 15},
-				{"type": "king", "rate": 549, "inch": 20},
-				{"type": "emperor", "rate": 639, "inch": 24}
+				{"type": "king", "rate": 569, "inch": 20},
+				{"type": "emperor", "rate": 699, "inch": 24}
 			],
 			"description": "Delicious paratha with a combination of green peas and paneer.",
 			"category": "Supreme Parathas",
@@ -327,8 +327,8 @@
 			"name": "Bell Pepper Paneer",
 			"price": [
 				{"type": "queen", "rate": 389, "inch": 15},
-				{"type": "king", "rate": 549, "inch": 20},
-				{"type": "emperor", "rate": 639, "inch": 24}
+				{"type": "king", "rate": 569, "inch": 20},
+				{"type": "emperor", "rate": 699, "inch": 24}
 			],
 			"description": "Flavorful paratha filled with bell peppers and paneer.",
 			"category": "Supreme Parathas",
@@ -341,8 +341,8 @@
 			"name": "Paneer Sweet Corn",
 			"price": [
 				{"type": "queen", "rate": 389, "inch": 15},
-				{"type": "king", "rate": 549, "inch": 20},
-				{"type": "emperor", "rate": 639, "inch": 24}
+				{"type": "king", "rate": 569, "inch": 20},
+				{"type": "emperor", "rate": 699, "inch": 24}
 			],
 			"description": "Mouth-watering paratha stuffed with paneer and sweet corn.",
 			"category": "Supreme Parathas",
@@ -355,8 +355,8 @@
 			"name": "Paneer Mushroom",
 			"price": [
 				{"type": "queen", "rate": 389, "inch": 15},
-				{"type": "king", "rate": 549, "inch": 20},
-				{"type": "emperor", "rate": 639, "inch": 24}
+				{"type": "king", "rate": 569, "inch": 20},
+				{"type": "emperor", "rate": 699, "inch": 24}
 			],
 			"description": "Savory paratha filled with paneer and mushrooms.",
 			"category": "Supreme Parathas",
@@ -523,7 +523,7 @@
 			"name": "Malai Tikka",
 			"price": [
 				{"rate": 399, "type": "Sizzler"},
-				{"rate": 290, "type": "Charcoal Grilled (Half/Full)"}
+				{"rate": 290, "type": "Charcoal Grilled"}
 			],
 			"description": "Creamy and succulent Malai Tikka with a hint of spices.",
 			"isVeg": false,
@@ -586,7 +586,7 @@
 			"name": "Chicken Tikka",
 			"price": [
 				{"rate": 399, "type": "Sizzler"},
-				{"rate": 280, "type": "Charcoal Grilled"}
+				{"rate": 290, "type": "Charcoal Grilled"}
 			],
 			"description": "Classic and flavorful Chicken Tikka prepared with care.",
 			"isVeg": false,
@@ -622,7 +622,7 @@
 			"name": "Paneer Achari Tikka",
 			"price": [
 				{"rate": 349, "type": "Sizzler"},
-				{"rate": 229, "type": "Charcoal Grilled"}
+				{"rate": 249, "type": "Charcoal Grilled"}
 			],
 			"description": "Flavorful and tangy Paneer Achari Tikka with pickled spices.",
 			"isVeg": true,
@@ -634,7 +634,7 @@
 			"name": "Paneer Tikka",
 			"price": [
 				{"rate": 349, "type": "Sizzler"},
-				{"rate": 229, "type": "Charcoal Grilled"}
+				{"rate": 249, "type": "Charcoal Grilled"}
 			],
 			"description": "Classic and delicious Paneer Tikka prepared with care.",
 			"isVeg": true,
@@ -646,7 +646,7 @@
 			"name": "Afghani Paneer",
 			"price": [
 				{"rate": 349, "type": "Sizzler"},
-				{"rate": 229, "type": "Charcoal Grilled"}
+				{"rate": 249, "type": "Charcoal Grilled"}
 			],
 			"description": "Creamy and flavorful Afghani-style grilled Paneer.",
 			"isVeg": true,
@@ -658,7 +658,7 @@
 			"name": "Malai Paneer Tikka",
 			"price": [
 				{"rate": 349, "type": "Sizzler"},
-				{"rate": 229, "type": "Charcoal Grilled"}
+				{"rate": 249, "type": "Charcoal Grilled"}
 			],
 			"description": "Rich and creamy Malai Paneer Tikka with aromatic spices.",
 			"isVeg": true,
@@ -670,7 +670,7 @@
 			"name": "Paneer Kali Mirch",
 			"price": [
 				{"rate": 349, "type": "Sizzler"},
-				{"rate": 229, "type": "Charcoal Grilled"}
+				{"rate": 249, "type": "Charcoal Grilled"}
 			],
 			"description": "Paneer marinated with black pepper and aromatic spices.",
 			"isVeg": true,
@@ -682,7 +682,7 @@
 			"name": "Methi Malai Paneer",
 			"price": [
 				{"rate": 349, "type": "Sizzler"},
-				{"rate": 229, "type": "Charcoal Grilled"}
+				{"rate": 249, "type": "Charcoal Grilled"}
 			],
 			"description": "Creamy and flavorful Methi Malai Paneer with fresh fenugreek.",
 			"isVeg": true,
@@ -694,7 +694,7 @@
 			"name": "Paneer Angara",
 			"price": [
 				{"rate": 349, "type": "Sizzler"},
-				{"rate": 229, "type": "Charcoal Grilled"}
+				{"rate": 249, "type": "Charcoal Grilled"}
 			],
 			"description": "Spicy and smoky Paneer Angara grilled to perfection.",
 			"isVeg": true,
@@ -706,7 +706,7 @@
 			"name": "Aloo Tandoori",
 			"price": [
 				{"rate": 299, "type": "Sizzler"},
-				{"rate": 199, "type": "Charcoal Grilled"}
+				{"rate": 249, "type": "Charcoal Grilled"}
 			],
 			"description": "Delicious Tandoori potatoes marinated with spices.",
 			"isVeg": true,
@@ -718,7 +718,7 @@
 			"name": "Afghani Mushroom",
 			"price": [
 				{"rate": 299, "type": "Sizzler"},
-				{"rate": 199, "type": "Charcoal Grilled"}
+				{"rate": 249, "type": "Charcoal Grilled"}
 			],
 			"description": "Succulent and flavorful grilled Afghani mushrooms.",
 			"isVeg": true,
@@ -730,7 +730,7 @@
 			"name": "Mushroom Tandoori",
 			"price": [
 				{"rate": 299, "type": "Sizzler"},
-				{"rate": 199, "type": "Charcoal Grilled"}
+				{"rate": 249, "type": "Charcoal Grilled"}
 			],
 			"description": "Tandoori-style grilled mushrooms with aromatic spices.",
 			"isVeg": true,
@@ -968,9 +968,9 @@
 			"name": "Veg Paratha",
 			"description": "A perfect blend of spices, vegetables, and herbs in every bite.",
 			"price": [
-				{"type": "queen", "rate": 399, "inch": 15},
-				{"type": "king", "rate": 569, "inch": 20},
-				{"type": "emperor", "rate": 659, "inch": 24}
+				{"type": "queen", "rate": 429, "inch": 15},
+				{"type": "king", "rate": 589, "inch": 20},
+				{"type": "emperor", "rate": 699, "inch": 24}
 			],
 			"isVeg": true,
 			"genre": "make_your_own_paratha",

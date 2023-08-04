@@ -15,7 +15,7 @@ const MenuItemCard = ({list}: Props) => {
 
 	return (
 		<>
-			{list.map(({name, description, price, isVeg}) => {
+			{list.map(({name, description, price, isVeg, genre}) => {
 				return (
 					<Grid item xs={12} lg={6} sx={{mb: 2}} key={description}>
 						<Box
@@ -31,20 +31,32 @@ const MenuItemCard = ({list}: Props) => {
 							}}
 						>
 							<Box>
-								<Box sx={{display: "flex", alignItems: "center", flex: 1}}>
-									<Typography
-										fontSize={{xs: "1rem", sm: "1.2rem"}}
-										color={isVeg ? "#036F08" : theme.palette.custom.achar}
-										fontWeight={600}
-									>
-										{name}
-									</Typography>
-									{isVeg ? (
-										<Iconify icon={"openmoji:leafy-green"} size={25} />
-									) : (
-										<Iconify icon={"openmoji:meat-on-bone"} size={25} />
-									)}
-								</Box>
+								{genre === "lassi" ? (
+									<Box sx={{display: "flex", alignItems: "center", flex: 1}}>
+										<Typography
+											fontSize={{xs: "1rem", sm: "1.2rem"}}
+											color={"#000"}
+											fontWeight={600}
+										>
+											{name}
+										</Typography>
+									</Box>
+								) : (
+									<Box sx={{display: "flex", alignItems: "center", flex: 1}}>
+										<Typography
+											fontSize={{xs: "1rem", sm: "1.2rem"}}
+											color={isVeg ? "#036F08" : theme.palette.custom.achar}
+											fontWeight={600}
+										>
+											{name}
+										</Typography>
+										{isVeg ? (
+											<Iconify icon={"openmoji:leafy-green"} size={25} />
+										) : (
+											<Iconify icon={"openmoji:meat-on-bone"} size={25} />
+										)}
+									</Box>
+								)}
 								{/* {pathname === "/home" ? null : (
 								)} */}
 								<Box

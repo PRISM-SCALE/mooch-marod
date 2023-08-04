@@ -7,9 +7,10 @@ type Props = {
 	alt: string;
 	path: string;
 	sx?: object;
+	height?: number | string;
 };
 
-const BrandingCard = ({logo, background, alt, path, sx}: Props) => {
+const BrandingCard = ({logo, background, alt, path, sx, height = 450}: Props) => {
 	const theme = useTheme();
 	return (
 		<Box
@@ -32,7 +33,7 @@ const BrandingCard = ({logo, background, alt, path, sx}: Props) => {
 				alt={alt}
 				sx={{
 					filter: "drop-shadow(30px 30px 20px rgba(0, 0, 0, 0.15))",
-					height: 450,
+					height: height,
 
 					[theme.breakpoints.down("md")]: {
 						height: 200,

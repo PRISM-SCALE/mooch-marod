@@ -1,9 +1,11 @@
-import {Box, Container, Link, Typography, alpha, useTheme} from "@mui/material";
+import {Box, Button, Container, Link, Typography, alpha, useTheme} from "@mui/material";
+import {Link as RouterLink} from "react-router-dom";
 
 import FooterGallery from "../components/FooterGallery";
 import {useResponsive} from "../hooks/useResponsive";
 import SocialIcons from "../components/SocialIcons";
-import {logo_with_tag} from "../utils/common";
+import {logo_with_tag, waLink} from "../utils/common";
+import {Icon} from "@iconify/react";
 
 // interface Styles {
 // 	[key: string]: string | number | object;
@@ -50,18 +52,64 @@ const Footer = () => {
 
 					{/* WORK HOURS */}
 					<Box sx={{}}>
-						<Typography
-							variant="h3"
-							fontWeight={400}
-							sx={{color: theme.palette.custom.paratha, textTransform: "uppercase", mb: 2}}
-						>
-							Working Hours
-						</Typography>
-						<Typography sx={{color: "#fff"}}>
-							Monday - Sunday <br />
-							<strong style={{color: theme.palette.custom.paratha}}>11:30 - 16:30</strong> and{" "}
-							<strong style={{color: theme.palette.custom.paratha}}>18:30 - 23:30</strong>
-						</Typography>
+						<Box sx={{mb: 4}}>
+							<Typography
+								variant="h3"
+								fontWeight={400}
+								sx={{color: theme.palette.custom.paratha, textTransform: "uppercase", mb: 2}}
+							>
+								Working Hours
+							</Typography>
+							<Typography sx={{color: "#fff"}}>
+								Monday - Sunday <br />
+								<strong style={{color: theme.palette.custom.paratha}}>
+									11:30 - 16:30
+								</strong> and{" "}
+								<strong style={{color: theme.palette.custom.paratha}}>18:30 - 23:30</strong>
+							</Typography>
+						</Box>
+						<Box>
+							<Typography
+								variant="h3"
+								fontWeight={400}
+								sx={{color: theme.palette.custom.paratha, textTransform: "uppercase", mb: 2}}
+							>
+								Get in touch
+							</Typography>
+							<Box sx={{display: "flex", alignItems: "center", gap: 2}}>
+								<Link href={"tel:8884488690"}>
+									<Button
+										variant="contained"
+										sx={{
+											backgroundColor: theme.palette.custom.paratha,
+											"&:hover": {
+												backgroundColor: theme.palette.custom.paratha,
+											},
+										}}
+										startIcon={<Icon icon="fluent:call-32-regular" />}
+										disableElevation
+										disableRipple
+									>
+										CALL
+									</Button>
+								</Link>
+								<RouterLink to={waLink} target="_blank">
+									<Button
+										variant="contained"
+										startIcon={<Icon icon="fa:whatsapp" />}
+										sx={{
+											backgroundColor: theme.palette.custom.butter,
+											color: theme.palette.custom.achar,
+											"&:hover": {
+												backgroundColor: theme.palette.custom.butter,
+											},
+										}}
+									>
+										WHATSAPP
+									</Button>
+								</RouterLink>
+							</Box>
+						</Box>
 					</Box>
 
 					{/* CONTACT US */}
@@ -76,31 +124,18 @@ const Footer = () => {
 
 						<Box sx={{mb: 2}}>
 							<Typography variant="caption" sx={{color: theme.palette.custom.butter}}>
-								Location:
-							</Typography>
-							<Typography variant="body1" color={"#fff"}>
-								Mooch Marod, Prasanthi Complex,
-								<br />
-								Channasandra Main Rd, Whitefield,
-								<br />
-								Bengaluru, Karnataka 560067
-							</Typography>
-						</Box>
-
-						<Box sx={{mb: 2}}>
-							<Typography variant="caption" sx={{color: theme.palette.custom.butter}}>
 								Email Address
 							</Typography>
 							<Typography variant="body1" color={"#fff"}>
 								<Link
-									href="mailto:hello@moochmarod.com"
+									href="mailto:info@moochmarod.com"
 									sx={{cursor: "pointer", textDecoration: "none", color: "#fff"}}
 								>
-									hello@moochmarod.com
+									info@moochmarod.com
 								</Link>
 							</Typography>
 						</Box>
-
+						{/* 
 						<Box sx={{mb: 2}}>
 							<Typography variant="caption" sx={{color: theme.palette.custom.butter}}>
 								Phone Number
@@ -113,7 +148,7 @@ const Footer = () => {
 									+91 (888) 448 8690
 								</Link>
 							</Typography>
-						</Box>
+						</Box> */}
 					</Box>
 
 					{/* FOOTER GALLERY */}

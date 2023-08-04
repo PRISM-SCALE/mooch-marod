@@ -34,6 +34,57 @@
 				"state": "Karnataka",
 				"direction": "https://www.google.com/maps/place/Mooch+Marod/@12.9408524,77.6217301,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae151bc6bb5017:0x238209c985c6594e!8m2!3d12.9408472!4d77.624305!16s%2Fg%2F11gkwm9k__?entry=ttu"
 			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [77.7660717234883, 12.8750488058428]
+			},
+			"properties": {
+				"location": "Yamare Village, Bengaluru",
+				"phone": 8884488520,
+				"address": "SH 35, Yamare Village, Bengaluru, Sompura, Karnataka 562125",
+				"city": "Bengaluru",
+				"country": "India",
+				"pincode": 562125,
+				"state": "Karnataka",
+				"direction": "https://www.google.com/maps/place/Natura+Walk/@12.874803,77.7612652,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae73a40519dcb3:0x46ca4c7518a6c3df!8m2!3d12.8747978!4d77.7661361!16s%2Fg%2F11p56g12bs?entry=ttu"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [77.70361282394404, 12.957108894182221]
+			},
+			"properties": {
+				"location": "Aswath Nagar, Marathahalli, Bengaluru",
+				"phone": 8884488540,
+				"address": "352, Varthur Road near SGR Spencer, Aswath Nagar, Marathahalli, Bengaluru, Karnataka 560037",
+				"city": "Bengaluru",
+				"country": "India",
+				"pincode": 560037,
+				"state": "Karnataka",
+				"direction": "https://www.google.com/maps/place/Mooch+Marod/@12.9570092,77.7008422,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae13f129883fbf:0x1fd0022da1a4a540!8m2!3d12.957004!4d77.7034171!16s%2Fg%2F11frs_r9tw?entry=ttu"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [77.63990666251793, 13.023357988245115]
+			},
+			"properties": {
+				"location": "HRBR Layout, Kalyan Nagar, Bengaluru",
+				"phone": 8884488540,
+				"address": "414, 5th Main Rd, HRBR Layout 2nd Block, HRBR Layout, Kalyan Nagar, Bengaluru, Karnataka 560043",
+				"city": "Bengaluru",
+				"country": "India",
+				"pincode": 560043,
+				"state": "Karnataka",
+				"direction": "https://www.google.com/maps/place/Mooch+Marod/@13.0228669,77.6372113,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae178c4e9fc4d7:0x2d6cd5c1411aad6f!8m2!3d13.0228617!4d77.6397862!16s%2Fg%2F11tnyf9t0t?entry=ttu"
+			}
 		}
 	]
 }

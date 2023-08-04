@@ -5,7 +5,7 @@ import CountCard from "../../components/CountCard.tsx";
 
 const _data = [
 	{
-		count: 7000,
+		count: 100000,
 		character: "+",
 		text: "Parathas Served",
 	},
@@ -15,12 +15,12 @@ const _data = [
 		text: "Customer Comeback",
 	},
 	{
-		count: 28000,
+		count: 300000,
 		character: "+",
 		text: "People Served",
 	},
 	{
-		count: 4,
+		count: 5,
 		character: "+",
 		text: "Outlets in Bangalore",
 	},

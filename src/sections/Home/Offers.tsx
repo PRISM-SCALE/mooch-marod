@@ -50,7 +50,7 @@ const Offers = () => {
 					<Grid item xs={12} lg={6}>
 						<Box
 							sx={{
-								backgroundImage: `url(/images/offer_email_subs.webp)`,
+								backgroundImage: `linear-gradient(to right bottom, rgba(11, 1, 18, 0.4), rgba(11, 1, 18, 0.7)), url(/images/food_banner.webp)`,
 								height: {xs: "auto", md: BANNER_HEIGHT},
 								backgroundSize: "cover",
 								backgroundRepeat: "no-repeat",
@@ -60,7 +60,7 @@ const Offers = () => {
 							<Typography
 								variant="h3"
 								sx={{
-									color: "white",
+									color: "#fff",
 									pt: "1rem",
 									pl: "1rem",
 									fontWeight: 600,

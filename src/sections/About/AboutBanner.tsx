@@ -28,7 +28,7 @@ const AboutBanner = () => {
 					<Typography
 						variant="h1"
 						sx={{textTransform: "uppercase", fontSize: {xs: 32, md: 54}}}
-						color={theme.palette.custom.butter}
+						color={"#fff"}
 						fontWeight={600}
 						gutterBottom
 					>

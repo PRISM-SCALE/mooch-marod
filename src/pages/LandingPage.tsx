@@ -21,6 +21,7 @@ const LandingPage = () => {
 				logo={logo_butter}
 				path="/home"
 				sx={{width: {xs: "100%", md: "50%"}}}
+				height={400}
 			/>
 		</Box>
 	);
