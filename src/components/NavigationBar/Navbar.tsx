@@ -8,13 +8,8 @@ import {Link} from "react-router-dom";
 import {useResponsive} from "../../hooks/useResponsive";
 
 // UTILS
-<<<<<<< HEAD
-import {ROOT_LINK} from "../../utils/links";
-import {WA_LINK, logo_butter} from "../../utils/common";
-=======
-import {HOME_LINK} from "../../utils/links";
-import {logo_butter, waLink} from "../../utils/common";
->>>>>>> 08fc76f76d839b88ce93acc02ef31243255b419d
+import {HOME_LINK, WA_LINK} from "../../utils/links";
+import {logo_butter} from "../../utils/common";
 
 // COMPONENTS
 import Logo from "../Logo";
@@ -125,11 +120,7 @@ export default function Navbar(props: Props) {
 						{isMediumScreen !== isSmallScreen ? null : (
 							<Button
 								component={Link}
-<<<<<<< HEAD
 								to={WA_LINK}
-=======
-								to={waLink}
->>>>>>> 08fc76f76d839b88ce93acc02ef31243255b419d
 								target="_blank"
 								sx={{
 									backgroundColor: theme.palette.custom.paratha,

@@ -4,8 +4,9 @@ import {Link as RouterLink} from "react-router-dom";
 import FooterGallery from "../components/FooterGallery";
 import {useResponsive} from "../hooks/useResponsive";
 import SocialIcons from "../components/SocialIcons";
-import {logo_with_tag, waLink} from "../utils/common";
+import {logo_with_tag} from "../utils/common";
 import {Icon} from "@iconify/react";
+import {WA_LINK} from "../utils/links";
 
 // interface Styles {
 // 	[key: string]: string | number | object;
@@ -93,7 +94,7 @@ const Footer = () => {
 										CALL
 									</Button>
 								</Link>
-								<RouterLink to={waLink} target="_blank">
+								<RouterLink to={WA_LINK} target="_blank">
 									<Button
 										variant="contained"
 										startIcon={<Icon icon="fa:whatsapp" />}
