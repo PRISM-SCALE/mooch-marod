@@ -9,7 +9,7 @@ import {useResponsive} from "../../hooks/useResponsive";
 
 // UTILS
 import {ROOT_LINK} from "../../utils/links";
-import {logo_butter} from "../../utils/common";
+import {WA_LINK, logo_butter} from "../../utils/common";
 
 // COMPONENTS
 import Logo from "../Logo";
@@ -120,7 +120,7 @@ export default function Navbar(props: Props) {
 						{isMediumScreen !== isSmallScreen ? null : (
 							<Button
 								component={Link}
-								to="https://wa.link/mu962g"
+								to={WA_LINK}
 								target="_blank"
 								sx={{
 									backgroundColor: theme.palette.custom.paratha,
