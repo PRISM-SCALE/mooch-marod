@@ -124,27 +124,14 @@ const Footer = () => {
 
 						<Box sx={{mb: 2}}>
 							<Typography variant="caption" sx={{color: theme.palette.custom.butter}}>
-								Location:
-							</Typography>
-							<Typography variant="body1" color={"#fff"}>
-								Mooch Marod, Prasanthi Complex,
-								<br />
-								Channasandra Main Rd, Whitefield,
-								<br />
-								Bengaluru, Karnataka 560067
-							</Typography>
-						</Box>
-
-						<Box sx={{mb: 2}}>
-							<Typography variant="caption" sx={{color: theme.palette.custom.butter}}>
 								Email Address
 							</Typography>
 							<Typography variant="body1" color={"#fff"}>
 								<Link
-									href="mailto:hello@moochmarod.com"
+									href="mailto:info@moochmarod.com"
 									sx={{cursor: "pointer", textDecoration: "none", color: "#fff"}}
 								>
-									hello@moochmarod.com
+									info@moochmarod.com
 								</Link>
 							</Typography>
 						</Box>
