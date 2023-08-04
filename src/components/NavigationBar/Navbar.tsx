@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 import {useResponsive} from "../../hooks/useResponsive";
 
 // UTILS
-import {ROOT_LINK} from "../../utils/links";
+import {HOME_LINK} from "../../utils/links";
 import {logo_butter, waLink} from "../../utils/common";
 
 // COMPONENTS
@@ -107,7 +107,7 @@ export default function Navbar(props: Props) {
 							)}
 						</>
 
-						<Link to={ROOT_LINK} style={{textAlign: "center"}}>
+						<Link to={HOME_LINK} style={{textAlign: "center"}}>
 							<Logo
 								width={{xs: 50, md: trigger ? 80 : 90}}
 								height={{xs: 50, md: trigger ? 80 : 90}}
