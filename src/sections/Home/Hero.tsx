@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 import {useResponsive} from "../../hooks/useResponsive";
 
 // UTILS
-import {ROOT_LINK} from "../../utils/links";
+import {ROOT_LINK, WA_LINK} from "../../utils/links";
 import {logo_butter} from "../../utils/common";
 
 // COMPONENTS
@@ -196,7 +196,7 @@ const Hero = () => {
 						<Box component={animated.div} style={buttonProps}>
 							<Button
 								component={Link}
-								to="https://wa.link/mu962g"
+								to={WA_LINK}
 								target="_blank"
 								sx={{
 									backgroundColor: theme.palette.custom.paratha,
@@ -219,7 +219,7 @@ const Hero = () => {
 							</Button>
 							<Button
 								component={Link}
-								to="https://wa.link/mu962g"
+								to={WA_LINK}
 								target="_blank"
 								sx={{
 									border: `3px solid ${theme.palette.custom.paratha}`,

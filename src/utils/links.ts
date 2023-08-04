@@ -7,7 +7,7 @@ export const footerLinks = ["About", "Menu", "Blog", "Gallery", "Faq", "Contact"
 
 export const ROOT_LINK = "/";
 export const HOME_LINK = "/home";
-export const WA_LINK = "https://wa.link/nkuet6";
+export const WA_LINK = "https://wa.link/hdtniy";
 
 export const menuLinks = [
 	{link: "/home", path: "home", icon: "majesticons:home"},
