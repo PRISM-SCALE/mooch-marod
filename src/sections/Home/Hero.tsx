@@ -219,7 +219,7 @@ const Hero = () => {
 							</Button>
 							<Button
 								component={Link}
-								to={WA_LINK}
+								to={"https://wa.link/67jtf6"}
 								target="_blank"
 								sx={{
 									border: `3px solid ${theme.palette.custom.paratha}`,
