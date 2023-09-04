@@ -15,6 +15,40 @@
 		{"image": "/ingredients/carrot.png", "name": "Carrot"},
 		{"image": "/ingredients/kheema.png", "name": "Chicken Kheema"},
 		{"image": "/ingredients/kheema.png", "name": "Angara Chicken Keema"},
-		{"image": "/ingredients/kheema.png", "name": "Afghani Chicken Keema"}
+		{"image": "/ingredients/kheema.png", "name": "Afghani Chicken Keema"},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [77.70361282394404, 12.957108894182221]
+			},
+			"properties": {
+				"location": "Aswath Nagar, Marathahalli, Bengaluru (Temporarily Closed)",
+				"phone": 8884488540,
+				"address": "352, Varthur Road near SGR Spencer, Aswath Nagar, Marathahalli, Bengaluru, Karnataka 560037",
+				"city": "Bengaluru",
+				"country": "India",
+				"pincode": 560037,
+				"state": "Karnataka",
+				"direction": "https://www.google.com/maps/place/Mooch+Marod/@12.9570092,77.7008422,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae13f129883fbf:0x1fd0022da1a4a540!8m2!3d12.957004!4d77.7034171!16s%2Fg%2F11frs_r9tw?entry=ttu"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [77.63990666251793, 13.023357988245115]
+			},
+			"properties": {
+				"location": "HRBR Layout, Kalyan Nagar, Bengaluru  (Temporarily Closed)",
+				"phone": 8884488540,
+				"address": "414, 5th Main Rd, HRBR Layout 2nd Block, HRBR Layout, Kalyan Nagar, Bengaluru, Karnataka 560043",
+				"city": "Bengaluru",
+				"country": "India",
+				"pincode": 560043,
+				"state": "Karnataka",
+				"direction": "https://www.google.com/maps/place/Mooch+Marod/@13.0228669,77.6372113,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae178c4e9fc4d7:0x2d6cd5c1411aad6f!8m2!3d13.0228617!4d77.6397862!16s%2Fg%2F11tnyf9t0t?entry=ttu"
+			}
+		}
 	]
 }
