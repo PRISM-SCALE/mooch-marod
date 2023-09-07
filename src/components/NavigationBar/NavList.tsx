@@ -18,10 +18,12 @@ const NavList = ({open, anchorEl, handleClose}: Props) => {
 			MenuListProps={{
 				"aria-labelledby": "basic-button",
 			}}
-			PaperProps={{
-				sx: {
-					padding: 2,
-					width: 200,
+			slotProps={{
+				paper: {
+					style: {
+						padding: 2,
+						width: 200,
+					},
 				},
 			}}
 		>
