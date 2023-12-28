@@ -11,7 +11,7 @@ const LandingPage = () => {
 				alt="Food Kasoot"
 				background={fk_background_image}
 				logo={fk_logo}
-				path={"#"}
+				path={"https://foodkasoot-web.onrender.com/home"}
 				sx={{width: {xs: "100%", md: "50%"}}}
 			/>
 
